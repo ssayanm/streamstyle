@@ -20,9 +20,9 @@ const Nav = () => {
             <a>
               <Image
                 alt="Bennetts Car Care"
-                src="/assets/Bennettscarcare.png"
-                width={200}
-                height={75}
+                src="/assets/Revologo.png"
+                width={172}
+                height={69}
                 className="logo"
               />
             </a>
@@ -43,20 +43,13 @@ const Nav = () => {
             );
           })}
         </ul>
-
-        <a
-          className="phone-btn"
-          target="_blank"
-          href="https://wa.me/13459230411"
-        >
-          <FaMobileAlt className="icon" /> (345) 923-0411
-        </a>
       </div>
     </NavContainer>
   );
 };
 
 const NavContainer = styled.nav`
+  background: var(--clr-primary-1);
   height: 8rem;
   display: flex;
   align-items: center;
@@ -119,7 +112,7 @@ const NavContainer = styled.nav`
     }
     .nav-links {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       li {
         margin: 0 0.5rem;
       }

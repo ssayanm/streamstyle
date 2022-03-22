@@ -6,41 +6,46 @@ import { social } from "../utils/constants";
 
 const Hero = () => {
   return (
-    <Wrapper className="section-center">
-      <article className="content">
-        <h3>One Platform For Video Engagement & Live Commerce</h3>
-        <p>
-          Use the most powerful live and VOD shopping platform with a
-          frictionless buying experience.
-        </p>
+    <Wrapper>
+      <div className="section-center container">
+        <article className="content">
+          <h3>One Platform For Video Engagement & Live Commerce</h3>
+          <p>
+            Use the most powerful live and VOD shopping platform with a
+            frictionless buying experience.
+          </p>
 
-        <Link href="/contact">
-          <a className="btn hero-btn"> Get Started</a>
-        </Link>
-        <ul className="social-icons">
-          {social.map((socialIcon) => {
-            const { id, url, icon } = socialIcon;
-            return (
-              <li key={id}>
-                <a href={url} target="_blank">
-                  {icon}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </article>
-      <Slider />
+          <Link href="/contact">
+            <a className="btn hero-btn"> Get Started</a>
+          </Link>
+          <ul className="social-icons">
+            {social.map((socialIcon) => {
+              const { id, url, icon } = socialIcon;
+              return (
+                <li key={id}>
+                  <a href={url} target="_blank">
+                    {icon}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </article>
+        <Slider />
+      </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
   /* min-height: 50vh; */
-  display: grid;
-  place-items: center;
-  /* background-image: linear-gradient(0deg, #1b8686 0, #330867); */
   background: var(--clr-primary-1);
+  /* background-image: linear-gradient(0deg, #1b8686 0, #330867); */
+  .container {
+    display: grid;
+    place-items: center;
+  }
+
   h3 {
     font-size: 2.3rem;
   }
@@ -53,9 +58,12 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
-    height: calc(100vh - 5rem);
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    .container {
+      height: calc(100vh - 5rem);
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
     h3 {
       margin-bottom: 1.5rem;
     }
