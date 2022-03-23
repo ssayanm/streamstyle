@@ -7,7 +7,7 @@ const Meta = ({ title, keywords, description, siteTitle }) => {
       <meta name="keywords" content={keywords} />
       <meta name="description" content={description} />
       <meta charSet="utf-8" />
-      <link rel="icon" href="/assets/favicon.png" />
+      <link rel="icon" href="/assets/Revologo.png" />
       <title>{`${title} | ${siteTitle}`}</title>
     </Head>
   );

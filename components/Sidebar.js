@@ -20,9 +20,10 @@ const Sidebar = () => {
             <a>
               <Image
                 alt="Bennetts Car Care"
-                src="/assets/Bennettscarcare.png"
-                width={150}
-                height={57}
+                src="/images/Revologo.png"
+                width={172}
+                height={69}
+                className="logo"
               />
             </a>
           </Link>
@@ -43,13 +44,6 @@ const Sidebar = () => {
             );
           })}
         </ul>
-        <a
-          className="phone-btn"
-          target="_blank"
-          href="https://wa.me/13459230411"
-        >
-          <FaMobileAlt className="icon" /> (345) 923-0411
-        </a>
       </aside>
     </SidebarContainer>
   );

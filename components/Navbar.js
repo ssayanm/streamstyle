@@ -20,7 +20,7 @@ const Nav = () => {
             <a>
               <Image
                 alt="Bennetts Car Care"
-                src="/assets/Revologo.png"
+                src="/images/Revologo.png"
                 width={172}
                 height={69}
                 className="logo"
@@ -73,7 +73,7 @@ const NavContainer = styled.nav`
   .nav-toggle {
     background: transparent;
     border: transparent;
-    color: var(--clr-primary-1);
+    color: var(--clr-black);
     cursor: pointer;
     svg {
       font-size: 2rem;
@@ -118,7 +118,8 @@ const NavContainer = styled.nav`
       }
       a {
         color: var(--clr-grey-1);
-        font-size: 1.2rem;
+        font-size: 21px;
+        line-height: 1.07;
         text-transform: capitalize;
         letter-spacing: var(--spacing);
         padding: 0.5rem;

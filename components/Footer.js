@@ -5,14 +5,9 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <Wrapper>
-      <h5>
-        Copyright &copy; {new Date().getFullYear()} All rights reserved
-        <br />
-        <span>
-          Developed with <FaHeart style={{ color: "#ff355e" }} /> by Sayan
-          Mukherjee
-        </span>
-      </h5>
+      <p>
+        Copyright &copy; {new Date().getFullYear()} Borderfree Technologies Inc.
+      </p>
     </Wrapper>
   );
 };
@@ -28,11 +23,11 @@ const Wrapper = styled.footer`
   span {
     color: var(--clr-primary-5);
   }
-  h5 {
+  p {
     color: var(--clr-white);
     margin: 0.1rem;
 
-    font-weight: 400;
+    font-weight: 300;
     text-transform: none;
     line-height: 1.25;
   }

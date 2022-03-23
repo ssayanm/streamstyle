@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import Slider from "./Slider";
 import { social } from "../utils/constants";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -10,14 +11,15 @@ const Hero = () => {
       <div className="section-center container">
         <article className="content">
           <h3>One Platform For Video Engagement & Live Commerce</h3>
-          <p>
+          <h4>
             Use the most powerful live and VOD shopping platform with a
             frictionless buying experience.
-          </p>
+          </h4>
 
           <Link href="/contact">
             <a className="btn hero-btn"> Get Started</a>
           </Link>
+          <p>Available now on all platforms</p>
           <ul className="social-icons">
             {social.map((socialIcon) => {
               const { id, url, icon } = socialIcon;
@@ -31,7 +33,17 @@ const Hero = () => {
             })}
           </ul>
         </article>
-        <Slider />
+        <Link href="/">
+          <a>
+            <Image
+              alt="revo"
+              src="/images/herovideo.jpg"
+              width={826}
+              height={530}
+              className="logo"
+            />
+          </a>
+        </Link>
       </div>
     </Wrapper>
   );
@@ -43,7 +55,8 @@ const Wrapper = styled.section`
   /* background-image: linear-gradient(0deg, #1b8686 0, #330867); */
   .container {
     display: grid;
-    place-items: center;
+    place-items: center self-start center;
+    padding-top: 7rem;
   }
 
   h3 {
@@ -51,9 +64,10 @@ const Wrapper = styled.section`
   }
   p {
     line-height: 1.5;
-    max-width: 45em;
-    /* margin-bottom: 2rem; */
-    color: var(--clr-grey-3);
+    /* max-width: 45em; */
+
+    margin-top: 2rem;
+    /* color: var(--clr-grey-3); */
     font-size: 1rem;
   }
 
@@ -66,9 +80,17 @@ const Wrapper = styled.section`
 
     h3 {
       margin-bottom: 1.5rem;
+      font-size: 72.5px;
+    }
+    h4 {
+      font-size: 39.5px;
+      font-family: "MontLight", sans-serif;
+      margin-bottom: 1.5rem;
+      letter-spacing: normal;
+      line-height: 1.1;
     }
     p {
-      font-size: 1.25rem;
+      font-size: 28.5px;
     }
     .hero-btn {
       padding: 0.75rem 1.5rem;
