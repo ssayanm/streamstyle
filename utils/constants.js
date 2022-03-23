@@ -41,36 +41,62 @@ export const links = [
   },
 ];
 
-export const services = [
+export const footerLinks = [
   {
     id: 1,
-    icon: <MdLocalCarWash className="service-icon" />,
-    title: "car wash",
-    text: "A clean car is always a happy car, get your car washed today! Contact Us today via whatsapp or just fill up the contact form.",
+    text: "FAQ",
+    url: "/",
   },
   {
     id: 2,
-    icon: <MdDirectionsCar className="service-icon" />,
-    title: "rent a car",
-    text: "Price from $30 a day, $175 a week,  $300 every 2 weeks, $550 a month.",
+    text: "Studio Login",
+    url: "/",
+  },
+  {
+    id: 3,
+    text: "Talk to Sales",
+    url: "/",
+  },
+  {
+    id: 4,
+    text: "Careers",
+    url: "/",
+  },
+];
+
+export const footerLinksAlt = [
+  {
+    id: 1,
+    text: "Contact",
+    url: "/",
+  },
+  {
+    id: 2,
+    text: "Terms & Conditions",
+    url: "/",
+  },
+  {
+    id: 3,
+    text: "Privacy Policy",
+    url: "/",
   },
 ];
 
 export const social = [
   {
     id: 1,
-    icon: <FaApple className="social-icon whatsapp"></FaApple>,
+    icon: <FaApple className="social-icon "></FaApple>,
     url: "#",
   },
   {
     id: 4,
-    icon: <GrAndroid className="social-icon fb"></GrAndroid>,
+    icon: <GrAndroid className="social-icon "></GrAndroid>,
     url: "#",
   },
 
   {
     id: 5,
-    icon: <FaShopify className="social-icon insta"></FaShopify>,
+    icon: <FaShopify className="social-icon "></FaShopify>,
     url: "#",
   },
 ];

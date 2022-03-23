@@ -19,7 +19,7 @@ const Nav = () => {
           <Link href="/">
             <a>
               <Image
-                alt="Bennetts Car Care"
+                alt="Revo"
                 src="/images/Revologo.png"
                 width={172}
                 height={69}
