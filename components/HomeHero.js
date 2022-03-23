@@ -5,16 +5,16 @@ import Slider from "./Slider";
 import { social } from "../utils/constants";
 import Image from "next/image";
 
-const Hero = () => {
+const HomeHero = () => {
   return (
     <Wrapper>
       <div className="section-center container">
         <article className="content">
           <h3>One Platform For Video Engagement & Live Commerce</h3>
-          <h4>
+          <p>
             Use the most powerful live and VOD shopping platform with a
             frictionless buying experience.
-          </h4>
+          </p>
 
           <Link href="/contact">
             <a className="btn hero-btn"> Get Started</a>
@@ -103,4 +103,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Hero;
+export default HomeHero;

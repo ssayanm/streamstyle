@@ -1,14 +1,23 @@
-import Hero from "../components/Hero";
+import HomeHero from "../components/HomeHero";
 import Services from "../components/Services";
 import Meta from "../components/Meta";
-import FeaturedCarRentals from "../components/FeaturedCarRentals";
-import FeaturedProducts from "../components/FeaturedProducts";
+
+import HomeSectionA from "../components/HomeSectionA";
+import HomeSectionB from "../components/HomeSectionB";
+import HomeSectionC from "../components/HomeSectionC";
+import HomeSectionD from "../components/HomeSectionD";
+import HomeSectionE from "../components/HomeSectionE";
 
 export default function Home() {
   return (
     <main>
       <Meta title="Home" />
-      <Hero />
+      <HomeHero />
+      <HomeSectionA />
+      <HomeSectionB />
+      <HomeSectionC />
+      <HomeSectionD />
+      <HomeSectionE />
     </main>
   );
 }
