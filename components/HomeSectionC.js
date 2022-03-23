@@ -32,8 +32,8 @@ const HomeSectionC = () => {
             Simple to use yet powerful show set up and full recording studio
             with automated features that keep audiences engaged and buying
           </p>
-          <h5>One-To-Many</h5>
-          <p>
+          <h5 className="content">One-To-Many</h5>
+          <p className="content">
             Invite experts, co-hosts, and even fans to participate in your live
             stream while thousands of consumers watch and interact{" "}
           </p>
@@ -57,17 +57,16 @@ const Wrapper = styled.section`
   .container {
     display: grid;
     place-items: center;
-    /* padding-top: 7rem; */
+    padding: 7rem 2rem;
   }
 
   h3 {
     font-size: 2.3rem;
   }
   p {
-    line-height: 1.3;
     /* max-width: 45em; */
     font-family: "MontSemiBold", sans-serif;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     /* color: var(--clr-grey-3); */
     font-size: 1rem;
   }
@@ -79,8 +78,8 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     .container {
       /* height: calc(90vh - 3rem); */
-      padding: 1rem 0;
-      grid-template-columns: 1fr 2fr;
+      padding: 7rem 2rem;
+      grid-template-columns: 900px auto;
       gap: 1rem;
     }
 
@@ -113,6 +112,10 @@ const Wrapper = styled.section`
     }
     .content {
       padding-left: 5rem;
+    }
+
+    .left-space {
+      padding-left: 2rem;
     }
   }
 `;

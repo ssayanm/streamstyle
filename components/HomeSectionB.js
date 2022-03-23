@@ -5,7 +5,7 @@ import { services } from "../utils/constants";
 const HomeSectionB = () => {
   return (
     <Wrapper>
-      <div className="section-center">
+      <div className="section-center1">
         <article className="header">
           <h3>
             The features
@@ -14,65 +14,82 @@ const HomeSectionB = () => {
         </article>
         <div className="services-center">
           <div>
-            <Image
-              alt="revo"
-              src="/images/cart.png"
-              width={49}
-              height={49}
-              objectFit="cover"
-            />
-            <p className="heading">Direct e-Commerce Integration</p>
-            <p className="desc">
-              Our live shopping solution provides instant product sync, seamless
-              integration you’re your e-Commerce platform, and instant checkout.{" "}
-            </p>
-            <Image
-              alt="revo"
-              src="/images/dollar.png"
-              width={49}
-              height={49}
-              objectFit="cover"
-            />
-            <p className="heading">Frictionless Payment</p>
-            <p className="desc">
-              Increase sales and conversion complete transactions in one-click
-              without ever leaving the show.{" "}
-            </p>
+            <div className="space">
+              <Image
+                alt="revo"
+                src="/images/cart.png"
+                width={49}
+                height={49}
+                objectFit="cover"
+              />
+              <p className="heading">Direct e-Commerce Integration</p>
+              <p className="desc">
+                Our live shopping solution provides instant product sync,
+                seamless integration you’re your e-Commerce platform, and
+                instant checkout.{" "}
+              </p>
+            </div>
+            <div className="space">
+              <Image
+                alt="revo"
+                src="/images/dollar.png"
+                width={49}
+                height={49}
+                objectFit="cover"
+              />
+              <p className="heading">
+                Frictionless <br />
+                Payment
+              </p>
+              <p className="desc">
+                Increase sales and conversion complete transactions in one-click
+                without ever leaving the show.{" "}
+              </p>
+            </div>
           </div>
           <div>
-            {" "}
-            <Image
-              alt="revo"
-              src="/images/eng.png"
-              width={49}
-              height={49}
-              objectFit="cover"
-            />
-            <p className="heading">High Engagement</p>
-            <p className="desc">
-              An immersive Live video experience that drives engagement,
-              discovery and community{" "}
-            </p>
-            <Image
-              alt="revo"
-              src="/images/analytics.png"
-              width={83}
-              height={41}
-              objectFit="cover"
-            />
-            <p className="heading">Real-Time Analytics</p>
-            <p className="desc">
-              Real-time analytics to maximize sales throughout the show. Built
-              in KPIs and fully branded ownership of enhanced analytics and
-              data.{" "}
-            </p>
+            <div className="space">
+              <Image
+                alt="revo"
+                src="/images/eng.png"
+                width={49}
+                height={49}
+                objectFit="cover"
+              />
+              <p className="heading">
+                High <br />
+                Engagement
+              </p>
+              <p className="desc">
+                An immersive Live video experience that drives engagement,
+                discovery and community{" "}
+              </p>
+            </div>
+            <div className="space">
+              <Image
+                alt="revo"
+                src="/images/analytics.png"
+                width={83}
+                height={41}
+                objectFit="cover"
+              />
+              <p className="heading">
+                Real-Time
+                <br /> Analytics
+              </p>
+              <p className="desc">
+                Real-time analytics to maximize sales throughout the show. Built
+                in KPIs and fully branded ownership of enhanced analytics and
+                data.{" "}
+              </p>
+            </div>
           </div>
           <div>
             <Image
               alt="revo"
               src="/images/features.png"
-              width={623}
-              height={555}
+              width={1200}
+              height={750}
               objectFit="cover"
             />
           </div>
@@ -87,7 +104,7 @@ const Wrapper = styled.section`
   h4 {
     color: var(--clr-white);
   }
-  padding: 5rem 0;
+  padding: 7rem 0rem;
 
   background: var(--clr-black);
 
@@ -100,7 +117,7 @@ const Wrapper = styled.section`
     color: var(--clr-white);
   }
   .services-center {
-    margin-top: 4rem;
+    margin-top: 2rem;
     display: grid;
     gap: 2.5rem;
   }
@@ -117,7 +134,8 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     .header {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr auto;
+      padding-left: 4rem;
     }
     h3 {
       font-size: 63px;
@@ -133,7 +151,8 @@ const Wrapper = styled.section`
   }
   @media (min-width: 576px) {
     .services-center {
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      grid-template-columns: 480px 430px auto;
+      padding-left: 4rem;
     }
   }
   @media (min-width: 1280px) {

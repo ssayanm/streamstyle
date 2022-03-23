@@ -114,7 +114,7 @@ const Wrapper = styled.section`
       grid-template-columns: 1fr 1fr 1fr;
       gap: 2rem;
       text-align: center;
-      padding: 5rem 0;
+      padding: 5rem 2rem;
     }
   }
 `;

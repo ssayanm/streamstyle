@@ -57,8 +57,8 @@ const SliderN = () => {
               <article className={position + " sarticle"} key={id}>
                 <center>
                   <Image
-                    alt="Bennetts Car Care"
-                    src={slide.url || `/assets/Bennettscarcare.png`}
+                    alt="Revo"
+                    src={slide.url || `/assets/revo.png`}
                     width={500}
                     height={500}
                     className="person-img"

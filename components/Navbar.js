@@ -20,7 +20,7 @@ const Nav = () => {
             <a>
               <Image
                 alt="Revo"
-                src="/images/Revologo.png"
+                src="/images/Revo_Logo_white.png"
                 width={172}
                 height={69}
                 className="logo"
@@ -50,7 +50,7 @@ const Nav = () => {
 
 const NavContainer = styled.nav`
   background: var(--clr-primary-1);
-  height: 8rem;
+  height: 9rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,11 +64,6 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    /* img {
-      width: 150px;
-      margin-left: -15px;
-    } */
   }
   .nav-toggle {
     background: transparent;
@@ -124,7 +119,7 @@ const NavContainer = styled.nav`
         letter-spacing: var(--spacing);
         padding: 0.5rem;
         &:hover {
-          border-bottom: 2px solid var(--clr-primary-1);
+          border-bottom: 1px solid var(--clr-black);
         }
       }
     }

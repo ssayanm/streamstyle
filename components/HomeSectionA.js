@@ -42,7 +42,7 @@ const Wrapper = styled.section`
   .container {
     display: grid;
     place-items: center;
-    /* padding-top: 7rem; */
+    padding: 7rem 2rem;
   }
 
   h3 {

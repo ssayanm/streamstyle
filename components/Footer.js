@@ -74,11 +74,6 @@ const Footer = () => {
 };
 
 const Wrapper = styled.footer`
-  /* height: 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   background: var(--clr-black);
 
   padding: 5rem 2rem;
@@ -131,7 +126,7 @@ const Wrapper = styled.footer`
   }
   @media (min-width: 992px) {
     .foot {
-      padding: 1rem 0;
+      padding: 5rem 0;
       grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
       gap: 4rem;
     }

@@ -15,10 +15,15 @@ const HomeHero = () => {
             Use the most powerful live and VOD shopping platform with a
             frictionless buying experience.
           </p>
+          <div className="btn-section">
+            <Link href="/">
+              <a className="btn-alt hero-btn"> Add to your shopify store</a>
+            </Link>
+            <Link href="/">
+              <a className="btn hero-btn"> Get Started</a>
+            </Link>
+          </div>
 
-          <Link href="/contact">
-            <a className="btn hero-btn"> Get Started</a>
-          </Link>
           <p>Available now on all platforms</p>
           <ul className="social-icons">
             {social.map((socialIcon) => {
@@ -50,13 +55,10 @@ const HomeHero = () => {
 };
 
 const Wrapper = styled.section`
-  /* min-height: 50vh; */
   background: var(--clr-primary-1);
-  /* background-image: linear-gradient(0deg, #1b8686 0, #330867); */
   .container {
     display: grid;
-    place-items: center self-start center;
-    padding-top: 7rem;
+    place-items: center;
   }
 
   h3 {
@@ -64,13 +66,30 @@ const Wrapper = styled.section`
   }
   p {
     line-height: 1.5;
-    /* max-width: 45em; */
 
     margin-top: 2rem;
-    /* color: var(--clr-grey-3); */
     font-size: 1rem;
   }
 
+  .hero-btn {
+    margin-top: 1rem;
+    text-align: center;
+    /* margin-bottom: 1rem; */
+  }
+
+  .hero-btn-alt {
+    text-align: center;
+    /* width: 60%; */
+    /* margin: 0 auto; */
+  }
+
+  .btn-section {
+    display: flex;
+    /* width: 32rem; */
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+  }
   @media (min-width: 992px) {
     .container {
       height: calc(100vh - 5rem);
@@ -96,9 +115,17 @@ const Wrapper = styled.section`
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
     }
-    .content {
-      /* display: block; */
-      /* position: relative; */
+
+    .hero-btn-alt {
+      margin-right: 2rem;
+    }
+
+    .btn-section {
+      display: flex;
+      width: 30rem;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 `;

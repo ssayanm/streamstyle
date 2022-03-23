@@ -9,7 +9,7 @@ const HomeSectionE = () => {
         <h3>Revo Video is word of mouth on steroids”</h3>
       </div>
       <p>Get started today.</p>
-      <center>
+      <center className="space">
         <Link href="/contact">
           <a className="btn"> Talk to Sales</a>
         </Link>
@@ -21,22 +21,16 @@ const HomeSectionE = () => {
 const Wrapper = styled.section`
   /* background-image: url("/images/circle.png"); */
 
-  .container {
-    display: grid;
-    place-items: center;
-    /* padding-top: 7rem; */
-  }
+  padding: 7rem 2rem;
 
   h3 {
     font-size: 2.3rem;
     color: var(--clr-black);
   }
   p {
-    line-height: 1.2;
-    /* max-width: 45em; */
+    text-align: center;
+    margin-bottom: 0rem;
 
-    /* margin-top: 2rem; */
-    /* color: var(--clr-grey-3); */
     font-size: 1rem;
   }
 
@@ -69,11 +63,6 @@ const Wrapper = styled.section`
     p {
       font-size: 35px;
       font-family: "MontSemiBold", sans-serif;
-      text-align: center;
-    }
-
-    .content {
-      padding-left: 5rem;
     }
   }
 `;

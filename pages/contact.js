@@ -68,9 +68,7 @@ const ContactPage = () => {
             </p>
             <p className="iconcons">
               <FaEnvelope className="iconcon" />
-              <a href="mailto:BennettsCarCare@hotmail.com">
-                BennettsCarCare@hotmail.com
-              </a>
+              <a href="mailto:">hello@hello.com</a>
             </p>
             <p className="iconcons">
               <FaPhoneAlt className="iconcon" />{" "}
@@ -94,7 +92,7 @@ const ContactPage = () => {
             })}
           </ul>
           <Image
-            alt="Bennetts Car Care"
+            alt="Revo"
             src="/assets/qrcode.jpeg"
             width={200}
             height={200}
@@ -145,7 +143,11 @@ const Wrapper = styled.section`
     color: var(--clr-grey-2);
 
     a {
-      color: var(--clr-grey-2);
+      color: red;
+    }
+
+    a:hover {
+      color: green;
     }
 
     .iconcon {

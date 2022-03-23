@@ -6,6 +6,7 @@ import { useAppContext } from "../context/app_context";
 import { FaMobileAlt, FaTimes } from "react-icons/fa";
 
 import styled from "styled-components";
+import { BsPlayCircleFill } from "react-icons/bs";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useAppContext();
@@ -19,7 +20,7 @@ const Sidebar = () => {
           <Link href="/">
             <a>
               <Image
-                alt="Bennetts Car Care"
+                alt="Revo"
                 src="/images/Revologo.png"
                 width={172}
                 height={69}
@@ -44,6 +45,7 @@ const Sidebar = () => {
             );
           })}
         </ul>
+        <BsPlayCircleFill className="icon" />
       </aside>
     </SidebarContainer>
   );
@@ -61,14 +63,18 @@ const SidebarContainer = styled.div`
     font-size: 2rem;
     background: transparent;
     border-color: transparent;
-    color: var(--clr-primary-5);
+    color: var(--clr-black);
     transition: var(--transition);
     cursor: pointer;
-    color: var(--clr-red-dark);
+
     margin-top: 0.2rem;
   }
   .close-btn:hover {
     color: var(--clr-red-light);
+  }
+  .icon {
+    width: 64px;
+    height: 64px;
   }
   .logo {
     justify-self: center;
@@ -79,20 +85,20 @@ const SidebarContainer = styled.div`
   }
   .links a {
     display: block;
-    text-align: left;
-    font-size: 1rem;
+    text-align: center;
+    font-size: 1.75rem;
     text-transform: capitalize;
-    padding: 1rem 1.5rem;
-    color: var(--clr-grey-3);
+    padding: 0.5rem 1.5rem;
+    color: var(--clr-black);
     transition: var(--transition);
     letter-spacing: var(--spacing);
   }
 
   .links a:hover {
-    padding: 1rem 1.5rem;
+    /* padding: 1rem 1.5rem;
     padding-left: 2rem;
-    background: var(--clr-grey-10);
-    color: var(--clr-grey-2);
+    background: var(--clr-grey-1);
+    color: var(--clr-white); */
   }
 
   .sidebar {
@@ -105,6 +111,11 @@ const SidebarContainer = styled.div`
     transition: var(--transition);
     transform: translate(-100%);
     z-index: -1;
+    background-image: linear-gradient(
+      to top,
+      rgba(69, 213, 107, 0.73),
+      #45d56b
+    );
   }
   .show-sidebar {
     transform: translate(0);
