@@ -86,7 +86,7 @@ const Footer = () => {
 const Wrapper = styled.footer`
   background: var(--clr-black);
 
-  padding: 5rem 2rem;
+  padding: 5rem 2rem 2rem 2rem;
   color: var(--clr-white);
   .foot {
     display: grid;

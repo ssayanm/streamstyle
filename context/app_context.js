@@ -64,30 +64,6 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: SIDEBAR_CLOSE });
   };
 
-  const fetchPricelists = async (purl) => {
-    dispatch({ type: GET_PRICELISTS_BEGIN });
-    try {
-      const response = await axios.get(purl);
-      const pricelists = response.data;
-
-      dispatch({ type: GET_PRICELISTS_SUCCESS, payload: pricelists });
-    } catch (error) {
-      dispatch({ type: GET_PRICELISTS_ERROR });
-    }
-  };
-
-  const fetchSlider = async (surl) => {
-    dispatch({ type: GET_SLIDER_BEGIN });
-    try {
-      const response = await axios.get(surl);
-      const slider = response.data;
-
-      dispatch({ type: GET_SLIDER_SUCCESS, payload: slider });
-    } catch (error) {
-      dispatch({ type: GET_SLIDER_ERROR });
-    }
-  };
-
   const fetchCarRentals = async (crurl) => {
     dispatch({ type: GET_CARRENTALS_BEGIN });
     try {
@@ -112,29 +88,15 @@ export const AppProvider = ({ children }) => {
     }
   };
 
-  const fetchSingleProduct = async (produrl) => {
-    dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
-    try {
-      const response = await axios.get(produrl);
-      const singleProduct = response.data;
-
-      dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct });
-    } catch (error) {
-      dispatch({ type: GET_SINGLE_PRODUCT_ERROR });
-    }
-  };
-
-  useEffect(() => {
-    fetchPricelists(purl),
-      fetchSlider(surl),
-      fetchCarRentals(crurl),
-      fetchProducts(produrl);
-  }, []);
+  // useEffect(() => {
+  //   fetchPricelists(purl),
+  //     fetchSlider(surl),
+  //     fetchCarRentals(crurl),
+  //     fetchProducts(produrl);
+  // }, []);
 
   return (
-    <AppContext.Provider
-      value={{ ...state, openSidebar, closeSidebar, fetchSingleProduct }}
-    >
+    <AppContext.Provider value={{ ...state, openSidebar, closeSidebar }}>
       {children}
     </AppContext.Provider>
   );
