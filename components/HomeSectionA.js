@@ -17,32 +17,29 @@ const HomeSectionA = () => {
             your social channels.
           </p>
         </article>
-        <Link href="/">
-          <a>
-            <Image
-              alt="revo"
-              src="/images/bgsec.png"
-              width={1112}
-              height={793}
-              //   objectFit="cover"
-            />
-          </a>
-        </Link>
+        <div>
+          <Image
+            alt="revo"
+            src="/images/bgsec.png"
+            width={1112}
+            height={793}
+            //   objectFit="cover"
+          />
+        </div>
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  /* min-height: 50vh; */
-  /* background: var(--clr-primary-1); */
-  /* background-image: url("/images/circle.png"); */
-  /* background-repeat: no-repeat; */
-
   .container {
     display: grid;
     place-items: center;
-    padding: 7rem 2rem;
+    padding: 5rem 2rem;
+  }
+
+  .content {
+    text-align: center;
   }
 
   h3 {
@@ -53,12 +50,14 @@ const Wrapper = styled.section`
     /* max-width: 45em; */
     font-family: "MontSemiBold", sans-serif;
     margin-top: 2rem;
-    /* color: var(--clr-grey-3); */
-    font-size: 1rem;
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
   }
   .icon {
     width: 64px;
     height: 64px;
+    text-align: center;
   }
   @media (min-width: 992px) {
     .container {
@@ -81,6 +80,8 @@ const Wrapper = styled.section`
     }
     p {
       font-size: 40px;
+      text-align: left;
+      margin-bottom: 0rem;
     }
     .hero-btn {
       padding: 0.75rem 1.5rem;
@@ -94,6 +95,7 @@ const Wrapper = styled.section`
     }
     .content {
       padding-left: 5rem;
+      text-align: left;
     }
   }
 `;

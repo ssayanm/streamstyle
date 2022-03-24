@@ -8,17 +8,15 @@ const HomeSectionC = () => {
   return (
     <Wrapper>
       <div className="section-center1 container">
-        <Link href="/">
-          <a>
-            <Image
-              alt="revo"
-              src="/images/bgsec.png"
-              width={1112}
-              height={793}
-              //   objectFit="cover"
-            />
-          </a>
-        </Link>
+        <div className="onlydesktop">
+          <Image
+            alt="revo"
+            src="/images/bgsec.png"
+            width={1112}
+            height={793}
+            //   objectFit="cover"
+          />
+        </div>
         <article className="content">
           <h3>
             The Future Of <br />
@@ -43,6 +41,15 @@ const HomeSectionC = () => {
             without leaving the experience{" "}
           </p>
         </article>
+        <div className="onlymobile">
+          <Image
+            alt="revo"
+            src="/images/bgsec.png"
+            width={1112}
+            height={793}
+            //   objectFit="cover"
+          />
+        </div>
       </div>
     </Wrapper>
   );
@@ -57,18 +64,21 @@ const Wrapper = styled.section`
   .container {
     display: grid;
     place-items: center;
-    padding: 7rem 2rem;
+    padding: 5rem 2rem;
+    text-align: center;
   }
 
   h3 {
-    font-size: 2.3rem;
+    font-size: 2.7rem;
+  }
+  h5 {
+    font-size: 1.75rem;
   }
   p {
     /* max-width: 45em; */
     font-family: "MontSemiBold", sans-serif;
-    /* margin-top: 2rem; */
-    /* color: var(--clr-grey-3); */
-    font-size: 1rem;
+
+    font-size: 1.2rem;
   }
   .icon {
     width: 64px;
@@ -78,9 +88,10 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     .container {
       /* height: calc(90vh - 3rem); */
-      padding: 7rem 2rem;
+      padding: 5rem 0rem;
       grid-template-columns: 900px auto;
       gap: 1rem;
+      text-align: left;
     }
 
     h3 {
@@ -112,6 +123,7 @@ const Wrapper = styled.section`
     }
     .content {
       padding-left: 5rem;
+      padding-right: 7rem;
     }
 
     .left-space {

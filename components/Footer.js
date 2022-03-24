@@ -10,7 +10,6 @@ const Footer = () => {
     <Wrapper>
       <div className="foot">
         <div>
-          {" "}
           <Link href="/">
             <a>
               <Image
@@ -22,6 +21,9 @@ const Footer = () => {
               />
             </a>
           </Link>
+        </div>
+        <div className="onlymobile" style={{ textAlign: "right" }}>
+          <FaPlay className="icon" />
         </div>
         <div>
           <ul className="nav-links">
@@ -50,8 +52,6 @@ const Footer = () => {
               );
             })}
           </ul>
-        </div>
-        <div>
           <ul className="nav-links">
             <li>
               <a>Socials</a>
@@ -61,7 +61,17 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="onlydesktop">
+          <ul className="nav-links">
+            <li>
+              <a>Socials</a>
+            </li>
+            <li>
+              <FaLinkedin className="iconsocial" />
+            </li>
+          </ul>
+        </div>
+        <div className="onlydesktop ">
           <FaPlay className="icon" />
         </div>
       </div>
@@ -80,6 +90,8 @@ const Wrapper = styled.footer`
   color: var(--clr-white);
   .foot {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
   }
   hr {
     color: var(--clr-white);
@@ -88,11 +100,7 @@ const Wrapper = styled.footer`
   }
 
   p {
-    margin: 0.1rem;
     color: var(--clr-white);
-    font-weight: 300;
-    text-transform: none;
-    line-height: 1.25;
     text-align: center;
   }
 
@@ -100,11 +108,12 @@ const Wrapper = styled.footer`
     color: var(--clr-primary-1);
     width: 34px;
     height: 34px;
+    text-align: right;
   }
 
   .iconsocial {
-    width: 43px;
-    height: 43px;
+    width: 33px;
+    height: 33px;
   }
   .nav-links {
     /* display: flex; */
@@ -114,11 +123,8 @@ const Wrapper = styled.footer`
     }
     a {
       color: var(--clr-white);
-      font-size: 21px;
-      line-height: 1.2;
-      text-transform: capitalize;
-      letter-spacing: var(--spacing);
-      /* padding: 1rem; */
+      font-size: 1.2rem;
+
       &:hover {
         border-bottom: 2px solid var(--clr-primary-1);
       }
@@ -130,7 +136,22 @@ const Wrapper = styled.footer`
       grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
       gap: 4rem;
     }
+    .nav-links {
+      /* display: flex; */
+      justify-content: flex-end;
+      li {
+        margin: 0.5rem 0.5rem;
+      }
+      a {
+        color: var(--clr-white);
+        font-size: 21px;
+      }
+    }
+
+    .iconsocial {
+      width: 43px;
+      height: 43px;
+    }
   }
 `;
-
 export default Footer;

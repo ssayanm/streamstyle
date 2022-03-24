@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import Slider from "./Slider";
 import { social } from "../utils/constants";
 import Image from "next/image";
 
@@ -15,16 +14,24 @@ const HomeHero = () => {
             Use the most powerful live and VOD shopping platform with a
             frictionless buying experience.
           </p>
+          <div className="onlymobile">
+            <Image
+              alt="revo"
+              src="/images/herovideo.jpg"
+              width={826}
+              height={530}
+            />
+          </div>
           <div className="btn-section">
             <Link href="/">
-              <a className="btn-alt hero-btn"> Add to your shopify store</a>
+              <a className="btn-alt btn-shopify"> Add to your shopify store</a>
             </Link>
             <Link href="/">
-              <a className="btn hero-btn"> Get Started</a>
+              <a className="btn btn-start"> Get Started</a>
             </Link>
           </div>
 
-          <p>Available now on all platforms</p>
+          <p className="smallfont">Available now on all platforms</p>
           <ul className="social-icons">
             {social.map((socialIcon) => {
               const { id, url, icon } = socialIcon;
@@ -38,17 +45,15 @@ const HomeHero = () => {
             })}
           </ul>
         </article>
-        <Link href="/">
-          <a>
-            <Image
-              alt="revo"
-              src="/images/herovideo.jpg"
-              width={826}
-              height={530}
-              className="logo"
-            />
-          </a>
-        </Link>
+
+        <div className="onlydesktop">
+          <Image
+            alt="revo"
+            src="/images/herovideo.jpg"
+            width={826}
+            height={530}
+          />
+        </div>
       </div>
     </Wrapper>
   );
@@ -56,31 +61,34 @@ const HomeHero = () => {
 
 const Wrapper = styled.section`
   background: var(--clr-primary-1);
+  padding: 2rem 0;
   .container {
     display: grid;
     place-items: center;
   }
 
   h3 {
-    font-size: 2.3rem;
+    font-size: 2.7rem;
+    text-align: center;
   }
   p {
-    line-height: 1.5;
-
     margin-top: 2rem;
-    font-size: 1rem;
+    font-size: 1.75rem;
+    text-align: center;
   }
-
-  .hero-btn {
+  .smallfont {
+    font-size: 1.25rem;
+  }
+  .btn-shopify {
     margin-top: 1rem;
     text-align: center;
-    /* margin-bottom: 1rem; */
+    margin-bottom: 1.5rem;
   }
 
-  .hero-btn-alt {
+  .btn-start {
     text-align: center;
-    /* width: 60%; */
-    /* margin: 0 auto; */
+    width: 12rem;
+    margin: 0 auto;
   }
 
   .btn-section {
@@ -100,6 +108,7 @@ const Wrapper = styled.section`
     h3 {
       margin-bottom: 1.5rem;
       font-size: 72.5px;
+      text-align: left;
     }
     h4 {
       font-size: 39.5px;
@@ -110,22 +119,30 @@ const Wrapper = styled.section`
     }
     p {
       font-size: 28.5px;
+      text-align: left;
     }
-    .hero-btn {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
+    .smallfont {
+      font-size: 1.5rem;
+    }
+    .btn-shopify {
+      margin-top: 0rem;
+      text-align: center;
+      margin-bottom: 0rem;
     }
 
-    .hero-btn-alt {
-      margin-right: 2rem;
+    .btn-start {
+      text-align: center;
+      width: auto;
+      margin: 0 auto;
     }
 
     .btn-section {
       display: flex;
-      width: 30rem;
+      width: 31rem;
       align-items: center;
       flex-direction: row;
       justify-content: space-between;
+      margin-top: 2rem;
     }
   }
 `;

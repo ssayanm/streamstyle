@@ -8,8 +8,8 @@ const HomeSectionE = () => {
       <div className="title">
         <h3>Revo Video is word of mouth on steroids”</h3>
       </div>
-      <p>Get started today.</p>
-      <center className="space">
+      <p className="space">Get started today.</p>
+      <center>
         <Link href="/contact">
           <a className="btn"> Talk to Sales</a>
         </Link>
@@ -21,26 +21,20 @@ const HomeSectionE = () => {
 const Wrapper = styled.section`
   /* background-image: url("/images/circle.png"); */
 
-  padding: 7rem 2rem;
+  padding: 5rem 2rem;
 
   h3 {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     color: var(--clr-black);
   }
   p {
     text-align: center;
-    margin-bottom: 0rem;
-
-    font-size: 1rem;
+    /* margin-bottom: 0rem; */
+    /* margin-top: 2rem; */
+    font-family: "MontSemiBold", sans-serif;
+    font-size: 1.75rem;
   }
 
-  .icon {
-    width: 113px;
-    height: 113px;
-    margin: 0 auto;
-    display: flex;
-    margin-bottom: 2rem;
-  }
   @media (min-width: 992px) {
     .container {
       /* height: calc(90vh - 3rem); */
@@ -53,16 +47,9 @@ const Wrapper = styled.section`
       margin-bottom: 1.5rem;
       font-size: 67px;
     }
-    h4 {
-      font-size: 39.5px;
-      font-family: "MontLight", sans-serif;
-      margin-bottom: 1.5rem;
-      letter-spacing: normal;
-      line-height: 1.1;
-    }
+
     p {
       font-size: 35px;
-      font-family: "MontSemiBold", sans-serif;
     }
   }
 `;

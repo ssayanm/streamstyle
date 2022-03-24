@@ -5,7 +5,7 @@ import { services } from "../utils/constants";
 const HomeSectionB = () => {
   return (
     <Wrapper>
-      <div className="section-center1">
+      <div className="container">
         <article className="header">
           <h3>
             The features
@@ -100,26 +100,43 @@ const HomeSectionB = () => {
 };
 
 const Wrapper = styled.section`
+  padding: 5rem 0rem;
+  background: var(--clr-black);
+
+  h3 {
+    font-size: 2.7rem;
+  }
+
+  .heading {
+    font-size: 1.75rem;
+    margin: 1rem 0;
+  }
+
+  .desc {
+    font-size: 1.2rem;
+  }
+
   h3,
   h4 {
     color: var(--clr-white);
   }
-  padding: 7rem 0rem;
-
-  background: var(--clr-black);
+  .container {
+    padding: 0 2rem;
+    text-align: center;
+  }
 
   .header h3 {
     margin-bottom: 2rem;
   }
   p {
     margin-bottom: 0;
-    line-height: 1.8;
+    /* line-height: 1.3; */
     color: var(--clr-white);
   }
   .services-center {
     margin-top: 2rem;
     display: grid;
-    gap: 2.5rem;
+    gap: 2rem;
   }
   .service {
     background: var(--clr-primary-7);
@@ -132,11 +149,18 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
+    .container {
+      padding: 0 2rem;
+      text-align: left;
+    }
     .header {
-      display: grid;
-      grid-template-columns: 1fr 1fr auto;
       padding-left: 4rem;
     }
+
+    .services-center {
+      gap: 2.5rem;
+    }
+
     h3 {
       font-size: 63px;
     }

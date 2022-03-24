@@ -5,7 +5,7 @@ import { FaBars, FaMobileAlt, FaPhoneAlt } from "react-icons/fa";
 
 import Link from "next/link";
 import Image from "next/image";
-import { links, social } from "../utils/constants";
+import { links } from "../utils/constants";
 
 import { useAppContext } from "../context/app_context";
 
