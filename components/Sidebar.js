@@ -21,7 +21,7 @@ const Sidebar = () => {
             <a>
               <Image
                 alt="Revo"
-                src="/images/Revologo.png"
+                src="/images/Revo_Logo_white.png"
                 width={172}
                 height={69}
                 className="logo"
