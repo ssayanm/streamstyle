@@ -1,7 +1,5 @@
 import HomeHero from "../components/HomeHero";
-import Services from "../components/Services";
 import Meta from "../components/Meta";
-
 import HomeSectionA from "../components/HomeSectionA";
 import HomeSectionB from "../components/HomeSectionB";
 import HomeSectionC from "../components/HomeSectionC";
