@@ -89,27 +89,27 @@ const Wrapper = styled.section`
     .container {
       /* height: calc(90vh - 3rem); */
       padding: 5rem 0rem;
-      grid-template-columns: 900px auto;
+      grid-template-columns: 1fr 1fr;
       gap: 1rem;
       text-align: left;
     }
 
     h3 {
       margin-bottom: 1.5rem;
-      font-size: 60px;
+      font-size: 4.3rem;
     }
     h4 {
-      font-size: 39.5px;
+      font-size: 2.5rem;
       font-family: "MontLight", sans-serif;
       margin-bottom: 1.5rem;
       letter-spacing: normal;
       line-height: 1.1;
     }
     h5 {
-      font-size: 32px;
+      font-size: 2rem;
     }
     p {
-      font-size: 24px;
+      /* font-size: 1.2rem; */
     }
     .hero-btn {
       padding: 0.75rem 1.5rem;

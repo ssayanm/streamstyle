@@ -90,7 +90,7 @@ const HomeSectionB = () => {
               src="/images/features.png"
               width={1200}
               height={750}
-              objectFit="cover"
+              // objectFit="cover"
             />
           </div>
         </div>
@@ -162,21 +162,22 @@ const Wrapper = styled.section`
     }
 
     h3 {
-      font-size: 63px;
+      font-size: 4.3rem;
     }
 
     .heading {
-      font-size: 32.5px;
+      font-size: 2rem;
     }
 
     .desc {
-      font-size: 20px;
+      font-size: 1.25rem;
     }
   }
   @media (min-width: 576px) {
     .services-center {
-      grid-template-columns: 480px 430px auto;
+      grid-template-columns: 1fr 1fr 1fr;
       padding-left: 4rem;
+      align-items: center;
     }
   }
   @media (min-width: 1280px) {

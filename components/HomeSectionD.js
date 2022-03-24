@@ -102,7 +102,7 @@ const Wrapper = styled.section`
 
     h3 {
       margin-bottom: 1.5rem;
-      font-size: 67px;
+      font-size: 4.3rem;
     }
     h4 {
       font-size: 39.5px;
