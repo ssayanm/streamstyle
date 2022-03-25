@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { links } from "../utils/constants";
+import { categories } from "../utils/constants";
 
 import { useAppContext } from "../context/app_context";
 import { FaMobileAlt, FaTimes } from "react-icons/fa";
@@ -8,13 +8,13 @@ import { FaMobileAlt, FaTimes } from "react-icons/fa";
 import styled from "styled-components";
 import { BsPlayCircleFill } from "react-icons/bs";
 
-const Sidebar = () => {
-  const { isSidebarOpen, closeSidebar } = useAppContext();
+const SubMenu = () => {
+  const { isSubMenuOpen, closeSubMenu } = useAppContext();
 
   return (
-    <SidebarContainer>
+    <SubMenuContainer>
       <aside
-        className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
+        className={`${isSubMenuOpen ? "sidebar show-sidebar" : "sidebar"}`}
       >
         <div className="sidebar-header">
           <Link href="/">
@@ -28,18 +28,18 @@ const Sidebar = () => {
               />
             </a>
           </Link>
-          <button className="close-btn" onClick={closeSidebar}>
+          <button className="close-btn" onClick={closeSubMenu}>
             <FaTimes />
           </button>
         </div>
 
-        <ul className="links">
-          {links.map((link) => {
+        <ul className="categories">
+          {categories.map((link) => {
             const { id, url, text } = link;
             return (
               <li key={id}>
                 <Link href={url}>
-                  <a onClick={closeSidebar}>{text}</a>
+                  <a onClick={closeSubMenu}>{text}</a>
                 </Link>
               </li>
             );
@@ -47,11 +47,11 @@ const Sidebar = () => {
         </ul>
         <BsPlayCircleFill className="icon" />
       </aside>
-    </SidebarContainer>
+    </SubMenuContainer>
   );
 };
 
-const SidebarContainer = styled.div`
+const SubMenuContainer = styled.div`
   text-align: center;
   .sidebar-header {
     display: flex;
@@ -80,10 +80,10 @@ const SidebarContainer = styled.div`
     justify-self: center;
     height: 45px;
   }
-  .links {
+  .categories {
     margin-bottom: 2rem;
   }
-  .links a {
+  .categories a {
     display: block;
     text-align: center;
     font-size: 1.75rem;
@@ -94,7 +94,7 @@ const SidebarContainer = styled.div`
     letter-spacing: var(--spacing);
   }
 
-  .links a:hover {
+  .categories a:hover {
     /* padding: 1rem 1.5rem;
     padding-left: 2rem;
     background: var(--clr-grey-1);
@@ -145,4 +145,4 @@ const SidebarContainer = styled.div`
   }
 `;
 
-export default Sidebar;
+export default SubMenu;

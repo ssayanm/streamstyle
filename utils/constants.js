@@ -6,7 +6,7 @@ export const links = [
   {
     id: 1,
     text: "How It Works",
-    url: "/",
+    url: "/how-it-works",
   },
   {
     id: 2,
@@ -21,12 +21,12 @@ export const links = [
   {
     id: 4,
     text: "Inspiration",
-    url: "/",
+    url: "/inspiration",
   },
   {
     id: 5,
     text: "Pricing",
-    url: "/",
+    url: "/pricing",
   },
   {
     id: 6,
@@ -119,5 +119,39 @@ export const categories = [
     text: "Direct Marketers",
     url: "/",
     components: <FaShopify />,
+  },
+];
+
+export const pricing = [
+  {
+    id: 1,
+    title: "DTC",
+    info: "Any DTC brand on e-commerce platforms. Download the app and go live",
+    desc: [
+      "5% of gross sales generated on the platform",
+      "No monthly fee",
+      "No code environment",
+      "No obligation",
+    ],
+  },
+  {
+    id: 2,
+    title: "Brands White Label",
+    info: "For brands that want to customize the consumer experience.",
+    desc: [
+      "5% of gross sales generated on the platform",
+      "Volume discounts",
+      "No code environment",
+    ],
+  },
+  {
+    id: 3,
+    title: "Revo for Enterprise SaaS",
+    info: "For large companies who want to fully customize and even extend the Revo platform within their ecosystem",
+    desc: [
+      "5% of gross sales generated on the platform",
+      "Volume discounts",
+      "No code environment",
+    ],
   },
 ];

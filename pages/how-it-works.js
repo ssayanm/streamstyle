@@ -1,6 +1,4 @@
 import Meta from "../components/Meta";
-import Brands from "../components/Brands";
-
 import Categories from "../components/Categories";
 
 export default function HowItWorks() {
