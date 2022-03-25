@@ -52,14 +52,16 @@ const Footer = () => {
               );
             })}
           </ul>
-          <ul className="nav-links">
-            <li>
-              <a>Socials</a>
-            </li>
-            <li>
-              <FaLinkedin className="iconsocial" />
-            </li>
-          </ul>
+          <div className="onlymobile">
+            <ul className="nav-links">
+              <li>
+                <a>Socials</a>
+              </li>
+              <li>
+                <FaLinkedin className="iconsocial" />
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="onlydesktop">
           <ul className="nav-links">

@@ -36,6 +36,7 @@ Variables
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #232323;
+  --clr-light: #7f7f7f;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 1.5rem;
@@ -175,6 +176,13 @@ p {
 
 .onlymobile {
   display: block !important;
+}
+
+.greendot {
+  /* width: 3rem;
+  height: 3rem; */
+
+  color: var(--clr-primary-1);
 }
 
 .loading {
