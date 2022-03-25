@@ -16,7 +16,7 @@ const Categories = () => {
     if (showLinks) {
       linksContainerRef.current.style.height = `${linksHeight}px`;
     } else {
-      linksContainerRef.current.style.height = "0px";
+      linksContainerRef.current.style.className = "navheight";
     }
   }, [showLinks]);
 
@@ -28,9 +28,6 @@ const Categories = () => {
       <h1 className="title text-center onlydesktop">Revo for</h1>
       <div className="nav-center links-container" ref={linksContainerRef}>
         <div className="nav-links" ref={linksRef}>
-          <button className="nav-toggle" onClick={toggleLinks}>
-            <FaAngleDown />
-          </button>
           {categories.map((link, index) => {
             const { id, text } = link;
             return (
@@ -43,6 +40,9 @@ const Categories = () => {
               </button>
             );
           })}
+          <button className="nav-toggle" onClick={toggleLinks}>
+            <FaAngleDown />
+          </button>
         </div>
       </div>
       {components}
@@ -53,7 +53,9 @@ const Categories = () => {
 const NavContainer = styled.nav`
   margin: 0 auto;
   /* padding: 2rem 0; */
-
+  .navheight {
+    height: 0px;
+  }
   .nav-center {
     width: max-content;
     margin: 0 auto;
@@ -83,12 +85,6 @@ const NavContainer = styled.nav`
     overflow: hidden;
     transition: var(--transition);
     background: var(--clr-primary-1);
-  }
-
-  .active-btn {
-    /* box-shadow: -2px 0 var(--clr-primary-5); */
-    border-bottom: 1px solid var(--clr-white);
-    opacity: 1;
   }
 
   .jbtn {
@@ -131,7 +127,7 @@ const NavContainer = styled.nav`
       display: none;
     }
     .nav-center {
-      width: max-content;
+      width: 90vw;
       margin: 0 auto;
       padding: 2rem;
       border-radius: 4rem;
@@ -141,11 +137,12 @@ const NavContainer = styled.nav`
     .nav-links {
       display: flex;
       justify-content: center;
+      align-items: center;
     }
 
     .jbtn {
       color: var(--clr-white);
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-family: "MontSemiBold";
       /* line-height: 1.07; */
       opacity: 0.38;
@@ -156,6 +153,10 @@ const NavContainer = styled.nav`
       &:hover {
         border-bottom: 1px solid var(--clr-white);
       }
+    }
+    .active-btn {
+      border-bottom: 1px solid var(--clr-white);
+      opacity: 1;
     }
   }
 `;

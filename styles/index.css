@@ -132,6 +132,9 @@ p {
   line-height: 1.3;
   font-family: "Mont";
 }
+img {
+  border-radius: 1rem;
+}
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 3rem;

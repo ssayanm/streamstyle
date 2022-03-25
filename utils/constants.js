@@ -155,3 +155,23 @@ export const pricing = [
     ],
   },
 ];
+
+export const channels = [
+  {
+    id: 1,
+    title: "Title here",
+  },
+  {
+    id: 2,
+    title: "Title here",
+  },
+
+  {
+    id: 3,
+    title: "Title here",
+  },
+  {
+    id: 4,
+    title: "Title here",
+  },
+];
