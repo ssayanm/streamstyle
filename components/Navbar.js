@@ -24,6 +24,7 @@ const Nav = () => {
                 width={172}
                 height={69}
                 className="logo"
+                priority
               />
             </a>
           </Link>
@@ -49,7 +50,7 @@ const Nav = () => {
 };
 
 const NavContainer = styled.nav`
-  background: var(--clr-primary-1);
+  /* background: var(--clr-primary-1); */
   height: 9rem;
   display: flex;
   align-items: center;

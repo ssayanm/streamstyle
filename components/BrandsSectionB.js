@@ -4,34 +4,37 @@ import Link from "next/link";
 import { BsPlayCircleFill } from "react-icons/bs";
 import Image from "next/image";
 
-const HomeSectionA = () => {
+const BrandsSectionB = () => {
   return (
     <Wrapper>
-      <div className="section-center1 container">
-        <article className="content">
-          <BsPlayCircleFill className="icon" />
-          <p>
-            Best in class shopping experience and storytelling platform that
-            helps you to engage longer and more frequently with your consumers.
-            Monetize live, pre-recorded and edited video and broadcast across
-            your social channels.
-          </p>
-        </article>
+      <div className="container">
         <div>
           <Image
             alt="revo"
-            src="/images/bgsec.png"
-            width={1112}
-            height={793}
+            src="/images/Weekly_Schedule.jpg"
+            width={900}
+            height={478}
             //   objectFit="cover"
           />
         </div>
+        <article className="content">
+          <BsPlayCircleFill className="icon" />
+          <h1 className="title">Create A Weekly Show Schedule</h1>
+          <p>
+            Leverage existing talent to create new weekly branded shows. 
+            Develop a slate of programming tied to live shopping events that
+            drive consumers back to your properties and enhance engagement and
+            activation.  
+          </p>
+        </article>
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
+  /* background: var(--clr-black); */
+  /* color: var(--clr-white); */
   .container {
     display: grid;
     place-items: center;
@@ -43,7 +46,7 @@ const Wrapper = styled.section`
   }
 
   p {
-    line-height: 1.3;
+    /* color: var(--clr-white); */
     /* max-width: 45em; */
     font-family: "MontSemiBold", sans-serif;
     margin-top: 2rem;
@@ -76,7 +79,6 @@ const Wrapper = styled.section`
       line-height: 1.1;
     }
     p {
-      font-size: 40px;
       text-align: left;
       margin-bottom: 0rem;
     }
@@ -97,4 +99,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default HomeSectionA;
+export default BrandsSectionB;

@@ -1,12 +1,6 @@
-import {
-  FaApple,
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaShopify,
-  FaWhatsappSquare,
-} from "react-icons/fa";
-import { MdLocalCarWash, MdDirectionsCar } from "react-icons/md";
+import { FaApple, FaShopify } from "react-icons/fa";
 import { GrAndroid } from "react-icons/gr";
+import Brands from "../components/Brands";
 
 export const links = [
   {
@@ -98,5 +92,32 @@ export const social = [
     id: 5,
     icon: <FaShopify className="social-icon "></FaShopify>,
     url: "#",
+  },
+];
+
+export const categories = [
+  {
+    id: 1,
+    text: "Brands",
+    url: "/",
+    components: <Brands />,
+  },
+  {
+    id: 2,
+    text: "Creators",
+    url: "/",
+    components: <FaApple />,
+  },
+  {
+    id: 3,
+    text: "Publishers & Distributors",
+    url: "/",
+    components: <GrAndroid />,
+  },
+  {
+    id: 4,
+    text: "Direct Marketers",
+    url: "/",
+    components: <FaShopify />,
   },
 ];

@@ -7,13 +7,14 @@ const HomeSectionD = () => {
     <Wrapper>
       <div className="container">
         <BsPlayCircle className="icon" />
-        <div className="title">
-          <h3>
+        <div className="text-center">
+          <h1 className="title">
             Integrate seamlessly into
             <br />
             your cart and payments
-          </h3>
+          </h1>
         </div>
+
         <div className="section-center featured">
           <div>
             <p className="header">One-click install</p>

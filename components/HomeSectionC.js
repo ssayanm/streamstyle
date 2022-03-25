@@ -18,7 +18,7 @@ const HomeSectionC = () => {
           />
         </div>
         <article className="content">
-          <h3>
+          <h3 className="title">
             The Future Of <br />
             Shopping Is LIVE
           </h3>
@@ -68,9 +68,6 @@ const Wrapper = styled.section`
     text-align: center;
   }
 
-  h3 {
-    font-size: 2.7rem;
-  }
   h5 {
     font-size: 1.75rem;
   }
@@ -94,10 +91,6 @@ const Wrapper = styled.section`
       text-align: left;
     }
 
-    h3 {
-      margin-bottom: 1.5rem;
-      font-size: 4.3rem;
-    }
     h4 {
       font-size: 2.5rem;
       font-family: "MontLight", sans-serif;

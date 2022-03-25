@@ -129,6 +129,7 @@ p {
   margin-bottom: 1rem;
   color: var(--clr-black);
   line-height: 1.3;
+  font-family: "Mont";
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -173,7 +174,7 @@ p {
 }
 
 .onlymobile {
-  display: inline-block !important;
+  display: block !important;
 }
 
 .loading {
@@ -188,18 +189,14 @@ p {
 }
 
 .btn {
-  /* text-transform: uppercase; */
   background: var(--clr-black);
   color: var(--clr-white);
-  /* padding: 0.375rem 0.75rem; */
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  /* line-height: 1.2; */
   letter-spacing: var(--spacing);
   display: inline-block;
   font-family: "MontSemiBold";
   transition: var(--transition);
-  /* font-size: 0.875rem; */
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
@@ -236,8 +233,13 @@ p {
 }
 
 .title {
+  font-size: 2.7rem;
+  margin-bottom: 2rem;
+  font-family: "MontBold";
+}
+
+.text-center {
   text-align: center;
-  color: var(--clr-grey-2);
 }
 
 .page-100 {
@@ -282,12 +284,16 @@ p {
     width: 90vw;
   }
 
+  .title {
+    font-size: 4rem;
+  }
+
   .onlymobile {
     display: none !important;
   }
 
   .onlydesktop {
-    display: inline-block !important;
+    display: block !important;
   }
   .social-icons {
     display: flex;
