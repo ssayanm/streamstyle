@@ -1,3 +1,4 @@
+import { Row, Col, Card } from "antd";
 import { useState } from "react";
 import styled from "styled-components";
 import { channels } from "../utils/constants";
@@ -7,33 +8,44 @@ const InspirationSectionB = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <Wrapper>
-      <div className="container">
-        <div className="text-center">
-          <h1 className="title">Discover all channels</h1>
+    <>
+      <Row gutter={16} style={{ padding: "0 4rem" }}>
+        {channels.map((channel) => (
+          <Col md={6} xs={12} key={channel.id} style={{ marginBottom: "2rem" }}>
+            <Card className="title">
+              <h1>{channel.title}</h1>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+      <Wrapper>
+        <div className="container">
+          <div className="text-center">
+            <h1 className="title">Discover all channels</h1>
+          </div>
+          <div className="section-center featured">
+            {toggle ? (
+              <div className="channels">
+                {channels.map((channel) => {
+                  return <GreenBox channel={channel} key={channel.id} />;
+                })}
+              </div>
+            ) : (
+              <div className="channels">
+                {channels.slice(0, 4).map((channel) => {
+                  return <GreenBox channel={channel} key={channel.id} />;
+                })}
+              </div>
+            )}
+          </div>
+          <center>
+            <button onClick={() => setToggle(!toggle)} className="btn">
+              View More
+            </button>
+          </center>
         </div>
-        <div className="section-center featured">
-          {toggle ? (
-            <div className="channels">
-              {channels.map((channel) => {
-                return <GreenBox channel={channel} key={channel.id} />;
-              })}
-            </div>
-          ) : (
-            <div className="channels">
-              {channels.slice(0, 4).map((channel) => {
-                return <GreenBox channel={channel} key={channel.id} />;
-              })}
-            </div>
-          )}
-        </div>
-        <center>
-          <button onClick={() => setToggle(!toggle)} className="btn">
-            View More
-          </button>
-        </center>
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </>
   );
 };
 

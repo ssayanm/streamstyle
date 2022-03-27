@@ -6,31 +6,12 @@ import { FaAngleDown } from "react-icons/fa";
 import Sider from "./Sider";
 
 const Categories = () => {
-  // const [showLinks, setShowLinks] = useState(false);
-  // const linksContainerRef = useRef(null);
-  // const linksRef = useRef(null);
-  // const toggleLinks = () => {
-  //   setShowLinks(!showLinks);
-  // };
-  // useEffect(() => {
-  //   const linksHeight = linksRef.current.getBoundingClientRect().height;
-  //   if (showLinks) {
-  //     linksContainerRef.current.style.height = `${linksHeight}px`;
-  //   } else {
-  //     linksContainerRef.current.style.className = "0px";
-  //   }
-  // }, [showLinks]);
-
   const [value, setValue] = useState(0);
 
   const { components } = categories[value];
   return (
     <NavContainer>
       <h1 className="title text-center onlydesktop">Revo for</h1>
-      {/*<div style={{maxHeight: ''}}>
-      <p>View All {</p>
-      {showAll ? {for(4) <Row></Row>} : {}}
-      </div>*/}
       <div className="nav-center links-container">
         <div className="nav-links">
           {categories.map((link, index) => {

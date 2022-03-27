@@ -20,86 +20,85 @@ const text = `
 
 const PriCing = () => {
   return (
-    <Wrapper>
-      <div className="section-center container">
-        <h1 className="title text-center ">Princing & Plans</h1>
+    <>
+      <Wrapper>
+        <div className="section-center container">
+          <h1 className="title text-center ">Princing & Plans</h1>
 
-        <div className="boxes">
-          <div className="box left">
-            <h5>Revo for</h5>
-            <h3>DTC</h3>
-            <p>
-              Any DTC brand on e-commerce platforms. Download the app and go
-              live
-            </p>
-            <ul>
-              <li>5% of gross sales generated on the platform. </li>
-              <li>No monthly fee</li>
-              <li> No code environment</li>
-              <li>No obligation</li>
-            </ul>
-            <center className="btnn">
-              <Link href="/">
-                <a className="btn-alt">Talk to Sales</a>
-              </Link>
-            </center>
-          </div>
-          <div className="box content">
-            <h5>Revo for</h5>
-            <h3>Brands White Label</h3>
-            <p>For brands that want to customize the consumer experience.</p>
-            <ul>
-              <li>5% of gross sales generated on the platform</li>
-              <li> Volume discounts </li>
-              <li>No code environment</li>
-            </ul>
+          <div className="boxes">
+            <div className="box left">
+              <h5>Revo for</h5>
+              <h3>DTC</h3>
+              <p>
+                Any DTC brand on e-commerce platforms. Download the app and go
+                live
+              </p>
+              <ul>
+                <li>5% of gross sales generated on the platform. </li>
+                <li>No monthly fee</li>
+                <li> No code environment</li>
+                <li>No obligation</li>
+              </ul>
+              <center className="btnn">
+                <Link href="/">
+                  <a className="btn-alt">Talk to Sales</a>
+                </Link>
+              </center>
+            </div>
+            <div className="box content">
+              <h5>Revo for</h5>
+              <h3>Brands White Label</h3>
+              <p>For brands that want to customize the consumer experience.</p>
+              <ul>
+                <li>5% of gross sales generated on the platform</li>
+                <li> Volume discounts </li>
+                <li>No code environment</li>
+              </ul>
 
-            <center className="btnn">
-              <Link href="/">
-                <a className="btn-alt">Talk to Sales</a>
-              </Link>
-            </center>
-          </div>
-          <div className="box right">
-            <h5>Revo for</h5>
-            <h3>Enterprise SaaS</h3>
-            <p>
-              For large companies who want to fully customize and even extend
-              the Revo platform within their ecosystem
-            </p>
+              <center className="btnn">
+                <Link href="/">
+                  <a className="btn-alt">Talk to Sales</a>
+                </Link>
+              </center>
+            </div>
+            <div className="box right">
+              <h5>Revo for</h5>
+              <h3>Enterprise SaaS</h3>
+              <p>
+                For large companies who want to fully customize and even extend
+                the Revo platform within their ecosystem
+              </p>
 
-            <center className="btnn">
-              <Link href="/">
-                <a className="btn-alt">Talk to Sales</a>
-              </Link>
-            </center>
+              <center className="btnn">
+                <Link href="/">
+                  <a className="btn-alt">Talk to Sales</a>
+                </Link>
+              </center>
+            </div>
           </div>
         </div>
-        <section className="info">
-          <Collapse
-            defaultActiveKey={["1"]}
-            onChange={callback}
-            bordered={false}
-            defaultActiveKey={["1"]}
-            expandIcon={({ isActive }) => <GoDash rotate={isActive ? 90 : 0} />}
-            className="site-collapse-custom-collapse"
-          >
-            <Panel header="Hide plan features" key="1">
-              {featuresDTC.map((features) => {
-                const { id, feature, text } = features;
-                return (
-                  <div key={id}>
-                    <h5>{feature}</h5>
-                    <p>{text}</p>
-                  </div>
-                );
-              })}
-            </Panel>
-          </Collapse>
-        </section>
-      </div>
-      <Price />
-    </Wrapper>
+        <Price />
+      </Wrapper>
+      <Collapse
+        defaultActiveKey={["1"]}
+        onChange={callback}
+        bordered={false}
+        expandIcon={({ isActive }) => <GoDash rotate={isActive ? 90 : 0} />}
+        className="site-collapse-custom-collapse"
+      >
+        <Panel header="Hide plan features" key="1">
+          {featuresDTC.map((features) => {
+            const { id, feature, text } = features;
+            return (
+              <div key={id}>
+                <h5>{feature}</h5>
+                <p>{text}</p>
+              </div>
+            );
+          })}
+        </Panel>
+      </Collapse>
+    </>
   );
 };
 

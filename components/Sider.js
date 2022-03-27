@@ -43,9 +43,9 @@ const Sider = () => {
               onClick={() => setValue(index)}
               icon={<MailOutlined />}
               title={text}
-              components={components}
+              // components={components}
             >
-              {components}
+              {link.components}
             </SubMenu>
           );
         })}

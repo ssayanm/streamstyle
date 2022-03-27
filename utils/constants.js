@@ -2,6 +2,7 @@ import { FaApple, FaShopify } from "react-icons/fa";
 import { GoPrimitiveDot } from "react-icons/go";
 import { GrAndroid } from "react-icons/gr";
 import Brands from "../components/Brands";
+import HomeSectionB from "../components/HomeSectionB";
 
 export const links = [
   {
@@ -107,7 +108,7 @@ export const categories = [
     id: 2,
     text: "Creators",
     url: "/",
-    components: <FaApple />,
+    components: <HomeSectionB />,
   },
   {
     id: 3,
@@ -242,7 +243,6 @@ export const featuredChannels = [
 export const featuresDTC = [
   {
     id: 1,
-
     feature: "Do I have to allow the use of cookies?",
     text: <GoPrimitiveDot className="greendot" />,
   },
