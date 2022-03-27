@@ -1,6 +1,22 @@
 import styled from "styled-components";
 import Link from "next/link";
 import Price from "./Price";
+import { featuresDTC } from "../utils/constants";
+import { Collapse } from "antd";
+import { FaApple } from "react-icons/fa";
+import { GoDash } from "react-icons/go";
+
+const { Panel } = Collapse;
+
+function callback(key) {
+  console.log(key);
+}
+
+const text = `
+  A dog is a type of domesticated animal.
+  Known for its loyalty and faithfulness,
+  it can be found as a welcome guest in many households across the world.
+`;
 
 const PriCing = () => {
   return (
@@ -59,6 +75,28 @@ const PriCing = () => {
             </center>
           </div>
         </div>
+        <section className="info">
+          <Collapse
+            defaultActiveKey={["1"]}
+            onChange={callback}
+            bordered={false}
+            defaultActiveKey={["1"]}
+            expandIcon={({ isActive }) => <GoDash rotate={isActive ? 90 : 0} />}
+            className="site-collapse-custom-collapse"
+          >
+            <Panel header="Hide plan features" key="1">
+              {featuresDTC.map((features) => {
+                const { id, feature, text } = features;
+                return (
+                  <div key={id}>
+                    <h5>{feature}</h5>
+                    <p>{text}</p>
+                  </div>
+                );
+              })}
+            </Panel>
+          </Collapse>
+        </section>
       </div>
       <Price />
     </Wrapper>

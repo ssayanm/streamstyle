@@ -6,7 +6,7 @@ import { GrClose } from "react-icons/gr";
 const Price = () => {
   return (
     <Wrapper>
-      <div class="grid">
+      <div className="grid">
         <span>
           <strong>Features</strong>
         </span>

@@ -1,4 +1,5 @@
 import { FaApple, FaShopify } from "react-icons/fa";
+import { GoPrimitiveDot } from "react-icons/go";
 import { GrAndroid } from "react-icons/gr";
 import Brands from "../components/Brands";
 
@@ -173,5 +174,97 @@ export const channels = [
   {
     id: 4,
     title: "Title here",
+  },
+  {
+    id: 5,
+    title: "Title here",
+  },
+  {
+    id: 6,
+    title: "Title here",
+  },
+
+  {
+    id: 7,
+    title: "Title here",
+  },
+  {
+    id: 8,
+    title: "Title here",
+  },
+];
+
+export const featuredChannels = [
+  {
+    id: 1,
+    title: "Title here",
+    image: "/images/image4.png",
+  },
+  {
+    id: 2,
+    title: "Title here",
+    image: "/images/image3.png",
+  },
+
+  {
+    id: 3,
+    title: "Title here",
+    image: "/images/image4.png",
+  },
+  {
+    id: 4,
+    title: "Title here",
+    image: "/images/image3.png",
+  },
+  {
+    id: 5,
+    title: "Title here",
+    image: "/images/image4.png",
+  },
+  {
+    id: 6,
+    title: "Title here",
+    image: "/images/image3.png",
+  },
+
+  {
+    id: 7,
+    title: "Title here",
+    image: "/images/image4.png",
+  },
+  {
+    id: 8,
+    title: "Title here",
+    image: "/images/image3.png",
+  },
+];
+
+export const featuresDTC = [
+  {
+    id: 1,
+
+    feature: "Do I have to allow the use of cookies?",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 2,
+    feature: "Do I have to allow the use of cookies?",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+];
+
+export const featuresBrands = [
+  {
+    id: 1,
+    feature: "Do I have to allow the use of cookies?",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+];
+
+export const featuresEnterprise = [
+  {
+    id: 1,
+    feature: "Do I have to allow the use of cookies?",
+    text: <GoPrimitiveDot className="greendot" />,
   },
 ];

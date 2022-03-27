@@ -1,50 +1,29 @@
-import { useState } from "react";
 import styled from "styled-components";
+
 import { channels } from "../utils/constants";
 import GreenBox from "./GreenBox";
 
-const InspirationSectionB = () => {
-  const [toggle, setToggle] = useState(false);
-
+const Channels = () => {
   return (
     <Wrapper>
-      <div className="container">
-        <div className="text-center">
-          <h1 className="title">Discover all channels</h1>
-        </div>
-        <div className="section-center featured">
-          {toggle ? (
-            <div className="channels">
-              {channels.map((channel) => {
-                return <GreenBox channel={channel} key={channel.id} />;
-              })}
-            </div>
-          ) : (
-            <div className="channels">
-              {channels.slice(0, 4).map((channel) => {
-                return <GreenBox channel={channel} key={channel.id} />;
-              })}
-            </div>
-          )}
-        </div>
-        <center>
-          <button onClick={() => setToggle(!toggle)} className="btn">
-            View More
-          </button>
-        </center>
+      <div className="section-center featured">
+        <ul className="channels">
+          {channels.map((channel) => {
+            //   const { id, url, text } = link;
+            return <GreenBox channel={channel} />;
+          })}
+        </ul>
       </div>
     </Wrapper>
   );
 };
 
+export default Channels;
+
 const Wrapper = styled.section`
   /* min-height: 50vh; */
   background: var(--clr-black);
   color: var(--clr-white);
-
-  .title {
-    color: var(--clr-white);
-  }
   /* background-image: url("/images/circle.png"); */
   /* background-repeat: no-repeat; */
 
@@ -140,5 +119,3 @@ const Wrapper = styled.section`
     }
   }
 `;
-
-export default InspirationSectionB;

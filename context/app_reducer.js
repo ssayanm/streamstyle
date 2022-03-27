@@ -18,6 +18,8 @@ import {
   GET_SINGLE_PRODUCT_ERROR,
   SUBMENU_OPEN,
   SUBMENU_CLOSE,
+  CHANNEL_OPEN,
+  CHANNEL_CLOSE,
 } from "./app_actions";
 
 const app_reducer = (state, action) => {
@@ -33,6 +35,12 @@ const app_reducer = (state, action) => {
 
     case SUBMENU_CLOSE:
       return { ...state, isSubMenuOpen: false };
+
+    case CHANNEL_OPEN:
+      return { ...state, isChannelOpen: true };
+
+    case CHANNEL_CLOSE:
+      return { ...state, isChannelOpen: false };
 
     // case GET_PRICELISTS_BEGIN:
     //   return { ...state, pricelists_loading: true };

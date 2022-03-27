@@ -7,6 +7,8 @@ import {
   SIDEBAR_CLOSE,
   SUBMENU_OPEN,
   SUBMENU_CLOSE,
+  CHANNEL_OPEN,
+  CHANNEL_CLOSE,
   // GET_PRICELISTS_BEGIN,
   // GET_PRICELISTS_SUCCESS,
   // GET_PRICELISTS_ERROR,
@@ -29,6 +31,7 @@ import { createContext } from "react";
 const initialState = {
   isSidebarOpen: false,
   isSubMenuOpen: false,
+  isChannelOpen: false,
   // pricelists_loading: false,
   // pricelists_error: false,
   // pricelists: [],
@@ -75,6 +78,13 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: SUBMENU_CLOSE });
   };
 
+  const openChannel = () => {
+    dispatch({ type: CHANNEL_OPEN });
+  };
+
+  const closeChannel = () => {
+    dispatch({ type: CHANNEL_CLOSE });
+  };
   // const fetchCarRentals = async (crurl) => {
   //   dispatch({ type: GET_CARRENTALS_BEGIN });
   //   try {
@@ -108,7 +118,15 @@ export const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ ...state, openSidebar, closeSidebar, openSubMenu, closeSubMenu }}
+      value={{
+        ...state,
+        openSidebar,
+        closeSidebar,
+        openSubMenu,
+        closeSubMenu,
+        openChannel,
+        closeChannel,
+      }}
     >
       {children}
     </AppContext.Provider>
