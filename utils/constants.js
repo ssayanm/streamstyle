@@ -499,3 +499,34 @@ export const featuresEnterprise = [
     text: "N/A",
   },
 ];
+
+export const featuresPrice = [
+  {
+    id: 1,
+    feature: "One Click Catalog Sync",
+    dtc: true,
+    brands: true,
+    enterprise: true,
+  },
+  {
+    id: 2,
+    feature: "abc",
+    dtc: true,
+    brands: true,
+    enterprise: true,
+  },
+  {
+    id: 3,
+    feature: "One Click Catalog Sync",
+    dtc: true,
+    brands: true,
+    enterprise: "For Free",
+  },
+  {
+    id: 4,
+    feature: "One Click Catalog Sync",
+    dtc: true,
+    brands: true,
+    enterprise: false,
+  },
+];

@@ -3,7 +3,12 @@ import React from "react";
 import Link from "next/link";
 import Price from "./Price";
 import { featuresDTC } from "../utils/constants";
-import { Card, Col, Collapse, Row } from "antd";
+import { Card, Col, Collapse, Row, Table } from "antd";
+
+import { GoPrimitiveDot } from "react-icons/go";
+
+import { GrClose } from "react-icons/gr";
+import { featuresPrice } from "../utils/constants";
 
 import { GoDash } from "react-icons/go";
 
@@ -14,6 +19,31 @@ function callback(key) {
 }
 
 const PriCing = () => {
+  const columnsfordtc = [
+    {
+      title: "Features",
+      dataIndex: "feature",
+      key: "feature",
+    },
+    {
+      title: "for DTC",
+      dataIndex: "dtc",
+      key: "dtc",
+      render: (text, record) => (
+        <div>
+          {typeof record.dtc === "boolean" ? (
+            record.dtc ? (
+              <GoPrimitiveDot className="greendot" />
+            ) : (
+              <GrClose />
+            )
+          ) : (
+            record.dtc
+          )}
+        </div>
+      ),
+    },
+  ];
   return (
     <>
       <Wrapper>
@@ -48,27 +78,12 @@ const PriCing = () => {
                 className="site-collapse-custom-collapse onlymobile"
               >
                 <Panel header="Hide plan features" key="1">
-                  <Row>
-                    <Col span="18">
-                      <strong style={{ textAlign: "left" }}>Features</strong>
-                    </Col>
-                    <Col span="6">
-                      <strong>for DTC</strong>
-                    </Col>
-                    {featuresDTC.map((features) => {
-                      const { id, feature, text } = features;
-                      return (
-                        <React.Fragment key={id}>
-                          <Col span={18} className="featuretitle">
-                            <p>{feature}</p>
-                          </Col>
-                          <Col span={6}>
-                            <p>{text}</p>
-                          </Col>
-                        </React.Fragment>
-                      );
-                    })}
-                  </Row>
+                  <Table
+                    dataSource={featuresPrice}
+                    columns={columnsfordtc}
+                    pagination={false}
+                    className="onlymobile"
+                  />
                 </Panel>
               </Collapse>
             </Col>

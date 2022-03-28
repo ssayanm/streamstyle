@@ -2,11 +2,149 @@ import styled from "styled-components";
 import { GoPrimitiveDot } from "react-icons/go";
 
 import { GrClose } from "react-icons/gr";
+import { featuresPrice } from "../utils/constants";
+import { Table } from "antd";
 
 const Price = () => {
+  const columnsfordesktop = [
+    {
+      title: "Features",
+      dataIndex: "feature",
+      key: "feature",
+    },
+    {
+      title: "for DTC",
+      dataIndex: "dtc",
+      key: "dtc",
+      render: (text, record) => (
+        <div>
+          {typeof record.dtc === "boolean" ? (
+            record.dtc ? (
+              <GoPrimitiveDot className="greendot" />
+            ) : (
+              <GrClose />
+            )
+          ) : (
+            record.dtc
+          )}
+        </div>
+      ),
+    },
+    {
+      title: "for Brands",
+      dataIndex: "brands",
+      key: "brands",
+      render: (text, record) => (
+        <div>
+          {typeof record.brands === "boolean" ? (
+            record.brands ? (
+              <GoPrimitiveDot className="greendot" />
+            ) : (
+              <GrClose />
+            )
+          ) : (
+            record.brands
+          )}
+        </div>
+      ),
+    },
+    {
+      title: "for Enterprise",
+      dataIndex: "enterprise",
+      key: "enterprise",
+      render: (text, record) => (
+        <div>
+          {typeof record.enterprise === "boolean" ? (
+            record.enterprise ? (
+              <GoPrimitiveDot className="greendot" />
+            ) : (
+              <GrClose />
+            )
+          ) : (
+            record.enterprise
+          )}
+        </div>
+      ),
+    },
+  ];
+
+  const columnsforbrands = [
+    {
+      title: "Features",
+      dataIndex: "feature",
+      key: "feature",
+    },
+
+    {
+      title: "for Brands",
+      dataIndex: "brands",
+      key: "brands",
+      render: (text, record) => (
+        <div>
+          {typeof record.brands === "boolean" ? (
+            record.brands ? (
+              <GoPrimitiveDot className="greendot" />
+            ) : (
+              <GrClose />
+            )
+          ) : (
+            record.brands
+          )}
+        </div>
+      ),
+    },
+  ];
+
+  const columnsforenterprise = [
+    {
+      title: "Features",
+      dataIndex: "feature",
+      key: "feature",
+    },
+
+    {
+      title: "for Enterprise",
+      dataIndex: "enterprise",
+      key: "enterprise",
+      render: (text, record) => (
+        <div>
+          {typeof record.enterprise === "boolean" ? (
+            record.enterprise ? (
+              <GoPrimitiveDot className="greendot" />
+            ) : (
+              <GrClose />
+            )
+          ) : (
+            record.enterprise
+          )}
+        </div>
+      ),
+    },
+  ];
+
   return (
-    <Wrapper className="onlydesktop">
-      <div className="grid">
+    <Wrapper>
+      <Table
+        dataSource={featuresPrice}
+        columns={columnsfordesktop}
+        pagination={false}
+        className="onlydesktop"
+      />
+
+      <Table
+        dataSource={featuresPrice}
+        columns={columnsforbrands}
+        pagination={false}
+        className="onlymobile"
+      />
+
+      <Table
+        dataSource={featuresPrice}
+        columns={columnsforenterprise}
+        pagination={false}
+        className="onlymobile"
+      />
+      {/*<div className="grid">
         <span>
           <strong>Features</strong>
         </span>
@@ -133,7 +271,7 @@ const Price = () => {
         <span>N/A</span>
         <span>N/A</span>
         <span>N/A</span>
-      </div>
+  </div>*/}
     </Wrapper>
   );
 };
@@ -154,7 +292,7 @@ const Wrapper = styled.section`
   .grid > span {
     padding: 1.5rem 0rem;
     border-bottom: 1px solid black;
-
+    font-family: "Mont", sans-serif;
     strong {
       font-family: "MontBold";
     }
