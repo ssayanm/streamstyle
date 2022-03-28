@@ -2,13 +2,36 @@ import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { categories } from "../utils/constants";
 
+import { Tabs } from "antd";
+
+const { TabPane } = Tabs;
+
+function callback(key) {
+  console.log(key);
+}
+
 const Categories = () => {
   const [value, setValue] = useState(0);
-
   const { components } = categories[value];
+
   return (
     <NavContainer>
       <h1 className="title text-center onlydesktop">Revo for</h1>
+      <Tabs
+        defaultActiveKey="1"
+        onChange={callback}
+        centered="true"
+        className="onlydesktop"
+      >
+        {categories.map((link, index) => {
+          const { id, text, components } = link;
+          return (
+            <TabPane tab={text} key={id}>
+              {components}
+            </TabPane>
+          );
+        })}
+      </Tabs>
       <div className="nav-center links-container onlydesktop">
         <div className="nav-links">
           {categories.map((link, index) => {
@@ -25,6 +48,7 @@ const Categories = () => {
           })}
         </div>
       </div>
+
       <div className="onlymobile navmob">
         <select className="mobselect">
           {categories.map((link, index) => {
@@ -51,11 +75,22 @@ const NavContainer = styled.nav`
     width: 90vw;
     margin: 0 auto;
   }
-  select {
-    /* margin: 50px; */
-    /* width: 150px; */
-    /* padding: 5px 35px 5px 5px; */
-    /* font-size: 16px; */
+  .ant-tabs {
+    /* margin: 0 2rem; */
+
+    width: 90vw !important;
+    margin: 0 auto;
+  }
+
+  .ant-tabs-nav-wrap {
+    border-radius: 3rem;
+    background: var(--clr-primary-1);
+    padding: 1rem 0;
+  }
+
+  .ant-tabs-tab {
+    font-size: 1.5rem;
+    color: var(--clr-white);
   }
   .mobselect {
     border-radius: 3rem;

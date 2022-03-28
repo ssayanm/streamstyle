@@ -8,32 +8,74 @@ const InspirationSectionC = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <Wrapper>
-      <Row gutter={[16, 24]}>
-        {featuredChannels.map((channel) => (
-          <Col span={12} key={channel.id}>
-            <Card className="channels">
-              <Image
-                alt="Revo"
-                src={channel.image}
-                width={100}
-                height={120}
-                className="logo"
-                objectFit="cover"
-              />
-            </Card>
-          </Col>
-        ))}
-      </Row>
-      <Row gutter={16} justify="space-between" style={{ padding: "0 1rem" }}>
-        <Col>
-          <h5 className="featitle">Featured Channels</h5>
+      <Row gutter={[16, 24]} justify="center">
+        <Col span={10}>
+          <h5 className="featitle1">Featured Channels</h5>
+          <Row>
+            {featuredChannels.map((channel) => (
+              <Col span={8} className="gutter-box" key={channel.id}>
+                <Image
+                  alt="Revo"
+                  src={channel.image}
+                  width={170}
+                  height={170}
+                  className="logo"
+                  objectFit="cover"
+                />
+              </Col>
+            ))}
+          </Row>
+
+          <h5 className="featitle1">Featured Channels</h5>
+          <Row>
+            {featuredChannels.map((channel) => (
+              <Col span={8} className="gutter-box" key={channel.id}>
+                <Image
+                  alt="Revo"
+                  src={channel.image}
+                  width={170}
+                  height={170}
+                  className="logo"
+                  objectFit="cover"
+                />
+              </Col>
+            ))}
+          </Row>
         </Col>
-        <Col>
-          <button onClick={() => setToggle(!toggle)} className="fbtn">
-            View More
-          </button>
+        <Col span={10}>
+          <h5 className="featitle1">Featured Channels</h5>
+          <Row>
+            {featuredChannels.map((channel) => (
+              <Col span={8} className="gutter-box" key={channel.id}>
+                <Image
+                  alt="Revo"
+                  src={channel.image}
+                  width={170}
+                  height={170}
+                  className="logo"
+                  objectFit="cover"
+                />
+              </Col>
+            ))}
+          </Row>
+          <h5 className="featitle1">Featured Channels</h5>
+          <Row>
+            {featuredChannels.map((channel) => (
+              <Col span={8} className="gutter-box" key={channel.id}>
+                <Image
+                  alt="Revo"
+                  src={channel.image}
+                  width={170}
+                  height={170}
+                  className="logo"
+                  objectFit="cover"
+                />
+              </Col>
+            ))}
+          </Row>
         </Col>
       </Row>
+
       <Row gutter={8}>
         {toggle
           ? featuredChannels.map((channel) => (
@@ -73,6 +115,10 @@ export default InspirationSectionC;
 
 const Wrapper = styled.section`
   padding: 2rem 0rem;
+
+  .gutter-box {
+    padding: 0.75rem 0rem;
+  }
 
   .fbtn {
     background: none;
