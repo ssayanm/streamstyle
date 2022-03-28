@@ -91,7 +91,7 @@ const Brands = () => {
             Leverage existing talent to create new weekly branded shows. 
             Develop a slate of programming tied to live shopping events that
             drive consumers back to your properties and enhance engagement and
-            activation.  
+            activation.
           </p>
         </article>
         <div className="onlymobile">
@@ -174,6 +174,9 @@ const Wrapper = styled.section`
     p {
       color: var(--clr-white);
     }
+    .title {
+      color: var(--clr-white);
+    }
   }
 
   .section-b {
@@ -191,6 +194,10 @@ const Wrapper = styled.section`
     padding: 2rem;
 
     p {
+      color: var(--clr-white);
+    }
+
+    .title {
       color: var(--clr-white);
     }
   }

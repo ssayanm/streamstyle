@@ -3,7 +3,6 @@ import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import styled from "styled-components";
 import { channels } from "../utils/constants";
-import GreenBox from "./GreenBox";
 
 const InspirationSectionB = () => {
   const [toggle, setToggle] = useState(false);

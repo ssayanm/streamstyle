@@ -1,36 +1,136 @@
-import Link from "next/link";
+import { Row, Col, Card } from "antd";
+import Image from "next/image";
 import { useState } from "react";
 import styled from "styled-components";
 import { featuredChannels } from "../utils/constants";
-import FeaturedBox from "./FeaturedBox";
 
 const InspirationSectionA = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <Wrapper>
-      <div className="container">
-        {" "}
-        <div className="section-center ">
-          <div className="fbtn-container">
-            <button className="fbtn" onClick={() => setToggle(!toggle)}>
-              View All
-            </button>
-          </div>
-          {toggle ? (
-            <div className="channels">
-              {featuredChannels.map((channel) => {
-                return <FeaturedBox channel={channel} key={channel.id} />;
-              })}
-            </div>
-          ) : (
-            <div className="channels">
-              {featuredChannels.slice(0, 4).map((channel) => {
-                return <FeaturedBox channel={channel} key={channel.id} />;
-              })}
-            </div>
-          )}
-        </div>
-      </div>
+      <Row gutter={16} justify="space-between" style={{ padding: "0 1rem" }}>
+        <Col>
+          <h5 className="featitle">Featured Channels</h5>
+        </Col>
+        <Col>
+          <button onClick={() => setToggle(!toggle)} className="fbtn">
+            View More
+          </button>
+        </Col>
+      </Row>
+      <Row gutter={8}>
+        {toggle
+          ? featuredChannels.map((channel) => (
+              <Col md={6} xs={12} key={channel.id}>
+                <Card className="channels">
+                  <Image
+                    alt="Revo"
+                    src={channel.image}
+                    width={400}
+                    height={500}
+                    className="logo"
+                    objectFit="cover"
+                  />
+                </Card>
+              </Col>
+            ))
+          : featuredChannels.slice(0, 4).map((channel) => (
+              <Col md={6} xs={12} key={channel.id}>
+                <Card className="channels">
+                  <Image
+                    alt="Revo"
+                    src={channel.image}
+                    width={400}
+                    height={500}
+                    className="logo"
+                    objectFit="cover"
+                  />
+                </Card>
+              </Col>
+            ))}
+      </Row>
+      <Row gutter={16} justify="space-between" style={{ padding: "0 1rem" }}>
+        <Col>
+          <h5 className="featitle">Featured Channels</h5>
+        </Col>
+        <Col>
+          <button onClick={() => setToggle(!toggle)} className="fbtn">
+            View More
+          </button>
+        </Col>
+      </Row>
+      <Row gutter={8}>
+        {toggle
+          ? featuredChannels.map((channel) => (
+              <Col md={6} xs={12} key={channel.id}>
+                <Card className="channels">
+                  <Image
+                    alt="Revo"
+                    src={channel.image}
+                    width={400}
+                    height={500}
+                    className="logo"
+                    objectFit="cover"
+                  />
+                </Card>
+              </Col>
+            ))
+          : featuredChannels.slice(0, 4).map((channel) => (
+              <Col md={6} xs={12} key={channel.id}>
+                <Card className="channels">
+                  <Image
+                    alt="Revo"
+                    src={channel.image}
+                    width={400}
+                    height={500}
+                    className="logo"
+                    objectFit="cover"
+                  />
+                </Card>
+              </Col>
+            ))}
+      </Row>
+      <Row gutter={16} justify="space-between" style={{ padding: "0 1rem" }}>
+        <Col>
+          <h5 className="featitle">Featured Channels</h5>
+        </Col>
+        <Col>
+          <button onClick={() => setToggle(!toggle)} className="fbtn">
+            View More
+          </button>
+        </Col>
+      </Row>
+      <Row gutter={8}>
+        {toggle
+          ? featuredChannels.map((channel) => (
+              <Col md={6} xs={12} key={channel.id}>
+                <Card className="channels">
+                  <Image
+                    alt="Revo"
+                    src={channel.image}
+                    width={400}
+                    height={500}
+                    className="logo"
+                    objectFit="cover"
+                  />
+                </Card>
+              </Col>
+            ))
+          : featuredChannels.slice(0, 4).map((channel) => (
+              <Col md={6} xs={12} key={channel.id}>
+                <Card className="channels">
+                  <Image
+                    alt="Revo"
+                    src={channel.image}
+                    width={400}
+                    height={500}
+                    className="logo"
+                    objectFit="cover"
+                  />
+                </Card>
+              </Col>
+            ))}
+      </Row>
     </Wrapper>
   );
 };
@@ -38,13 +138,8 @@ const InspirationSectionA = () => {
 export default InspirationSectionA;
 
 const Wrapper = styled.section`
-  .container {
-    padding: 5rem 2rem;
-  }
+  padding: 2rem 0rem;
 
-  .fbtn-container {
-    text-align: right;
-  }
   .fbtn {
     background: none;
     color: var(--clr-black);
@@ -54,16 +149,18 @@ const Wrapper = styled.section`
   }
 
   .channels {
-    display: grid;
+    border: none;
+  }
+
+  .featitle {
+    background: var(--clr-black);
+    color: var(--clr-white);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
   }
   @media (min-width: 992px) {
-    .container {
-    }
+    padding: 4rem;
 
-    .channels {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 2rem;
-    }
     .title {
       font-size: 2rem;
     }

@@ -30,12 +30,7 @@ const Categories = () => {
           {categories.map((link, index) => {
             const { id, text } = link;
             return (
-              <option
-                key={id}
-                onClick={() => setValue(index)}
-
-                // className={`jbtn ${index === value && "active-btn"}`}
-              >
+              <option key={id} onClick={() => setValue(index)}>
                 {text}
               </option>
             );
