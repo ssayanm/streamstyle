@@ -1,6 +1,7 @@
 import InspirationHero from "../components/InspirationHero";
 import InspirationSectionA from "../components/InspirationSectionA";
 import InspirationSectionB from "../components/InspirationSectionB";
+import InspirationSectionC from "../components/InspirationSectionC";
 import Meta from "../components/Meta";
 
 export default function Inspiration() {
@@ -10,6 +11,7 @@ export default function Inspiration() {
       <InspirationHero />
       <InspirationSectionA />
       <InspirationSectionB />
+      <InspirationSectionC />
     </main>
   );
 }

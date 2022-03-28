@@ -40,7 +40,7 @@ const HomeSectionD = () => {
           </div>
         </div>
         <center>
-          <Link href="/contact">
+          <Link href="/">
             <a className="btn"> Learn More</a>
           </Link>
         </center>

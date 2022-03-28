@@ -10,7 +10,7 @@ const HomeSectionE = () => {
       </div>
       <p className="space">Get started today.</p>
       <center>
-        <Link href="/contact">
+        <Link href="/">
           <a className="btn"> Talk to Sales</a>
         </Link>
       </center>
