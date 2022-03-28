@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import styled from "styled-components";
 import { featuredChannels } from "../utils/constants";
+import FeaturedChannels from "./FeaturedChannels";
 
 const InspirationSectionA = () => {
   const [toggle, setToggle] = useState(false);
@@ -22,30 +23,12 @@ const InspirationSectionA = () => {
         {toggle
           ? featuredChannels.map((channel) => (
               <Col md={6} xs={12} key={channel.id}>
-                <Card className="channels">
-                  <Image
-                    alt="Revo"
-                    src={channel.image}
-                    width={400}
-                    height={500}
-                    className="logo"
-                    objectFit="cover"
-                  />
-                </Card>
+                <FeaturedChannels channel={channel} />
               </Col>
             ))
           : featuredChannels.slice(0, 4).map((channel) => (
               <Col md={6} xs={12} key={channel.id}>
-                <Card className="channels">
-                  <Image
-                    alt="Revo"
-                    src={channel.image}
-                    width={400}
-                    height={500}
-                    className="logo"
-                    objectFit="cover"
-                  />
-                </Card>
+                <FeaturedChannels channel={channel} />
               </Col>
             ))}
       </Row>
@@ -63,30 +46,12 @@ const InspirationSectionA = () => {
         {toggle
           ? featuredChannels.map((channel) => (
               <Col md={6} xs={12} key={channel.id}>
-                <Card className="channels">
-                  <Image
-                    alt="Revo"
-                    src={channel.image}
-                    width={400}
-                    height={500}
-                    className="logo"
-                    objectFit="cover"
-                  />
-                </Card>
+                <FeaturedChannels channel={channel} />
               </Col>
             ))
           : featuredChannels.slice(0, 4).map((channel) => (
               <Col md={6} xs={12} key={channel.id}>
-                <Card className="channels">
-                  <Image
-                    alt="Revo"
-                    src={channel.image}
-                    width={400}
-                    height={500}
-                    className="logo"
-                    objectFit="cover"
-                  />
-                </Card>
+                <FeaturedChannels channel={channel} />
               </Col>
             ))}
       </Row>
@@ -104,30 +69,12 @@ const InspirationSectionA = () => {
         {toggle
           ? featuredChannels.map((channel) => (
               <Col md={6} xs={12} key={channel.id}>
-                <Card className="channels">
-                  <Image
-                    alt="Revo"
-                    src={channel.image}
-                    width={400}
-                    height={500}
-                    className="logo"
-                    objectFit="cover"
-                  />
-                </Card>
+                <FeaturedChannels channel={channel} />
               </Col>
             ))
           : featuredChannels.slice(0, 4).map((channel) => (
               <Col md={6} xs={12} key={channel.id}>
-                <Card className="channels">
-                  <Image
-                    alt="Revo"
-                    src={channel.image}
-                    width={400}
-                    height={500}
-                    className="logo"
-                    objectFit="cover"
-                  />
-                </Card>
+                <FeaturedChannels channel={channel} />
               </Col>
             ))}
       </Row>
