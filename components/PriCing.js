@@ -102,7 +102,7 @@ const PriCing = () => {
             </Col>
           </Row>
 
-          <div className="boxes">
+          <div className="boxes" style={{ display: "none" }}>
             <div className="box left">
               <h5>Revo for</h5>
               <h3>DTC</h3>
