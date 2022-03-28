@@ -193,6 +193,40 @@ export const channels = [
     id: 8,
     title: "Title here",
   },
+  {
+    id: 9,
+    title: "Title here",
+  },
+  {
+    id: 10,
+    title: "Title here",
+  },
+  {
+    id: 11,
+    title: "Title here",
+  },
+
+  {
+    id: 12,
+    title: "Title here",
+  },
+  {
+    id: 13,
+    title: "Title here",
+  },
+  {
+    id: 14,
+    title: "Title here",
+  },
+
+  {
+    id: 15,
+    title: "Title here",
+  },
+  {
+    id: 16,
+    title: "Title here",
+  },
 ];
 
 export const featuredChannels = [

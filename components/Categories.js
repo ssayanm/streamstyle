@@ -1,9 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { categories } from "../utils/constants";
-import { useAppContext } from "../context/app_context";
-import { FaAngleDown } from "react-icons/fa";
-import Sider from "./Sider";
 
 const Categories = () => {
   const [value, setValue] = useState(0);
@@ -12,7 +9,7 @@ const Categories = () => {
   return (
     <NavContainer>
       <h1 className="title text-center onlydesktop">Revo for</h1>
-      <div className="nav-center links-container">
+      <div className="nav-center links-container onlydesktop">
         <div className="nav-links">
           {categories.map((link, index) => {
             const { id, text } = link;
@@ -28,6 +25,23 @@ const Categories = () => {
           })}
         </div>
       </div>
+      <div className="onlymobile navmob">
+        <select className="mobselect">
+          {categories.map((link, index) => {
+            const { id, text } = link;
+            return (
+              <option
+                key={id}
+                onClick={() => setValue(index)}
+
+                // className={`jbtn ${index === value && "active-btn"}`}
+              >
+                {text}
+              </option>
+            );
+          })}
+        </select>
+      </div>
 
       {components}
     </NavContainer>
@@ -37,16 +51,42 @@ const Categories = () => {
 const NavContainer = styled.nav`
   margin: 0 auto;
   /* padding: 2rem 0; */
-  .navheight {
-    height: 0px;
+
+  .navmob {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  select {
+    /* margin: 50px; */
+    /* width: 150px; */
+    /* padding: 5px 35px 5px 5px; */
+    /* font-size: 16px; */
+  }
+  .mobselect {
+    border-radius: 3rem;
+    padding: 1rem;
+    box-shadow: none;
+    font-size: 1.5rem;
+    width: 100%;
+    font-family: "MontBold";
+    border: none;
+    text-align: center;
+    color: var(--clr-white);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: url(/images/white-down-arrow.png) 93% / 10% no-repeat
+      var(--clr-primary-1);
+  }
+
+  select::-ms-expand {
+    display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
   }
   .nav-center {
     width: max-content;
     margin: 0 auto;
     padding: 1rem;
-    /* border-radius: 4rem; */
-    /* max-width: var(--max-width); */
-    /* background: var(--clr-primary-1); */
   }
   .nav-header {
     display: flex;

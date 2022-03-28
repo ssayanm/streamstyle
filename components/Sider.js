@@ -1,55 +1,57 @@
-import { Menu } from "antd";
-
-import {
-  AppstoreOutlined,
-  MailOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
 import { useState } from "react";
 import { categories } from "../utils/constants";
 
-const { SubMenu } = Menu;
+import { Select } from "antd";
+import Brands from "./Brands";
+import HomeSectionB from "./HomeSectionB";
+import styledComponents from "styled-components";
 
-// submenu keys of first level
-const rootSubmenuKeys = ["sub1", "sub2", "sub4"];
+const { Option } = Select;
 
 const Sider = () => {
-  const [openKeys, setOpenKeys] = useState(["sub1"]);
+  const [selected, setSelected] = useState(0);
   const [value, setValue] = useState(0);
   const { components } = categories[value];
-
-  const onOpenChange = (keys) => {
-    const latestOpenKey = keys.find((key) => openKeys.indexOf(key) === -1);
-    if (rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
-      setOpenKeys(keys);
-    } else {
-      setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
-    }
-  };
+  const { acomponents } = categories[selected];
 
   return (
     <>
-      <Menu
-        mode="inline"
-        openKeys={openKeys}
-        onOpenChange={onOpenChange}
-        style={{ width: 256 }}
+      <Select
+        defaultValue="Brands"
+        style={{ width: 120 }}
+        // onSelect={handleChange}
       >
+        {categories.map((link, index) => {
+          const { id, text, components } = link;
+          return (
+            <Option
+              key={index}
+              value={text}
+              onChange={() => setSelected(index)}
+            >
+              {text}
+            </Option>
+          );
+        })}
+      </Select>
+
+      <select name="cars" id="cars">
         {categories.map((link, index) => {
           const { id, text } = link;
           return (
-            <SubMenu
+            <option
               key={id}
               onClick={() => setValue(index)}
-              icon={<MailOutlined />}
-              title={text}
-              // components={components}
+              className={`jbtn ${index === value && "active-btn"}`}
             >
-              {link.components}
-            </SubMenu>
+              {text}
+            </option>
           );
         })}
-      </Menu>
+      </select>
+
+      {/* <div>{selected === "Brands" ? <Brands /> : <HomeSectionB />}</div>*/}
+      <div>{components}</div>
     </>
   );
 };

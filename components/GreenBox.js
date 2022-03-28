@@ -80,9 +80,9 @@ const Wrapper = styled.section`
     }
 
     .greenbox {
-      width: 25rem;
+      width: max-content;
 
-      height: 20rem;
+      /* height: 20rem; */
     }
   }
 `;
