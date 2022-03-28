@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import Link from "next/link";
-import Price from "./Price";
-import { featuresDTC } from "../utils/constants";
+
 import { Card, Col, Collapse, Row, Table } from "antd";
 
 import { GoPrimitiveDot } from "react-icons/go";
@@ -23,14 +22,14 @@ const PriCing = () => {
     {
       title: "Features",
       dataIndex: "feature",
-      key: "feature",
+      key: "id",
     },
     {
       title: "for DTC",
       dataIndex: "dtc",
-      key: "dtc",
+      key: "id",
       render: (text, record) => (
-        <div>
+        <div key={record.id}>
           {typeof record.dtc === "boolean" ? (
             record.dtc ? (
               <GoPrimitiveDot className="greendot" />
@@ -44,133 +43,170 @@ const PriCing = () => {
       ),
     },
   ];
-  return (
-    <>
-      <Wrapper>
-        <div className="section-center container">
-          <h1 className="title text-center ">Princing & Plans</h1>
 
-          <Row justify="space-around" align="middle" className="boxx">
-            <Col md={7} sm={24} className="box">
-              <h5>Revo for</h5>
-              <h3>DTC</h3>
-              <p>
-                Any DTC brand on e-commerce platforms. Download the app and go
-                live
-              </p>
-              <ul>
-                <li>5% of gross sales generated on the platform. </li>
-                <li>No monthly fee</li>
-                <li> No code environment</li>
-                <li>No obligation</li>
-              </ul>
+  const columnsforbrands = [
+    {
+      title: "Features",
+      dataIndex: "feature",
+      key: "id",
+    },
 
-              <Link href="/">
-                <a className="btn-alt">Talk to Sales</a>
-              </Link>
-              <Collapse
-                defaultActiveKey={["1"]}
-                onChange={callback}
-                bordered={false}
-                expandIcon={({ isActive }) => (
-                  <GoDash rotate={isActive ? 90 : 0} />
-                )}
-                className="site-collapse-custom-collapse onlymobile"
-              >
-                <Panel header="Hide plan features" key="1">
-                  <Table
-                    dataSource={featuresPrice}
-                    columns={columnsfordtc}
-                    pagination={false}
-                    className="onlymobile"
-                  />
-                </Panel>
-              </Collapse>
-            </Col>
-            <Col md={7} sm={24} className="box boxmiddle">
-              <h5>Revo for</h5>
-              <h3>Brands White Label</h3>
-              <p>For brands that want to customize the consumer experience.</p>
-              <ul>
-                <li>5% of gross sales generated on the platform</li>
-                <li> Volume discounts </li>
-                <li>No code environment</li>
-              </ul>
-
-              <Link href="/">
-                <a className="btn-alt">Talk to Sales</a>
-              </Link>
-            </Col>
-            <Col md={7} sm={24} className="box">
-              <h5>Revo for</h5>
-              <h3>Enterprise SaaS</h3>
-              <p>
-                For large companies who want to fully customize and even extend
-                the Revo platform within their ecosystem
-              </p>
-
-              <span className="btnn">
-                <Link href="/">
-                  <a className="btn-alt">Talk to Sales</a>
-                </Link>
-              </span>
-            </Col>
-          </Row>
-
-          <div className="boxes" style={{ display: "none" }}>
-            <div className="box left">
-              <h5>Revo for</h5>
-              <h3>DTC</h3>
-              <p>
-                Any DTC brand on e-commerce platforms. Download the app and go
-                live
-              </p>
-              <ul>
-                <li>5% of gross sales generated on the platform. </li>
-                <li>No monthly fee</li>
-                <li> No code environment</li>
-                <li>No obligation</li>
-              </ul>
-
-              <Link href="/">
-                <a className="btn-alt">Talk to Sales</a>
-              </Link>
-            </div>
-            <div className="box content">
-              <h5>Revo for</h5>
-              <h3>Brands White Label</h3>
-              <p>For brands that want to customize the consumer experience.</p>
-              <ul>
-                <li>5% of gross sales generated on the platform</li>
-                <li> Volume discounts </li>
-                <li>No code environment</li>
-              </ul>
-
-              <center className="btnn">
-                <Link href="/">
-                  <a className="btn-alt">Talk to Sales</a>
-                </Link>
-              </center>
-            </div>
-            <div className="box right">
-              <h5>Revo for</h5>
-              <h3>Enterprise SaaS</h3>
-              <p>
-                For large companies who want to fully customize and even extend
-                the Revo platform within their ecosystem
-              </p>
-
-              <center className="btnn">
-                <Link href="/">
-                  <a className="btn-alt">Talk to Sales</a>
-                </Link>
-              </center>
-            </div>
-          </div>
+    {
+      title: "for Brands",
+      dataIndex: "brands",
+      key: "id",
+      render: (text, record) => (
+        <div key={record.id}>
+          {typeof record.brands === "boolean" ? (
+            record.brands ? (
+              <GoPrimitiveDot className="greendot" />
+            ) : (
+              <GrClose />
+            )
+          ) : (
+            record.brands
+          )}
         </div>
-        <Price />
-      </Wrapper>
-    </>
+      ),
+    },
+  ];
+
+  const columnsforenterprise = [
+    {
+      title: "Features",
+      dataIndex: "feature",
+      key: "id",
+    },
+
+    {
+      title: "for Enterprise",
+      dataIndex: "enterprise",
+      key: "id",
+      render: (text, record) => (
+        <div key={record.id}>
+          {typeof record.enterprise === "boolean" ? (
+            record.enterprise ? (
+              <GoPrimitiveDot className="greendot" />
+            ) : (
+              <GrClose />
+            )
+          ) : (
+            record.enterprise
+          )}
+        </div>
+      ),
+    },
+  ];
+  return (
+    <Wrapper>
+      <div className="section-center container">
+        <h1 className="title text-center ">Princing & Plans</h1>
+
+        <Row justify="space-around" align="middle" className="boxx">
+          <Col md={7} sm={24} className="box">
+            <h5>Revo for</h5>
+            <h3>DTC</h3>
+            <p>
+              Any DTC brand on e-commerce platforms. Download the app and go
+              live
+            </p>
+            <ul>
+              <li>5% of gross sales generated on the platform. </li>
+              <li>No monthly fee</li>
+              <li> No code environment</li>
+              <li>No obligation</li>
+            </ul>
+
+            <Link href="/">
+              <a className="btn-alt">Talk to Sales</a>
+            </Link>
+            <Collapse
+              defaultActiveKey={["10"]}
+              onChange={callback}
+              bordered={false}
+              expandIcon={({ isActive }) => (
+                <GoDash rotate={isActive ? 90 : 0} />
+              )}
+              className="site-collapse-custom-collapse onlymobile"
+            >
+              <Panel header="Hide plan features" key="10">
+                <Table
+                  dataSource={featuresPrice}
+                  columns={columnsfordtc}
+                  pagination={false}
+                  className="onlymobile"
+                />
+              </Panel>
+            </Collapse>
+          </Col>
+          <Col md={7} sm={24} className="box boxmiddle">
+            <h5>Revo for</h5>
+            <h3>Brands White Label</h3>
+            <p>For brands that want to customize the consumer experience.</p>
+            <ul>
+              <li>5% of gross sales generated on the platform</li>
+              <li> Volume discounts </li>
+              <li>No code environment</li>
+            </ul>
+
+            <Link href="/">
+              <a className="btn-alt">Talk to Sales</a>
+            </Link>
+
+            <Collapse
+              defaultActiveKey={["12"]}
+              onChange={callback}
+              bordered={false}
+              expandIcon={({ isActive }) => (
+                <GoDash rotate={isActive ? 90 : 0} />
+              )}
+              className="site-collapse-custom-collapse onlymobile"
+            >
+              <Panel header="Hide plan features" key="12">
+                <Table
+                  dataSource={featuresPrice}
+                  columns={columnsforbrands}
+                  pagination={false}
+                  className="onlymobile"
+                />
+              </Panel>
+            </Collapse>
+          </Col>
+          <Col md={7} sm={24} className="box">
+            <h5>Revo for</h5>
+            <h3>Enterprise SaaS</h3>
+            <p>
+              For large companies who want to fully customize and even extend
+              the Revo platform within their ecosystem
+            </p>
+
+            <span className="btnn">
+              <Link href="/">
+                <a className="btn-alt">Talk to Sales</a>
+              </Link>
+            </span>
+            <Collapse
+              defaultActiveKey={["1"]}
+              onChange={callback}
+              bordered={false}
+              expandIcon={({ isActive }) => (
+                <GoDash rotate={isActive ? 90 : 0} />
+              )}
+              className="site-collapse-custom-collapse onlymobile"
+            >
+              <Panel header="Hide plan features" key="1">
+                <Table
+                  dataSource={featuresPrice}
+                  columns={columnsforenterprise}
+                  pagination={false}
+                  className="onlymobile"
+                />
+              </Panel>
+            </Collapse>
+          </Col>
+        </Row>
+      </div>
+    </Wrapper>
   );
 };
 
@@ -296,3 +332,58 @@ const Wrapper = styled.section`
 `;
 
 export default PriCing;
+
+{
+  /*
+<div className="boxes" style={{ display: "none" }}>
+<div className="box left">
+  <h5>Revo for</h5>
+  <h3>DTC</h3>
+  <p>
+    Any DTC brand on e-commerce platforms. Download the app and go
+    live
+  </p>
+  <ul>
+    <li>5% of gross sales generated on the platform. </li>
+    <li>No monthly fee</li>
+    <li> No code environment</li>
+    <li>No obligation</li>
+  </ul>
+
+  <Link href="/">
+    <a className="btn-alt">Talk to Sales</a>
+  </Link>
+</div>
+<div className="box content">
+  <h5>Revo for</h5>
+  <h3>Brands White Label</h3>
+  <p>For brands that want to customize the consumer experience.</p>
+  <ul>
+    <li>5% of gross sales generated on the platform</li>
+    <li> Volume discounts </li>
+    <li>No code environment</li>
+  </ul>
+
+  <center className="btnn">
+    <Link href="/">
+      <a className="btn-alt">Talk to Sales</a>
+    </Link>
+  </center>
+</div>
+<div className="box right">
+  <h5>Revo for</h5>
+  <h3>Enterprise SaaS</h3>
+  <p>
+    For large companies who want to fully customize and even extend
+    the Revo platform within their ecosystem
+  </p>
+
+  <center className="btnn">
+    <Link href="/">
+      <a className="btn-alt">Talk to Sales</a>
+    </Link>
+  </center>
+</div>
+</div>
+*/
+}

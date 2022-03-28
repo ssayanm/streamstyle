@@ -278,228 +278,6 @@ export const featuredChannels = [
   },
 ];
 
-export const featuresDTC = [
-  {
-    id: 1,
-    feature: "One Click Catalog Sync",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 2,
-    feature: "Stream one to many and up to 11 guests",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 3,
-    feature: "Full Studio",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 4,
-    feature: "AI Try-On",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-
-  {
-    id: 5,
-    feature: "Branded Consumer screen",
-    text: "For Fee",
-  },
-  {
-    id: 6,
-    feature: "One-Click Checkout",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 7,
-    feature: "Creator Community Matching",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 8,
-    feature: "Marketplace Placement",
-    text: "For Fee",
-  },
-  {
-    id: 9,
-    feature: "Marketplace Promotion",
-    text: "For Fee",
-  },
-  {
-    id: 10,
-    feature: "Creator Payment Wallets",
-    text: "For Fee",
-  },
-  {
-    id: 11,
-    feature: "Training",
-    text: "For Fee",
-  },
-  {
-    id: 12,
-    feature: "Platform customization",
-    text: "For Fee",
-  },
-  {
-    id: 13,
-    feature: "Customer Care",
-    text: "e-mail & live chat 9-5 M-F EST",
-  },
-  {
-    id: 14,
-    feature: "Client Servicess",
-    text: "N/A",
-  },
-];
-
-export const featuresBrands = [
-  {
-    id: 1,
-    feature: "One Click Catalog Sync",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 2,
-    feature: "Stream one to many and up to 11 guests",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 3,
-    feature: "Full Studio",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 4,
-    feature: "AI Try-On",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-
-  {
-    id: 5,
-    feature: "Branded Consumer screen",
-    text: "For Fee",
-  },
-  {
-    id: 6,
-    feature: "One-Click Checkout",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 7,
-    feature: "Creator Community Matching",
-    text: "For Fee",
-  },
-  {
-    id: 8,
-    feature: "Marketplace Placement",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 9,
-    feature: "Marketplace Promotion",
-    text: <GrClose />,
-  },
-  {
-    id: 10,
-    feature: "Creator Payment Wallets",
-    text: "Included",
-  },
-  {
-    id: 11,
-    feature: "Training",
-    text: "Included",
-  },
-  {
-    id: 12,
-    feature: "Platform customization",
-    text: "For Fee",
-  },
-  {
-    id: 13,
-    feature: "Customer Care",
-    text: "24/7 support 2h response time",
-  },
-  {
-    id: 14,
-    feature: "Client Servicess",
-    text: "N/A",
-  },
-];
-
-export const featuresEnterprise = [
-  {
-    id: 1,
-    feature: "One Click Catalog Sync",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 2,
-    feature: "Stream one to many and up to 11 guests",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 3,
-    feature: "Full Studio",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 4,
-    feature: "AI Try-On",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-
-  {
-    id: 5,
-    feature: "Branded Consumer screen",
-    text: "For Fee",
-  },
-  {
-    id: 6,
-    feature: "One-Click Checkout",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 7,
-    feature: "Creator Community Matching",
-    text: "For Fee",
-  },
-  {
-    id: 8,
-    feature: "Marketplace Placement",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 9,
-    feature: "Marketplace Promotion",
-    text: <GoPrimitiveDot className="greendot" />,
-  },
-  {
-    id: 10,
-    feature: "Creator Payment Wallets",
-    text: "Included",
-  },
-  {
-    id: 11,
-    feature: "Training",
-    text: "Included",
-  },
-  {
-    id: 12,
-    feature: "Platform customization",
-    text: "For Fee",
-  },
-  {
-    id: 13,
-    feature: "Customer Care",
-    text: "24/7 support 30min response time",
-  },
-  {
-    id: 14,
-    feature: "Client Servicess",
-    text: "N/A",
-  },
-];
-
 export const featuresPrice = [
   {
     id: 1,
@@ -510,23 +288,93 @@ export const featuresPrice = [
   },
   {
     id: 2,
-    feature: "abc",
+    feature: "Stream one to many and up to 11 guests",
     dtc: true,
     brands: true,
     enterprise: true,
   },
   {
     id: 3,
-    feature: "One Click Catalog Sync",
+    feature: "Full Studio",
     dtc: true,
     brands: true,
-    enterprise: "For Free",
+    enterprise: true,
   },
   {
     id: 4,
-    feature: "One Click Catalog Sync",
+    feature: "AI Try-On",
     dtc: true,
     brands: true,
-    enterprise: false,
+    enterprise: true,
+  },
+  {
+    id: 5,
+    feature: "Branded Consumer screen",
+    dtc: "For Free",
+    brands: true,
+    enterprise: true,
+  },
+  {
+    id: 6,
+    feature: "One-Click Checkout",
+    dtc: true,
+    brands: true,
+    enterprise: true,
+  },
+  {
+    id: 7,
+    feature: "Creator Community Matching",
+    dtc: false,
+    brands: "For Free",
+    enterprise: "For Free",
+  },
+  {
+    id: 8,
+    feature: "Marketplace Placement",
+    dtc: true,
+    brands: true,
+    enterprise: true,
+  },
+  {
+    id: 9,
+    feature: "Marketplace Promotion",
+    dtc: "For Fee",
+    brands: false,
+    enterprise: true,
+  },
+  {
+    id: 10,
+    feature: "Creator Payment Wallets",
+    dtc: "For Fee",
+    brands: "Included",
+    enterprise: "Included",
+  },
+  {
+    id: 11,
+    feature: "Training",
+    dtc: "For Fee",
+    brands: "Included",
+    enterprise: "Included",
+  },
+  {
+    id: 12,
+    feature: "Platform customization",
+    dtc: "For Fee",
+    brands: "For Fee",
+    enterprise: "For Fee",
+  },
+  {
+    id: 13,
+    feature: "Customer Care",
+    dtc: "e-mail & live chat 9-5 M-F EST",
+    brands: "24/7 support 2h response time",
+    enterprise: "24/7 support 30min response time",
+  },
+  {
+    id: 14,
+    feature: "Client Servicess",
+    dtc: "N/A",
+    brands: "Monthly Updates",
+    enterprise: "Weekly Updates",
   },
 ];

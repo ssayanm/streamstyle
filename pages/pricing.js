@@ -1,4 +1,5 @@
 import Meta from "../components/Meta";
+import Price from "../components/Price";
 import PriCing from "../components/PriCing";
 
 export default function Pricing() {
@@ -6,6 +7,7 @@ export default function Pricing() {
     <main>
       <Meta title="Pricing" />
       <PriCing />
+      <Price />
     </main>
   );
 }
