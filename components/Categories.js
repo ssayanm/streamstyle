@@ -17,37 +17,23 @@ const Categories = () => {
   return (
     <NavContainer>
       <h1 className="title text-center onlydesktop">Revo for</h1>
-      <Tabs
-        defaultActiveKey="1"
-        onChange={callback}
-        centered="true"
-        className="onlydesktop"
-      >
-        {categories.map((link, index) => {
-          const { id, text, components } = link;
-          return (
-            <TabPane tab={text} key={id}>
-              {components}
-            </TabPane>
-          );
-        })}
-      </Tabs>
-      <div className="nav-center links-container onlydesktop">
-        <div className="nav-links">
+      {
+        <Tabs
+          defaultActiveKey="1"
+          onChange={callback}
+          centered="true"
+          className="onlydesktop"
+        >
           {categories.map((link, index) => {
-            const { id, text } = link;
+            const { id, text, components } = link;
             return (
-              <button
-                key={id}
-                onClick={() => setValue(index)}
-                className={`jbtn ${index === value && "active-btn"}`}
-              >
-                {text}
-              </button>
+              <TabPane tab={text} key={id}>
+                {components}
+              </TabPane>
             );
           })}
-        </div>
-      </div>
+        </Tabs>
+      }
 
       <div className="onlymobile navmob">
         <select className="mobselect">
@@ -60,9 +46,8 @@ const Categories = () => {
             );
           })}
         </select>
+        {components}
       </div>
-
-      {components}
     </NavContainer>
   );
 };
@@ -75,23 +60,35 @@ const NavContainer = styled.nav`
     width: 90vw;
     margin: 0 auto;
   }
-  .ant-tabs {
-    /* margin: 0 2rem; */
-
-    width: 90vw !important;
-    margin: 0 auto;
-  }
 
   .ant-tabs-nav-wrap {
     border-radius: 3rem;
     background: var(--clr-primary-1);
-    padding: 1rem 0;
+    padding: 1rem;
+    margin: 0 5rem;
+  }
+  .ant-tabs-top > .ant-tabs-nav::before {
+    border-bottom: none;
   }
 
   .ant-tabs-tab {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.38);
+    margin: 0 3rem;
+    cursor: pointer;
+    font-family: "MontSemiBold";
+  }
+
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
     color: var(--clr-white);
   }
+
+  .ant-tabs-ink-bar {
+    position: absolute;
+    background: var(--clr-white);
+    pointer-events: none;
+  }
+
   .mobselect {
     border-radius: 3rem;
     padding: 1rem;

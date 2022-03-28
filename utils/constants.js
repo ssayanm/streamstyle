@@ -1,6 +1,6 @@
 import { FaApple, FaShopify } from "react-icons/fa";
 import { GoPrimitiveDot } from "react-icons/go";
-import { GrAndroid } from "react-icons/gr";
+import { GrAndroid, GrClose } from "react-icons/gr";
 import Brands from "../components/Brands";
 import HomeSectionB from "../components/HomeSectionB";
 
@@ -277,28 +277,221 @@ export const featuredChannels = [
 export const featuresDTC = [
   {
     id: 1,
-    feature: "Do I have to allow the use of cookies?",
+    feature: "One Click Catalog Sync",
     text: <GoPrimitiveDot className="greendot" />,
   },
   {
     id: 2,
-    feature: "Do I have to allow the use of cookies?",
+    feature: "Stream one to many and up to 11 guests",
     text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 3,
+    feature: "Full Studio",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 4,
+    feature: "AI Try-On",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+
+  {
+    id: 5,
+    feature: "Branded Consumer screen",
+    text: "For Fee",
+  },
+  {
+    id: 6,
+    feature: "One-Click Checkout",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 7,
+    feature: "Creator Community Matching",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 8,
+    feature: "Marketplace Placement",
+    text: "For Fee",
+  },
+  {
+    id: 9,
+    feature: "Marketplace Promotion",
+    text: "For Fee",
+  },
+  {
+    id: 10,
+    feature: "Creator Payment Wallets",
+    text: "For Fee",
+  },
+  {
+    id: 11,
+    feature: "Training",
+    text: "For Fee",
+  },
+  {
+    id: 12,
+    feature: "Platform customization",
+    text: "For Fee",
+  },
+  {
+    id: 13,
+    feature: "Customer Care",
+    text: "e-mail & live chat 9-5 M-F EST",
+  },
+  {
+    id: 14,
+    feature: "Client Servicess",
+    text: "N/A",
   },
 ];
 
 export const featuresBrands = [
   {
     id: 1,
-    feature: "Do I have to allow the use of cookies?",
+    feature: "One Click Catalog Sync",
     text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 2,
+    feature: "Stream one to many and up to 11 guests",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 3,
+    feature: "Full Studio",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 4,
+    feature: "AI Try-On",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+
+  {
+    id: 5,
+    feature: "Branded Consumer screen",
+    text: "For Fee",
+  },
+  {
+    id: 6,
+    feature: "One-Click Checkout",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 7,
+    feature: "Creator Community Matching",
+    text: "For Fee",
+  },
+  {
+    id: 8,
+    feature: "Marketplace Placement",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 9,
+    feature: "Marketplace Promotion",
+    text: <GrClose />,
+  },
+  {
+    id: 10,
+    feature: "Creator Payment Wallets",
+    text: "Included",
+  },
+  {
+    id: 11,
+    feature: "Training",
+    text: "Included",
+  },
+  {
+    id: 12,
+    feature: "Platform customization",
+    text: "For Fee",
+  },
+  {
+    id: 13,
+    feature: "Customer Care",
+    text: "24/7 support 2h response time",
+  },
+  {
+    id: 14,
+    feature: "Client Servicess",
+    text: "N/A",
   },
 ];
 
 export const featuresEnterprise = [
   {
     id: 1,
-    feature: "Do I have to allow the use of cookies?",
+    feature: "One Click Catalog Sync",
     text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 2,
+    feature: "Stream one to many and up to 11 guests",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 3,
+    feature: "Full Studio",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 4,
+    feature: "AI Try-On",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+
+  {
+    id: 5,
+    feature: "Branded Consumer screen",
+    text: "For Fee",
+  },
+  {
+    id: 6,
+    feature: "One-Click Checkout",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 7,
+    feature: "Creator Community Matching",
+    text: "For Fee",
+  },
+  {
+    id: 8,
+    feature: "Marketplace Placement",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 9,
+    feature: "Marketplace Promotion",
+    text: <GoPrimitiveDot className="greendot" />,
+  },
+  {
+    id: 10,
+    feature: "Creator Payment Wallets",
+    text: "Included",
+  },
+  {
+    id: 11,
+    feature: "Training",
+    text: "Included",
+  },
+  {
+    id: 12,
+    feature: "Platform customization",
+    text: "For Fee",
+  },
+  {
+    id: 13,
+    feature: "Customer Care",
+    text: "24/7 support 30min response time",
+  },
+  {
+    id: 14,
+    feature: "Client Servicess",
+    text: "N/A",
   },
 ];

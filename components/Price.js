@@ -162,7 +162,7 @@ const Wrapper = styled.section`
 
   @media (min-width: 992px) {
     width: 70vw;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     padding: 2rem;
     margin: 0 auto;
     .grid {

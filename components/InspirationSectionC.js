@@ -75,38 +75,6 @@ const InspirationSectionC = () => {
           </Row>
         </Col>
       </Row>
-
-      <Row gutter={8}>
-        {toggle
-          ? featuredChannels.map((channel) => (
-              <Col md={6} xs={12} key={channel.id}>
-                <Card className="channels">
-                  <Image
-                    alt="Revo"
-                    src={channel.image}
-                    width={400}
-                    height={500}
-                    className="logo"
-                    objectFit="cover"
-                  />
-                </Card>
-              </Col>
-            ))
-          : featuredChannels.slice(0, 4).map((channel) => (
-              <Col md={6} xs={12} key={channel.id}>
-                <Card className="channels">
-                  <Image
-                    alt="Revo"
-                    src={channel.image}
-                    width={400}
-                    height={500}
-                    className="logo"
-                    objectFit="cover"
-                  />
-                </Card>
-              </Col>
-            ))}
-      </Row>
     </Wrapper>
   );
 };
@@ -117,7 +85,7 @@ const Wrapper = styled.section`
   padding: 2rem 0rem;
 
   .gutter-box {
-    padding: 0.75rem 0rem;
+    padding: 0.75rem 0.1rem;
   }
 
   .fbtn {
