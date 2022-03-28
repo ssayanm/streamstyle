@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { categories } from "../utils/constants";
-
+import Select from "react-select";
 import { Tabs } from "antd";
 
 const { TabPane } = Tabs;
@@ -13,6 +13,7 @@ function callback(key) {
 const Categories = () => {
   const [value, setValue] = useState(0);
   const { components } = categories[value];
+  const [selectedOption, setSelectedOption] = useState(categories[0]);
 
   return (
     <NavContainer>
@@ -36,7 +37,12 @@ const Categories = () => {
       }
 
       <div className="onlymobile navmob">
-        <select className="mobselect">
+        <Select
+          defaultValue={selectedOption}
+          onChange={setSelectedOption}
+          options={categories}
+        />
+        {/*   <select className="mobselect">
           {categories.map((link, index) => {
             const { id, text } = link;
             return (
@@ -45,8 +51,8 @@ const Categories = () => {
               </option>
             );
           })}
-        </select>
-        {components}
+        </select>*/}
+        {selectedOption.components}
       </div>
     </NavContainer>
   );

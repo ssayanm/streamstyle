@@ -101,24 +101,28 @@ export const categories = [
   {
     id: 1,
     text: "Brands",
+    label: "Brands",
     url: "/",
     components: <Brands />,
   },
   {
     id: 2,
     text: "Creators",
+    label: "Creators",
     url: "/",
     components: <HomeSectionB />,
   },
   {
     id: 3,
     text: "Publishers & Distributors",
+    label: "Publishers & Distributors",
     url: "/",
     components: <GrAndroid />,
   },
   {
     id: 4,
     text: "Direct Marketers",
+    label: "Direct Marketers",
     url: "/",
     components: <FaShopify />,
   },
