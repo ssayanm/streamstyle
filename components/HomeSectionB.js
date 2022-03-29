@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styled from "styled-components";
-import { services } from "../utils/constants";
 
 const HomeSectionB = () => {
   return (

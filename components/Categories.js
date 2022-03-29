@@ -41,6 +41,7 @@ const Categories = () => {
           defaultValue={selectedOption}
           onChange={setSelectedOption}
           options={categories}
+          className="mobselect"
         />
         {/*   <select className="mobselect">
           {categories.map((link, index) => {
@@ -95,12 +96,12 @@ const NavContainer = styled.nav`
     pointer-events: none;
   }
 
-  .mobselect {
+  .mobselect .css-1s2u09g-control {
     border-radius: 3rem;
-    padding: 1rem;
+    /* padding: 1rem; */
     box-shadow: none;
     font-size: 1.5rem;
-    width: 100%;
+    background: var(--clr-primary-1);
     font-family: "MontBold";
     border: none;
     text-align: center;
@@ -109,8 +110,17 @@ const NavContainer = styled.nav`
     -moz-appearance: none;
     appearance: none;
     cursor: pointer;
-    background: url(/images/white-down-arrow.png) 93% / 10% no-repeat
-      var(--clr-primary-1);
+
+    .css-tlfecz-indicatorContainer {
+      color: var(--clr-white);
+    }
+    .css-1okebmr-indicatorSeparator {
+      display: none;
+    }
+
+    .css-qc6sy-singleValue {
+      color: var(--clr-white);
+    }
   }
 
   select::-ms-expand {

@@ -20,9 +20,9 @@ const InspirationSectionC = () => {
               </button>
             </Col>
           </Row>
-          <Row>
+          <Row className="space">
             {featuredChannels.map((channel) => (
-              <Col span={8} className="gutter-box" key={channel.id}>
+              <Col span={8} className="gutter-box " key={channel.id}>
                 <Image
                   alt="Revo"
                   src={channel.image}
@@ -45,7 +45,7 @@ const InspirationSectionC = () => {
               </button>
             </Col>
           </Row>
-          <Row>
+          <Row className="space">
             {featuredChannels.map((channel) => (
               <Col span={8} className="gutter-box" key={channel.id}>
                 <Image
@@ -71,7 +71,7 @@ const InspirationSectionC = () => {
               </button>
             </Col>
           </Row>
-          <Row>
+          <Row className="space">
             {featuredChannels.map((channel) => (
               <Col span={8} className="gutter-box" key={channel.id}>
                 <Image
@@ -100,7 +100,7 @@ const InspirationSectionC = () => {
             </Col>
           </Row>
 
-          <Row>
+          <Row className="space">
             {featuredChannels.map((channel) => (
               <Col span={8} className="gutter-box" key={channel.id}>
                 <Image
@@ -128,6 +128,10 @@ const Wrapper = styled.section`
   .gutter-box {
     padding: 0.75rem 0.1rem;
     text-align: center;
+  }
+
+  .space {
+    margin-bottom: 2rem;
   }
 
   .fbtn {

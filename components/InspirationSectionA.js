@@ -108,7 +108,7 @@ const Wrapper = styled.section`
     font-family: "Mont";
   }
   @media (min-width: 992px) {
-    padding: 4rem 0;
+    padding: 4rem;
 
     .title {
       font-size: 2rem;

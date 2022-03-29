@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
-import { FaBars, FaMobileAlt, FaPhoneAlt } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 
 import Link from "next/link";
 import Image from "next/image";

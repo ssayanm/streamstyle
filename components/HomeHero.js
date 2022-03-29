@@ -104,7 +104,7 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     padding-top: 5rem;
     .container {
-      height: 100vh;
+      height: calc(100vh - 5rem);
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
     }
