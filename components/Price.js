@@ -92,7 +92,7 @@ const Wrapper = styled.section`
   font-family: "Mont";
 
   @media (min-width: 992px) {
-    width: 60vw;
+    width: 80vw;
     font-size: 1.2rem;
     padding: 2rem;
     margin: 0 auto;

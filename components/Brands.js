@@ -354,8 +354,8 @@ const Wrapper = styled.section`
       text-align: left;
     }
     .greenbox {
-      width: 45rem;
-      height: 28rem;
+      width: 35rem;
+      height: 25rem;
     }
   }
 `;
