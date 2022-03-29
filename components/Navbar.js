@@ -12,8 +12,6 @@ const Nav = () => {
   const router = useRouter();
   const { openSidebar } = useAppContext();
 
-  console.log(router.asPath);
-
   return (
     <NavContainer
       style={{

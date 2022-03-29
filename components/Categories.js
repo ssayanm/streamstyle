@@ -10,6 +10,25 @@ function callback(key) {
   console.log(key);
 }
 
+const customStyles = {
+  option: (provided, state) => ({
+    ...provided,
+    borderBottom: "1px dotted #000",
+    // background: state.isSelected ? "red" : "blue",
+    // padding: 20,
+    // borderRadius: "3rem",
+    /* padding: 1rem; */
+    boxShadow: "none",
+    fontSize: "1.2rem",
+    background: "var(--clr-primary-1)",
+    fontFamily: "MontBold",
+
+    color: "var(--clr-white)",
+
+    cursor: "pointer",
+  }),
+};
+
 const Categories = () => {
   const [value, setValue] = useState(0);
 
@@ -41,6 +60,7 @@ const Categories = () => {
           onChange={setSelectedOption}
           options={categories}
           className="mobselect"
+          styles={customStyles}
         />
 
         {selectedOption.components}
@@ -111,6 +131,10 @@ const NavContainer = styled.nav`
 
     .css-qc6sy-singleValue {
       color: var(--clr-white);
+    }
+
+    #react-select-2-listbox {
+      background: red !important;
     }
   }
 
