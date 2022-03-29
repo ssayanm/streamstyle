@@ -1,49 +1,53 @@
 import Link from "next/link";
 import { BsPlayCircle } from "react-icons/bs";
 import styled from "styled-components";
+import { Row, Col } from "antd";
 
 const HomeSectionD = () => {
   return (
     <Wrapper>
-      <div className="container">
-        <BsPlayCircle className="icon" />
-        <div className="text-center">
-          <h1 className="title">
-            Integrate seamlessly into
-            <br />
-            your cart and payments
-          </h1>
-        </div>
-
-        <div className="section-center featured">
-          <div>
-            <p className="header">One-click install</p>
-            <p className="info">
-              Revo seamlessly integrates into your e-commerce platform syncing
-              products, orders and payments automatically{" "}
-            </p>
-          </div>
-          <div>
-            <p className="header">Shopping cart integrations</p>
-            <p className="info">
-              Manage products and orders from any shop system with more than 48
-              major shop platforms integrated.
-            </p>
-          </div>
-          <div>
-            <p className="header">Embedded payments</p>
-            <p className="info">
-              We offer fully integrated in-stream, one-click checkout. Choose
-              from over 180 different supported payment providers or start with
-              us as your preferred partner.
-            </p>
-          </div>
-        </div>
-        <center>
-          <Link href="/">
-            <a className="btn"> Learn More</a>
-          </Link>
-        </center>
+      <div className="section-center">
+        <Row gutter={16} justify="center" align="middle">
+          <Col>
+            <BsPlayCircle className="icon" />
+            <h1 className="title">
+              Integrate seamlessly into
+              <br />
+              your cart and payments
+            </h1>
+          </Col>
+          <Row className="space">
+            <Col sm={24} md={12} xl={8}>
+              <p className="header">One-click install</p>
+              <p className="info">
+                Revo seamlessly integrates into your e-commerce platform syncing
+                products, orders and payments automatically{" "}
+              </p>
+            </Col>
+            <Col sm={24} md={12} xl={8}>
+              <p className="header">Shopping cart integrations</p>
+              <p className="info">
+                Manage products and orders from any shop system with more than
+                48 major shop platforms integrated.
+              </p>
+            </Col>
+            <Col sm={24} md={12} xl={8}>
+              <p className="header">Embedded payments</p>
+              <p className="info">
+                We offer fully integrated in-stream, one-click checkout. Choose
+                from over 180 different supported payment providers or start
+                with us as your preferred partner.
+              </p>
+            </Col>
+          </Row>
+          <Col>
+            <center>
+              <Link href="/">
+                <a className="btn"> Learn More</a>
+              </Link>
+            </center>
+          </Col>
+        </Row>
       </div>
     </Wrapper>
   );
@@ -52,18 +56,15 @@ const HomeSectionD = () => {
 const Wrapper = styled.section`
   /* min-height: 50vh; */
   background: var(--clr-primary-1);
+  background-image: url("/images/circle.png");
+  background-position: -16% 120%;
+  background-repeat: no-repeat;
   /* background-image: url("/images/circle.png"); */
   /* background-repeat: no-repeat; */
+  padding: 6rem 2rem;
+  margin: 0 auto;
+  text-align: center;
 
-  .container {
-    padding: 5rem 2rem;
-    text-align: center;
-  }
-
-  h3 {
-    font-size: 2.3rem;
-    color: var(--clr-black);
-  }
   p {
     font-size: 1.75rem;
   }
@@ -85,15 +86,10 @@ const Wrapper = styled.section`
     font-size: 1.2rem;
   }
 
-  .featured {
-    padding: 2rem;
-    display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    gap: 1rem;
-  }
   @media (min-width: 992px) {
-    .container {
-      text-align: left;
+    padding: 9rem 2rem;
+    .ant-col {
+      padding: 0 2rem;
     }
 
     .icon {
@@ -118,17 +114,6 @@ const Wrapper = styled.section`
 
     .info {
       font-size: 25px;
-    }
-
-    .content {
-      padding-left: 5rem;
-    }
-    .featured {
-      /* display: grid; */
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
-      text-align: center;
-      padding: 3rem 2rem;
     }
   }
 `;

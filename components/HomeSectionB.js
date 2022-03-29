@@ -1,9 +1,17 @@
 import Image from "next/image";
 import styled from "styled-components";
+import { Row, Col } from "antd";
 
 const HomeSectionB = () => {
   return (
     <Wrapper>
+      <Row gutter={16} justify="center" align="middle">
+        <Col></Col>
+        <Row className="space">
+          <Col sm={24} md={12} xl={8}></Col>
+          <Col sm={24} md={12} xl={8}></Col>
+        </Row>
+      </Row>
       <div className="container">
         <article className="header">
           <h3>
@@ -99,7 +107,7 @@ const HomeSectionB = () => {
 };
 
 const Wrapper = styled.section`
-  padding: 5rem 0rem;
+  padding: 6rem 2rem;
   background: var(--clr-black);
 
   h3 {
@@ -148,6 +156,7 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
+    padding: 9rem 2rem;
     .container {
       padding: 0 2rem;
       text-align: left;

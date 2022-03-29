@@ -14,7 +14,7 @@ const HomeHeroN = () => {
           align="middle"
           className="herorow"
         >
-          <Col sm={4} md={6} lg={8} xl={14}>
+          <Col sm={24} md={18} lg={16} xl={14}>
             <article className="content">
               <h1 className="title">
                 One Platform For Video Engagement & Live Commerce
@@ -60,7 +60,7 @@ const HomeHeroN = () => {
               </ul>
             </article>
           </Col>
-          <Col span={10}>
+          <Col sm={24} md={18} lg={16} xl={10}>
             <div className="onlydesktop">
               <Image
                 alt="revo"

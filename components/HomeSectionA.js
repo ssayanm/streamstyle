@@ -3,12 +3,13 @@ import styled from "styled-components";
 import Link from "next/link";
 import { BsPlayCircleFill } from "react-icons/bs";
 import Image from "next/image";
+import { Row, Col } from "antd";
 
 const HomeSectionA = () => {
   return (
     <Wrapper>
-      <div className="section-center1 container">
-        <article className="content">
+      <Row gutter={16} justify="center" align="middle">
+        <Col sm={24} md={12} xl={12}>
           <BsPlayCircleFill className="icon" />
           <p>
             Best in class shopping experience and storytelling platform that
@@ -16,34 +17,30 @@ const HomeSectionA = () => {
             Monetize live, pre-recorded and edited video and broadcast across
             your social channels.
           </p>
-        </article>
-        <div>
+        </Col>
+        <Col sm={24} md={12} xl={10}>
+          {" "}
           <Image
             alt="revo"
-            src="/images/bgsec.png"
-            width={1112}
-            height={793}
-            //   objectFit="cover"
+            src="/images/Revo_image_homepage_Section_1.png"
+            width={1200}
+            height={750}
+            objectFit="cover"
           />
-        </div>
-      </div>
+        </Col>
+      </Row>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  .container {
-    display: grid;
-    place-items: center;
-    padding: 5rem 2rem;
-  }
-
-  .content {
-    text-align: center;
-  }
+  padding: 6rem 2rem;
+  background-image: url("/images/circle.png");
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
 
   p {
-    line-height: 1.3;
     /* max-width: 45em; */
     font-family: "MontSemiBold", sans-serif;
     margin-top: 2rem;
@@ -57,42 +54,13 @@ const Wrapper = styled.section`
     text-align: center;
   }
   @media (min-width: 992px) {
-    .container {
-      /* height: calc(90vh - 3rem); */
-      padding: 1rem 0;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-    }
+    background-position: 120% 50%;
+    padding: 9rem 2rem;
 
-    h3 {
-      margin-bottom: 1.5rem;
-      font-size: 4.3rem;
-    }
-    h4 {
-      font-size: 39.5px;
-      font-family: "MontLight", sans-serif;
-      margin-bottom: 1.5rem;
-      letter-spacing: normal;
-      line-height: 1.1;
-    }
     p {
-      font-size: 40px;
+      font-size: 2.2rem;
       text-align: left;
       margin-bottom: 0rem;
-    }
-    .hero-btn {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-    }
-    .bgcircle {
-      position: absolute;
-      margin-left: 70rem;
-      z-index: -1;
-      margin-top: -50rem;
-    }
-    .content {
-      padding-left: 5rem;
-      text-align: left;
     }
   }
 `;
