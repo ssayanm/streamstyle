@@ -8,7 +8,7 @@ const Brands = () => {
   return (
     <Wrapper>
       <Row
-        gutter={[16, 16]}
+        gutter={[32, 32]}
         justify="center"
         align="middle"
         className="section"
@@ -306,6 +306,19 @@ const Wrapper = styled.section`
     transform: translateY(1rem);
   }
 
+  .greenbox {
+    background: var(--clr-primary-1);
+    border: solid 1px #000;
+    width: max-content;
+    margin: 0 auto;
+    padding: 2rem 1rem 0rem 1rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
   @media (min-width: 992px) {
     /* padding: 9rem 2rem; */
 
@@ -335,9 +348,14 @@ const Wrapper = styled.section`
 
     .title {
       text-align: left;
+      font-size: 3rem;
     }
     .icons {
       text-align: left;
+    }
+    .greenbox {
+      width: 45rem;
+      height: 28rem;
     }
   }
 `;

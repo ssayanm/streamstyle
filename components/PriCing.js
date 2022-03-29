@@ -116,8 +116,8 @@ const PriCing = () => {
             <h5>Revo for</h5>
             <h3>DTC</h3>
             <p>
-              Any DTC brand on e-commerce platforms. Download the app and go
-              live
+              Any DTC brand on e-commerce platforms.
+              <br /> Download the app and go live
             </p>
             <ul>
               <li>5% of gross sales generated on the platform. </li>
@@ -288,14 +288,14 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
-    padding: 5rem 0;
+    padding: 5rem 2rem;
 
     .boxx {
       /* width: 70vw; */
     }
     .box {
       box-shadow: var(--dark-shadow);
-      padding: 2rem;
+      padding: 3rem;
       height: 32rem;
       background-color: var(--clr-white);
       position: relative;

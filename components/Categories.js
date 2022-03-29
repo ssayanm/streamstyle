@@ -12,29 +12,29 @@ function callback(key) {
 
 const Categories = () => {
   const [value, setValue] = useState(0);
-  const { components } = categories[value];
+
   const [selectedOption, setSelectedOption] = useState(categories[0]);
 
   return (
     <NavContainer>
       <h1 className="title text-center onlydesktop">Revo for</h1>
-      <div className="section-center">
-        <Tabs
-          defaultActiveKey="1"
-          onChange={callback}
-          centered="true"
-          className="onlydesktop"
-        >
-          {categories.map((link, index) => {
-            const { id, text, components } = link;
-            return (
-              <TabPane tab={text} key={id}>
-                {components}
-              </TabPane>
-            );
-          })}
-        </Tabs>
-      </div>
+
+      <Tabs
+        defaultActiveKey="1"
+        onChange={callback}
+        centered="true"
+        className="onlydesktop"
+      >
+        {categories.map((link, index) => {
+          const { id, text, components } = link;
+          return (
+            <TabPane tab={text} key={id}>
+              {components}
+            </TabPane>
+          );
+        })}
+      </Tabs>
+
       <div className="onlymobile navmob">
         <Select
           defaultValue={selectedOption}
