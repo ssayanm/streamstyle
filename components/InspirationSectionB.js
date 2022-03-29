@@ -58,6 +58,7 @@ const Wrapper = styled.section`
   .gtitle {
     margin-top: 7rem;
     color: var(--clr-white);
+    font-family: "Mont";
   }
 
   .btn {

@@ -9,8 +9,17 @@ const InspirationSectionC = () => {
   return (
     <Wrapper>
       <Row gutter={[16, 24]} justify="center">
-        <Col span={10}>
-          <h5 className="featitle1">Featured Channels</h5>
+        <Col md={10} sm={20}>
+          <Row justify="space-between" style={{ padding: "0 1rem" }}>
+            <Col>
+              <h5 className="featitle">Featured Channels</h5>
+            </Col>
+            <Col>
+              <button onClick={() => setToggle(!toggle)} className="fbtn">
+                View More
+              </button>
+            </Col>
+          </Row>
           <Row>
             {featuredChannels.map((channel) => (
               <Col span={8} className="gutter-box" key={channel.id}>
@@ -26,7 +35,16 @@ const InspirationSectionC = () => {
             ))}
           </Row>
 
-          <h5 className="featitle1">Featured Channels</h5>
+          <Row justify="space-between" style={{ padding: "0 1rem" }}>
+            <Col>
+              <h5 className="featitle">Featured Channels</h5>
+            </Col>
+            <Col>
+              <button onClick={() => setToggle(!toggle)} className="fbtn">
+                View More
+              </button>
+            </Col>
+          </Row>
           <Row>
             {featuredChannels.map((channel) => (
               <Col span={8} className="gutter-box" key={channel.id}>
@@ -42,8 +60,17 @@ const InspirationSectionC = () => {
             ))}
           </Row>
         </Col>
-        <Col span={10}>
-          <h5 className="featitle1">Featured Channels</h5>
+        <Col md={10} sm={20}>
+          <Row gutter={16} justify="space-between">
+            <Col>
+              <h5 className="featitle">Featured Channels</h5>
+            </Col>
+            <Col>
+              <button onClick={() => setToggle(!toggle)} className="fbtn">
+                View More
+              </button>
+            </Col>
+          </Row>
           <Row>
             {featuredChannels.map((channel) => (
               <Col span={8} className="gutter-box" key={channel.id}>
@@ -58,7 +85,21 @@ const InspirationSectionC = () => {
               </Col>
             ))}
           </Row>
-          <h5 className="featitle1">Featured Channels</h5>
+          <Row
+            gutter={16}
+            justify="space-between"
+            style={{ padding: "0 2rem" }}
+          >
+            <Col>
+              <h5 className="featitle">Featured Channels</h5>
+            </Col>
+            <Col>
+              <button onClick={() => setToggle(!toggle)} className="fbtn">
+                View More
+              </button>
+            </Col>
+          </Row>
+
           <Row>
             {featuredChannels.map((channel) => (
               <Col span={8} className="gutter-box" key={channel.id}>
@@ -82,17 +123,18 @@ const InspirationSectionC = () => {
 export default InspirationSectionC;
 
 const Wrapper = styled.section`
-  padding: 2rem 0rem;
+  padding: 2rem;
 
   .gutter-box {
     padding: 0.75rem 0.1rem;
+    text-align: center;
   }
 
   .fbtn {
     background: none;
     color: var(--clr-black);
     border: none;
-
+    font-family: "MontSemiBold";
     cursor: pointer;
   }
 
@@ -105,6 +147,7 @@ const Wrapper = styled.section`
     color: var(--clr-white);
     padding: 0.5rem 1rem;
     border-radius: 2rem;
+    font-family: "Mont";
   }
   @media (min-width: 992px) {
     padding: 4rem;

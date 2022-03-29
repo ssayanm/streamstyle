@@ -86,12 +86,13 @@ export default InspirationSectionA;
 
 const Wrapper = styled.section`
   padding: 2rem 0rem;
+  font-family: "Mont";
 
   .fbtn {
     background: none;
     color: var(--clr-black);
     border: none;
-
+    font-family: "MontSemiBold";
     cursor: pointer;
   }
 
@@ -104,9 +105,10 @@ const Wrapper = styled.section`
     color: var(--clr-white);
     padding: 0.5rem 1rem;
     border-radius: 2rem;
+    font-family: "Mont";
   }
   @media (min-width: 992px) {
-    padding: 4rem;
+    padding: 4rem 0;
 
     .title {
       font-size: 2rem;

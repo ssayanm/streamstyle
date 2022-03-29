@@ -26,6 +26,7 @@ const InspirationHero = () => {
 const Wrapper = styled.section`
   /* background: var(--clr-primary-1); */
   /* margin-top: -9rem; */
+
   padding: 2em;
   /* padding: 2rem 0; */
   .container {

@@ -104,7 +104,7 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     padding-top: 5rem;
     .container {
-      height: calc(100vh - 5rem);
+      height: 100vh;
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
     }
@@ -114,7 +114,7 @@ const Wrapper = styled.section`
     }
 
     p {
-      font-size: 2rem;
+      font-size: 1.75rem;
       text-align: left;
     }
     .smallfont {

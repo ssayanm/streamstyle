@@ -23,6 +23,7 @@ const PriCing = () => {
       title: "Features",
       dataIndex: "feature",
       key: "id",
+      width: "65%",
     },
     {
       title: "for DTC",
@@ -49,6 +50,7 @@ const PriCing = () => {
       title: "Features",
       dataIndex: "feature",
       key: "id",
+      width: "65%",
     },
 
     {
@@ -76,6 +78,7 @@ const PriCing = () => {
       title: "Features",
       dataIndex: "feature",
       key: "id",
+      width: "65%",
     },
 
     {
@@ -99,124 +102,111 @@ const PriCing = () => {
   ];
   return (
     <Wrapper>
-      <div className="section-center container">
-        <h1 className="title text-center ">Princing & Plans</h1>
+      <h1 className="title text-center ">Princing & Plans</h1>
 
-        <Row justify="space-around" align="middle" className="boxx">
-          <Col md={7} sm={24} className="box">
-            <h5>Revo for</h5>
-            <h3>DTC</h3>
-            <p>
-              Any DTC brand on e-commerce platforms. Download the app and go
-              live
-            </p>
-            <ul>
-              <li>5% of gross sales generated on the platform. </li>
-              <li>No monthly fee</li>
-              <li> No code environment</li>
-              <li>No obligation</li>
-            </ul>
+      <Row justify="space-around" align="middle" className="boxx">
+        <Col md={7} sm={24} className="box">
+          <h5>Revo for</h5>
+          <h3>DTC</h3>
+          <p>
+            Any DTC brand on e-commerce platforms. Download the app and go live
+          </p>
+          <ul>
+            <li>5% of gross sales generated on the platform. </li>
+            <li>No monthly fee</li>
+            <li> No code environment</li>
+            <li>No obligation</li>
+          </ul>
 
+          <Link href="/">
+            <a className="btn-alt">Talk to Sales</a>
+          </Link>
+          <Collapse
+            defaultActiveKey={["10"]}
+            onChange={callback}
+            bordered={false}
+            expandIcon={({ isActive }) => <GoDash rotate={isActive ? 90 : 0} />}
+            className="site-collapse-custom-collapse onlymobile"
+          >
+            <Panel header="Hide plan features" key="10">
+              <Table
+                dataSource={featuresPrice}
+                columns={columnsfordtc}
+                pagination={false}
+                className="onlymobile"
+              />
+            </Panel>
+          </Collapse>
+        </Col>
+        <Col md={7} sm={24} className="box boxmiddle">
+          <h5>Revo for</h5>
+          <h3>Brands White Label</h3>
+          <p>For brands that want to customize the consumer experience.</p>
+          <ul>
+            <li>5% of gross sales generated on the platform</li>
+            <li> Volume discounts </li>
+            <li>No code environment</li>
+          </ul>
+
+          <Link href="/">
+            <a className="btn-alt">Talk to Sales</a>
+          </Link>
+
+          <Collapse
+            defaultActiveKey={["12"]}
+            onChange={callback}
+            bordered={false}
+            expandIcon={({ isActive }) => <GoDash rotate={isActive ? 90 : 0} />}
+            className="site-collapse-custom-collapse onlymobile"
+          >
+            <Panel header="Hide plan features" key="12">
+              <Table
+                dataSource={featuresPrice}
+                columns={columnsforbrands}
+                pagination={false}
+                className="onlymobile"
+              />
+            </Panel>
+          </Collapse>
+        </Col>
+        <Col md={7} sm={24} className="box">
+          <h5>Revo for</h5>
+          <h3>Enterprise SaaS</h3>
+          <p>
+            For large companies who want to fully customize and even extend the
+            Revo platform within their ecosystem
+          </p>
+
+          <span className="btnn">
             <Link href="/">
               <a className="btn-alt">Talk to Sales</a>
             </Link>
-            <Collapse
-              defaultActiveKey={["10"]}
-              onChange={callback}
-              bordered={false}
-              expandIcon={({ isActive }) => (
-                <GoDash rotate={isActive ? 90 : 0} />
-              )}
-              className="site-collapse-custom-collapse onlymobile"
-            >
-              <Panel header="Hide plan features" key="10">
-                <Table
-                  dataSource={featuresPrice}
-                  columns={columnsfordtc}
-                  pagination={false}
-                  className="onlymobile"
-                />
-              </Panel>
-            </Collapse>
-          </Col>
-          <Col md={7} sm={24} className="box boxmiddle">
-            <h5>Revo for</h5>
-            <h3>Brands White Label</h3>
-            <p>For brands that want to customize the consumer experience.</p>
-            <ul>
-              <li>5% of gross sales generated on the platform</li>
-              <li> Volume discounts </li>
-              <li>No code environment</li>
-            </ul>
-
-            <Link href="/">
-              <a className="btn-alt">Talk to Sales</a>
-            </Link>
-
-            <Collapse
-              defaultActiveKey={["12"]}
-              onChange={callback}
-              bordered={false}
-              expandIcon={({ isActive }) => (
-                <GoDash rotate={isActive ? 90 : 0} />
-              )}
-              className="site-collapse-custom-collapse onlymobile"
-            >
-              <Panel header="Hide plan features" key="12">
-                <Table
-                  dataSource={featuresPrice}
-                  columns={columnsforbrands}
-                  pagination={false}
-                  className="onlymobile"
-                />
-              </Panel>
-            </Collapse>
-          </Col>
-          <Col md={7} sm={24} className="box">
-            <h5>Revo for</h5>
-            <h3>Enterprise SaaS</h3>
-            <p>
-              For large companies who want to fully customize and even extend
-              the Revo platform within their ecosystem
-            </p>
-
-            <span className="btnn">
-              <Link href="/">
-                <a className="btn-alt">Talk to Sales</a>
-              </Link>
-            </span>
-            <Collapse
-              defaultActiveKey={["1"]}
-              onChange={callback}
-              bordered={false}
-              expandIcon={({ isActive }) => (
-                <GoDash rotate={isActive ? 90 : 0} />
-              )}
-              className="site-collapse-custom-collapse onlymobile"
-            >
-              <Panel header="Hide plan features" key="1">
-                <Table
-                  dataSource={featuresPrice}
-                  columns={columnsforenterprise}
-                  pagination={false}
-                  className="onlymobile"
-                />
-              </Panel>
-            </Collapse>
-          </Col>
-        </Row>
-      </div>
+          </span>
+          <Collapse
+            defaultActiveKey={["1"]}
+            onChange={callback}
+            bordered={false}
+            expandIcon={({ isActive }) => <GoDash rotate={isActive ? 90 : 0} />}
+            className="site-collapse-custom-collapse onlymobile"
+          >
+            <Panel header="Hide plan features" key="1">
+              <Table
+                dataSource={featuresPrice}
+                columns={columnsforenterprise}
+                pagination={false}
+                className="onlymobile"
+              />
+            </Panel>
+          </Collapse>
+        </Col>
+      </Row>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  padding: 2em;
-
-  .container {
-    display: grid;
-    place-items: center;
-  }
+  padding: 2em 1rem;
+  font-family: "Mont";
 
   .title {
     text-align: center;
@@ -224,6 +214,20 @@ const Wrapper = styled.section`
 
   .site-collapse-custom-collapse {
     margin-top: 1rem;
+    color: var(--clr-black);
+  }
+
+  .ant-table-thead > tr > th {
+    font-family: "MontBold";
+  }
+
+  .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+    color: var(--clr-primary-1);
+    font-family: "MontBold";
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
   }
   .featuretitle {
     p {
@@ -238,12 +242,14 @@ const Wrapper = styled.section`
 
   .boxx {
     width: 80vw;
+    margin: 0 auto;
     text-align: center;
+    margin-top: 4rem;
   }
 
   .box {
     box-shadow: var(--dark-shadow);
-    padding: 1.5rem;
+    padding: 1rem 0.75rem;
     border-radius: 1rem;
 
     margin-bottom: 2rem;
@@ -251,14 +257,11 @@ const Wrapper = styled.section`
 
     h5 {
       font-size: 1.25rem;
+      font-family: "MontSemiBold";
     }
     h3 {
       font-size: 1.75rem;
-    }
-
-    p {
-      /* font-size: 1.25rem; */
-      // color: var(--clr-light);
+      font-family: "MontSemiBold";
     }
 
     ul {
@@ -274,13 +277,6 @@ const Wrapper = styled.section`
 
   @media (min-width: 992px) {
     padding: 5rem 0;
-    .boxes {
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 3rem;
-      grid-template-areas: "left content right";
-      margin: 5rem 0;
-      width: 70vw;
-    }
 
     .boxx {
       width: 70vw;
@@ -326,7 +322,7 @@ const Wrapper = styled.section`
     }
 
     .title {
-      text-align: left;
+      text-align: center;
     }
   }
 `;
