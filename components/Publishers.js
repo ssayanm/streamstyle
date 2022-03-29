@@ -4,7 +4,7 @@ import { BsPlayCircleFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
 
-const Brands = () => {
+const Publishers = () => {
   return (
     <Wrapper>
       <Row
@@ -14,13 +14,12 @@ const Brands = () => {
         className="section"
       >
         <Col sm={24} md={12}>
-          <h1 className="title">
-            Sell to your customers directly with shoppable videos
-          </h1>
+          <h1 className="title">Improve Your Monetization Efficiency</h1>
           <p>
-            Connect with thousands of consumers with single or multi-screen
-            premium video quality and simulcast your stream to multiple
-            locations at the same time
+            Transform content consumption and create new opportunities to
+            monetize your library. Create fully branded shows, sell
+            sponsorships, insert pre-roll and drive product or merch sales via
+            our One-click payment platform
           </p>
         </Col>
         <Col sm={24} md={12}>
@@ -33,70 +32,25 @@ const Brands = () => {
           />
         </Col>
         <Col sm={24} md={12}>
-          <h1 className="title">Easy to Use</h1>
+          <h1 className="title">Allow Consumers To Shop What They Love </h1>
           <p>
-            One-click. Go Live - in as little as 5 minutes your brand can be
-            live
+            Create new catalogs of products tied to existing videos or shows
+            thus creating a new way for consumers to engage with your content,
+            talent, share and shop! Automatically connect and sync to any
+            e-commerce platform or internal ERP systems, keeping your products
+            up to date and always in sync.
           </p>
         </Col>
-        <Col sm={24} md={12}>
-          <div className="greenbox">
-            <h1 className="title">Easy to Use</h1>
-          </div>
-        </Col>
-
         <Col sm={24} md={12}>
           <Image
             alt="revo"
-            src="/images/Catalog_sync.jpg"
-            width={900}
-            height={506}
+            src="/images/herovideo.jpg"
+            width={826}
+            height={530}
             objectFit="cover"
           />
         </Col>
-        <Col sm={24} md={12}>
-          <h1 className="title">Catalog Sync</h1>
-          <p>
-            Automatically connect and sync to any e-commerce platform keeping
-            your products up to date and available for your shows
-          </p>
-        </Col>
-      </Row>
 
-      <Row
-        className="section-a"
-        gutter={[48, 32]}
-        justify="center"
-        align="middle"
-      >
-        <Col sm={24} md={12}>
-          <div className="icons">
-            <BsPlayCircleFill className="icon" />
-          </div>
-          <h1 className="title">Live & VOD</h1>
-          <p>
-            Create new live shows and monetize existing VOD content in a new and
-            engaging way
-          </p>
-        </Col>
-        <Col sm={24} md={12}>
-          {" "}
-          <Image
-            alt="revo"
-            src="/images/Live_and_vod.png"
-            width={900}
-            height={602}
-            objectFit="cover"
-          />
-        </Col>
-      </Row>
-
-      <Row
-        className="section-b"
-        gutter={[48, 32]}
-        justify="center"
-        align="middle"
-      >
         <Col sm={24} md={12} className="onlydesktop">
           <Image
             alt="revo"
@@ -117,6 +71,69 @@ const Brands = () => {
             Develop a slate of programming tied to live shopping events that
             drive consumers back to your properties and enhance engagement and
             activation.
+          </p>
+        </Col>
+        <Col sm={24} md={12} className="onlymobile">
+          <Image
+            alt="revo"
+            src="/images/Weekly_Schedule.jpg"
+            width={900}
+            height={478}
+            objectFit="cover"
+          />
+        </Col>
+      </Row>
+
+      <Row
+        className="section-a"
+        gutter={[48, 32]}
+        justify="center"
+        align="middle"
+      >
+        <Col sm={24} md={12}>
+          <div className="icons">
+            <BsPlayCircleFill className="icon" />
+          </div>
+          <h1 className="title">Live & VOD</h1>
+          <p>
+            Create live and VOD shoppable shows that you can re-distribute
+            within your ecosystem, use for promotional efforts,  and/or
+            syndicate across other platforms and marketplaces
+          </p>
+        </Col>
+        <Col sm={24} md={12}>
+          {" "}
+          <Image
+            alt="revo"
+            src="/images/Live_and_vod.png"
+            width={900}
+            height={602}
+            objectFit="cover"
+          />
+        </Col>
+      </Row>
+
+      <Row
+        className="section-b"
+        gutter={[48, 32]}
+        justify="center"
+        align="middle"
+      >
+        {" "}
+        <Col sm={24} md={12} className="onlydesktop">
+          <Image
+            alt="revo"
+            src="/images/Weekly_Schedule.jpg"
+            width={900}
+            height={478}
+            objectFit="cover"
+          />
+        </Col>
+        <Col sm={24} md={12}>
+          <h1 className="title">Frictionless Checkout</h1>
+          <p>
+            One-click in-stream checkout connected to 180+ payment providers and
+            automated split payments for creators and talent
           </p>
         </Col>
         <Col sm={24} md={12} className="onlymobile">
@@ -156,42 +173,6 @@ const Brands = () => {
           </Col>
         </Row>
       </div>
-
-      <Row
-        className="section-c"
-        gutter={[48, 32]}
-        justify="center"
-        align="middle"
-      >
-        <Col sm={24} md={12} className="onlydesktop">
-          <Image
-            alt="revo"
-            src="/images/Frictionles_checkout.jpg"
-            width={900}
-            height={520}
-            objectFit="cover"
-          />
-        </Col>
-        <Col sm={24} md={12}>
-          <div className="icons">
-            <BsPlayCircleFill className="icon" />
-          </div>
-
-          <h1 className="title">Frictionless Checkout</h1>
-          <p>
-            One-click in-stream checkout connected to 180+ payment providers
-          </p>
-        </Col>
-        <Col sm={24} md={12} className="onlymobile">
-          <Image
-            alt="revo"
-            src="/images/Frictionles_checkout.jpg"
-            width={900}
-            height={520}
-            objectFit="cover"
-          />
-        </Col>
-      </Row>
 
       <Row
         className="section-b"
@@ -360,4 +341,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Brands;
+export default Publishers;

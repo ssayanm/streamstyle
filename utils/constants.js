@@ -1,8 +1,9 @@
 import { FaApple, FaShopify } from "react-icons/fa";
-import { GoPrimitiveDot } from "react-icons/go";
 import { GrAndroid, GrClose } from "react-icons/gr";
 import Brands from "../components/Brands";
-import HomeSectionB from "../components/HomeSectionB";
+import Creators from "../components/Creators";
+import Marketers from "../components/Marketers";
+import Publishers from "../components/Publishers";
 
 export const links = [
   {
@@ -110,21 +111,21 @@ export const categories = [
     text: "Creators",
     label: "Creators",
     url: "/",
-    components: <HomeSectionB />,
+    components: <Creators />,
   },
   {
     id: 3,
     text: "Publishers & Distributors",
     label: "Publishers & Distributors",
     url: "/",
-    components: <GrAndroid />,
+    components: <Publishers />,
   },
   {
     id: 4,
     text: "Direct Marketers",
     label: "Direct Marketers",
     url: "/",
-    components: <FaShopify />,
+    components: <Marketers />,
   },
 ];
 

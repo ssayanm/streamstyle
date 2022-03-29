@@ -4,7 +4,7 @@ import { BsPlayCircleFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
 
-const Brands = () => {
+const Creators = () => {
   return (
     <Wrapper>
       <Row
@@ -14,14 +14,8 @@ const Brands = () => {
         className="section"
       >
         <Col sm={24} md={12}>
-          <h1 className="title">
-            Sell to your customers directly with shoppable videos
-          </h1>
-          <p>
-            Connect with thousands of consumers with single or multi-screen
-            premium video quality and simulcast your stream to multiple
-            locations at the same time
-          </p>
+          <h1 className="title">Unleash The Power Of Live Commerce</h1>
+          <p>Unleash The Power Of Live Commerce</p>
         </Col>
         <Col sm={24} md={12}>
           <Image
@@ -33,33 +27,17 @@ const Brands = () => {
           />
         </Col>
         <Col sm={24} md={12}>
-          <h1 className="title">Easy to Use</h1>
+          <h1 className="title">Comprehensive Studio Platform</h1>
           <p>
-            One-click. Go Live - in as little as 5 minutes your brand can be
-            live
+            Features an all-in-one control panel to set up shows, polls, banners
+            and has both host, moderator and creator functionality. Seamlessly
+            sell products via comprehensive live-streams
           </p>
         </Col>
         <Col sm={24} md={12}>
           <div className="greenbox">
-            <h1 className="title">Easy to Use</h1>
+            <h1 className="title">Use shot of Studio</h1>
           </div>
-        </Col>
-
-        <Col sm={24} md={12}>
-          <Image
-            alt="revo"
-            src="/images/Catalog_sync.jpg"
-            width={900}
-            height={506}
-            objectFit="cover"
-          />
-        </Col>
-        <Col sm={24} md={12}>
-          <h1 className="title">Catalog Sync</h1>
-          <p>
-            Automatically connect and sync to any e-commerce platform keeping
-            your products up to date and available for your shows
-          </p>
         </Col>
       </Row>
 
@@ -69,25 +47,22 @@ const Brands = () => {
         justify="center"
         align="middle"
       >
+        <Col sm={24} md={12} className="onlydesktop">
+          <div className="greenbox">
+            <h1 className="title">Need video of live chat in motion</h1>
+          </div>
+        </Col>
         <Col sm={24} md={12}>
           <div className="icons">
             <BsPlayCircleFill className="icon" />
           </div>
-          <h1 className="title">Live & VOD</h1>
-          <p>
-            Create new live shows and monetize existing VOD content in a new and
-            engaging way
-          </p>
+          <h1 className="title">Live Chat Moderation</h1>
+          <p>Connect with your customers in real-time using live-chat</p>
         </Col>
-        <Col sm={24} md={12}>
-          {" "}
-          <Image
-            alt="revo"
-            src="/images/Live_and_vod.png"
-            width={900}
-            height={602}
-            objectFit="cover"
-          />
+        <Col sm={24} md={12} className="onlymobile">
+          <div className="greenbox">
+            <h1 className="title">Need video of live chat in motion</h1>
+          </div>
         </Col>
       </Row>
 
@@ -97,45 +72,35 @@ const Brands = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} className="onlydesktop">
-          <Image
-            alt="revo"
-            src="/images/Weekly_Schedule.jpg"
-            width={900}
-            height={478}
-            objectFit="cover"
-          />
-        </Col>
         <Col sm={24} md={12}>
-          <div className="icons">
-            {" "}
-            <BsPlayCircleFill className="icon" />
-          </div>
-          <h1 className="title">Create A Weekly Show Schedule</h1>
+          <h1 className="title">Get Paid </h1>
           <p>
-            Leverage existing talent to create new weekly branded shows. 
-            Develop a slate of programming tied to live shopping events that
-            drive consumers back to your properties and enhance engagement and
-            activation.
+            For every sale you are paid directly to your bank account through
+            our payment platform. Never wait for checks again, go live and get
+            paid!
           </p>
         </Col>
-        <Col sm={24} md={12} className="onlymobile">
-          <Image
-            alt="revo"
-            src="/images/Weekly_Schedule.jpg"
-            width={900}
-            height={478}
-            objectFit="cover"
-          />
+        <Col sm={24} md={12}>
+          <div className="greenbox">
+            <h1 className="title">
+              Need video of payment process for creators
+            </h1>
+          </div>
         </Col>
       </Row>
       <div className="section-center">
-        <Row
-          className="section-d"
-          // gutter={[32, 32]}
-          justify="center"
-          // align="middle"
-        >
+        <Row className="section-d" justify="center">
+          <Col sm={24} md={8} className="onlydesktop">
+            <div className="fimage">
+              <Image
+                alt="revo"
+                src="/images/Virtual_try_on.png"
+                width={400}
+                height={753}
+                objectFit="cover"
+              />
+            </div>
+          </Col>
           <Col sm={24} md={16}>
             <h1 className="title">Virtual AI Try-On </h1>
             <p>
@@ -143,7 +108,7 @@ const Brands = () => {
               increasing customer satisfaction
             </p>
           </Col>
-          <Col sm={24} md={8}>
+          <Col sm={24} md={8} className="onlymobile">
             <div className="fimage">
               <Image
                 alt="revo"
@@ -156,42 +121,6 @@ const Brands = () => {
           </Col>
         </Row>
       </div>
-
-      <Row
-        className="section-c"
-        gutter={[48, 32]}
-        justify="center"
-        align="middle"
-      >
-        <Col sm={24} md={12} className="onlydesktop">
-          <Image
-            alt="revo"
-            src="/images/Frictionles_checkout.jpg"
-            width={900}
-            height={520}
-            objectFit="cover"
-          />
-        </Col>
-        <Col sm={24} md={12}>
-          <div className="icons">
-            <BsPlayCircleFill className="icon" />
-          </div>
-
-          <h1 className="title">Frictionless Checkout</h1>
-          <p>
-            One-click in-stream checkout connected to 180+ payment providers
-          </p>
-        </Col>
-        <Col sm={24} md={12} className="onlymobile">
-          <Image
-            alt="revo"
-            src="/images/Frictionles_checkout.jpg"
-            width={900}
-            height={520}
-            objectFit="cover"
-          />
-        </Col>
-      </Row>
 
       <Row
         className="section-b"
@@ -317,6 +246,11 @@ const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+
+    .title {
+      text-align: center;
+      color: var(--clr-black);
+    }
   }
 
   @media (min-width: 992px) {
@@ -360,4 +294,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Brands;
+export default Creators;
