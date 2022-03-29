@@ -8,13 +8,8 @@ const HomeHeroN = () => {
   return (
     <Wrapper>
       <div className="section-center">
-        <Row
-          gutter={[16, 16]}
-          justify="center"
-          align="middle"
-          className="herorow"
-        >
-          <Col sm={24} md={18} lg={16} xl={14}>
+        <Row gutter={48} justify="center" align="middle" className="herorow">
+          <Col sm={24} md={14}>
             <article className="content">
               <h1 className="title">
                 One Platform For Video Engagement & Live Commerce
@@ -60,7 +55,7 @@ const HomeHeroN = () => {
               </ul>
             </article>
           </Col>
-          <Col sm={24} md={18} lg={16} xl={10}>
+          <Col sm={24} md={10}>
             <div className="onlydesktop">
               <Image
                 alt="revo"
@@ -79,15 +74,8 @@ const HomeHeroN = () => {
 
 const Wrapper = styled.section`
   background: var(--clr-primary-1);
-
-  margin-top: -9rem;
-
-  /* padding: 2rem 0; */
-
-  .herorow {
-    padding-top: 10rem;
-  }
-
+  /* margin-top: -9rem; */
+  padding: 6rem 2rem;
   p {
     margin-top: 2rem;
     font-size: 1.75rem;
@@ -119,9 +107,9 @@ const Wrapper = styled.section`
     text-align: center;
   }
   @media (min-width: 992px) {
-    padding-top: 7rem;
+    padding: 9rem 2rem;
     /* height: calc(100vh - 5rem); */
-    height: 100vh;
+    height: 85vh;
     .title {
       text-align: left;
     }

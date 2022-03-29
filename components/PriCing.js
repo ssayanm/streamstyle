@@ -22,13 +22,13 @@ const PriCing = () => {
     {
       title: "Features",
       dataIndex: "feature",
-      key: "id",
+      key: "feature",
       width: "65%",
     },
     {
       title: "for DTC",
       dataIndex: "dtc",
-      key: "id",
+      key: "dtc",
       render: (text, record) => (
         <div key={record.id}>
           {typeof record.dtc === "boolean" ? (
@@ -49,14 +49,14 @@ const PriCing = () => {
     {
       title: "Features",
       dataIndex: "feature",
-      key: "id",
+      key: "feature",
       width: "65%",
     },
 
     {
       title: "for Brands",
       dataIndex: "brands",
-      key: "id",
+      key: "brands",
       render: (text, record) => (
         <div key={record.id}>
           {typeof record.brands === "boolean" ? (
@@ -77,14 +77,14 @@ const PriCing = () => {
     {
       title: "Features",
       dataIndex: "feature",
-      key: "id",
+      key: "feature",
       width: "65%",
     },
 
     {
       title: "for Enterprise",
       dataIndex: "enterprise",
-      key: "id",
+      key: "enterprise",
       render: (text, record) => (
         <div key={record.id}>
           {typeof record.enterprise === "boolean" ? (

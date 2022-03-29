@@ -10,13 +10,13 @@ const Price = () => {
     {
       title: "Features",
       dataIndex: "feature",
-      key: "id",
+      key: "feature",
       width: "40%",
     },
     {
       title: "for DTC",
       dataIndex: "dtc",
-      key: "id",
+      key: "dtc",
       render: (text, record) => (
         <div>
           {typeof record.dtc === "boolean" ? (
@@ -34,7 +34,7 @@ const Price = () => {
     {
       title: "for Brands",
       dataIndex: "brands",
-      key: "id",
+      key: "brands",
       render: (text, record) => (
         <div>
           {typeof record.brands === "boolean" ? (
@@ -52,7 +52,7 @@ const Price = () => {
     {
       title: "for Enterprise",
       dataIndex: "enterprise",
-      key: "id",
+      key: "enterprise",
       render: (text, record) => (
         <div>
           {typeof record.enterprise === "boolean" ? (

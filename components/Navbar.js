@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { FaBars } from "react-icons/fa";
-
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import { links } from "../utils/constants";
@@ -9,10 +9,18 @@ import { links } from "../utils/constants";
 import { useAppContext } from "../context/app_context";
 
 const Nav = () => {
+  const router = useRouter();
   const { openSidebar } = useAppContext();
 
+  console.log(router.asPath);
+
   return (
-    <NavContainer>
+    <NavContainer
+      style={{
+        background:
+          router.asPath === "/" ? "var(--clr-primary-1)" : "var(--clr-white)",
+      }}
+    >
       <div className="nav-center">
         <div className="nav-header">
           <Link href="/">

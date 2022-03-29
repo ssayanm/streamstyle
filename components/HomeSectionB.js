@@ -5,102 +5,105 @@ import { Row, Col } from "antd";
 const HomeSectionB = () => {
   return (
     <Wrapper>
-      <Row gutter={16} justify="center" align="middle">
-        <Col></Col>
-        <Row className="space">
-          <Col sm={24} md={12} xl={8}></Col>
-          <Col sm={24} md={12} xl={8}></Col>
+      <div className="section-center">
+        <Row gutter={16}>
+          <Col>
+            {" "}
+            <h3>
+              The features
+              <br /> you need
+            </h3>
+          </Col>
         </Row>
-      </Row>
-      <div className="container">
-        <article className="header">
-          <h3>
-            The features
-            <br /> you need
-          </h3>
-        </article>
-        <div className="services-center">
-          <div>
-            <div className="space">
-              <Image
-                alt="revo"
-                src="/images/cart.png"
-                width={49}
-                height={49}
-                objectFit="cover"
-              />
-              <p className="heading">Direct e-Commerce Integration</p>
-              <p className="desc">
-                Our live shopping solution provides instant product sync,
-                seamless integration you’re your e-Commerce platform, and
-                instant checkout.{" "}
-              </p>
-            </div>
-            <div className="space">
-              <Image
-                alt="revo"
-                src="/images/dollar.png"
-                width={49}
-                height={49}
-                objectFit="cover"
-              />
-              <p className="heading">
-                Frictionless <br />
-                Payment
-              </p>
-              <p className="desc">
-                Increase sales and conversion complete transactions in one-click
-                without ever leaving the show.{" "}
-              </p>
-            </div>
-          </div>
-          <div>
-            <div className="space">
-              <Image
-                alt="revo"
-                src="/images/eng.png"
-                width={49}
-                height={49}
-                objectFit="cover"
-              />
-              <p className="heading">
-                High <br />
-                Engagement
-              </p>
-              <p className="desc">
-                An immersive Live video experience that drives engagement,
-                discovery and community{" "}
-              </p>
-            </div>
-            <div className="space">
-              <Image
-                alt="revo"
-                src="/images/analytics.png"
-                width={83}
-                height={41}
-                objectFit="cover"
-              />
-              <p className="heading">
-                Real-Time
-                <br /> Analytics
-              </p>
-              <p className="desc">
-                Real-time analytics to maximize sales throughout the show. Built
-                in KPIs and fully branded ownership of enhanced analytics and
-                data.{" "}
-              </p>
-            </div>
-          </div>
-          <div>
+        <Row gutter={[48, 32]}>
+          <Col sm={24} md={16}>
+            <Row gutter={[32, 48]}>
+              <Col sm={24} md={12}>
+                <Image
+                  alt="revo"
+                  src="/images/cart.png"
+                  width={49}
+                  height={49}
+                  objectFit="cover"
+                />
+                <p className="heading">
+                  Direct e-Commerce
+                  <br /> Integration
+                </p>
+                <p className="desc">
+                  Our live shopping solution provides instant product sync,
+                  seamless integration you’re your e-Commerce platform, and
+                  instant checkout.{" "}
+                </p>
+              </Col>
+              <Col sm={24} md={12}>
+                {" "}
+                <Image
+                  alt="revo"
+                  src="/images/eng.png"
+                  width={49}
+                  height={49}
+                  objectFit="cover"
+                />
+                <p className="heading">
+                  High <br />
+                  Engagement
+                </p>
+                <p className="desc">
+                  An immersive Live video experience that drives engagement,
+                  discovery and community{" "}
+                </p>
+              </Col>
+            </Row>
+            <Row gutter={[32, 32]}>
+              <Col sm={24} md={12} className="space">
+                {" "}
+                <Image
+                  alt="revo"
+                  src="/images/dollar.png"
+                  width={49}
+                  height={49}
+                  objectFit="cover"
+                />
+                <p className="heading">
+                  Frictionless <br />
+                  Payment
+                </p>
+                <p className="desc">
+                  Increase sales and conversion complete transactions in
+                  one-click without ever leaving the show.{" "}
+                </p>
+              </Col>
+              <Col sm={24} md={12} className="space">
+                <Image
+                  alt="revo"
+                  src="/images/analytics.png"
+                  width={83}
+                  height={41}
+                  objectFit="cover"
+                />
+                <p className="heading">
+                  Real-Time
+                  <br /> Analytics
+                </p>
+                <p className="desc">
+                  Real-time analytics to maximize sales throughout the show.
+                  Built in KPIs and fully branded ownership of enhanced
+                  analytics and data.{" "}
+                </p>
+              </Col>
+            </Row>
+          </Col>
+          <Col sm={24} md={8} className="imagecon">
             <Image
               alt="revo"
               src="/images/features.png"
               width={1200}
               height={750}
-              // objectFit="cover"
+              objectFit="cover"
             />
-          </div>
-        </div>
+          </Col>
+        </Row>
       </div>
     </Wrapper>
   );
@@ -109,6 +112,12 @@ const HomeSectionB = () => {
 const Wrapper = styled.section`
   padding: 6rem 2rem;
   background: var(--clr-black);
+
+  .imagecon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   h3 {
     font-size: 2.7rem;
@@ -140,27 +149,10 @@ const Wrapper = styled.section`
     /* line-height: 1.3; */
     color: var(--clr-white);
   }
-  .services-center {
-    margin-top: 2rem;
-    display: grid;
-    gap: 2rem;
-  }
-  .service {
-    background: var(--clr-primary-7);
-    text-align: center;
-    padding: 2.5rem 2rem;
-    border-radius: var(--radius);
-    p {
-      /* color: var(--clr-primary-2); */
-    }
-  }
 
   @media (min-width: 992px) {
     padding: 9rem 2rem;
-    .container {
-      padding: 0 2rem;
-      text-align: left;
-    }
+
     .header {
       padding-left: 4rem;
     }
@@ -179,19 +171,6 @@ const Wrapper = styled.section`
 
     .desc {
       font-size: 1.25rem;
-    }
-  }
-  @media (min-width: 576px) {
-    .services-center {
-      grid-template-columns: 1fr 1fr 1fr;
-      padding-left: 4rem;
-      align-items: center;
-    }
-  }
-  @media (min-width: 1280px) {
-    /* padding: 0; */
-    .section-center {
-      /* transform: translateY(5rem); */
     }
   }
 `;
