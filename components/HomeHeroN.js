@@ -8,7 +8,7 @@ const HomeHeroN = () => {
   return (
     <Wrapper>
       <div className="section-center">
-        <Row gutter={48} justify="center" align="middle" className="herorow">
+        <Row gutter={16} justify="center" align="middle" className="herorow">
           <Col sm={24} md={14}>
             <article className="content">
               <h1 className="title">
@@ -107,9 +107,9 @@ const Wrapper = styled.section`
     text-align: center;
   }
   @media (min-width: 992px) {
-    padding: 9rem 2rem;
+    padding: 5rem 2rem;
     /* height: calc(100vh - 5rem); */
-    height: 85vh;
+    /* height: 85vh; */
     .title {
       text-align: left;
     }
@@ -141,6 +141,10 @@ const Wrapper = styled.section`
       justify-content: space-between;
       margin-top: 2rem;
     }
+  }
+
+  @media (min-width: 1367px) {
+    padding: 9rem 2rem;
   }
 `;
 

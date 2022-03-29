@@ -18,7 +18,7 @@ const Categories = () => {
   return (
     <NavContainer>
       <h1 className="title text-center onlydesktop">Revo for</h1>
-      {
+      <div className="section-center">
         <Tabs
           defaultActiveKey="1"
           onChange={callback}
@@ -34,8 +34,7 @@ const Categories = () => {
             );
           })}
         </Tabs>
-      }
-
+      </div>
       <div className="onlymobile navmob">
         <Select
           defaultValue={selectedOption}
@@ -43,16 +42,7 @@ const Categories = () => {
           options={categories}
           className="mobselect"
         />
-        {/*   <select className="mobselect">
-          {categories.map((link, index) => {
-            const { id, text } = link;
-            return (
-              <option key={id} onClick={() => setValue(index)}>
-                {text}
-              </option>
-            );
-          })}
-        </select>*/}
+
         {selectedOption.components}
       </div>
     </NavContainer>
@@ -71,15 +61,16 @@ const NavContainer = styled.nav`
   .ant-tabs-nav-wrap {
     border-radius: 3rem;
     background: var(--clr-primary-1);
-    padding: 1rem;
-    margin: 0 5rem;
+    padding: 0.5rem;
+    /* margin: 0 5rem; */
+    /* width: 80vw; */
   }
   .ant-tabs-top > .ant-tabs-nav::before {
     border-bottom: none;
   }
 
   .ant-tabs-tab {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.38);
     margin: 0 3rem;
     cursor: pointer;
@@ -126,101 +117,8 @@ const NavContainer = styled.nav`
   select::-ms-expand {
     display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
   }
-  .nav-center {
-    width: max-content;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  .nav-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .nav-toggle {
-    background: transparent;
-    border: transparent;
-    color: var(--clr-black);
-    cursor: pointer;
-
-    svg {
-      font-size: 2rem;
-    }
-  }
-
-  .links-container {
-    /* height: 0; */
-    overflow: hidden;
-    transition: var(--transition);
-    background: var(--clr-primary-1);
-  }
-
-  .jbtn {
-    background: none;
-    border: none;
-    color: var(--clr-white);
-    font-size: 1.2rem;
-    font-family: "MontSemiBold";
-    display: block;
-    transition: var(--transition);
-    cursor: pointer;
-    margin: 0 auto;
-    /* padding: 0.5rem; */
-    /* margin: 0 3rem; */
-    &:hover {
-      border-bottom: 1px solid var(--clr-white);
-    }
-  }
-  .nav-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 1rem;
-  }
-  .nav-toggle {
-    font-size: 1.5rem;
-    color: var(--clr-white);
-    background: transparent;
-    border-color: transparent;
-    transition: var(--transition);
-    cursor: pointer;
-  }
-  .nav-toggle:hover {
-    color: var(--clr-primary-1);
-    transform: rotate(90deg);
-  }
 
   @media (min-width: 992px) {
-    .nav-toggle {
-      display: none;
-    }
-    .nav-center {
-      width: 90vw;
-      margin: 0 auto;
-      padding: 2rem;
-      border-radius: 4rem;
-      /* max-width: var(--max-width); */
-      background: var(--clr-primary-1);
-    }
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .jbtn {
-      color: var(--clr-white);
-      font-size: 2rem;
-      font-family: "MontSemiBold";
-      /* line-height: 1.07; */
-      opacity: 0.38;
-      letter-spacing: var(--spacing);
-
-      /* padding: 0 0.5rem; */
-      margin: 0 3rem;
-      &:hover {
-        border-bottom: 1px solid var(--clr-white);
-      }
-    }
     .active-btn {
       border-bottom: 1px solid var(--clr-white);
       opacity: 1;
