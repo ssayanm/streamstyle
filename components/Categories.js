@@ -19,7 +19,7 @@ const customStyles = {
     // borderRadius: "3rem",
     /* padding: 1rem; */
     boxShadow: "none",
-    fontSize: "1.2rem",
+    fontSize: "1.5rem",
     background: "var(--clr-primary-1)",
     fontFamily: "MontBold",
 
@@ -76,6 +76,10 @@ const NavContainer = styled.nav`
   .navmob {
     width: 90vw;
     margin: 0 auto;
+  }
+
+  .css-qc6sy-singleValue {
+    font-size: 1.5rem;
   }
 
   .ant-tabs-nav-wrap {
