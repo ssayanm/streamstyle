@@ -113,7 +113,7 @@ const Wrapper = styled.section`
 
     .greendot {
       width: 1.5rem;
-      height: 1.75rem;
+      height: 1.25rem;
     }
   }
 
@@ -130,7 +130,7 @@ const Wrapper = styled.section`
     }
 
     h5 {
-      font-size: 2rem;
+      font-size: 1.75rem;
       text-align: left;
     }
     p {
