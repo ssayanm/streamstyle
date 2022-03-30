@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BsPlayCircleFill } from "react-icons/bs";
+import { BsPlayCircleFill, BsPlayFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
 
@@ -33,7 +33,11 @@ const Brands = () => {
           />
         </Col>
         <Col sm={24} md={12}>
-          <h1 className="title">Easy to Use</h1>
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Easy to Use</h1>
+          </div>
+
           <p>
             One-click. Go Live - in as little as 5 minutes your brand can be
             live
@@ -55,7 +59,11 @@ const Brands = () => {
           />
         </Col>
         <Col sm={24} md={12}>
-          <h1 className="title">Catalog Sync</h1>
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Catalog Sync</h1>
+          </div>
+
           <p>
             Automatically connect and sync to any e-commerce platform keeping
             your products up to date and available for your shows
@@ -70,10 +78,11 @@ const Brands = () => {
         align="middle"
       >
         <Col sm={24} md={12}>
-          <div className="icons">
-            <BsPlayCircleFill className="icon" />
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Live & VOD</h1>
           </div>
-          <h1 className="title">Live & VOD</h1>
+
           <p>
             Create new live shows and monetize existing VOD content in a new and
             engaging way
@@ -107,11 +116,11 @@ const Brands = () => {
           />
         </Col>
         <Col sm={24} md={12}>
-          <div className="icons">
-            {" "}
-            <BsPlayCircleFill className="icon" />
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Create A Weekly Show Schedule</h1>
           </div>
-          <h1 className="title">Create A Weekly Show Schedule</h1>
+
           <p>
             Leverage existing talent to create new weekly branded shows. 
             Develop a slate of programming tied to live shopping events that
@@ -137,7 +146,11 @@ const Brands = () => {
           // align="middle"
         >
           <Col sm={24} md={16}>
-            <h1 className="title">Virtual AI Try-On </h1>
+            <div className="iconbar">
+              <BsPlayFill className="icon" />
+              <h1 className="title">Virtual AI Try-On</h1>
+            </div>
+
             <p>
               Allow consumers to try-on products virtually reducing returns and
               increasing customer satisfaction
@@ -173,11 +186,11 @@ const Brands = () => {
           />
         </Col>
         <Col sm={24} md={12}>
-          <div className="icons">
-            <BsPlayCircleFill className="icon" />
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Frictionless Checkout</h1>
           </div>
 
-          <h1 className="title">Frictionless Checkout</h1>
           <p>
             One-click in-stream checkout connected to 180+ payment providers
           </p>
@@ -200,11 +213,12 @@ const Brands = () => {
         align="middle"
       >
         <Col sm={24} md={12}>
-          <div className="icons">
-            {" "}
-            <BsPlayCircleFill className="icon" />
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Real-Time Analytics</h1>
           </div>
-          <h1 className="title">Real-Time Analytics</h1>
+
+          <h1 className="title"></h1>
           <p>
             On-demand analytics dashboard on sales, engagement and more from
             your live dashboard. Analytics can be used during live events to
@@ -283,7 +297,7 @@ const Wrapper = styled.section`
   p {
     /* max-width: 45em; */
     /* font-family: "MontSemiBold", sans-serif; */
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 2rem;
@@ -291,15 +305,6 @@ const Wrapper = styled.section`
 
   .title {
     font-size: 2rem;
-  }
-
-  .icons {
-    text-align: center;
-  }
-  .icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 2rem;
   }
 
   .fimage {
@@ -317,6 +322,23 @@ const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+
+    .title {
+      font-size: 2rem;
+    }
+  }
+
+  .iconbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+    }
   }
 
   @media (min-width: 992px) {
@@ -350,12 +372,16 @@ const Wrapper = styled.section`
       text-align: left;
       font-size: 3rem;
     }
-    .icons {
-      text-align: left;
-    }
+
     .greenbox {
       width: 35rem;
       height: 25rem;
+    }
+
+    .iconbar {
+      justify-content: flex-start;
+      align-items: baseline;
+      flex-direction: row;
     }
   }
 `;

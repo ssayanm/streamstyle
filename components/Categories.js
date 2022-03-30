@@ -146,6 +146,9 @@ const NavContainer = styled.nav`
       border-bottom: 1px solid var(--clr-white);
       opacity: 1;
     }
+    .ant-tabs-tab {
+      font-size: 1.75rem;
+    }
   }
 `;
 

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BsPlayCircleFill } from "react-icons/bs";
+import { BsPlayCircleFill, BsPlayFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
 
@@ -27,7 +27,11 @@ const Creators = () => {
           />
         </Col>
         <Col sm={24} md={12}>
-          <h1 className="title">Comprehensive Studio Platform</h1>
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Comprehensive Studio Platform</h1>
+          </div>
+
           <p>
             Features an all-in-one control panel to set up shows, polls, banners
             and has both host, moderator and creator functionality. Seamlessly
@@ -53,10 +57,11 @@ const Creators = () => {
           </div>
         </Col>
         <Col sm={24} md={12}>
-          <div className="icons">
-            <BsPlayCircleFill className="icon" />
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Live Chat Moderation</h1>
           </div>
-          <h1 className="title">Live Chat Moderation</h1>
+
           <p>Connect with your customers in real-time using live-chat</p>
         </Col>
         <Col sm={24} md={12} className="onlymobile">
@@ -73,7 +78,11 @@ const Creators = () => {
         align="middle"
       >
         <Col sm={24} md={12}>
-          <h1 className="title">Get Paid </h1>
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Get Paid</h1>
+          </div>
+
           <p>
             For every sale you are paid directly to your bank account through
             our payment platform. Never wait for checks again, go live and get
@@ -102,7 +111,10 @@ const Creators = () => {
             </div>
           </Col>
           <Col sm={24} md={16}>
-            <h1 className="title">Virtual AI Try-On </h1>
+            <div className="iconbar">
+              <BsPlayFill className="icon" />
+              <h1 className="title">Virtual AI Try-On</h1>
+            </div>
             <p>
               Allow consumers to try-on products virtually reducing returns and
               increasing customer satisfaction
@@ -129,11 +141,10 @@ const Creators = () => {
         align="middle"
       >
         <Col sm={24} md={12}>
-          <div className="icons">
-            {" "}
-            <BsPlayCircleFill className="icon" />
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Real-Time Analytics</h1>
           </div>
-          <h1 className="title">Real-Time Analytics</h1>
           <p>
             On-demand analytics dashboard on sales, engagement and more from
             your live dashboard. Analytics can be used during live events to
@@ -222,15 +233,6 @@ const Wrapper = styled.section`
     font-size: 2rem;
   }
 
-  .icons {
-    text-align: center;
-  }
-  .icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 2rem;
-  }
-
   .fimage {
     transform: translateY(1rem);
   }
@@ -250,6 +252,21 @@ const Wrapper = styled.section`
     .title {
       text-align: center;
       color: var(--clr-black);
+
+      font-size: 2rem;
+    }
+  }
+
+  .iconbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -284,12 +301,16 @@ const Wrapper = styled.section`
       text-align: left;
       font-size: 3rem;
     }
-    .icons {
-      text-align: left;
-    }
+
     .greenbox {
       width: 35rem;
       height: 25rem;
+    }
+
+    .iconbar {
+      justify-content: flex-start;
+      align-items: baseline;
+      flex-direction: row;
     }
   }
 `;

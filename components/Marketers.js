@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BsPlayCircleFill } from "react-icons/bs";
+import { BsPlayCircleFill, BsPlayFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
 
@@ -29,7 +29,11 @@ const Marketers = () => {
           />
         </Col>
         <Col sm={24} md={12}>
-          <h1 className="title">Create & Host Live Events</h1>
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Create & Host Live Events</h1>
+          </div>
+
           <p>
             Features an all-in-one control panel to easily set up and host
             events, send invitations, integrate polls and banners to help spark
@@ -55,10 +59,11 @@ const Marketers = () => {
           </div>
         </Col>
         <Col sm={24} md={12}>
-          <div className="icons">
-            <BsPlayCircleFill className="icon" />
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Live Chat Moderation</h1>
           </div>
-          <h1 className="title">Live Chat Moderation</h1>
+
           <p>
             Chat live with your customers, answer questions, and interact in
             real-time driving activation and sales
@@ -78,11 +83,11 @@ const Marketers = () => {
         align="middle"
       >
         <Col sm={24} md={12}>
-          <div className="icons">
-            {" "}
-            <BsPlayCircleFill className="icon" />
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Frictionless Checkout</h1>
           </div>
-          <h1 className="title">Frictionless Checkout</h1>
+
           <p>
             Our frictionless payment process makes it easy for guests to
             purchase without ever leaving your part. No more calling and
@@ -116,7 +121,11 @@ const Marketers = () => {
             </div>
           </Col>
           <Col sm={24} md={16}>
-            <h1 className="title">Virtual AI Try-On </h1>
+            <div className="iconbar">
+              <BsPlayFill className="icon" />
+              <h1 className="title">Virtual AI Try-On</h1>
+            </div>
+
             <p>
               Allow consumers to try-on products virtually reducing returns and
               increasing customer satisfaction
@@ -143,11 +152,11 @@ const Marketers = () => {
         align="middle"
       >
         <Col sm={24} md={12}>
-          <div className="icons">
-            {" "}
-            <BsPlayCircleFill className="icon" />
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Real-Time Analytics</h1>
           </div>
-          <h1 className="title">Real-Time Analytics</h1>
+
           <p>
             On-demand analytics dashboard on sales, engagement and more from
             your live dashboard. Analytics can be used during live events to
@@ -236,15 +245,6 @@ const Wrapper = styled.section`
     font-size: 2rem;
   }
 
-  .icons {
-    text-align: center;
-  }
-  .icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 2rem;
-  }
-
   .fimage {
     transform: translateY(1rem);
   }
@@ -264,6 +264,20 @@ const Wrapper = styled.section`
     .title {
       text-align: center;
       color: var(--clr-black);
+
+      font-size: 2rem;
+    }
+  }
+  .iconbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -298,12 +312,15 @@ const Wrapper = styled.section`
       text-align: left;
       font-size: 3rem;
     }
-    .icons {
-      text-align: left;
-    }
+
     .greenbox {
       width: 35rem;
       height: 25rem;
+    }
+    .iconbar {
+      justify-content: flex-start;
+      align-items: baseline;
+      flex-direction: row;
     }
   }
 `;

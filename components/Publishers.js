@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BsPlayCircleFill } from "react-icons/bs";
+import { BsPlayCircleFill, BsPlayFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
 
@@ -32,7 +32,11 @@ const Publishers = () => {
           />
         </Col>
         <Col sm={24} md={12}>
-          <h1 className="title">Allow Consumers To Shop What They Love </h1>
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Allow Consumers To Shop What They Love</h1>
+          </div>
+
           <p>
             Create new catalogs of products tied to existing videos or shows
             thus creating a new way for consumers to engage with your content,
@@ -44,9 +48,9 @@ const Publishers = () => {
         <Col sm={24} md={12}>
           <Image
             alt="revo"
-            src="/images/herovideo.jpg"
-            width={826}
-            height={530}
+            src="/images/Catalog_sync.jpg"
+            width={1649}
+            height={929}
             objectFit="cover"
           />
         </Col>
@@ -61,11 +65,11 @@ const Publishers = () => {
           />
         </Col>
         <Col sm={24} md={12}>
-          <div className="icons">
-            {" "}
-            <BsPlayCircleFill className="icon" />
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Create A Weekly Show Schedule</h1>
           </div>
-          <h1 className="title">Create A Weekly Show Schedule</h1>
+
           <p>
             Leverage existing talent to create new weekly branded shows. 
             Develop a slate of programming tied to live shopping events that
@@ -91,10 +95,11 @@ const Publishers = () => {
         align="middle"
       >
         <Col sm={24} md={12}>
-          <div className="icons">
-            <BsPlayCircleFill className="icon" />
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Live & VOD</h1>
           </div>
-          <h1 className="title">Live & VOD</h1>
+
           <p>
             Create live and VOD shoppable shows that you can re-distribute
             within your ecosystem, use for promotional efforts,  and/or
@@ -123,14 +128,17 @@ const Publishers = () => {
         <Col sm={24} md={12} className="onlydesktop">
           <Image
             alt="revo"
-            src="/images/Weekly_Schedule.jpg"
-            width={900}
-            height={478}
+            src="/images/Frictionles_checkout.jpg"
+            width={1796}
+            height={1038}
             objectFit="cover"
           />
         </Col>
         <Col sm={24} md={12}>
-          <h1 className="title">Frictionless Checkout</h1>
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Frictionless Checkout</h1>
+          </div>
           <p>
             One-click in-stream checkout connected to 180+ payment providers and
             automated split payments for creators and talent
@@ -139,9 +147,9 @@ const Publishers = () => {
         <Col sm={24} md={12} className="onlymobile">
           <Image
             alt="revo"
-            src="/images/Weekly_Schedule.jpg"
-            width={900}
-            height={478}
+            src="/images/Frictionles_checkout.jpg"
+            width={1796}
+            height={1038}
             objectFit="cover"
           />
         </Col>
@@ -154,7 +162,10 @@ const Publishers = () => {
           // align="middle"
         >
           <Col sm={24} md={16}>
-            <h1 className="title">Virtual AI Try-On </h1>
+            <div className="iconbar">
+              <BsPlayFill className="icon" />
+              <h1 className="title">Virtual AI Try-On</h1>
+            </div>
             <p>
               Allow consumers to try-on products virtually reducing returns and
               increasing customer satisfaction
@@ -181,11 +192,10 @@ const Publishers = () => {
         align="middle"
       >
         <Col sm={24} md={12}>
-          <div className="icons">
-            {" "}
-            <BsPlayCircleFill className="icon" />
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">Real-Time Analytics</h1>
           </div>
-          <h1 className="title">Real-Time Analytics</h1>
           <p>
             On-demand analytics dashboard on sales, engagement and more from
             your live dashboard. Analytics can be used during live events to
@@ -274,15 +284,6 @@ const Wrapper = styled.section`
     font-size: 2rem;
   }
 
-  .icons {
-    text-align: center;
-  }
-  .icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 2rem;
-  }
-
   .fimage {
     transform: translateY(1rem);
   }
@@ -298,6 +299,22 @@ const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+    .title {
+      font-size: 2rem;
+    }
+  }
+
+  .iconbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+    }
   }
 
   @media (min-width: 992px) {
@@ -331,12 +348,15 @@ const Wrapper = styled.section`
       text-align: left;
       font-size: 3rem;
     }
-    .icons {
-      text-align: left;
-    }
+
     .greenbox {
       width: 35rem;
       height: 25rem;
+    }
+    .iconbar {
+      justify-content: flex-start;
+      align-items: baseline;
+      flex-direction: row;
     }
   }
 `;
