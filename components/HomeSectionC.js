@@ -148,7 +148,7 @@ const Wrapper = styled.section`
 
     .leftcontent {
       padding-left: 5rem;
-      padding-right: 3rem;
+      padding-right: 1rem;
     }
 
     .left-space {

@@ -1,6 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import { BsPlayCircleFill, BsPlayFill } from "react-icons/bs";
+import { BsPlayFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
 

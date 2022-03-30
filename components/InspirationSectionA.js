@@ -1,5 +1,4 @@
-import { Row, Col, Card } from "antd";
-import Image from "next/image";
+import { Row, Col } from "antd";
 import { useState } from "react";
 import styled from "styled-components";
 import { featuredChannels } from "../utils/constants";

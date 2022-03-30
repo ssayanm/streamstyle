@@ -1,4 +1,4 @@
-import { Row, Col, Card } from "antd";
+import { Row, Col } from "antd";
 import Image from "next/image";
 import { useState } from "react";
 import styled from "styled-components";

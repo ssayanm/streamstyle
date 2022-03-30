@@ -74,8 +74,7 @@ const HomeHero = () => {
 
 const Wrapper = styled.section`
   background: var(--clr-primary-1);
-  /* margin-top: -9rem; */
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   p {
     margin-top: 2rem;
     font-size: 1.75rem;
@@ -108,8 +107,7 @@ const Wrapper = styled.section`
   }
   @media (min-width: 992px) {
     padding: 5rem 2rem;
-    /* height: calc(100vh - 5rem); */
-    /* height: 85vh; */
+
     .title {
       text-align: left;
     }
