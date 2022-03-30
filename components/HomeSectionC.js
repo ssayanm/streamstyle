@@ -4,6 +4,7 @@ import Link from "next/link";
 import { BsPlayCircleFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
+import { GoPrimitiveDot } from "react-icons/go";
 
 const HomeSectionC = () => {
   return (
@@ -31,17 +32,32 @@ const HomeSectionC = () => {
               Elevate your brand’s online experience with the Revo Video
               platform
             </p>
-            <h5>All in one platform</h5>
+
+            <div className="greeniconbar">
+              <GoPrimitiveDot className="greendot" />
+              <h5>All in one platform</h5>
+            </div>
+
             <p>
               Simple to use yet powerful show set up and full recording studio
               with automated features that keep audiences engaged and buying
             </p>
-            <h5 className="content">One-To-Many</h5>
+            <div className="greeniconbar content">
+              <GoPrimitiveDot className="greendot" />
+
+              <h5>One-To-Many</h5>
+            </div>
+
             <p className="content">
               Invite experts, co-hosts, and even fans to participate in your
               live stream while thousands of consumers watch and interact{" "}
             </p>
-            <h5>Shop-in-Video</h5>
+            <div className="greeniconbar">
+              <GoPrimitiveDot className="greendot" />
+
+              <h5>Shop-in-Video</h5>
+            </div>
+
             <p>
               Our integrated payment platform, customers can buy instantly,
               without leaving the experience{" "}
@@ -69,14 +85,19 @@ const Wrapper = styled.section`
   background-position: -16% 50%;
   background-repeat: no-repeat;
 
+  .title {
+    text-align: center;
+  }
+
   h5 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-family: "MontSemiBold", sans-serif;
+    text-align: center;
   }
   p {
     /* max-width: 45em; */
     font-family: "MontSemiBold", sans-serif;
-
+    text-align: center;
     font-size: 1.2rem;
   }
   .icon {
@@ -84,19 +105,36 @@ const Wrapper = styled.section`
     height: 64px;
   }
 
+  .greeniconbar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* flex-direction: column; */
+
+    .greendot {
+      width: 1.5rem;
+      height: 1.75rem;
+    }
+  }
+
   @media (min-width: 992px) {
     padding: 9rem 2rem;
 
-    h4 {
-      font-size: 2.5rem;
-      font-family: "MontLight", sans-serif;
-      margin-bottom: 1.5rem;
+    .greeniconbar {
+      justify-content: flex-start;
+      align-items: baseline;
+      flex-direction: row;
     }
+    .title {
+      text-align: left;
+    }
+
     h5 {
       font-size: 2rem;
+      text-align: left;
     }
     p {
-      /* font-size: 1.2rem; */
+      text-align: left;
     }
     .hero-btn {
       padding: 0.75rem 1.5rem;

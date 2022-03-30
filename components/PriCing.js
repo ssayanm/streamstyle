@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import Link from "next/link";
 
-import { Card, Col, Collapse, Row, Table } from "antd";
+import { Col, Collapse, Row, Table } from "antd";
 
 import { GoPrimitiveDot } from "react-icons/go";
 
@@ -10,7 +10,6 @@ import { GrClose } from "react-icons/gr";
 import { featuresPrice } from "../utils/constants";
 
 import { GoDash } from "react-icons/go";
-import Image from "next/image";
 
 const { Panel } = Collapse;
 
