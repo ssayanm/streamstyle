@@ -18,7 +18,7 @@ const Price = () => {
       dataIndex: "dtc",
       key: "dtc",
       render: (text, record) => (
-        <div>
+        <div className="text-center">
           {typeof record.dtc === "boolean" ? (
             record.dtc ? (
               <GoPrimitiveDot className="greendot" />
@@ -36,7 +36,7 @@ const Price = () => {
       dataIndex: "brands",
       key: "brands",
       render: (text, record) => (
-        <div>
+        <div className="text-center">
           {typeof record.brands === "boolean" ? (
             record.brands ? (
               <GoPrimitiveDot className="greendot" />
@@ -54,7 +54,7 @@ const Price = () => {
       dataIndex: "enterprise",
       key: "enterprise",
       render: (text, record) => (
-        <div>
+        <div className="text-center">
           {typeof record.enterprise === "boolean" ? (
             record.enterprise ? (
               <GoPrimitiveDot className="greendot" />
@@ -101,6 +101,10 @@ const Wrapper = styled.section`
     .ant-table-thead > tr > th {
       font-family: "MontBold";
       font-size: 1.1rem;
+
+      :not(:first-child) {
+        text-align: center;
+      }
     }
   }
 `;

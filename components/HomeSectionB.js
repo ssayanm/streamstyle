@@ -17,7 +17,7 @@ const HomeSectionB = () => {
         </Row>
         <Row gutter={[48, 32]}>
           <Col sm={24} md={16}>
-            <Row gutter={[32, 48]}>
+            <Row gutter={[32, 32]}>
               <Col sm={24} md={12}>
                 <Image
                   alt="revo"

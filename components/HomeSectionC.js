@@ -42,13 +42,13 @@ const HomeSectionC = () => {
               Simple to use yet powerful show set up and full recording studio
               with automated features that keep audiences engaged and buying
             </p>
-            <div className="greeniconbar content">
+            <div className="greeniconbar leftcontent">
               <GoPrimitiveDot className="greendot" />
 
               <h5>One-To-Many</h5>
             </div>
 
-            <p className="content">
+            <p className="leftcontent">
               Invite experts, co-hosts, and even fans to participate in your
               live stream while thousands of consumers watch and interact{" "}
             </p>
@@ -143,7 +143,12 @@ const Wrapper = styled.section`
 
     .content {
       padding-left: 5rem;
-      padding-right: 7rem;
+      padding-right: 4rem;
+    }
+
+    .leftcontent {
+      padding-left: 5rem;
+      padding-right: 3rem;
     }
 
     .left-space {

@@ -30,7 +30,7 @@ const PriCing = () => {
       dataIndex: "dtc",
       key: "dtc",
       render: (text, record) => (
-        <div key={record.id}>
+        <div key={record.id} className="text-center">
           {typeof record.dtc === "boolean" ? (
             record.dtc ? (
               <GoPrimitiveDot className="greendot" />
@@ -58,7 +58,7 @@ const PriCing = () => {
       dataIndex: "brands",
       key: "brands",
       render: (text, record) => (
-        <div key={record.id}>
+        <div key={record.id} className="text-center">
           {typeof record.brands === "boolean" ? (
             record.brands ? (
               <GoPrimitiveDot className="greendot" />
@@ -86,7 +86,7 @@ const PriCing = () => {
       dataIndex: "enterprise",
       key: "enterprise",
       render: (text, record) => (
-        <div key={record.id}>
+        <div key={record.id} className="text-center">
           {typeof record.enterprise === "boolean" ? (
             record.enterprise ? (
               <GoPrimitiveDot className="greendot" />
@@ -100,7 +100,6 @@ const PriCing = () => {
       ),
     },
   ];
-  const style = { background: "#0092ff", padding: "8px 0" };
 
   return (
     <Wrapper>
@@ -251,6 +250,12 @@ const Wrapper = styled.section`
     p {
       text-align: left;
       color: var(--clr-black);
+    }
+  }
+
+  .ant-table-thead > tr > th {
+    :not(:first-child) {
+      text-align: center;
     }
   }
 
