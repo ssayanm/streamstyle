@@ -18,15 +18,13 @@ const customStyles = {
     fontSize: "1.2rem",
     background: "var(--clr-primary-1)",
     fontFamily: "MontBold",
-
     color: "var(--clr-white)",
-
     cursor: "pointer",
   }),
 };
 
 const Categories = () => {
-  const [value, setValue] = useState(0);
+  // const [value, setValue] = useState(0);
 
   const [selectedOption, setSelectedOption] = useState(categories[0]);
 

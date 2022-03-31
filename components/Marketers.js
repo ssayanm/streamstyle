@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { BsPlayFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
+import ReactPlayer from "react-player/lazy";
 
 const Marketers = () => {
   return (
@@ -19,14 +20,19 @@ const Marketers = () => {
           </h1>
           <p>Start a live sales channel to monetize your hosts’ parties</p>
         </Col>
-        <Col sm={24} md={12}>
-          <Image
-            alt="revo"
-            src="/images/herovideo.jpg"
-            width={826}
-            height={530}
-            objectFit="cover"
-          />
+        <Col sm={24} md={12} className="widthfull">
+          <div className="player-wrapper">
+            <ReactPlayer
+              url={"/videos/homevideo.mp4"}
+              playing={true}
+              muted={true}
+              controls={true}
+              width="100%"
+              height="100%"
+              image="/images/herovideo.jpg"
+              className="react-player"
+            />
+          </div>
         </Col>
         <Col sm={24} md={12}>
           <div className="iconbar">
@@ -125,7 +131,6 @@ const Marketers = () => {
               <BsPlayFill className="icon" />
               <h1 className="title">Virtual AI Try-On</h1>
             </div>
-
             <p>
               Allow consumers to try-on products virtually reducing returns and
               increasing customer satisfaction
@@ -306,6 +311,7 @@ const Wrapper = styled.section`
     p {
       text-align: left;
       margin-bottom: 0rem;
+      margin-top: 0rem;
     }
 
     .title {

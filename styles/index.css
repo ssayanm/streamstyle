@@ -336,3 +336,7 @@ img {
 video {
   border-radius: 1rem;
 }
+
+.widthfull {
+  width: 100%;
+}
