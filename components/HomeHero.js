@@ -2,14 +2,14 @@ import { Row, Col } from "antd";
 import styled from "styled-components";
 import Link from "next/link";
 import { social } from "../utils/constants";
-import Image from "next/image";
+import ReactPlayer from "react-player/lazy";
 
 const HomeHero = () => {
   return (
     <Wrapper>
       <div className="section-center">
-        <Row gutter={16} justify="center" align="middle" className="herorow">
-          <Col sm={24} md={14}>
+        <Row gutter={32} justify="center" align="middle" className="herorow">
+          <Col sm={24} md={24} lg={12}>
             <article className="content">
               <h1 className="title">
                 One Platform For Video Engagement & Live Commerce
@@ -19,14 +19,18 @@ const HomeHero = () => {
                 frictionless buying experience.
               </p>
               <div className="onlymobile">
-                <Image
-                  alt="revo"
-                  src="/images/herovideo.jpg"
-                  width={526}
-                  height={530}
-                  objectFit="cover"
-                  // placeholder="blur"
-                />
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    url={"/videos/homevideo.mp4"}
+                    playing={true}
+                    muted={true}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    image="/images/herovideo.jpg"
+                    className="react-player"
+                  />
+                </div>
               </div>
               <div className="btn-section">
                 <Link href="/">
@@ -55,15 +59,19 @@ const HomeHero = () => {
               </ul>
             </article>
           </Col>
-          <Col sm={24} md={10}>
+          <Col sm={24} md={24} lg={12}>
             <div className="onlydesktop">
-              <Image
-                alt="revo"
-                src="/images/herovideo.jpg"
-                width={826}
-                height={530}
-                objectFit="cover"
-              />
+              <div className="player-wrapper">
+                <ReactPlayer
+                  url={"/videos/homevideo.mp4"}
+                  playing={true}
+                  muted={true}
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                  className="react-player"
+                />
+              </div>
             </div>
           </Col>
         </Row>
