@@ -96,7 +96,7 @@ const Wrapper = styled.section`
     font-size: 1.2rem;
     padding: 2rem;
     margin: 0 auto;
-    margin-bottom: 7rem;
+    margin-bottom: 2rem;
 
     .ant-table-thead > tr > th {
       font-family: "MontBold";

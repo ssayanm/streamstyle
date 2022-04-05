@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import Link from "next/link";
-import Price from "./Price";
 import Image from "next/image";
 
 const InspirationHero = () => {
@@ -11,13 +9,25 @@ const InspirationHero = () => {
           <h1 className="title">See what our customers are raving about!</h1>
         </div>
 
-        <Image
-          alt="revo"
-          src="/images/dummy.png"
-          width={1529}
-          height={661}
-          // placeholder="blur"
-        />
+        <div className="onlydesktop">
+          <Image
+            alt="revo"
+            src="/images/insiprnhero.jpg"
+            width={1920}
+            height={661}
+            objectFit="cover"
+          />
+        </div>
+        <div className="onlymobile">
+          {" "}
+          <Image
+            alt="revo"
+            src="/images/insiprnhero.jpg"
+            width={916}
+            height={620}
+            objectFit="cover"
+          />
+        </div>
       </div>
     </Wrapper>
   );
@@ -74,7 +84,7 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
-    padding: 5rem 0;
+    padding: 2rem 0;
 
     .container {
       place-items: unset;
