@@ -1,10 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { links } from "../utils/constants";
-
 import { useAppContext } from "../context/app_context";
 import { FaTimes } from "react-icons/fa";
-
 import styled from "styled-components";
 import { BsPlayCircleFill } from "react-icons/bs";
 

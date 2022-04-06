@@ -21,9 +21,9 @@ const FeaturedChannels = ({ channel }) => {
 export default FeaturedChannels;
 
 const Wrapper = styled.section`
-  padding: 2rem 0rem;
+  padding: 0;
 
-  .gutter-box {
-    padding: 0.75rem 0.1rem;
+  @media (min-width: 992px) {
+    padding: 1rem 0rem 1rem 0;
   }
 `;

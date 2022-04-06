@@ -8,9 +8,9 @@ const InspirationSectionC = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <Wrapper>
-      <Row gutter={[16, 24]} justify="center">
+      <Row gutter={[32, 24]} justify="center">
         <Col md={10} sm={20}>
-          <Row justify="space-between" style={{ padding: "0 1rem" }}>
+          <Row justify="space-between" align="middle">
             <Col>
               <h5 className="featitle">Featured Channels</h5>
             </Col>
@@ -26,8 +26,8 @@ const InspirationSectionC = () => {
                 <Image
                   alt="Revo"
                   src={channel.image}
-                  width={170}
-                  height={170}
+                  width={200}
+                  height={200}
                   className="logo"
                   objectFit="cover"
                 />
@@ -35,9 +35,9 @@ const InspirationSectionC = () => {
             ))}
           </Row>
 
-          <Row justify="space-between" style={{ padding: "0 1rem" }}>
+          <Row justify="space-between" align="middle">
             <Col>
-              <h5 className="featitle">Featured Channels</h5>
+              <h5 className="featitle">Featured Channelsa</h5>
             </Col>
             <Col>
               <button onClick={() => setToggle(!toggle)} className="fbtn">
@@ -51,8 +51,8 @@ const InspirationSectionC = () => {
                 <Image
                   alt="Revo"
                   src={channel.image}
-                  width={170}
-                  height={170}
+                  width={200}
+                  height={200}
                   className="logo"
                   objectFit="cover"
                 />
@@ -61,7 +61,7 @@ const InspirationSectionC = () => {
           </Row>
         </Col>
         <Col md={10} sm={20}>
-          <Row gutter={16} justify="space-between">
+          <Row justify="space-between" align="middle">
             <Col>
               <h5 className="featitle">Featured Channels</h5>
             </Col>
@@ -77,19 +77,15 @@ const InspirationSectionC = () => {
                 <Image
                   alt="Revo"
                   src={channel.image}
-                  width={170}
-                  height={170}
+                  width={200}
+                  height={200}
                   className="logo"
                   objectFit="cover"
                 />
               </Col>
             ))}
           </Row>
-          <Row
-            gutter={16}
-            justify="space-between"
-            style={{ padding: "0 2rem" }}
-          >
+          <Row justify="space-between" align="middle">
             <Col>
               <h5 className="featitle">Featured Channels</h5>
             </Col>
@@ -106,8 +102,8 @@ const InspirationSectionC = () => {
                 <Image
                   alt="Revo"
                   src={channel.image}
-                  width={170}
-                  height={170}
+                  width={200}
+                  height={200}
                   className="logo"
                   objectFit="cover"
                 />
@@ -126,12 +122,13 @@ const Wrapper = styled.section`
   padding: 2rem;
 
   .gutter-box {
-    padding: 0.75rem 0.1rem;
+    padding: 0.75rem 0.5rem;
     text-align: center;
   }
 
   .space {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
   }
 
   .fbtn {

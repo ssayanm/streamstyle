@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Link from "next/link";
-import { BsPlayCircleFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
 import { GoPrimitiveDot } from "react-icons/go";

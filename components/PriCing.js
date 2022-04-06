@@ -1,14 +1,10 @@
 import styled from "styled-components";
 import React from "react";
 import Link from "next/link";
-
 import { Col, Collapse, Row, Table } from "antd";
-
 import { GoPrimitiveDot } from "react-icons/go";
-
 import { GrClose } from "react-icons/gr";
 import { featuresPrice } from "../utils/constants";
-
 import { GoDash } from "react-icons/go";
 
 const { Panel } = Collapse;
@@ -104,7 +100,6 @@ const PriCing = () => {
   return (
     <Wrapper>
       <h1 className="title text-center ">Princing & Plans</h1>
-
       <div className="section-center space1">
         <Row gutter={[32, 32]} justify="center" align="middle">
           <Col sm={24} md={12} lg={8}>

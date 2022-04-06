@@ -8,7 +8,12 @@ const InspirationSectionA = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <Wrapper>
-      <Row gutter={16} justify="space-between" style={{ padding: "0 1rem" }}>
+      <Row
+        gutter={16}
+        justify="space-between"
+        align="middle"
+        style={{ padding: "0 1rem" }}
+      >
         <Col>
           <h5 className="featitle">Featured Channels</h5>
         </Col>
@@ -31,7 +36,13 @@ const InspirationSectionA = () => {
               </Col>
             ))}
       </Row>
-      <Row gutter={16} justify="space-between" style={{ padding: "0 1rem" }}>
+      <Row
+        gutter={16}
+        justify="space-between"
+        align="middle"
+        style={{ padding: "0 1rem" }}
+      >
+        {" "}
         <Col>
           <h5 className="featitle">Featured Channels</h5>
         </Col>
@@ -54,7 +65,13 @@ const InspirationSectionA = () => {
               </Col>
             ))}
       </Row>
-      <Row gutter={16} justify="space-between" style={{ padding: "0 1rem" }}>
+      <Row
+        gutter={16}
+        justify="space-between"
+        align="middle"
+        style={{ padding: "0 1rem" }}
+      >
+        {" "}
         <Col>
           <h5 className="featitle">Featured Channels</h5>
         </Col>
@@ -84,7 +101,7 @@ const InspirationSectionA = () => {
 export default InspirationSectionA;
 
 const Wrapper = styled.section`
-  padding: 2rem 0rem;
+  padding: 1rem;
   font-family: "Mont";
 
   .fbtn {
@@ -107,7 +124,7 @@ const Wrapper = styled.section`
     font-family: "Mont";
   }
   @media (min-width: 992px) {
-    padding: 4rem;
+    padding: 3rem;
 
     .title {
       font-size: 2rem;

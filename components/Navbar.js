@@ -1,11 +1,9 @@
 import styled from "styled-components";
-
 import { FaBars } from "react-icons/fa";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import { links } from "../utils/constants";
-
 import { useAppContext } from "../context/app_context";
 
 const Nav = () => {

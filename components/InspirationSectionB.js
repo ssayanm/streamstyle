@@ -44,7 +44,7 @@ const InspirationSectionB = () => {
 };
 
 const Wrapper = styled.section`
-  padding: 2rem 1rem;
+  padding: 4rem 1rem 2rem 1rem;
   background: var(--clr-black);
   color: var(--clr-white);
 

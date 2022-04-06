@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { GoPrimitiveDot } from "react-icons/go";
-
 import { GrClose } from "react-icons/gr";
 import { featuresPrice } from "../utils/constants";
 import { Table } from "antd";
