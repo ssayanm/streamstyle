@@ -1,4 +1,4 @@
-import { FaApple, FaShopify } from "react-icons/fa";
+import { FaApple, FaShopify, FaLinkedin } from "react-icons/fa";
 import { GrAndroid, GrClose } from "react-icons/gr";
 import Brands from "../components/Brands";
 import Creators from "../components/Creators";
@@ -11,16 +11,7 @@ export const links = [
     text: "How It Works",
     url: "/how-it-works",
   },
-  {
-    id: 2,
-    text: "clients",
-    url: "/",
-  },
-  {
-    id: 3,
-    text: "About Us",
-    url: "/",
-  },
+
   {
     id: 4,
     text: "Inspiration",
@@ -34,7 +25,7 @@ export const links = [
   {
     id: 6,
     text: "Get Started",
-    url: "/",
+    url: "/get-started",
   },
 ];
 
@@ -47,17 +38,13 @@ export const footerLinks = [
   {
     id: 2,
     text: "Studio Login",
-    url: "/",
+    url: "https://studio.revo.video/#/login2",
   },
-  {
-    id: 3,
-    text: "Talk to Sales",
-    url: "/",
-  },
+
   {
     id: 4,
     text: "Careers",
-    url: "/",
+    url: "https://jobs.wrk.xyz/borderfree",
   },
 ];
 
@@ -82,8 +69,8 @@ export const footerLinksAlt = [
 export const social = [
   {
     id: 1,
-    icon: <FaApple className="social-icon "></FaApple>,
-    url: "#",
+    icon: <FaLinkedin className="social-icon "></FaLinkedin>,
+    url: "https://www.linkedin.com/company/borderfreetechnologies",
   },
   {
     id: 4,

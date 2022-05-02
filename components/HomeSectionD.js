@@ -40,13 +40,6 @@ const HomeSectionD = () => {
               </p>
             </Col>
           </Row>
-          <Col>
-            <center>
-              <Link href="/">
-                <a className="btn"> Learn More</a>
-              </Link>
-            </center>
-          </Col>
         </Row>
       </div>
     </Wrapper>

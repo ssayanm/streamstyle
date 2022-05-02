@@ -34,18 +34,23 @@ const HomeHero = () => {
               </div>
               <div className="btn-section">
                 <Link href="/">
-                  <a className="btn-alt btn-shopify">
+                  <a
+                    className="btn-alt btn-shopify"
+                    style={{ display: "none" }}
+                  >
                     {" "}
                     Add to your shopify store
                   </a>
                 </Link>
-                <Link href="/">
+                <Link href="/get-started">
                   <a className="btn btn-start"> Get Started</a>
                 </Link>
               </div>
 
-              <p className="smallfont">Available now on all platforms</p>
-              <ul className="social-icons">
+              <p className="smallfont" style={{ display: "none" }}>
+                Available now on all platforms
+              </p>
+              <ul className="social-icons" style={{ display: "none" }}>
                 {social.map((socialIcon) => {
                   const { id, url, icon } = socialIcon;
                   return (
@@ -134,23 +139,22 @@ const Wrapper = styled.section`
     }
 
     .btn-start {
-      text-align: center;
       width: auto;
       margin: 0 auto;
     }
 
     .btn-section {
-      display: flex;
-      width: 31rem;
+      display: block;
+      /* width: 31rem; */
       align-items: center;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
       margin-top: 2rem;
     }
   }
 
   @media (min-width: 1367px) {
-    padding: 9rem 2rem;
+    padding: 5rem 2rem;
   }
 `;
 

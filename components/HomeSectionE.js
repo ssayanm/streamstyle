@@ -10,8 +10,8 @@ const HomeSectionE = () => {
           <h3 className="title">Revo Video is word of mouth on steroids”</h3>
           <p>Get started today.</p>
           <center>
-            <Link href="/">
-              <a className="btn"> Talk to Sales</a>
+            <Link href="/get-started">
+              <a className="btn"> Get Started</a>
             </Link>
           </center>
         </Col>

@@ -40,13 +40,13 @@ const HomeSectionC = () => {
               Simple to use yet powerful show set up and full recording studio
               with automated features that keep audiences engaged and buying
             </p>
-            <div className="greeniconbar leftcontent">
+            <div className="greeniconbar leftcontent1">
               <GoPrimitiveDot className="greendot" />
 
               <h5>One-To-Many</h5>
             </div>
 
-            <p className="leftcontent">
+            <p className="leftcontent1">
               Invite experts, co-hosts, and even fans to participate in your
               live stream while thousands of consumers watch and interact{" "}
             </p>
