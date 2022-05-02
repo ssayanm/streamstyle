@@ -116,9 +116,9 @@ const Publishers = () => {
           {" "}
           <Image
             alt="revo"
-            src="/images/Live_and_vod.png"
-            width={900}
-            height={602}
+            src="/images/Live _ VOD.gif"
+            width={852}
+            height={479}
             objectFit="cover"
           />
         </Col>
@@ -134,9 +134,9 @@ const Publishers = () => {
         <Col sm={24} md={12} className="onlydesktop">
           <Image
             alt="revo"
-            src="/images/Frictionles_checkout.jpg"
-            width={1796}
-            height={1038}
+            src="/images/Checkout.gif"
+            width={852}
+            height={479}
             objectFit="cover"
           />
         </Col>
@@ -153,9 +153,9 @@ const Publishers = () => {
         <Col sm={24} md={12} className="onlymobile">
           <Image
             alt="revo"
-            src="/images/Frictionles_checkout.jpg"
-            width={1796}
-            height={1038}
+            src="/images/Checkout.gif"
+            width={852}
+            height={479}
             objectFit="cover"
           />
         </Col>
@@ -181,9 +181,9 @@ const Publishers = () => {
             <div className="fimage">
               <Image
                 alt="revo"
-                src="/images/Virtual_try_on.png"
-                width={400}
-                height={753}
+                src="/images/Virtual Try On.gif"
+                width={852}
+                height={479}
                 objectFit="cover"
               />
             </div>
@@ -212,9 +212,9 @@ const Publishers = () => {
         <Col sm={24} md={12}>
           <Image
             alt="revo"
-            src="/images/Real_time_analytics.png"
-            width={1874}
-            height={1080}
+            src="/images/Real-Time Analytics.gif"
+            width={852}
+            height={479}
             objectFit="cover"
           />
         </Col>

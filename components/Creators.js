@@ -108,9 +108,9 @@ const Creators = () => {
             <div className="fimage">
               <Image
                 alt="revo"
-                src="/images/Virtual_try_on.png"
-                width={400}
-                height={753}
+                src="/images/Virtual Try On.gif"
+                width={852}
+                height={479}
                 objectFit="cover"
               />
             </div>
@@ -129,9 +129,9 @@ const Creators = () => {
             <div className="fimage">
               <Image
                 alt="revo"
-                src="/images/Virtual_try_on.png"
-                width={400}
-                height={753}
+                src="/images/Virtual Try On.gif"
+                width={852}
+                height={479}
                 objectFit="cover"
               />
             </div>
@@ -160,9 +160,9 @@ const Creators = () => {
         <Col sm={24} md={12}>
           <Image
             alt="revo"
-            src="/images/Real_time_analytics.png"
-            width={1874}
-            height={1080}
+            src="/images/Real-Time Analytics.gif"
+            width={852}
+            height={479}
             objectFit="cover"
           />
         </Col>
