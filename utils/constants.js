@@ -57,12 +57,12 @@ export const footerLinksAlt = [
   {
     id: 2,
     text: "Terms & Conditions",
-    url: "/",
+    url: "/terms",
   },
   {
     id: 3,
     text: "Privacy Policy",
-    url: "/",
+    url: "/privacy",
   },
 ];
 
