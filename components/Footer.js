@@ -39,6 +39,20 @@ const Footer = () => {
               );
             })}
           </ul>
+          <ul className="social-icons onlymobile">
+            {social.map((socialIcon) => {
+              const { id, url, icon } = socialIcon;
+              return (
+                <li key={id}>
+                  <Link href={url}>
+                    <a href={url} target="_blank">
+                      {icon}
+                    </a>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
         <div className="onlymobile">
           <ul className="nav-links">
@@ -54,22 +68,7 @@ const Footer = () => {
             })}
           </ul>
         </div>
-        <div className="onlymobile">
-          <ul className="social-icons">
-            {social.map((socialIcon) => {
-              const { id, url, icon } = socialIcon;
-              return (
-                <li key={id}>
-                  <Link href={url}>
-                    <a href={url} target="_blank">
-                      {icon}
-                    </a>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+
         <div className="onlydesktop">
           <ul className="nav-links">
             {footerLinksAlt.map((link) => {
