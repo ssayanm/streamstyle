@@ -25,6 +25,7 @@ const Footer = () => {
         <div className="onlymobile" style={{ textAlign: "right" }}>
           <FaPlay className="icon" />
         </div>
+
         <div>
           <ul className="nav-links">
             {footerLinks.map((link) => {
@@ -39,7 +40,7 @@ const Footer = () => {
             })}
           </ul>
         </div>
-        <div>
+        <div className="onlymobile">
           <ul className="nav-links">
             {footerLinksAlt.map((link) => {
               const { id, url, text } = link;
@@ -52,25 +53,52 @@ const Footer = () => {
               );
             })}
           </ul>
-          <div className="onlymobile">
-            <ul className="nav-links">
-              <li>
-                <a>Socials</a>
-              </li>
-              <li>
-                <FaLinkedin className="iconsocial" />
-              </li>
-            </ul>
-          </div>
+        </div>
+        <div className="onlymobile">
+          <ul className="social-icons">
+            {social.map((socialIcon) => {
+              const { id, url, icon } = socialIcon;
+              return (
+                <li key={id}>
+                  <Link href={url}>
+                    <a href={url} target="_blank">
+                      {icon}
+                    </a>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
         <div className="onlydesktop">
           <ul className="nav-links">
-            <li>
-              <a>Socials</a>
-            </li>
-            <li>
-              <FaLinkedin className="iconsocial" />
-            </li>
+            {footerLinksAlt.map((link) => {
+              const { id, url, text } = link;
+              return (
+                <li key={id}>
+                  <Link href={url}>
+                    <a>{text}</a>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className="onlydesktop">
+          <ul className="social-icons">
+            {social.map((socialIcon) => {
+              const { id, url, icon } = socialIcon;
+              return (
+                <li key={id}>
+                  <Link href={url}>
+                    <a href={url} target="_blank">
+                      {icon}
+                    </a>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className="onlydesktop ">
@@ -111,12 +139,11 @@ const Wrapper = styled.footer`
     width: 34px;
     height: 34px;
     text-align: right;
+
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
-  .iconsocial {
-    width: 33px;
-    height: 33px;
-  }
   .nav-links {
     /* display: flex; */
     justify-content: flex-end;
@@ -148,11 +175,6 @@ const Wrapper = styled.footer`
         color: var(--clr-white);
         font-size: 21px;
       }
-    }
-
-    .iconsocial {
-      width: 43px;
-      height: 43px;
     }
   }
 `;

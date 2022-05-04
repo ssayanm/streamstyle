@@ -1,5 +1,5 @@
 import { FaApple, FaShopify, FaLinkedin } from "react-icons/fa";
-import { GrAndroid, GrClose } from "react-icons/gr";
+import { GrAndroid } from "react-icons/gr";
 import Brands from "../components/Brands";
 import Creators from "../components/Creators";
 import Marketers from "../components/Marketers";
@@ -31,11 +31,6 @@ export const links = [
 
 export const footerLinks = [
   {
-    id: 1,
-    text: "FAQ",
-    url: "/",
-  },
-  {
     id: 2,
     text: "Studio Login",
     url: "https://studio.revo.video/#/login2",
@@ -49,11 +44,6 @@ export const footerLinks = [
 ];
 
 export const footerLinksAlt = [
-  {
-    id: 1,
-    text: "Contact",
-    url: "/",
-  },
   {
     id: 2,
     text: "Terms & Conditions",
@@ -71,17 +61,6 @@ export const social = [
     id: 1,
     icon: <FaLinkedin className="social-icon "></FaLinkedin>,
     url: "https://www.linkedin.com/company/borderfreetechnologies",
-  },
-  {
-    id: 4,
-    icon: <GrAndroid className="social-icon "></GrAndroid>,
-    url: "#",
-  },
-
-  {
-    id: 5,
-    icon: <FaShopify className="social-icon "></FaShopify>,
-    url: "#",
   },
 ];
 

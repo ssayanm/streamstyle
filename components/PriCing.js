@@ -117,8 +117,8 @@ const PriCing = () => {
                 <li>No obligation</li>
               </ul>
 
-              <Link href="/">
-                <a className="btn-alt">Talk to Sales</a>
+              <Link href="/get-started">
+                <a className="btn"> Get Started</a>
               </Link>
               <Collapse
                 defaultActiveKey={["10"]}
@@ -151,8 +151,8 @@ const PriCing = () => {
                 <li>No code environment</li>
               </ul>
 
-              <Link href="/">
-                <a className="btn-alt">Talk to Sales</a>
+              <Link href="/get-started">
+                <a className="btn"> Get Started</a>
               </Link>
 
               <Collapse
@@ -185,8 +185,8 @@ const PriCing = () => {
               </p>
 
               <span className="btnn">
-                <Link href="/">
-                  <a className="btn-alt">Talk to Sales</a>
+                <Link href="/get-started">
+                  <a className="btn"> Get Started</a>
                 </Link>
               </span>
               <Collapse
