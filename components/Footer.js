@@ -163,13 +163,14 @@ const Wrapper = styled.footer`
   }
   @media (min-width: 992px) {
     .foot {
-      padding: 5rem 0;
+      padding: 4rem;
       grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
       gap: 1rem;
 
-      /* /* justify-items: center; */
+      /* justify-items: center; */
       align-items: center;
     }
+
     .nav-links {
       /* display: flex; */
       justify-content: flex-end;
