@@ -44,9 +44,13 @@ const Creators = () => {
           </p>
         </Col>
         <Col sm={24} md={12}>
-          <div className="greenbox">
-            <h1 className="title">Use shot of Studio</h1>
-          </div>
+          <Image
+            alt="revo"
+            src="/images/Studio.jpg"
+            width={900}
+            height={563}
+            objectFit="cover"
+          />
         </Col>
       </Row>
 

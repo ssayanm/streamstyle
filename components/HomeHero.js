@@ -22,7 +22,7 @@ const HomeHero = () => {
                 <div className="player-wrapper">
                   <ReactPlayer
                     url={"/videos/homevideo.mp4"}
-                    playing={true}
+                    playing={false}
                     muted={true}
                     controls={true}
                     width="100%"

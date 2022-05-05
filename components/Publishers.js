@@ -66,7 +66,7 @@ const Publishers = () => {
             alt="revo"
             src="/images/Weekly_Schedule.jpg"
             width={900}
-            height={478}
+            height={390}
             objectFit="cover"
           />
         </Col>
@@ -88,7 +88,7 @@ const Publishers = () => {
             alt="revo"
             src="/images/Weekly_Schedule.jpg"
             width={900}
-            height={478}
+            height={390}
             objectFit="cover"
           />
         </Col>
