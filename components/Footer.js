@@ -104,7 +104,7 @@ const Footer = () => {
         <center>
           {" "}
           <div className="onlydesktop ">
-            <FaPlay className="icon" />
+            <FaPlay className="icon" data-aos="zoom-in" />
           </div>
         </center>
       </div>

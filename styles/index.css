@@ -133,12 +133,6 @@ p {
   font-family: "Mont";
 }
 
-img {
-  border-radius: 1rem;
-}
-.logo {
-  border-radius: 0.1rem;
-}
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 3rem;

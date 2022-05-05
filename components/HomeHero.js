@@ -9,7 +9,7 @@ const HomeHero = () => {
     <Wrapper>
       <div className="section-center">
         <Row gutter={32} justify="center" align="middle" className="herorow">
-          <Col sm={24} md={24} lg={12}>
+          <Col sm={24} md={24} lg={12} data-aos="fade-right">
             <article className="content">
               <h1 className="title">
                 One Platform For Video Engagement & Live Commerce
@@ -75,6 +75,7 @@ const HomeHero = () => {
                   width="100%"
                   height="100%"
                   className="react-player"
+                  image="/images/herovideo.jpg"
                 />
               </div>
             </div>

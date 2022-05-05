@@ -9,7 +9,7 @@ const HomeSectionD = () => {
       <div className="section-center">
         <Row gutter={16} justify="center" align="middle">
           <Col>
-            <BsPlayCircle className="icon" />
+            <BsPlayCircle className="icon" data-aos="fade-up" />
             <h1 className="title">
               Integrate seamlessly into
               <br />

@@ -26,6 +26,7 @@ const HomeSectionB = () => {
                   height={49}
                   objectFit="cover"
                   quality={100}
+                  data-aos="zoom-in"
                 />
                 <p className="heading">
                   Direct e-Commerce
@@ -46,6 +47,7 @@ const HomeSectionB = () => {
                   height={49}
                   objectFit="cover"
                   quality={100}
+                  data-aos="zoom-in"
                 />
                 <p className="heading">
                   High <br />
@@ -67,6 +69,7 @@ const HomeSectionB = () => {
                   height={49}
                   objectFit="cover"
                   quality={100}
+                  data-aos="zoom-in"
                 />
                 <p className="heading">
                   Frictionless <br />
@@ -85,6 +88,7 @@ const HomeSectionB = () => {
                   height={41}
                   objectFit="cover"
                   quality={100}
+                  data-aos="zoom-in"
                 />
                 <p className="heading">
                   Real-Time

@@ -102,7 +102,7 @@ const PriCing = () => {
       <h1 className="title text-center ">Pricing & Plans</h1>
       <div className="section-center space1">
         <Row gutter={[32, 32]} justify="center" align="middle">
-          <Col sm={24} md={12} lg={8}>
+          <Col sm={24} md={12} lg={8} data-aos="fade-up">
             <div className="box first">
               <h5>Revo for</h5>
               <h3>DTC</h3>
@@ -140,7 +140,7 @@ const PriCing = () => {
               </Collapse>
             </div>
           </Col>
-          <Col sm={24} md={12} lg={8}>
+          <Col sm={24} md={12} lg={8} data-aos="zoom-in-up">
             <div className="box boxmiddle">
               <h5>Revo for</h5>
               <h3>Brands White Label</h3>
@@ -175,7 +175,7 @@ const PriCing = () => {
               </Collapse>
             </div>
           </Col>
-          <Col sm={24} md={12} lg={8}>
+          <Col sm={24} md={12} lg={8} data-aos="fade-up">
             <div className="box">
               <h5>Revo for</h5>
               <h3>Enterprise SaaS</h3>
