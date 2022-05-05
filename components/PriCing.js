@@ -103,7 +103,7 @@ const PriCing = () => {
       <div className="section-center space1">
         <Row gutter={[32, 32]} justify="center" align="middle">
           <Col sm={24} md={12} lg={8}>
-            <div className="box">
+            <div className="box first">
               <h5>Revo for</h5>
               <h3>DTC</h3>
               <p>
@@ -269,6 +269,7 @@ const Wrapper = styled.section`
     h3 {
       font-size: 1.75rem;
       font-family: "MontSemiBold";
+      color: var(--clr-primary-1);
     }
 
     ul {
@@ -280,6 +281,13 @@ const Wrapper = styled.section`
     li {
       text-align: left;
     }
+  }
+
+  .first {
+    /* transition: width 2s, height 4s;
+    &:hover {
+      cursor: pointer;
+    } */
   }
 
   @media (min-width: 992px) {
