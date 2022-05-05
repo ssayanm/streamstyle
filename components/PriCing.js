@@ -99,7 +99,7 @@ const PriCing = () => {
 
   return (
     <Wrapper>
-      <h1 className="title text-center ">Princing & Plans</h1>
+      <h1 className="title text-center ">Pricing & Plans</h1>
       <div className="section-center space1">
         <Row gutter={[32, 32]} justify="center" align="middle">
           <Col sm={24} md={12} lg={8}>
