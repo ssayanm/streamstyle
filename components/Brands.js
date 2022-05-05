@@ -34,6 +34,7 @@ const Brands = () => {
               height="100%"
               image="/images/herovideo.jpg"
               className="react-player1"
+              quality={100}
             />
           </div>
         </Col>
@@ -61,6 +62,7 @@ const Brands = () => {
             width={852}
             height={479}
             objectFit="cover"
+            quality={100}
           />
         </Col>
         <Col sm={24} md={12}>
@@ -101,6 +103,7 @@ const Brands = () => {
             width={852}
             height={479}
             objectFit="cover"
+            quality={100}
           />
         </Col>
       </Row>
@@ -118,6 +121,7 @@ const Brands = () => {
             width={900}
             height={390}
             objectFit="cover"
+            quality={100}
           />
         </Col>
         <Col sm={24} md={12}>
@@ -140,6 +144,7 @@ const Brands = () => {
             width={900}
             height={390}
             objectFit="cover"
+            quality={100}
           />
         </Col>
       </Row>
@@ -148,26 +153,27 @@ const Brands = () => {
           className="section-d"
           // gutter={[32, 32]}
           justify="center"
-          // align="middle"
+          align="middle"
         >
-          <Col sm={24} md={16}>
+          <Col sm={24} md={14}>
             <div className="iconbar">
               <BsPlayFill className="icon" />
               <h1 className="title">Virtual AI Try-On</h1>
             </div>
-            <p>
-              Allow consumers to try-on products virtually reducing returns and
+            <p className="para">
+              Allow consumers to try-on products virtually reducing, returns and
               increasing customer satisfaction
             </p>
           </Col>
-          <Col sm={24} md={8}>
-            <div className="fimage">
+          <Col sm={24} md={10}>
+            <div className="fimage1">
               <Image
                 alt="revo"
                 src="/images/Virtual Try On.gif"
                 width={852}
                 height={479}
                 objectFit="cover"
+                quality="100"
               />
             </div>
           </Col>
@@ -187,6 +193,7 @@ const Brands = () => {
             width={852}
             height={479}
             objectFit="cover"
+            quality={100}
           />
         </Col>
         <Col sm={24} md={12}>
@@ -206,6 +213,7 @@ const Brands = () => {
             width={852}
             height={479}
             objectFit="cover"
+            quality={100}
           />
         </Col>
       </Row>
@@ -237,6 +245,7 @@ const Brands = () => {
             width={852}
             height={479}
             objectFit="cover"
+            quality={100}
           />
         </Col>
       </Row>
@@ -246,6 +255,10 @@ const Brands = () => {
 
 const Wrapper = styled.section`
   /* padding: 6rem 2rem; */
+
+  .para {
+    /* width: 30rem; */
+  }
 
   .section-d {
     margin: 2rem 0;
@@ -353,9 +366,9 @@ const Wrapper = styled.section`
     }
 
     .section-d {
-      margin: 12rem 0 15rem 0;
+      margin: 5rem 0 5rem 0;
       background: var(--clr-primary-1);
-      height: 23rem;
+
       padding: 6rem 4rem;
       border-radius: 2rem;
     }

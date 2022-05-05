@@ -25,6 +25,7 @@ const HomeSectionB = () => {
                   width={49}
                   height={49}
                   objectFit="cover"
+                  quality={100}
                 />
                 <p className="heading">
                   Direct e-Commerce
@@ -44,6 +45,7 @@ const HomeSectionB = () => {
                   width={49}
                   height={49}
                   objectFit="cover"
+                  quality={100}
                 />
                 <p className="heading">
                   High <br />
@@ -64,6 +66,7 @@ const HomeSectionB = () => {
                   width={49}
                   height={49}
                   objectFit="cover"
+                  quality={100}
                 />
                 <p className="heading">
                   Frictionless <br />
@@ -81,6 +84,7 @@ const HomeSectionB = () => {
                   width={83}
                   height={41}
                   objectFit="cover"
+                  quality={100}
                 />
                 <p className="heading">
                   Real-Time
@@ -101,6 +105,7 @@ const HomeSectionB = () => {
               width={1200}
               height={750}
               objectFit="cover"
+              quality={100}
             />
           </Col>
         </Row>

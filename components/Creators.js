@@ -50,6 +50,7 @@ const Creators = () => {
             width={900}
             height={563}
             objectFit="cover"
+            quality={100}
           />
         </Col>
       </Row>
@@ -107,25 +108,31 @@ const Creators = () => {
         </Col>
       </Row>
       <div className="section-center">
-        <Row className="section-d" justify="center">
-          <Col sm={24} md={8} className="onlydesktop">
-            <div className="fimage">
+        <Row
+          className="section-d"
+          justify="center"
+          align="middle"
+          gutter={[32, 32]}
+        >
+          <Col sm={24} md={10} className="onlydesktop">
+            <div className="fimage1">
               <Image
                 alt="revo"
                 src="/images/Virtual Try On.gif"
                 width={852}
                 height={479}
                 objectFit="cover"
+                quality={100}
               />
             </div>
           </Col>
-          <Col sm={24} md={16}>
+          <Col sm={24} md={14}>
             <div className="iconbar">
               <BsPlayFill className="icon" />
               <h1 className="title">Virtual AI Try-On</h1>
             </div>
-            <p>
-              Allow consumers to try-on products virtually reducing returns and
+            <p className="para">
+              Allow consumers to try-on products virtually reducing, returns and
               increasing customer satisfaction
             </p>
           </Col>
@@ -137,6 +144,7 @@ const Creators = () => {
                 width={852}
                 height={479}
                 objectFit="cover"
+                quality={100}
               />
             </div>
           </Col>
@@ -168,6 +176,7 @@ const Creators = () => {
             width={852}
             height={479}
             objectFit="cover"
+            quality={100}
           />
         </Col>
       </Row>
@@ -290,9 +299,9 @@ const Wrapper = styled.section`
     }
 
     .section-d {
-      margin: 12rem 0 15rem 0;
+      margin: 5rem 0 5rem 0;
       background: var(--clr-primary-1);
-      height: 23rem;
+
       padding: 6rem 4rem;
       border-radius: 2rem;
     }

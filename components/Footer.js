@@ -18,6 +18,7 @@ const Footer = () => {
                 width={172}
                 height={69}
                 className="logo"
+                quality={100}
               />
             </a>
           </Link>
@@ -100,9 +101,12 @@ const Footer = () => {
             })}
           </ul>
         </div>
-        <div className="onlydesktop ">
-          <FaPlay className="icon" />
-        </div>
+        <center>
+          {" "}
+          <div className="onlydesktop ">
+            <FaPlay className="icon" />
+          </div>
+        </center>
       </div>
       <hr />
       <p>
@@ -137,7 +141,6 @@ const Wrapper = styled.footer`
     color: var(--clr-primary-1);
     width: 34px;
     height: 34px;
-    text-align: right;
 
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -151,7 +154,7 @@ const Wrapper = styled.footer`
     }
     a {
       color: var(--clr-white);
-      font-size: 1.2rem;
+      font-size: 1rem;
 
       &:hover {
         border-bottom: 2px solid var(--clr-primary-1);
@@ -162,7 +165,10 @@ const Wrapper = styled.footer`
     .foot {
       padding: 5rem 0;
       grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-      gap: 4rem;
+      gap: 1rem;
+
+      /* /* justify-items: center; */
+      align-items: center;
     }
     .nav-links {
       /* display: flex; */
@@ -172,7 +178,7 @@ const Wrapper = styled.footer`
       }
       a {
         color: var(--clr-white);
-        font-size: 21px;
+        font-size: 1.2rem;
       }
     }
   }

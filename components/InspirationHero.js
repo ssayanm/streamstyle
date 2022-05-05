@@ -17,6 +17,7 @@ const InspirationHero = () => {
               width={1920}
               height={661}
               objectFit="cover"
+              quality={100}
             />
           </div>
           <div className="onlymobile">
@@ -26,6 +27,7 @@ const InspirationHero = () => {
               width={916}
               height={620}
               objectFit="cover"
+              quality={100}
             />
           </div>
         </Col>

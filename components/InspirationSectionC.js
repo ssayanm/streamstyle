@@ -30,6 +30,7 @@ const InspirationSectionC = () => {
                   height={200}
                   className="logo"
                   objectFit="cover"
+                  quality={100}
                 />
               </Col>
             ))}
@@ -55,6 +56,7 @@ const InspirationSectionC = () => {
                   height={200}
                   className="logo"
                   objectFit="cover"
+                  quality={100}
                 />
               </Col>
             ))}
@@ -81,6 +83,7 @@ const InspirationSectionC = () => {
                   height={200}
                   className="logo"
                   objectFit="cover"
+                  quality={100}
                 />
               </Col>
             ))}
@@ -106,6 +109,7 @@ const InspirationSectionC = () => {
                   height={200}
                   className="logo"
                   objectFit="cover"
+                  quality={100}
                 />
               </Col>
             ))}

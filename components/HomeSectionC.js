@@ -17,6 +17,7 @@ const HomeSectionC = () => {
               width={1200}
               height={750}
               objectFit="cover"
+              quality={100}
             />
           </div>
         </Col>
@@ -68,6 +69,7 @@ const HomeSectionC = () => {
               width={1200}
               height={750}
               objectFit="cover"
+              quality={100}
             />
           </div>
         </Col>

@@ -12,6 +12,7 @@ const FeaturedChannels = ({ channel }) => {
           width={400}
           height={500}
           objectFit="cover"
+          quality={100}
         />
       </Card>
     </Wrapper>

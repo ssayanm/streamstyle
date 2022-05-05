@@ -31,6 +31,7 @@ const Nav = () => {
                 width={172}
                 height={69}
                 className="logo"
+                quality={100}
                 priority
               />
             </a>
@@ -45,7 +46,9 @@ const Nav = () => {
             return (
               <li key={id}>
                 <Link href={url}>
-                  <a>{text}</a>
+                  <a className={router.pathname === url ? "active" : ""}>
+                    {text}
+                  </a>
                 </Link>
               </li>
             );
@@ -127,8 +130,11 @@ const NavContainer = styled.nav`
         letter-spacing: var(--spacing);
         padding: 0.5rem;
         &:hover {
-          border-bottom: 1px solid var(--clr-black);
+          border-bottom: 2px solid var(--clr-primary-1);
         }
+      }
+      .active {
+        border-bottom: 2px solid var(--clr-primary-1);
       }
     }
     .cart-btn-wrapper {
