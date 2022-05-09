@@ -9,7 +9,7 @@ const Marketers = () => {
   return (
     <Wrapper>
       <Row
-        gutter={[32, 32]}
+        gutter={[32, 48]}
         justify="center"
         align="middle"
         className="section"
@@ -300,7 +300,7 @@ const Wrapper = styled.section`
     .section-a,
     .section-b,
     .section-c {
-      padding: 4rem 6rem;
+      padding: 6rem;
     }
 
     .section-d {

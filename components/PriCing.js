@@ -107,8 +107,8 @@ const PriCing = () => {
               <h5>Revo for</h5>
               <h3>DTC</h3>
               <p>
-                Any DTC brand on e-commerce platforms.
-                <br /> Download the app and go live
+                Any DTC brand on e-commerce platforms. Download the app and go
+                live
               </p>
               <ul>
                 <li>5% of gross sales generated on the platform. </li>
@@ -256,7 +256,7 @@ const Wrapper = styled.section`
 
   .box {
     box-shadow: var(--dark-shadow);
-    padding: 2rem 0.75rem;
+    padding: 2rem 1rem;
     border-radius: 1rem;
 
     margin-bottom: 2rem;
@@ -280,14 +280,11 @@ const Wrapper = styled.section`
     }
     li {
       text-align: left;
+      font-size: 1rem;
     }
-  }
-
-  .first {
-    /* transition: width 2s, height 4s;
-    &:hover {
-      cursor: pointer;
-    } */
+    p {
+      font-size: 1.1rem;
+    }
   }
 
   @media (min-width: 992px) {
@@ -296,7 +293,7 @@ const Wrapper = styled.section`
     .box {
       box-shadow: var(--dark-shadow);
       padding: 3rem 2rem;
-      height: 30rem;
+      height: 39rem;
       background-color: var(--clr-white);
       position: relative;
 
@@ -308,7 +305,7 @@ const Wrapper = styled.section`
       }
 
       p {
-        /* font-size: 1.25rem; */
+        font-size: 1.5rem;
         color: var(--clr-light);
       }
 
@@ -320,6 +317,7 @@ const Wrapper = styled.section`
       }
       li {
         text-align: left;
+        font-size: 1.3rem;
       }
       .btnn {
         position: absolute;
@@ -330,7 +328,7 @@ const Wrapper = styled.section`
     }
 
     .boxmiddle {
-      height: 33rem;
+      height: 43rem;
     }
 
     .title {

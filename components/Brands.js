@@ -8,7 +8,7 @@ const Brands = () => {
   return (
     <Wrapper>
       <Row
-        gutter={[32, 32]}
+        gutter={[32, 48]}
         justify="center"
         align="middle"
         className="section"
@@ -45,8 +45,8 @@ const Brands = () => {
           </div>
 
           <p>
-            One-click. Go Live - in as little as 5 minutes your brand can be
-            live
+            One-click. Go Live - in as little as 5 minutes
+            <br /> your brand can be live
           </p>
         </Col>
         <Col sm={24} md={12}>
@@ -151,7 +151,7 @@ const Brands = () => {
       <div className="section-center">
         <Row
           className="section-d"
-          // gutter={[32, 32]}
+          gutter={[32, 32]}
           justify="center"
           align="middle"
         >
@@ -362,7 +362,7 @@ const Wrapper = styled.section`
     .section-a,
     .section-b,
     .section-c {
-      padding: 4rem 6rem;
+      padding: 6rem;
     }
 
     .section-d {

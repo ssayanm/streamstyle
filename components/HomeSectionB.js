@@ -8,11 +8,7 @@ const HomeSectionB = () => {
       <div className="section-center">
         <Row gutter={16}>
           <Col>
-            {" "}
-            <h3>
-              The features
-              <br /> you need
-            </h3>
+            <h3>The features you need</h3>
           </Col>
         </Row>
         <Row gutter={[48, 32]}>

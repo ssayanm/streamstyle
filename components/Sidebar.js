@@ -89,7 +89,7 @@ const SidebarContainer = styled.div`
     padding: 0.5rem 1.5rem;
     color: var(--clr-black);
     transition: var(--transition);
-    letter-spacing: var(--spacing);
+    font-family: "Mont";
   }
 
   .links a:hover {
@@ -124,7 +124,6 @@ const SidebarContainer = styled.div`
   }
   .phone-btn {
     font-size: 1.4rem;
-    letter-spacing: var(--spacing);
 
     display: flex;
     justify-content: center;
