@@ -108,13 +108,13 @@ const PriCing = () => {
               <h3>DTC</h3>
               <p>
                 Any DTC brand on e-commerce platforms. Download the app and go
-                live
+                live.
               </p>
               <ul>
                 <li>5% of gross sales generated on the platform. </li>
-                <li>No monthly fee</li>
-                <li> No code environment</li>
-                <li>No obligation</li>
+                <li>No monthly fee.</li>
+                <li> No code environment.</li>
+                <li>No obligation.</li>
               </ul>
 
               <Link href="/get-started">
@@ -146,9 +146,9 @@ const PriCing = () => {
               <h3>Brands White Label</h3>
               <p>For brands that want to customize the consumer experience.</p>
               <ul>
-                <li>5% of gross sales generated on the platform</li>
-                <li> Volume discounts </li>
-                <li>No code environment</li>
+                <li>5% of gross sales generated on the platform.</li>
+                <li> Volume discounts. </li>
+                <li>No code environment.</li>
               </ul>
 
               <Link href="/get-started">
@@ -181,7 +181,7 @@ const PriCing = () => {
               <h3>Enterprise SaaS</h3>
               <p>
                 For large companies who want to fully customize and even extend
-                the Revo platform within their ecosystem
+                the Revo platform within their ecosystem.
               </p>
 
               <span className="btnn">

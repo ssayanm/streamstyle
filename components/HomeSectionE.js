@@ -7,7 +7,7 @@ const HomeSectionE = () => {
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
         <Col>
-          <h3 className="title">Revo Video is word of mouth on steroids”</h3>
+          <h3 className="title">"Revo Video is word of mouth on steroids"</h3>
           <p>Get started today.</p>
           <center>
             <Link href="/get-started">
