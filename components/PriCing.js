@@ -288,10 +288,11 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
-    padding: 5rem 2rem;
+    padding: 2rem 2rem 5rem 2rem;
 
     .box {
       box-shadow: var(--dark-shadow);
+      margin-top: 2rem;
       padding: 3rem 2rem;
       height: 39rem;
       background-color: var(--clr-white);
