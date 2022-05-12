@@ -3,8 +3,30 @@ import { BsPlayFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
 import ReactPlayer from "react-player/lazy";
+import { useAppContext } from "../context/app_context";
+import useSWR from "swr";
+import Loading from "./Loading";
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Brands = () => {
+  const { data, error } = useSWR(
+    `${process.env.url}/api/how-it-works`,
+    fetcher
+  );
+
+  if (error) return <div>Failed to load</div>;
+  if (!data)
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+  // const { heading, subHeading } = brands.data.attributes;
+  // const { howItWorks } = useAppContext();
+
+  console.log(data.data[7].attributes);
+
   return (
     <Wrapper>
       <Row

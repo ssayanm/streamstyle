@@ -7,7 +7,7 @@ import { Tabs } from "antd";
 const { TabPane } = Tabs;
 
 function callback(key) {
-  console.log(key);
+  // console.log(key);
 }
 
 const customStyles = {
@@ -25,6 +25,10 @@ const customStyles = {
 
 const Categories = () => {
   // const [value, setValue] = useState(0);
+
+  // const { heading, subHeading } = howItWorks.data.attributes;
+
+  // console.log(heading);
 
   const [selectedOption, setSelectedOption] = useState(categories[0]);
 

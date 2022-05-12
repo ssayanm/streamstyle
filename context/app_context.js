@@ -1,5 +1,5 @@
-// import axios from "axios";
-import React, { useContext, useReducer } from "react";
+import axios from "axios";
+import React, { useContext, useEffect, useReducer } from "react";
 import reducer from "./app_reducer";
 
 import {
@@ -9,15 +9,18 @@ import {
   SUBMENU_CLOSE,
   CHANNEL_OPEN,
   CHANNEL_CLOSE,
+  GET_HOWITWORKS_BEGIN,
+  GET_HOWITWORKS_SUCCESS,
+  GET_HOWITWORKS_ERROR,
   // GET_PRICELISTS_BEGIN,
   // GET_PRICELISTS_SUCCESS,
   // GET_PRICELISTS_ERROR,
   // GET_SLIDER_BEGIN,
   // GET_SLIDER_SUCCESS,
   // GET_SLIDER_ERROR,
-  // GET_CARRENTALS_BEGIN,
-  // GET_CARRENTALS_SUCCESS,
-  // GET_CARRENTALS_ERROR,
+  // GET_HOWITWORKS_BEGIN,
+  // GET_HOWITWORKS_SUCCESS,
+  // GET_HOWITWORKS_ERROR,
   // GET_PRODUCTS_BEGIN,
   // GET_PRODUCTS_SUCCESS,
   // GET_PRODUCTS_ERROR,
@@ -38,13 +41,13 @@ const initialState = {
   // slider_loading: false,
   // slider_error: false,
   // slider: [],
-  // carrentals_loading: false,
-  // carrentals_error: false,
-  // carrentals: [],
-  // featured_carrentals: [],
-  // products: [],
-  // products_loading: false,
-  // products_error: false,
+  // HOWITWORKS_loading: false,
+  // HOWITWORKS_error: false,
+  // HOWITWORKS: [],
+  // featured_HOWITWORKS: [],
+  howItWorks: [],
+  howItWorks_loading: false,
+  howItWorks_error: false,
   // featured_products: [],
 
   // single_product: [],
@@ -52,9 +55,10 @@ const initialState = {
   // single_product_error: false,
 };
 
-// const purl = `${process.env.url}/pricelists`;
+const purl = `${process.env.url}/api/how-it-works`;
+
 // const surl = `${process.env.url}/sliders`;
-// const crurl = `${process.env.url}/carrentals`;
+// const crurl = `${process.env.url}/HOWITWORKS`;
 // const produrl = `${process.env.url}/products`;
 
 const AppContext = createContext();
@@ -85,17 +89,18 @@ export const AppProvider = ({ children }) => {
   const closeChannel = () => {
     dispatch({ type: CHANNEL_CLOSE });
   };
-  // const fetchCarRentals = async (crurl) => {
-  //   dispatch({ type: GET_CARRENTALS_BEGIN });
-  //   try {
-  //     const response = await axios.get(crurl);
-  //     const carrentals = response.data;
 
-  //     dispatch({ type: GET_CARRENTALS_SUCCESS, payload: carrentals });
-  //   } catch (error) {
-  //     dispatch({ type: GET_CARRENTALS_ERROR });
-  //   }
-  // };
+  const fetchHowItWorks = async (purl) => {
+    dispatch({ type: GET_HOWITWORKS_BEGIN });
+    try {
+      const response = await axios.get(purl);
+      const howItWorks = response.data;
+
+      dispatch({ type: GET_HOWITWORKS_SUCCESS, payload: howItWorks });
+    } catch (error) {
+      dispatch({ type: GET_HOWITWORKS_ERROR });
+    }
+  };
 
   // const fetchProducts = async (produrl) => {
   //   dispatch({ type: GET_PRODUCTS_BEGIN });
@@ -109,12 +114,9 @@ export const AppProvider = ({ children }) => {
   //   }
   // };
 
-  // useEffect(() => {
-  //   fetchPricelists(purl),
-  //     fetchSlider(surl),
-  //     fetchCarRentals(crurl),
-  //     fetchProducts(produrl);
-  // }, []);
+  useEffect(() => {
+    fetchHowItWorks(purl);
+  }, []);
 
   return (
     <AppContext.Provider

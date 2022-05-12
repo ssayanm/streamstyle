@@ -1,3 +1,4 @@
+import axios from "axios";
 import Meta from "../components/Meta";
 import HomeHero from "../components/HomeHero";
 import HomeSectionA from "../components/HomeSectionA";
@@ -6,7 +7,18 @@ import HomeSectionC from "../components/HomeSectionC";
 import HomeSectionD from "../components/HomeSectionD";
 import HomeSectionE from "../components/HomeSectionE";
 
-export default function Home() {
+// export const getStaticProps = async () => {
+//   try {
+//     const res = await axios.get(`${process.env.url}/api/home/`);
+//     const home = res.data;
+
+//     return { props: { home } };
+//   } catch (error) {
+//     return { error };
+//   }
+// };
+
+export default function Home({ home }) {
   return (
     <main>
       <Meta title="Home" />

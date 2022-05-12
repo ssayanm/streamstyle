@@ -1,9 +1,9 @@
 import {
   SIDEBAR_OPEN,
   SIDEBAR_CLOSE,
-  GET_PRICELISTS_ERROR,
-  GET_PRICELISTS_SUCCESS,
-  GET_PRICELISTS_BEGIN,
+  GET_HOWITWORKS_ERROR,
+  GET_HOWITWORKS_SUCCESS,
+  GET_HOWITWORKS_BEGIN,
   GET_SLIDER_BEGIN,
   GET_SLIDER_SUCCESS,
   GET_SLIDER_ERROR,
@@ -42,22 +42,22 @@ const app_reducer = (state, action) => {
     case CHANNEL_CLOSE:
       return { ...state, isChannelOpen: false };
 
-    // case GET_PRICELISTS_BEGIN:
-    //   return { ...state, pricelists_loading: true };
+    case GET_HOWITWORKS_BEGIN:
+      return { ...state, howItWorks_loading: true };
 
-    // case GET_PRICELISTS_SUCCESS:
-    //   return {
-    //     ...state,
-    //     pricelists_loading: false,
-    //     pricelists: action.payload,
-    //   };
+    case GET_HOWITWORKS_SUCCESS:
+      return {
+        ...state,
+        howItWorks_loading: false,
+        howItWorks: action.payload,
+      };
 
-    // case GET_PRICELISTS_ERROR:
-    //   return {
-    //     ...state,
-    //     pricelists_loading: false,
-    //     pricelists_error: true,
-    //   };
+    case GET_HOWITWORKS_ERROR:
+      return {
+        ...state,
+        howItWorks_loading: false,
+        howItWorks_error: true,
+      };
 
     // case GET_SLIDER_BEGIN:
     //   return { ...state, slider_loading: true };
