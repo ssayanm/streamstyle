@@ -7,25 +7,29 @@ import { useAppContext } from "../context/app_context";
 import useSWR from "swr";
 import Loading from "./Loading";
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+// const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Brands = () => {
-  const { data, error } = useSWR(
-    `${process.env.url}/api/how-it-works`,
-    fetcher
-  );
+  // const { data, error } = useSWR(
+  //   `${process.env.url}/api/how-it-works`,
+  //   fetcher
+  // );
 
-  if (error) return <div>Failed to load</div>;
-  if (!data)
-    return (
-      <div>
-        <Loading />
-      </div>
-    );
+  // if (error) return <div>Failed to load</div>;
+  // if (!data)
+  //   return (
+  //     <div>
+  //       <Loading />
+  //     </div>
+  //   );
   // const { heading, subHeading } = brands.data.attributes;
   // const { howItWorks } = useAppContext();
 
-  console.log(data.data[7].attributes);
+  // const temp = data.data[7].filter((item) => {
+  //   return item.id === 9;
+  // });
+
+  console.log(data.data[7].attributes.heading);
 
   return (
     <Wrapper>
