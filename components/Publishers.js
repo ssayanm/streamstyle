@@ -28,6 +28,7 @@ const Publishers = () => {
             <ReactPlayer
               url={"/videos/homevideo.mp4"}
               playing={true}
+              loop={true}
               muted={true}
               controls={true}
               width="100%"
@@ -52,12 +53,16 @@ const Publishers = () => {
           </p>
         </Col>
         <Col sm={24} md={12}>
-          <Image
-            alt="revo"
-            src="/images/Catalog_sync.jpg"
-            width={1649}
-            height={929}
-            objectFit="cover"
+          <ReactPlayer
+            url={"/videos/catalog_sync.mp4"}
+            playing={true}
+            loop={true}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            image="/images/herovideo.jpg"
+            className="react-player1"
             quality={100}
           />
         </Col>
@@ -116,13 +121,16 @@ const Publishers = () => {
           </p>
         </Col>
         <Col sm={24} md={12}>
-          {" "}
-          <Image
-            alt="revo"
-            src="/images/Live _ VOD.gif"
-            width={852}
-            height={479}
-            objectFit="cover"
+          <ReactPlayer
+            url={"/videos/Live _ VOD.mp4"}
+            playing={true}
+            loop={true}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            image="/images/herovideo.jpg"
+            className="react-player1"
             quality={100}
           />
         </Col>
@@ -136,12 +144,16 @@ const Publishers = () => {
       >
         {" "}
         <Col sm={24} md={12} className="onlydesktop">
-          <Image
-            alt="revo"
-            src="/images/Checkout.gif"
-            width={852}
-            height={479}
-            objectFit="cover"
+          <ReactPlayer
+            url={"/videos/Frictionless Checkout.mp4"}
+            playing={true}
+            loop={true}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            image="/images/herovideo.jpg"
+            className="react-player1"
             quality={100}
           />
         </Col>
@@ -156,12 +168,16 @@ const Publishers = () => {
           </p>
         </Col>
         <Col sm={24} md={12} className="onlymobile">
-          <Image
-            alt="revo"
-            src="/images/Checkout.gif"
-            width={852}
-            height={479}
-            objectFit="cover"
+          <ReactPlayer
+            url={"/videos/Frictionless Checkout.mp4"}
+            playing={true}
+            loop={true}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            image="/images/herovideo.jpg"
+            className="react-player1"
             quality={100}
           />
         </Col>
@@ -185,16 +201,18 @@ const Publishers = () => {
             </p>
           </Col>
           <Col sm={24} md={10}>
-            <div className="fimage1">
-              <Image
-                alt="revo"
-                src="/images/Virtual Try On.gif"
-                width={852}
-                height={479}
-                objectFit="cover"
-                quality="100"
-              />
-            </div>
+            <ReactPlayer
+              url={"/videos/Virtual Try On.mp4"}
+              playing={true}
+              loop={true}
+              muted={true}
+              controls={true}
+              width="100%"
+              height="100%"
+              image="/images/herovideo.jpg"
+              className="react-player1"
+              quality={100}
+            />
           </Col>
         </Row>
       </div>
@@ -217,12 +235,16 @@ const Publishers = () => {
           </p>
         </Col>
         <Col sm={24} md={12}>
-          <Image
-            alt="revo"
-            src="/images/Real-Time Analytics.gif"
-            width={852}
-            height={479}
-            objectFit="cover"
+          <ReactPlayer
+            url={"/videos/Real-Time Analytics.mp4"}
+            playing={true}
+            loop={true}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            image="/images/herovideo.jpg"
+            className="react-player1"
             quality={100}
           />
         </Col>

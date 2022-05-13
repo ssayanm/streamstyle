@@ -10,13 +10,13 @@ const HomeSectionD = () => {
         <Row gutter={16} justify="center" align="middle">
           <Col>
             <BsPlayCircle className="icon" data-aos="fade-up" />
-            <h1 className="title">
+            <h1 className="title" data-aos="fade-up">
               Integrate seamlessly into
               <br />
               your cart and payments
             </h1>
           </Col>
-          <Row className="space">
+          <Row className="space" data-aos="fade-up">
             <Col sm={24} md={12} xl={8}>
               <p className="header">One-click install</p>
               <p className="info">

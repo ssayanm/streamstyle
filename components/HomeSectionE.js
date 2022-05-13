@@ -6,7 +6,7 @@ const HomeSectionE = () => {
   return (
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
-        <Col>
+        <Col data-aos="fade-up">
           <h3 className="title">"Revo Video is word of mouth on steroids"</h3>
           <p>Get started today.</p>
           <center>

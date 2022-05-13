@@ -23,6 +23,7 @@ const Creators = () => {
             <ReactPlayer
               url={"/videos/homevideo.mp4"}
               playing={true}
+              loop={true}
               muted={true}
               controls={true}
               width="100%"
@@ -62,9 +63,18 @@ const Creators = () => {
         align="middle"
       >
         <Col sm={24} md={12} className="onlydesktop">
-          <div className="greenbox">
-            <h1 className="title">Need video of live chat in motion</h1>
-          </div>
+          <ReactPlayer
+            url={"/videos/Live Chat & Moderation.mp4"}
+            playing={true}
+            loop={true}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            image="/images/herovideo.jpg"
+            className="react-player1"
+            quality={100}
+          />
         </Col>
         <Col sm={24} md={12}>
           <div className="iconbar">
@@ -75,9 +85,18 @@ const Creators = () => {
           <p>Connect with your customers in real-time using live-chat</p>
         </Col>
         <Col sm={24} md={12} className="onlymobile">
-          <div className="greenbox">
-            <h1 className="title">Need video of live chat in motion</h1>
-          </div>
+          <ReactPlayer
+            url={"/videos/Live Chat & Moderation.mp4"}
+            playing={true}
+            loop={true}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            image="/images/herovideo.jpg"
+            className="react-player1"
+            quality={100}
+          />
         </Col>
       </Row>
 
@@ -116,12 +135,16 @@ const Creators = () => {
         >
           <Col sm={24} md={10} className="onlydesktop">
             <div className="fimage1">
-              <Image
-                alt="revo"
-                src="/images/Virtual Try On.gif"
-                width={852}
-                height={479}
-                objectFit="cover"
+              <ReactPlayer
+                url={"/videos/Virtual Try On.mp4"}
+                playing={true}
+                loop={true}
+                muted={true}
+                controls={true}
+                width="100%"
+                height="100%"
+                image="/images/herovideo.jpg"
+                className="react-player1"
                 quality={100}
               />
             </div>
@@ -137,16 +160,18 @@ const Creators = () => {
             </p>
           </Col>
           <Col sm={24} md={8} className="onlymobile">
-            <div className="fimage">
-              <Image
-                alt="revo"
-                src="/images/Virtual Try On.gif"
-                width={852}
-                height={479}
-                objectFit="cover"
-                quality={100}
-              />
-            </div>
+            <ReactPlayer
+              url={"/videos/Virtual Try On.mp4"}
+              playing={true}
+              loop={true}
+              muted={true}
+              controls={true}
+              width="100%"
+              height="100%"
+              image="/images/herovideo.jpg"
+              className="react-player1"
+              quality={100}
+            />
           </Col>
         </Row>
       </div>
@@ -170,12 +195,16 @@ const Creators = () => {
           </p>
         </Col>
         <Col sm={24} md={12}>
-          <Image
-            alt="revo"
-            src="/images/Real-Time Analytics.gif"
-            width={852}
-            height={479}
-            objectFit="cover"
+          <ReactPlayer
+            url={"/videos/Real-Time Analytics.mp4"}
+            playing={true}
+            loop={true}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            image="/images/herovideo.jpg"
+            className="react-player1"
             quality={100}
           />
         </Col>

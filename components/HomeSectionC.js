@@ -22,7 +22,7 @@ const HomeSectionC = () => {
           </div>
         </Col>
         <Col sm={24} md={16} xl={12}>
-          <article className="content">
+          <article className="content" data-aos="fade-left">
             <h3 className="title">
               The Future Of <br />
               Shopping Is LIVE
