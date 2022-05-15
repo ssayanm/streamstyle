@@ -3,6 +3,7 @@ import axios from "axios";
 import Meta from "../components/Meta";
 import Price from "../components/Price";
 import PriCing from "../components/PriCing";
+import Loading from "../components/Loading";
 
 // export const getStaticProps = async () => {
 //   try {

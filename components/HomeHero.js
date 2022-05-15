@@ -6,6 +6,7 @@ import ReactPlayer from "react-player/lazy";
 
 const HomeHero = () => {
   // const { heading, subHeading } = home.data.attributes;
+
   return (
     <Wrapper>
       <div className="section-center">
