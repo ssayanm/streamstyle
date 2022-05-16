@@ -3,6 +3,8 @@ import { GoPrimitiveDot } from "react-icons/go";
 import { GrClose } from "react-icons/gr";
 import { featuresPrice } from "../utils/constants";
 import { Table } from "antd";
+import Image from "next/image";
+import Link from "next/link";
 
 const Price = () => {
   const columnsfordesktop = [
@@ -69,15 +71,31 @@ const Price = () => {
   ];
 
   return (
-    <Wrapper>
-      <Table
-        dataSource={featuresPrice}
-        columns={columnsfordesktop}
-        pagination={false}
-        className="onlydesktop"
-        id={1}
-      />
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Table
+          dataSource={featuresPrice}
+          columns={columnsfordesktop}
+          pagination={false}
+          className="onlydesktop"
+          id={1}
+        />
+      </Wrapper>
+      <center className="space">
+        <Link href="/get-started">
+          <a>
+            {" "}
+            <Image
+              alt="revo"
+              src="/images/pricingim.png"
+              width={250}
+              height={252}
+              objectFit="cover"
+            />{" "}
+          </a>
+        </Link>
+      </center>
+    </>
   );
 };
 

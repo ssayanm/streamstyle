@@ -6,6 +6,7 @@ import { GoPrimitiveDot } from "react-icons/go";
 import { GrClose } from "react-icons/gr";
 import { featuresPrice } from "../utils/constants";
 import { GoDash } from "react-icons/go";
+import ReactMarkdown from "react-markdown";
 
 const { Panel } = Collapse;
 
@@ -14,6 +15,8 @@ function callback(key) {
 }
 
 const PriCing = () => {
+  //  const { dtcFeature } = pricing.data.attributes;
+
   const columnsfordtc = [
     {
       title: "Features",
@@ -110,6 +113,10 @@ const PriCing = () => {
                 Any DTC brand on e-commerce platforms. Download the app and go
                 live.
               </p>
+              {/*  <div className="features">
+                <ReactMarkdown children={dtcFeature} />
+  </div>*/}
+
               <ul>
                 <li>5% of gross sales generated on the platform. </li>
                 <li>No monthly fee.</li>
@@ -277,6 +284,22 @@ const Wrapper = styled.section`
       width: 15rem;
       margin-top: 2rem;
       margin-bottom: 2rem;
+      word-break: break-word;
+    }
+    .features {
+      /* text-align: left; */
+      /* width: 15rem; */
+      /* margin: 0 auto; */
+      /* margin-top: 2rem; */
+      /* margin-bottom: 2rem; */
+    }
+    pre,
+    code {
+      /* font-size: 1rem; */
+      font-family: "Mont";
+
+      display: contents;
+      word-break: break-all;
     }
     li {
       text-align: left;
@@ -310,9 +333,13 @@ const Wrapper = styled.section`
         color: var(--clr-light);
       }
 
+      pre,
+      code {
+        font-size: 1.2rem;
+      }
       ul {
         margin: 0 auto;
-        width: 15rem;
+        width: 18rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
       }
