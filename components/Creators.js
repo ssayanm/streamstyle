@@ -119,11 +119,14 @@ const Creators = () => {
           </p>
         </Col>
         <Col sm={24} md={12}>
-          <div className="greenbox">
-            <h1 className="title">
-              Need video of payment process for creators
-            </h1>
-          </div>
+          <Image
+            alt="revo"
+            src="/images/paymentprocess.png"
+            width={1441}
+            height={960}
+            objectFit="cover"
+            quality={100}
+          />
         </Col>
       </Row>
       <div className="section-center">

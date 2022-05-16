@@ -77,9 +77,14 @@ const Brands = () => {
           </p>
         </Col>
         <Col sm={24} md={12}>
-          <div className="greenbox">
-            <h1 className="title">Easy to Use</h1>
-          </div>
+          <Image
+            alt="revo"
+            src="/images/Studio1.png"
+            width={1440}
+            height={900}
+            objectFit="cover"
+            quality={100}
+          />
         </Col>
 
         <Col sm={24} md={12}>
