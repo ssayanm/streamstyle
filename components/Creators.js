@@ -273,10 +273,10 @@ const Wrapper = styled.section`
   p {
     /* max-width: 45em; */
     /* font-family: "MontSemiBold", sans-serif; */
-    margin-top: 2rem;
+    margin-top: 0rem;
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
 
   .title {

@@ -48,9 +48,17 @@ const Marketers = () => {
           </p>
         </Col>
         <Col sm={24} md={12}>
-          <div className="greenbox">
-            <h1 className="title">Use clip rom Tocara Video</h1>
-          </div>
+          <ReactPlayer
+            url={"/videos/setstudio.mp4"}
+            playing={true}
+            loop={true}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            image="/images/herovideo.jpg"
+            className="react-player1"
+          />
         </Col>
       </Row>
 
@@ -278,10 +286,10 @@ const Wrapper = styled.section`
   p {
     /* max-width: 45em; */
     /* font-family: "MontSemiBold", sans-serif; */
-    margin-top: 2rem;
+    margin-top: 0rem;
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
 
   .title {

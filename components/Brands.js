@@ -87,7 +87,7 @@ const Brands = () => {
           />
         </Col>
 
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} className="onlydesktop">
           <ReactPlayer
             url={"/videos/catalog_sync.mp4"}
             playing={true}
@@ -111,6 +111,20 @@ const Brands = () => {
             Automatically connect and sync to any e-commerce platform keeping
             your products up to date and available for your shows
           </p>
+        </Col>
+        <Col sm={24} md={12} className="onlymobile">
+          <ReactPlayer
+            url={"/videos/catalog_sync.mp4"}
+            playing={true}
+            loop={true}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            image="/images/herovideo.jpg"
+            className="react-player1"
+            quality={100}
+          />
         </Col>
       </Row>
 
@@ -365,9 +379,10 @@ const Wrapper = styled.section`
   }
 
   p {
+    margin-top: 0rem;
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
 
   .title {
