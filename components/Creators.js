@@ -23,7 +23,6 @@ const Creators = () => {
             <ReactPlayer
               url={"/videos/homevideo.mp4"}
               playing={true}
-              loop={true}
               muted={true}
               controls={true}
               width="100%"
@@ -66,7 +65,6 @@ const Creators = () => {
           <ReactPlayer
             url={"/videos/Live Chat & Moderation.mp4"}
             playing={true}
-            loop={true}
             muted={true}
             controls={true}
             width="100%"
@@ -88,7 +86,6 @@ const Creators = () => {
           <ReactPlayer
             url={"/videos/Live Chat & Moderation.mp4"}
             playing={true}
-            loop={true}
             muted={true}
             controls={true}
             width="100%"
@@ -141,7 +138,6 @@ const Creators = () => {
               <ReactPlayer
                 url={"/videos/Virtual Try On.mp4"}
                 playing={true}
-                loop={true}
                 muted={true}
                 controls={true}
                 width="100%"
@@ -166,7 +162,6 @@ const Creators = () => {
             <ReactPlayer
               url={"/videos/Virtual Try On.mp4"}
               playing={true}
-              loop={true}
               muted={true}
               controls={true}
               width="100%"
@@ -201,7 +196,6 @@ const Creators = () => {
           <ReactPlayer
             url={"/videos/Real-Time Analytics.mp4"}
             playing={true}
-            loop={true}
             muted={true}
             controls={true}
             width="100%"

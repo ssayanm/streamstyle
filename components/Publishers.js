@@ -28,7 +28,6 @@ const Publishers = () => {
             <ReactPlayer
               url={"/videos/homevideo.mp4"}
               playing={true}
-              loop={true}
               muted={true}
               controls={true}
               width="100%"
@@ -56,7 +55,6 @@ const Publishers = () => {
           <ReactPlayer
             url={"/videos/catalog_sync.mp4"}
             playing={true}
-            loop={true}
             muted={true}
             controls={true}
             width="100%"
@@ -124,7 +122,6 @@ const Publishers = () => {
           <ReactPlayer
             url={"/videos/Live _ VOD.mp4"}
             playing={true}
-            loop={true}
             muted={true}
             controls={true}
             width="100%"
@@ -147,7 +144,6 @@ const Publishers = () => {
           <ReactPlayer
             url={"/videos/Frictionless Checkout.mp4"}
             playing={true}
-            loop={true}
             muted={true}
             controls={true}
             width="100%"
@@ -171,7 +167,6 @@ const Publishers = () => {
           <ReactPlayer
             url={"/videos/Frictionless Checkout.mp4"}
             playing={true}
-            loop={true}
             muted={true}
             controls={true}
             width="100%"
@@ -204,7 +199,6 @@ const Publishers = () => {
             <ReactPlayer
               url={"/videos/Virtual Try On.mp4"}
               playing={true}
-              loop={true}
               muted={true}
               controls={true}
               width="100%"
@@ -238,7 +232,6 @@ const Publishers = () => {
           <ReactPlayer
             url={"/videos/Real-Time Analytics.mp4"}
             playing={true}
-            loop={true}
             muted={true}
             controls={true}
             width="100%"
