@@ -34,7 +34,7 @@ const Brands = () => {
   return (
     <Wrapper>
       <Row
-        gutter={[32, 48]}
+        gutter={[48, 48]}
         justify="center"
         align="middle"
         className="section"
@@ -59,7 +59,6 @@ const Brands = () => {
               width="100%"
               height="100%"
               image="/images/herovideo.jpg"
-              className="react-player1"
               quality={100}
             />
           </div>
@@ -95,7 +94,6 @@ const Brands = () => {
             width="100%"
             height="100%"
             image="/images/herovideo.jpg"
-            className="react-player1"
             quality={100}
           />
         </Col>
@@ -119,7 +117,6 @@ const Brands = () => {
             width="100%"
             height="100%"
             image="/images/herovideo.jpg"
-            className="react-player1"
             quality={100}
           />
         </Col>
@@ -151,7 +148,6 @@ const Brands = () => {
             width="100%"
             height="100%"
             image="/images/herovideo.jpg"
-            className="react-player1"
             quality={100}
           />
         </Col>
@@ -223,7 +219,6 @@ const Brands = () => {
               width="100%"
               height="100%"
               image="/images/herovideo.jpg"
-              className="react-player1"
               quality={100}
             />
           </Col>
@@ -245,7 +240,6 @@ const Brands = () => {
             width="100%"
             height="100%"
             image="/images/herovideo.jpg"
-            className="react-player1"
             quality={100}
           />
         </Col>
@@ -268,7 +262,6 @@ const Brands = () => {
             width="100%"
             height="100%"
             image="/images/herovideo.jpg"
-            className="react-player1"
             quality={100}
           />
         </Col>
@@ -303,7 +296,6 @@ const Brands = () => {
             width="100%"
             height="100%"
             image="/images/herovideo.jpg"
-            className="react-player1"
             quality={100}
           />
         </Col>
@@ -381,27 +373,6 @@ const Wrapper = styled.section`
     font-size: 2rem;
   }
 
-  .fimage {
-    transform: translateY(1rem);
-  }
-
-  .greenbox {
-    background: var(--clr-primary-1);
-    border: solid 1px #000;
-    /* width: max-content; */
-    margin: 0 auto;
-    padding: 2rem 1rem 0rem 1rem;
-    height: 15rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-
-    .title {
-      font-size: 2rem;
-    }
-  }
-
   .iconbar {
     display: flex;
     justify-content: center;
@@ -433,10 +404,6 @@ const Wrapper = styled.section`
       border-radius: 2rem;
     }
 
-    .fimage {
-      transform: translateY(-17rem);
-    }
-
     p {
       text-align: left;
       margin-bottom: 0rem;
@@ -446,11 +413,6 @@ const Wrapper = styled.section`
     .title {
       text-align: left;
       font-size: 3rem;
-    }
-
-    .greenbox {
-      width: 35rem;
-      height: 25rem;
     }
 
     .iconbar {

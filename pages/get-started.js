@@ -30,6 +30,7 @@ const HubspotContactForm = () => {
             <div className="contenta">
               <h1 className="title">Get in touch</h1>
             </div>
+
             <div id="hubspotForm" data-aos="fade-up"></div>
           </div>
         </Col>
