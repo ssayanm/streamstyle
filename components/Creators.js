@@ -107,7 +107,7 @@ const Creators = () => {
             <h1 className="title">Get Paid</h1>
           </div>
 
-          <p>
+          <p className="pright">
             For every sale you are paid directly to your bank account through
             our payment platform. Never wait for checks again, go live and get
             paid!
@@ -291,6 +291,10 @@ const Wrapper = styled.section`
     .section-b,
     .section-c {
       padding: 6rem;
+    }
+
+    .section .ant-col {
+      padding: 1rem 0;
     }
 
     .section-d {

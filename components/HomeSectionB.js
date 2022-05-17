@@ -12,8 +12,8 @@ const HomeSectionB = () => {
           </Col>
         </Row>
         <Row gutter={[48, 32]}>
-          <Col sm={24} md={16}>
-            <Row gutter={[32, 32]}>
+          <Col sm={24} md={12}>
+            <Row gutter={[48, 32]}>
               <Col sm={24} md={12}>
                 <Image
                   alt="revo"
@@ -55,7 +55,7 @@ const HomeSectionB = () => {
                 </p>
               </Col>
             </Row>
-            <Row gutter={[32, 32]}>
+            <Row gutter={[48, 32]}>
               <Col sm={24} md={12} className="space">
                 {" "}
                 <Image
@@ -98,7 +98,7 @@ const HomeSectionB = () => {
               </Col>
             </Row>
           </Col>
-          <Col sm={24} md={8} className="imagecon">
+          <Col sm={24} md={12} className="imagecon">
             <Image
               alt="revo"
               src="/images/features.png"

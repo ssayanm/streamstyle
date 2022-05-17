@@ -285,6 +285,10 @@ p {
   padding: 2rem 0;
 }
 
+.pright {
+  padding-right: 0;
+}
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 90vw;
@@ -310,6 +314,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .pright {
+    padding-right: 100px;
   }
 }
 

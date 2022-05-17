@@ -304,6 +304,10 @@ const Wrapper = styled.section`
       padding: 6rem;
     }
 
+    .section .ant-col {
+      padding: 1rem 0;
+    }
+
     .section-d {
       margin: 5rem 0 5rem 0;
       background: var(--clr-primary-1);
