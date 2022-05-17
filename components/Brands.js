@@ -305,14 +305,8 @@ const Brands = () => {
 };
 
 const Wrapper = styled.section`
-  /* padding: 6rem 2rem; */
-
-  .para {
-    /* width: 30rem; */
-  }
-
   .section-d {
-    margin: 2rem 0;
+    margin: 2rem 0 3rem 0;
     background: var(--clr-primary-1);
     height: max-content;
     padding: 2rem 0.5rem;
@@ -401,7 +395,7 @@ const Wrapper = styled.section`
     }
 
     .section-d {
-      margin: 5rem 0 5rem 0;
+      margin: 0rem 0 5rem 0;
       background: var(--clr-primary-1);
 
       padding: 6rem 4rem;

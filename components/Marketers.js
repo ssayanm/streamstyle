@@ -215,8 +215,6 @@ const Marketers = () => {
 };
 
 const Wrapper = styled.section`
-  /* padding: 6rem 2rem; */
-
   .section-d {
     margin: 2rem 0;
     background: var(--clr-primary-1);
@@ -295,8 +293,6 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
-    /* padding: 9rem 2rem; */
-
     .section,
     .section-a,
     .section-b,
@@ -309,7 +305,7 @@ const Wrapper = styled.section`
     }
 
     .section-d {
-      margin: 5rem 0 5rem 0;
+      /* margin: 0rem 0 5rem 0; */
       background: var(--clr-primary-1);
 
       padding: 6rem 4rem;
