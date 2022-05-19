@@ -39,7 +39,7 @@ export const footerLinks = [
   {
     id: 4,
     text: "Careers",
-    url: "https://jobs.wrk.xyz/borderfree",
+    url: "https://jobs.wrk.xyz/borderFee",
   },
 ];
 
@@ -60,7 +60,7 @@ export const social = [
   {
     id: 1,
     icon: <FaLinkedin className="social-icon "></FaLinkedin>,
-    url: "https://www.linkedin.com/company/borderfreetechnologies",
+    url: "https://www.linkedin.com/company/borderFeetechnologies",
   },
 ];
 
@@ -277,7 +277,7 @@ export const featuresPrice = [
   {
     id: 5,
     feature: "Branded Consumer screen",
-    dtc: "For Free",
+    dtc: "For Fee",
     brands: true,
     enterprise: true,
   },
@@ -292,8 +292,8 @@ export const featuresPrice = [
     id: 7,
     feature: "Creator Community Matching",
     dtc: false,
-    brands: "For Free",
-    enterprise: "For Free",
+    brands: "For Fee",
+    enterprise: "For Fee",
   },
   {
     id: 8,
