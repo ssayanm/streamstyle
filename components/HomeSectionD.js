@@ -8,9 +8,9 @@ const HomeSectionD = () => {
     <Wrapper>
       <div className="section-center">
         <Row gutter={16} justify="center" align="middle">
-          <Col>
-            <BsPlayCircle className="icon" data-aos="fade-up" />
-            <h1 className="title" data-aos="fade-up">
+          <Col data-aos="fade-up">
+            <BsPlayCircle className="icon" />
+            <h1 className="title">
               Integrate seamlessly into
               <br />
               your cart and payments

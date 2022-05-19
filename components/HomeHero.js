@@ -66,7 +66,7 @@ const HomeHero = () => {
               </ul>
             </article>
           </Col>
-          <Col sm={24} md={24} lg={12}>
+          <Col sm={24} md={24} lg={12} data-aos="zoom-in">
             <div className="onlydesktop">
               <div className="player-wrapper">
                 <ReactPlayer

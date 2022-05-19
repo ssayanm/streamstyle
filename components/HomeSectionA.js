@@ -7,7 +7,7 @@ const HomeSectionA = () => {
   return (
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
-        <Col sm={24} md={12} xl={12}>
+        <Col sm={24} md={12} xl={12} data-aos="fade-right">
           <BsPlayCircleFill className="icon" />
           <p>
             Best in class shopping experience and storytelling platform that
@@ -16,7 +16,7 @@ const HomeSectionA = () => {
             your social channels.
           </p>
         </Col>
-        <Col sm={24} md={12} xl={10}>
+        <Col sm={24} md={12} xl={10} data-aos="zoom-in">
           {" "}
           <Image
             alt="revo"

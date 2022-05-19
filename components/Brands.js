@@ -39,7 +39,7 @@ const Brands = () => {
         align="middle"
         className="section"
       >
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-right">
           <h1 className="title">
             Sell to your customers directly with shoppable videos
           </h1>
@@ -49,7 +49,7 @@ const Brands = () => {
             locations at the same time
           </p>
         </Col>
-        <Col sm={24} md={12} className="widthfull">
+        <Col sm={24} md={12} className="widthfull" data-aos="zoom-in">
           <div className="player-wrapper1">
             <ReactPlayer
               url={"/videos/homevideo.mp4"}
@@ -63,7 +63,7 @@ const Brands = () => {
             />
           </div>
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-right">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Easy to Use</h1>
@@ -74,7 +74,7 @@ const Brands = () => {
             <br /> your brand can be live
           </p>
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="zoom-in">
           <Image
             alt="revo"
             src="/images/Studio1.png"
@@ -85,7 +85,7 @@ const Brands = () => {
           />
         </Col>
 
-        <Col sm={24} md={12} className="onlydesktop">
+        <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
             url={"/videos/catalog_sync.mp4"}
             playing={true}
@@ -97,7 +97,7 @@ const Brands = () => {
             quality={100}
           />
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-left">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Catalog Sync</h1>
@@ -128,7 +128,7 @@ const Brands = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-right">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Live & VOD</h1>
@@ -139,7 +139,7 @@ const Brands = () => {
             engaging way
           </p>
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
             url={"/videos/Live _ VOD.mp4"}
             playing={true}
@@ -159,7 +159,7 @@ const Brands = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} className="onlydesktop">
+        <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <Image
             alt="revo"
             src="/images/Weekly_Schedule.jpg"
@@ -169,7 +169,7 @@ const Brands = () => {
             quality={100}
           />
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-left">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Create A Weekly Show Schedule</h1>
@@ -200,7 +200,7 @@ const Brands = () => {
           justify="center"
           align="middle"
         >
-          <Col sm={24} md={14}>
+          <Col sm={24} md={14} data-aos="fade-right">
             <div className="iconbar">
               <BsPlayFill className="icon" />
               <h1 className="title">Virtual AI Try-On</h1>
@@ -210,7 +210,7 @@ const Brands = () => {
               increasing customer satisfaction
             </p>
           </Col>
-          <Col sm={24} md={10}>
+          <Col sm={24} md={10} data-aos="zoom-in">
             <ReactPlayer
               url={"/videos/Virtual Try On.mp4"}
               playing={true}
@@ -231,7 +231,7 @@ const Brands = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} className="onlydesktop">
+        <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
             url={"/videos/Frictionless Checkout.mp4"}
             playing={true}
@@ -243,7 +243,7 @@ const Brands = () => {
             quality={100}
           />
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-left">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Frictionless Checkout</h1>
@@ -273,7 +273,7 @@ const Brands = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-right">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Real-Time Analytics</h1>
@@ -287,7 +287,7 @@ const Brands = () => {
             actionable customer insights with first-party user data
           </p>
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
             url={"/videos/Real-Time Analytics.mp4"}
             playing={true}

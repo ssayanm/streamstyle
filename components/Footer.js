@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <Wrapper>
       <div className="foot">
-        <div>
+        <div data-aos="zoom-in">
           <Link href="/">
             <a>
               <Image

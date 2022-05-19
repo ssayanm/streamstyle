@@ -7,14 +7,14 @@ const HomeSectionB = () => {
     <Wrapper>
       <div className="section-center">
         <Row gutter={16}>
-          <Col>
+          <Col data-aos="fade-up">
             <h3>The features you need</h3>
           </Col>
         </Row>
         <Row gutter={[48, 32]}>
           <Col sm={24} md={12}>
             <Row gutter={[48, 32]}>
-              <Col sm={24} md={12}>
+              <Col sm={24} md={12} data-aos="fade-up">
                 <Image
                   alt="revo"
                   src="/images/cart.png"
@@ -22,7 +22,6 @@ const HomeSectionB = () => {
                   height={49}
                   objectFit="cover"
                   quality={100}
-                  data-aos="zoom-in"
                 />
                 <p className="heading">
                   Direct e-Commerce
@@ -34,7 +33,7 @@ const HomeSectionB = () => {
                   instant checkout.{" "}
                 </p>
               </Col>
-              <Col sm={24} md={12}>
+              <Col sm={24} md={12} data-aos="fade-up">
                 {" "}
                 <Image
                   alt="revo"
@@ -43,7 +42,6 @@ const HomeSectionB = () => {
                   height={49}
                   objectFit="cover"
                   quality={100}
-                  data-aos="zoom-in"
                 />
                 <p className="heading">
                   High <br />
@@ -56,7 +54,7 @@ const HomeSectionB = () => {
               </Col>
             </Row>
             <Row gutter={[48, 32]}>
-              <Col sm={24} md={12} className="space">
+              <Col sm={24} md={12} className="space" data-aos="fade-up">
                 {" "}
                 <Image
                   alt="revo"
@@ -65,7 +63,6 @@ const HomeSectionB = () => {
                   height={49}
                   objectFit="cover"
                   quality={100}
-                  data-aos="zoom-in"
                 />
                 <p className="heading">
                   Frictionless <br />
@@ -76,7 +73,7 @@ const HomeSectionB = () => {
                   one-click without ever leaving the show.{" "}
                 </p>
               </Col>
-              <Col sm={24} md={12} className="space">
+              <Col sm={24} md={12} className="space" data-aos="fade-up">
                 <Image
                   alt="revo"
                   src="/images/analytics.png"
@@ -84,7 +81,6 @@ const HomeSectionB = () => {
                   height={41}
                   objectFit="cover"
                   quality={100}
-                  data-aos="zoom-in"
                 />
                 <p className="heading">
                   Real-Time
@@ -98,7 +94,7 @@ const HomeSectionB = () => {
               </Col>
             </Row>
           </Col>
-          <Col sm={24} md={12} className="imagecon">
+          <Col sm={24} md={12} className="imagecon" data-aos="zoom-in">
             <Image
               alt="revo"
               src="/images/features.png"

@@ -14,13 +14,13 @@ const Marketers = () => {
         align="middle"
         className="section"
       >
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-right">
           <h1 className="title">
             One Platform For Video Engagement & Live Commerce
           </h1>
           <p>Start a live sales channel to monetize your hosts’ parties</p>
         </Col>
-        <Col sm={24} md={12} className="widthfull">
+        <Col sm={24} md={12} className="widthfull" data-aos="zoom-in">
           <div className="player-wrapper">
             <ReactPlayer
               url={"/videos/homevideo.mp4"}
@@ -34,7 +34,7 @@ const Marketers = () => {
             />
           </div>
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-right">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Create & Host Live Events</h1>
@@ -46,7 +46,7 @@ const Marketers = () => {
             conversations, and acquire new party hosts!
           </p>
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
             url={"/videos/setstudio.mp4"}
             playing={true}
@@ -65,7 +65,7 @@ const Marketers = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} className="onlydesktop">
+        <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
             url={"/videos/Live Chat & Moderation.mp4"}
             playing={true}
@@ -77,7 +77,7 @@ const Marketers = () => {
             quality={100}
           />
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-left">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Live Chat Moderation</h1>
@@ -108,7 +108,7 @@ const Marketers = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-right">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Frictionless Checkout</h1>
@@ -120,7 +120,7 @@ const Marketers = () => {
             emailing to collect orders!
           </p>
         </Col>
-        <Col sm={24} md={12} className="">
+        <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
             url={"/videos/Frictionless Checkout.mp4"}
             playing={true}
@@ -141,7 +141,7 @@ const Marketers = () => {
           align="middle"
           gutter={[32, 32]}
         >
-          <Col sm={24} md={10} className="onlydesktop">
+          <Col sm={24} md={10} className="onlydesktop" data-aos="zoom-in">
             <ReactPlayer
               url={"/videos/Virtual Try On.mp4"}
               playing={true}
@@ -153,7 +153,7 @@ const Marketers = () => {
               quality={100}
             />
           </Col>
-          <Col sm={24} md={14}>
+          <Col sm={24} md={14} data-aos="fade-left">
             <div className="iconbar">
               <BsPlayFill className="icon" />
               <h1 className="title">Virtual AI Try-On</h1>
@@ -184,7 +184,7 @@ const Marketers = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-left">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Real-Time Analytics</h1>
@@ -197,7 +197,7 @@ const Marketers = () => {
             actionable customer insights with first-party user data
           </p>
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
             url={"/videos/Real-Time Analytics.mp4"}
             playing={true}

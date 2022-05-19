@@ -14,11 +14,11 @@ const Creators = () => {
         align="middle"
         className="section"
       >
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-right">
           <h1 className="title">Unleash The Power Of Live Commerce</h1>
           <p>Unleash The Power Of Live Commerce</p>
         </Col>
-        <Col sm={24} md={12} className="widthfull">
+        <Col sm={24} md={12} className="widthfull" data-aos="zoom-in">
           <div className="player-wrapper">
             <ReactPlayer
               url={"/videos/homevideo.mp4"}
@@ -32,7 +32,7 @@ const Creators = () => {
             />
           </div>
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-right">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Comprehensive Studio Platform</h1>
@@ -43,7 +43,7 @@ const Creators = () => {
             sell products via comprehensive live-streams
           </p>
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="zoom-in">
           <Image
             alt="revo"
             src="/images/Studio.jpg"
@@ -61,7 +61,7 @@ const Creators = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} className="onlydesktop">
+        <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
             url={"/videos/Live Chat & Moderation.mp4"}
             playing={true}
@@ -73,7 +73,7 @@ const Creators = () => {
             quality={100}
           />
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-left">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Live Chat Moderation</h1>
@@ -101,7 +101,7 @@ const Creators = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-right">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Get Paid</h1>
@@ -113,7 +113,7 @@ const Creators = () => {
             paid!
           </p>
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="zoom-in">
           <Image
             alt="revo"
             src="/images/paymentprocess.png"
@@ -131,7 +131,7 @@ const Creators = () => {
           align="middle"
           gutter={[32, 32]}
         >
-          <Col sm={24} md={10} className="onlydesktop">
+          <Col sm={24} md={10} className="onlydesktop" data-aos="zoom-in">
             <ReactPlayer
               url={"/videos/Virtual Try On.mp4"}
               playing={true}
@@ -143,7 +143,7 @@ const Creators = () => {
               quality={100}
             />
           </Col>
-          <Col sm={24} md={14}>
+          <Col sm={24} md={14} data-aos="fade-left">
             <div className="iconbar">
               <BsPlayFill className="icon" />
               <h1 className="title">Virtual AI Try-On</h1>
@@ -174,7 +174,7 @@ const Creators = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="fade-right">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Real-Time Analytics</h1>
@@ -186,7 +186,7 @@ const Creators = () => {
             actionable customer insights with first-party user data
           </p>
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
             url={"/videos/Real-Time Analytics.mp4"}
             playing={true}

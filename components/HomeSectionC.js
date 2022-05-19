@@ -8,7 +8,7 @@ const HomeSectionC = () => {
   return (
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
-        <Col sm={24} md={16} xl={12}>
+        <Col sm={24} md={16} xl={12} data-aos="zoom-in">
           {" "}
           <div className="onlydesktop">
             <Image

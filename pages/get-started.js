@@ -25,7 +25,7 @@ const HubspotContactForm = () => {
   return (
     <Wrapper>
       <Row gutter={[32, 32]} justify="center" align="middle">
-        <Col sm={24} md={12} lg={8}>
+        <Col sm={24} md={12} lg={8} data-aos="fade-up">
           <div className="box">
             <div className="contenta">
               <h1 className="title">Get in touch</h1>
