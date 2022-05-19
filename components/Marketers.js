@@ -14,7 +14,7 @@ const Marketers = () => {
         align="middle"
         className="section"
       >
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <h1 className="title">
             One Platform For Video Engagement & Live Commerce
           </h1>
@@ -34,7 +34,7 @@ const Marketers = () => {
             />
           </div>
         </Col>
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Create & Host Live Events</h1>
@@ -77,7 +77,7 @@ const Marketers = () => {
             quality={100}
           />
         </Col>
-        <Col sm={24} md={12} data-aos="fade-left">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Live Chat Moderation</h1>
@@ -108,7 +108,7 @@ const Marketers = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Frictionless Checkout</h1>
@@ -153,7 +153,7 @@ const Marketers = () => {
               quality={100}
             />
           </Col>
-          <Col sm={24} md={14} data-aos="fade-left">
+          <Col sm={24} md={14} data-aos="fade-up">
             <div className="iconbar">
               <BsPlayFill className="icon" />
               <h1 className="title">Virtual AI Try-On</h1>
@@ -184,7 +184,7 @@ const Marketers = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} data-aos="fade-left">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Real-Time Analytics</h1>

@@ -21,8 +21,8 @@ const HomeSectionC = () => {
             />
           </div>
         </Col>
-        <Col sm={24} md={16} xl={12}>
-          <article className="content" data-aos="fade-left">
+        <Col sm={24} md={16} xl={12} data-aos="fade-up">
+          <article className="content">
             <h3 className="title">
               The Future Of <br />
               Shopping Is LIVE
@@ -41,13 +41,13 @@ const HomeSectionC = () => {
               Simple to use yet powerful show set up and full recording studio
               with automated features that keep audiences engaged and buying
             </p>
-            <div className="greeniconbar leftcontent1">
+            <div className="greeniconbar ">
               <GoPrimitiveDot className="greendot" />
 
               <h5>One-To-Many</h5>
             </div>
 
-            <p className="leftcontent1">
+            <p className="">
               Invite experts, co-hosts, and even fans to participate in your
               live stream while thousands of consumers watch and interact{" "}
             </p>
@@ -144,11 +144,6 @@ const Wrapper = styled.section`
     .content {
       padding-left: 5rem;
       padding-right: 4rem;
-    }
-
-    .leftcontent {
-      padding-left: 5rem;
-      padding-right: 1rem;
     }
 
     .left-space {

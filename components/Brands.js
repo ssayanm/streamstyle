@@ -39,7 +39,7 @@ const Brands = () => {
         align="middle"
         className="section"
       >
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <h1 className="title">
             Sell to your customers directly with shoppable videos
           </h1>
@@ -63,14 +63,14 @@ const Brands = () => {
             />
           </div>
         </Col>
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Easy to Use</h1>
           </div>
 
           <p>
-            One-click. Go Live - in as little as 5 minutes
+            One-click. Go Live - in-up as little as 5 minutes
             <br /> your brand can be live
           </p>
         </Col>
@@ -97,7 +97,7 @@ const Brands = () => {
             quality={100}
           />
         </Col>
-        <Col sm={24} md={12} data-aos="fade-left">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Catalog Sync</h1>
@@ -128,15 +128,15 @@ const Brands = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Live & VOD</h1>
           </div>
 
           <p>
-            Create new live shows and monetize existing VOD content in a new and
-            engaging way
+            Create new live shows and monetize existing VOD content in-up a new
+            and engaging way
           </p>
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
@@ -169,16 +169,16 @@ const Brands = () => {
             quality={100}
           />
         </Col>
-        <Col sm={24} md={12} data-aos="fade-left">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Create A Weekly Show Schedule</h1>
           </div>
 
           <p>
-            Leverage existing talent to create new weekly branded shows. 
-            Develop a slate of programming tied to live shopping events that
-            drive consumers back to your properties and enhance engagement and
+            Leverage existing talent to create new weekly branded shows. Develop
+            a slate of programming tied to live shopping events that drive
+            consumers back to your properties and enhance engagement and
             activation.
           </p>
         </Col>
@@ -200,7 +200,7 @@ const Brands = () => {
           justify="center"
           align="middle"
         >
-          <Col sm={24} md={14} data-aos="fade-right">
+          <Col sm={24} md={14} data-aos="fade-up">
             <div className="iconbar">
               <BsPlayFill className="icon" />
               <h1 className="title">Virtual AI Try-On</h1>
@@ -243,14 +243,14 @@ const Brands = () => {
             quality={100}
           />
         </Col>
-        <Col sm={24} md={12} data-aos="fade-left">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Frictionless Checkout</h1>
           </div>
 
           <p>
-            One-click in-stream checkout connected to 180+ payment providers
+            One-click in-up-stream checkout connected to 180+ payment providers
           </p>
         </Col>
         <Col sm={24} md={12} className="onlymobile">
@@ -273,7 +273,7 @@ const Brands = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Real-Time Analytics</h1>

@@ -14,7 +14,7 @@ const Creators = () => {
         align="middle"
         className="section"
       >
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <h1 className="title">Unleash The Power Of Live Commerce</h1>
           <p>Unleash The Power Of Live Commerce</p>
         </Col>
@@ -32,7 +32,7 @@ const Creators = () => {
             />
           </div>
         </Col>
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Comprehensive Studio Platform</h1>
@@ -73,7 +73,7 @@ const Creators = () => {
             quality={100}
           />
         </Col>
-        <Col sm={24} md={12} data-aos="fade-left">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Live Chat Moderation</h1>
@@ -101,7 +101,7 @@ const Creators = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Get Paid</h1>
@@ -143,7 +143,7 @@ const Creators = () => {
               quality={100}
             />
           </Col>
-          <Col sm={24} md={14} data-aos="fade-left">
+          <Col sm={24} md={14} data-aos="fade-up">
             <div className="iconbar">
               <BsPlayFill className="icon" />
               <h1 className="title">Virtual AI Try-On</h1>
@@ -174,7 +174,7 @@ const Creators = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Real-Time Analytics</h1>

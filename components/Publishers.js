@@ -14,7 +14,7 @@ const Publishers = () => {
         align="middle"
         className="section"
       >
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <h1 className="title">Improve Your Monetization Efficiency</h1>
           <p>
             Transform content consumption and create new opportunities to
@@ -37,7 +37,7 @@ const Publishers = () => {
             />
           </div>
         </Col>
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Allow Consumers To Shop What They Love</h1>
@@ -74,7 +74,7 @@ const Publishers = () => {
             quality={100}
           />
         </Col>
-        <Col sm={24} md={12} data-aos="fade-left">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Create A Weekly Show Schedule</h1>
@@ -105,7 +105,7 @@ const Publishers = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Live & VOD</h1>
@@ -150,7 +150,7 @@ const Publishers = () => {
             quality={100}
           />
         </Col>
-        <Col sm={24} md={12} data-aos="fade-left">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Frictionless Checkout</h1>
@@ -181,7 +181,7 @@ const Publishers = () => {
           justify="center"
           align="middle"
         >
-          <Col sm={24} md={14} data-aos="fade-right">
+          <Col sm={24} md={14} data-aos="fade-up">
             <div className="iconbar">
               <BsPlayFill className="icon" />
               <h1 className="title">Virtual AI Try-On</h1>
@@ -211,7 +211,7 @@ const Publishers = () => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} data-aos="fade-right">
+        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
             <h1 className="title">Real-Time Analytics</h1>
