@@ -4,7 +4,19 @@ import Image from "next/image";
 import { Row, Col } from "antd";
 import { GoPrimitiveDot } from "react-icons/go";
 
-const HomeSectionC = () => {
+const HomeSectionC = ({ home }) => {
+  const {
+    HomeSectionCheading,
+    HomeSectionCimage,
+    HomeSectionCsubheading,
+    HomeSectionCbulletA,
+    HomeSectionCbulletAdesc,
+    HomeSectionCbulletB,
+    HomeSectionCbulletBdesc,
+    HomeSectionCbulletC,
+    HomeSectionCbulletCdesc,
+  } = home.data.attributes;
+
   return (
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
@@ -13,7 +25,8 @@ const HomeSectionC = () => {
           <div className="onlydesktop">
             <Image
               alt="revo"
-              src="/images/Revo_image_homepage_Section_3.png"
+              src={HomeSectionCimage.data.attributes.url}
+              // src="/images/Revo_image_homepage_Section_3.png"
               width={1200}
               height={750}
               objectFit="cover"
@@ -23,44 +36,29 @@ const HomeSectionC = () => {
         </Col>
         <Col sm={24} md={16} xl={12} data-aos="fade-up">
           <article className="content">
-            <h3 className="title">
-              The Future Of <br />
-              Shopping Is LIVE
-            </h3>
-            <p>
-              Elevate your brand’s online experience with the Revo Video
-              platform
-            </p>
+            <h3 className="title">{HomeSectionCheading}</h3>
+            <p>{HomeSectionCsubheading}</p>
 
             <div className="greeniconbar">
               <GoPrimitiveDot className="greendot" />
-              <h5>All in one platform</h5>
+              <h5>{HomeSectionCbulletA}</h5>
             </div>
 
-            <p>
-              Simple to use yet powerful show set up and full recording studio
-              with automated features that keep audiences engaged and buying
-            </p>
+            <p>{HomeSectionCbulletAdesc}</p>
             <div className="greeniconbar ">
               <GoPrimitiveDot className="greendot" />
 
-              <h5>One-To-Many</h5>
+              <h5>{HomeSectionCbulletB}</h5>
             </div>
 
-            <p className="">
-              Invite experts, co-hosts, and even fans to participate in your
-              live stream while thousands of consumers watch and interact{" "}
-            </p>
+            <p className="">{HomeSectionCbulletBdesc}</p>
             <div className="greeniconbar">
               <GoPrimitiveDot className="greendot" />
 
-              <h5>Shop-in-Video</h5>
+              <h5>{HomeSectionCbulletC}</h5>
             </div>
 
-            <p>
-              Our integrated payment platform, customers can buy instantly,
-              without leaving the experience{" "}
-            </p>
+            <p>{HomeSectionCbulletCdesc}</p>
           </article>
           <div className="onlymobile">
             <Image

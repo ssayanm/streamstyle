@@ -2,16 +2,19 @@ import Link from "next/link";
 import styled from "styled-components";
 import { Row, Col } from "antd";
 
-const HomeSectionE = () => {
+const HomeSectionE = ({ home }) => {
+  const { HomeSectionEheading, HomeSectionEsubheading, buttonText } =
+    home.data.attributes;
+
   return (
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
         <Col data-aos="fade-up">
-          <h3 className="title">"Revo Video is word of mouth on steroids"</h3>
-          <p>Get started today.</p>
+          <h3 className="title">{HomeSectionEheading}</h3>
+          <p>{HomeSectionEsubheading}</p>
           <center>
             <Link href="/get-started">
-              <a className="btn"> Get Started</a>
+              <a className="btn"> {buttonText}</a>
             </Link>
           </center>
         </Col>

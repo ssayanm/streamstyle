@@ -10,27 +10,27 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Loading from "../components/Loading";
 
-// export const getStaticProps = async () => {
-//   try {
-//     const res = await axios.get(`${process.env.url}/api/home/`);
-//     const home = res.data;
+export const getStaticProps = async () => {
+  try {
+    const res = await axios.get(`${process.env.url}/api/home/?populate=*`);
+    const home = res.data;
 
-//     return { props: { home } };
-//   } catch (error) {
-//     return { error };
-//   }
-// };
+    return { props: { home } };
+  } catch (error) {
+    return { error };
+  }
+};
 
 export default function Home({ home }) {
   return (
     <main>
       <Meta title="Home" />
-      <HomeHero />
-      <HomeSectionA />
-      <HomeSectionB />
-      <HomeSectionC />
-      <HomeSectionD />
-      <HomeSectionE />
+      <HomeHero home={home} />
+      <HomeSectionA home={home} />
+      <HomeSectionB home={home} />
+      <HomeSectionC home={home} />
+      <HomeSectionD home={home} />
+      <HomeSectionE home={home} />
     </main>
   );
 }

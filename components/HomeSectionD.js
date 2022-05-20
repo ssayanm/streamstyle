@@ -3,7 +3,7 @@ import { BsPlayCircle } from "react-icons/bs";
 import styled from "styled-components";
 import { Row, Col } from "antd";
 
-const HomeSectionD = () => {
+const HomeSectionD = ({ home }) => {
   return (
     <Wrapper>
       <div className="section-center">

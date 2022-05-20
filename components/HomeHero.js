@@ -4,8 +4,8 @@ import Link from "next/link";
 import { social } from "../utils/constants";
 import ReactPlayer from "react-player/lazy";
 
-const HomeHero = () => {
-  // const { heading, subHeading } = home.data.attributes;
+const HomeHero = ({ home }) => {
+  const { heading, subHeading, heroVideo, buttonText } = home.data.attributes;
 
   return (
     <Wrapper>
@@ -13,17 +13,13 @@ const HomeHero = () => {
         <Row gutter={32} justify="center" align="middle" className="herorow">
           <Col sm={24} md={24} lg={12} data-aos="fade-up">
             <article className="content">
-              <h1 className="title">
-                One Platform For Video Engagement & Live Commerce
-              </h1>
-              <p>
-                Use the most powerful live and VOD shopping platform with a
-                frictionless buying experience.
-              </p>
+              <h1 className="title">{heading}</h1>
+              <p>{subHeading}</p>
               <div className="onlymobile">
                 <div className="player-wrapper">
                   <ReactPlayer
-                    url={"/videos/homevideo.mp4"}
+                    url={heroVideo.data.attributes.url}
+                    // url={"/videos/homevideo.mp4"}
                     playing={false}
                     muted={true}
                     controls={true}
@@ -45,7 +41,7 @@ const HomeHero = () => {
                   </a>
                 </Link>
                 <Link href="/get-started">
-                  <a className="btn btn-start"> Get Started</a>
+                  <a className="btn btn-start"> {buttonText}</a>
                 </Link>
               </div>
 

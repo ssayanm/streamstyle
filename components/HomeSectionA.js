@@ -3,7 +3,8 @@ import { BsPlayCircleFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
 
-const HomeSectionA = () => {
+const HomeSectionA = ({ home }) => {
+  const { HomeSectionAimage } = home.data.attributes;
   return (
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
@@ -20,7 +21,8 @@ const HomeSectionA = () => {
           {" "}
           <Image
             alt="revo"
-            src="/images/Revo_image_homepage_Section_1.png"
+            src={HomeSectionAimage.data.attributes.url}
+            // src="/images/Revo_image_homepage_Section_1.png"
             width={1200}
             height={750}
             objectFit="cover"

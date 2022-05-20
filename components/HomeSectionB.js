@@ -2,7 +2,8 @@ import Image from "next/image";
 import styled from "styled-components";
 import { Row, Col } from "antd";
 
-const HomeSectionB = () => {
+const HomeSectionB = ({ home }) => {
+  const { HomeSectionBimage } = home.data.attributes;
   return (
     <Wrapper>
       <div className="section-center">
@@ -97,7 +98,8 @@ const HomeSectionB = () => {
           <Col sm={24} md={12} className="imagecon" data-aos="zoom-in">
             <Image
               alt="revo"
-              src="/images/features.png"
+              src={HomeSectionBimage.data.attributes.url}
+              // src="/images/features.png"
               width={1200}
               height={750}
               objectFit="cover"
