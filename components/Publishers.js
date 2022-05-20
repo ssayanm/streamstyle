@@ -4,8 +4,25 @@ import { BsPlayFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
 import ReactPlayer from "react-player/lazy";
+import useSWR from "swr";
+import Loading from "./Loading";
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Publishers = () => {
+  const { data, error } = useSWR(
+    `${process.env.url}/api/how-it-works?populate=*`,
+    fetcher
+  );
+
+  if (error) return <div>Failed to load</div>;
+  if (!data)
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+
   return (
     <Wrapper>
       <Row
@@ -15,24 +32,20 @@ const Publishers = () => {
         className="section"
       >
         <Col sm={24} md={12} data-aos="fade-up">
-          <h1 className="title">Improve Your Monetization Efficiency</h1>
-          <p>
-            Transform content consumption and create new opportunities to
-            monetize your library. Create fully branded shows, sell
-            sponsorships, insert pre-roll and drive product or merch sales via
-            our One-click payment platform
-          </p>
+          <h1 className="title">{data.data[12].attributes.heading}</h1>
+          <p>{data.data[12].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} className="widthfull" data-aos="zoom-in">
           <div className="player-wrapper">
             <ReactPlayer
-              url={"/videos/homevideo.mp4"}
+              url={data.data[7].attributes.image.data.attributes.url}
+              // url={"/videos/homevideo.mp4"}
               playing={true}
               muted={true}
               controls={true}
               width="100%"
               height="100%"
-              image="/images/herovideo.jpg"
+              // image="/images/herovideo.jpg"
               className="react-player"
             />
           </div>
@@ -40,26 +53,21 @@ const Publishers = () => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">Allow Consumers To Shop What They Love</h1>
+            <h1 className="title">{data.data[13].attributes.heading}</h1>
           </div>
 
-          <p>
-            Create new catalogs of products tied to existing videos or shows
-            thus creating a new way for consumers to engage with your content,
-            talent, share and shop! Automatically connect and sync to any
-            e-commerce platform or internal ERP systems, keeping your products
-            up to date and always in sync.
-          </p>
+          <p>{data.data[13].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
-            url={"/videos/catalog_sync.mp4"}
+            url={data.data[13].attributes.image.data.attributes.url}
+            // url={"/videos/catalog_sync.mp4"}
             playing={true}
             muted={true}
             controls={true}
             width="100%"
             height="100%"
-            image="/images/herovideo.jpg"
+            // image="/images/herovideo.jpg"
             quality={100}
           />
         </Col>
@@ -67,9 +75,12 @@ const Publishers = () => {
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <Image
             alt="revo"
-            src="/images/Weekly_Schedule.jpg"
-            width={900}
-            height={390}
+            src={
+              data.data[4].attributes.image.data.attributes.formats.large.url
+            }
+            // src="/images/Weekly_Schedule.jpg"
+            width={1000}
+            height={434}
             objectFit="cover"
             quality={100}
           />
@@ -77,22 +88,20 @@ const Publishers = () => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">Create A Weekly Show Schedule</h1>
+            <h1 className="title">{data.data[4].attributes.heading}</h1>
           </div>
 
-          <p>
-            Leverage existing talent to create new weekly branded shows. 
-            Develop a slate of programming tied to live shopping events that
-            drive consumers back to your properties and enhance engagement and
-            activation.
-          </p>
+          <p>{data.data[4].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} className="onlymobile">
           <Image
             alt="revo"
-            src="/images/Weekly_Schedule.jpg"
-            width={900}
-            height={390}
+            src={
+              data.data[4].attributes.image.data.attributes.formats.large.url
+            }
+            // src="/images/Weekly_Schedule.jpg"
+            width={1000}
+            height={434}
             objectFit="cover"
             quality={100}
           />
@@ -108,24 +117,21 @@ const Publishers = () => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">Live & VOD</h1>
+            <h1 className="title"> {data.data[0].attributes.heading}</h1>
           </div>
 
-          <p>
-            Create live and VOD shoppable shows that you can re-distribute
-            within your ecosystem, use for promotional efforts,  and/or
-            syndicate across other platforms and marketplaces
-          </p>
+          <p>{data.data[0].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
-            url={"/videos/Live _ VOD.mp4"}
+            url={data.data[0].attributes.image.data.attributes.url}
+            // url={"/videos/Live _ VOD.mp4"}
             playing={true}
             muted={true}
             controls={true}
             width="100%"
             height="100%"
-            image="/images/herovideo.jpg"
+            // image="/images/herovideo.jpg"
             quality={100}
           />
         </Col>
@@ -140,35 +146,34 @@ const Publishers = () => {
         {" "}
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
-            url={"/videos/Frictionless Checkout.mp4"}
+            url={data.data[2].attributes.image.data.attributes.url}
+            // url={"/videos/Frictionless Checkout.mp4"}
             playing={true}
             muted={true}
             controls={true}
             width="100%"
             height="100%"
-            image="/images/herovideo.jpg"
+            // image="/images/herovideo.jpg"
             quality={100}
           />
         </Col>
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">Frictionless Checkout</h1>
+            <h1 className="title"> {data.data[2].attributes.heading}</h1>
           </div>
-          <p>
-            One-click in-stream checkout connected to 180+ payment providers and
-            automated split payments for creators and talent
-          </p>
+          <p>{data.data[2].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} className="onlymobile">
           <ReactPlayer
-            url={"/videos/Frictionless Checkout.mp4"}
+            url={data.data[2].attributes.image.data.attributes.url}
+            // url={"/videos/Frictionless Checkout.mp4"}
             playing={true}
             muted={true}
             controls={true}
             width="100%"
             height="100%"
-            image="/images/herovideo.jpg"
+            // image="/images/herovideo.jpg"
             quality={100}
           />
         </Col>
@@ -184,22 +189,20 @@ const Publishers = () => {
           <Col sm={24} md={14} data-aos="fade-up">
             <div className="iconbar">
               <BsPlayFill className="icon" />
-              <h1 className="title">Virtual AI Try-On</h1>
+              <h1 className="title">{data.data[3].attributes.heading}</h1>
             </div>
-            <p className="para">
-              Allow consumers to try-on products virtually reducing, returns and
-              increasing customer satisfaction
-            </p>
+            <p className="para">{data.data[3].attributes.subHeading}</p>
           </Col>
           <Col sm={24} md={10} data-aos="zoom-in">
             <ReactPlayer
-              url={"/videos/Virtual Try On.mp4"}
+              url={data.data[3].attributes.image.data.attributes.url}
+              // url={"/videos/Virtual Try On.mp4"}
               playing={true}
               muted={true}
               controls={true}
               width="100%"
               height="100%"
-              image="/images/herovideo.jpg"
+              // image="/images/herovideo.jpg"
               quality={100}
             />
           </Col>
@@ -214,24 +217,20 @@ const Publishers = () => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">Real-Time Analytics</h1>
+            <h1 className="title">{data.data[1].attributes.heading}</h1>
           </div>
-          <p>
-            On-demand analytics dashboard on sales, engagement and more from
-            your live dashboard. Analytics can be used during live events to
-            help promote products, create excitement and drive sales. Extract
-            actionable customer insights with first-party user data
-          </p>
+          <p>{data.data[1].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
-            url={"/videos/Real-Time Analytics.mp4"}
+            url={data.data[1].attributes.image.data.attributes.url}
+            // url={"/videos/Real-Time Analytics.mp4"}
             playing={true}
             muted={true}
             controls={true}
             width="100%"
             height="100%"
-            image="/images/herovideo.jpg"
+            // image="/images/herovideo.jpg"
             quality={100}
           />
         </Col>

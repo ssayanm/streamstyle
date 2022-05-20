@@ -4,8 +4,25 @@ import { BsPlayFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
 import ReactPlayer from "react-player/lazy";
+import useSWR from "swr";
+import Loading from "./Loading";
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Creators = () => {
+  const { data, error } = useSWR(
+    `${process.env.url}/api/how-it-works?populate=*`,
+    fetcher
+  );
+
+  if (error) return <div>Failed to load</div>;
+  if (!data)
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+
   return (
     <Wrapper>
       <Row
@@ -15,19 +32,20 @@ const Creators = () => {
         className="section"
       >
         <Col sm={24} md={12} data-aos="fade-up">
-          <h1 className="title">Unleash The Power Of Live Commerce</h1>
-          <p>Unleash The Power Of Live Commerce</p>
+          <h1 className="title">{data.data[8].attributes.heading}</h1>
+          <p>{data.data[8].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} className="widthfull" data-aos="zoom-in">
           <div className="player-wrapper">
             <ReactPlayer
-              url={"/videos/homevideo.mp4"}
+              url={data.data[7].attributes.image.data.attributes.url}
+              // url={"/videos/homevideo.mp4"}
               playing={true}
               muted={true}
               controls={true}
               width="100%"
               height="100%"
-              image="/images/herovideo.jpg"
+              // image="/images/herovideo.jpg"
               className="react-player"
             />
           </div>
@@ -35,20 +53,19 @@ const Creators = () => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">Comprehensive Studio Platform</h1>
+            <h1 className="title">{data.data[9].attributes.heading}</h1>
           </div>
-          <p>
-            Features an all-in-one control panel to set up shows, polls, banners
-            and has both host, moderator and creator functionality. Seamlessly
-            sell products via comprehensive live-streams
-          </p>
+          <p>{data.data[9].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <Image
             alt="revo"
-            src="/images/Studio.jpg"
-            width={900}
-            height={563}
+            src={
+              data.data[9].attributes.image.data.attributes.formats.large.url
+            }
+            // src="/images/Studio.jpg"
+            width={1000}
+            height={625}
             objectFit="cover"
             quality={100}
           />
@@ -63,33 +80,35 @@ const Creators = () => {
       >
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
-            url={"/videos/Live Chat & Moderation.mp4"}
+            url={data.data[10].attributes.image.data.attributes.url}
+            // url={"/videos/Live Chat & Moderation.mp4"}
             playing={true}
             muted={true}
             controls={true}
             width="100%"
             height="100%"
-            image="/images/herovideo.jpg"
+            // image="/images/herovideo.jpg"
             quality={100}
           />
         </Col>
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">Live Chat Moderation</h1>
+            <h1 className="title">{data.data[10].attributes.heading}</h1>
           </div>
 
-          <p>Connect with your customers in real-time using live-chat</p>
+          <p>{data.data[10].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} className="onlymobile">
           <ReactPlayer
-            url={"/videos/Live Chat & Moderation.mp4"}
+            url={data.data[10].attributes.image.data.attributes.url}
+            // url={"/videos/Live Chat & Moderation.mp4"}
             playing={true}
             muted={true}
             controls={true}
             width="100%"
             height="100%"
-            image="/images/herovideo.jpg"
+            // image="/images/herovideo.jpg"
             quality={100}
           />
         </Col>
@@ -104,21 +123,20 @@ const Creators = () => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">Get Paid</h1>
+            <h1 className="title">{data.data[11].attributes.heading}</h1>
           </div>
 
-          <p className="pright">
-            For every sale you are paid directly to your bank account through
-            our payment platform. Never wait for checks again, go live and get
-            paid!
-          </p>
+          <p className="pright">{data.data[11].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <Image
             alt="revo"
-            src="/images/paymentprocess.png"
-            width={1441}
-            height={960}
+            src={
+              data.data[11].attributes.image.data.attributes.formats.large.url
+            }
+            // src="/images/paymentprocess.png"
+            width={1000}
+            height={666}
             objectFit="cover"
             quality={100}
           />
@@ -133,35 +151,34 @@ const Creators = () => {
         >
           <Col sm={24} md={10} className="onlydesktop" data-aos="zoom-in">
             <ReactPlayer
-              url={"/videos/Virtual Try On.mp4"}
+              url={data.data[3].attributes.image.data.attributes.url}
+              // url={"/videos/Virtual Try On.mp4"}
               playing={true}
               muted={true}
               controls={true}
               width="100%"
               height="100%"
-              image="/images/herovideo.jpg"
+              // image="/images/herovideo.jpg"
               quality={100}
             />
           </Col>
           <Col sm={24} md={14} data-aos="fade-up">
             <div className="iconbar">
               <BsPlayFill className="icon" />
-              <h1 className="title">Virtual AI Try-On</h1>
+              <h1 className="title"> {data.data[3].attributes.heading}</h1>
             </div>
-            <p className="para">
-              Allow consumers to try-on products virtually reducing, returns and
-              increasing customer satisfaction
-            </p>
+            <p className="para">{data.data[3].attributes.subHeading}</p>
           </Col>
           <Col sm={24} md={8} className="onlymobile">
             <ReactPlayer
-              url={"/videos/Virtual Try On.mp4"}
+              url={data.data[3].attributes.image.data.attributes.url}
+              // url={"/videos/Virtual Try On.mp4"}
               playing={true}
               muted={true}
               controls={true}
               width="100%"
               height="100%"
-              image="/images/herovideo.jpg"
+              // image="/images/herovideo.jpg"
               quality={100}
             />
           </Col>
@@ -177,24 +194,20 @@ const Creators = () => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">Real-Time Analytics</h1>
+            <h1 className="title">{data.data[1].attributes.heading}</h1>
           </div>
-          <p>
-            On-demand analytics dashboard on sales, engagement and more from
-            your live dashboard. Analytics can be used during live events to
-            help promote products, create excitement and drive sales. Extract
-            actionable customer insights with first-party user data
-          </p>
+          <p>{data.data[1].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
-            url={"/videos/Real-Time Analytics.mp4"}
+            url={data.data[1].attributes.image.data.attributes.url}
+            // url={"/videos/Real-Time Analytics.mp4"}
             playing={true}
             muted={true}
             controls={true}
             width="100%"
             height="100%"
-            image="/images/herovideo.jpg"
+            // image="/images/herovideo.jpg"
             quality={100}
           />
         </Col>

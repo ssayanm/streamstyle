@@ -14,7 +14,12 @@ export const getStaticProps = async () => {
   try {
     const res = await axios.get(`${process.env.url}/api/home/?populate=*`);
     const home = res.data;
-
+    if (!home)
+      return (
+        <div>
+          <Loading />
+        </div>
+      );
     return { props: { home } };
   } catch (error) {
     return { error };

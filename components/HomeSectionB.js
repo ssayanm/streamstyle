@@ -7,12 +7,16 @@ const HomeSectionB = ({ home }) => {
   const {
     HomeSectionBheading,
     HomeSectionBimage,
+    HomeSectionBiconsA,
     HomeSectionBiconsHeadingA,
     HomeSectionBiconsDescA,
+    HomeSectionBiconsB,
     HomeSectionBiconsHeadingB,
     HomeSectionBiconsDescB,
+    HomeSectionBiconsC,
     HomeSectionBiconsHeadingC,
     HomeSectionBiconsDescC,
+    HomeSectionBiconsD,
     HomeSectionBiconsHeadingD,
     HomeSectionBiconsDescD,
   } = home.data.attributes;
@@ -30,7 +34,8 @@ const HomeSectionB = ({ home }) => {
               <Col sm={24} md={12} data-aos="fade-up">
                 <Image
                   alt="revo"
-                  src="/images/cart.png"
+                  src={HomeSectionBiconsA.data.attributes.url}
+                  // src="/images/cart.png"
                   width={49}
                   height={49}
                   objectFit="cover"
@@ -49,7 +54,8 @@ const HomeSectionB = ({ home }) => {
                 {" "}
                 <Image
                   alt="revo"
-                  src="/images/eng.png"
+                  src={HomeSectionBiconsB.data.attributes.url}
+                  // src="/images/eng.png"
                   width={49}
                   height={49}
                   objectFit="cover"
@@ -69,7 +75,8 @@ const HomeSectionB = ({ home }) => {
                 {" "}
                 <Image
                   alt="revo"
-                  src="/images/dollar.png"
+                  src={HomeSectionBiconsC.data.attributes.url}
+                  // src="/images/dollar.png"
                   width={49}
                   height={49}
                   objectFit="cover"
@@ -86,7 +93,8 @@ const HomeSectionB = ({ home }) => {
               <Col sm={24} md={12} className="space" data-aos="fade-up">
                 <Image
                   alt="revo"
-                  src="/images/analytics.png"
+                  src={HomeSectionBiconsD.data.attributes.url}
+                  // src="/images/analytics.png"
                   width={83}
                   height={41}
                   objectFit="cover"
