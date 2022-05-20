@@ -25,12 +25,14 @@ const HomeSectionC = ({ home }) => {
           <div className="onlydesktop">
             <Image
               alt="revo"
-              src={HomeSectionCimage.data.attributes.url}
+              src={HomeSectionCimage.data.attributes.formats.large.url}
               // src="/images/Revo_image_homepage_Section_3.png"
-              width={1200}
-              height={750}
+              width={1000}
+              height={625}
               objectFit="cover"
               quality={100}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNsfrG0HgAGlwKRsbTehgAAAABJRU5ErkJggg=="
             />
           </div>
         </Col>
@@ -63,11 +65,14 @@ const HomeSectionC = ({ home }) => {
           <div className="onlymobile">
             <Image
               alt="revo"
-              src="/images/Revo_image_homepage_Section_3.png"
-              width={1200}
-              height={750}
+              src={HomeSectionCimage.data.attributes.formats.large.url}
+              // src="/images/Revo_image_homepage_Section_3.png"
+              width={1000}
+              height={625}
               objectFit="cover"
               quality={100}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNsfrG0HgAGlwKRsbTehgAAAABJRU5ErkJggg=="
             />
           </div>
         </Col>

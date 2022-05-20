@@ -47,11 +47,6 @@ Variables
 }
 
 @font-face {
-  font-family: "MontLight";
-  src: url("/fonts/MontLight.otf");
-}
-
-@font-face {
   font-family: "Mont";
   src: url("/fonts/MontRegular.otf");
 }
@@ -109,7 +104,7 @@ h5 {
   /* text-transform: capitalize; */
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: "Mont-Bold", sans-serif;
+  font-family: "MontBold", sans-serif;
 }
 h1 {
   font-size: 2.5rem;

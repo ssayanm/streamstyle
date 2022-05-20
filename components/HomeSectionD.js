@@ -2,42 +2,39 @@ import Link from "next/link";
 import { BsPlayCircle } from "react-icons/bs";
 import styled from "styled-components";
 import { Row, Col } from "antd";
+import ReactMarkdown from "react-markdown";
 
 const HomeSectionD = ({ home }) => {
+  const {
+    HomeSectionDheading,
+    HomeSectionDbulletA,
+    HomeSectionDbulletAdesc,
+    HomeSectionDbulletB,
+    HomeSectionDbulletBdesc,
+    HomeSectionDbulletC,
+    HomeSectionDbulletCdesc,
+  } = home.data.attributes;
   return (
     <Wrapper>
       <div className="section-center">
         <Row gutter={16} justify="center" align="middle">
           <Col data-aos="fade-up">
             <BsPlayCircle className="icon" />
-            <h1 className="title">
-              Integrate seamlessly into
-              <br />
-              your cart and payments
-            </h1>
+
+            <ReactMarkdown children={HomeSectionDheading} className="title1" />
           </Col>
           <Row className="space" data-aos="fade-up">
             <Col sm={24} md={12} xl={8}>
-              <p className="header">One-click install</p>
-              <p className="info">
-                Revo seamlessly integrates into your e-commerce platform syncing
-                products, orders and payments automatically{" "}
-              </p>
+              <p className="header">{HomeSectionDbulletA}</p>
+              <p className="info">{HomeSectionDbulletAdesc}</p>
             </Col>
             <Col sm={24} md={12} xl={8}>
-              <p className="header">Shopping cart integrations</p>
-              <p className="info">
-                Manage products and orders from any shop system with more than
-                48 major shop platforms integrated.
-              </p>
+              <p className="header">{HomeSectionDbulletB}</p>
+              <p className="info">{HomeSectionDbulletBdesc}</p>
             </Col>
             <Col sm={24} md={12} xl={8}>
-              <p className="header">Embedded payments</p>
-              <p className="info">
-                We offer fully integrated in-stream, one-click checkout. Choose
-                from over 180 different supported payment providers or start
-                with us as your preferred partner.
-              </p>
+              <p className="header">{HomeSectionDbulletC}</p>
+              <p className="info">{HomeSectionDbulletCdesc}</p>
             </Col>
           </Row>
         </Row>
@@ -79,6 +76,12 @@ const Wrapper = styled.section`
     font-size: 1.2rem;
   }
 
+  .title1 h1 {
+    margin-bottom: 0rem;
+    font-family: "MontBold", sans-serif;
+    font-size: 2.2rem;
+  }
+
   @media (min-width: 992px) {
     padding: 9rem 2rem;
     .ant-col {
@@ -90,13 +93,21 @@ const Wrapper = styled.section`
       height: 113px;
     }
 
+    .title1 h1 {
+      font-size: 3.5rem;
+    }
+
+    .title1 {
+      margin-bottom: 2rem;
+    }
+
     h3 {
       margin-bottom: 1.5rem;
       font-size: 4.3rem;
     }
     h4 {
       font-size: 39.5px;
-      font-family: "MontLight", sans-serif;
+      font-family: "Mont", sans-serif;
       margin-bottom: 1.5rem;
       letter-spacing: normal;
       line-height: 1.1;

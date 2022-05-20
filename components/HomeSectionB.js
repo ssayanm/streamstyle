@@ -1,15 +1,27 @@
 import Image from "next/image";
 import styled from "styled-components";
 import { Row, Col } from "antd";
+import ReactMarkdown from "react-markdown";
 
 const HomeSectionB = ({ home }) => {
-  const { HomeSectionBimage } = home.data.attributes;
+  const {
+    HomeSectionBheading,
+    HomeSectionBimage,
+    HomeSectionBiconsHeadingA,
+    HomeSectionBiconsDescA,
+    HomeSectionBiconsHeadingB,
+    HomeSectionBiconsDescB,
+    HomeSectionBiconsHeadingC,
+    HomeSectionBiconsDescC,
+    HomeSectionBiconsHeadingD,
+    HomeSectionBiconsDescD,
+  } = home.data.attributes;
   return (
     <Wrapper>
       <div className="section-center">
         <Row gutter={16}>
           <Col data-aos="fade-up">
-            <h3>The features you need</h3>
+            <h3>{HomeSectionBheading}</h3>
           </Col>
         </Row>
         <Row gutter={[48, 32]}>
@@ -23,16 +35,15 @@ const HomeSectionB = ({ home }) => {
                   height={49}
                   objectFit="cover"
                   quality={100}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNsfrG0HgAGlwKRsbTehgAAAABJRU5ErkJggg=="
                 />
-                <p className="heading">
-                  Direct e-Commerce
-                  <br /> Integration
-                </p>
-                <p className="desc">
-                  Our live shopping solution provides instant product sync,
-                  seamless integration you’re your e-Commerce platform, and
-                  instant checkout.{" "}
-                </p>
+                <ReactMarkdown
+                  children={HomeSectionBiconsHeadingA}
+                  className="heading"
+                />
+
+                <p className="desc">{HomeSectionBiconsDescA}</p>
               </Col>
               <Col sm={24} md={12} data-aos="fade-up">
                 {" "}
@@ -43,15 +54,14 @@ const HomeSectionB = ({ home }) => {
                   height={49}
                   objectFit="cover"
                   quality={100}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNsfrG0HgAGlwKRsbTehgAAAABJRU5ErkJggg=="
                 />
-                <p className="heading">
-                  High <br />
-                  Engagement
-                </p>
-                <p className="desc">
-                  An immersive Live video experience that drives engagement,
-                  discovery and community{" "}
-                </p>
+                <ReactMarkdown
+                  children={HomeSectionBiconsHeadingB}
+                  className="heading"
+                />
+                <p className="desc">{HomeSectionBiconsDescB}</p>
               </Col>
             </Row>
             <Row gutter={[48, 32]}>
@@ -64,15 +74,14 @@ const HomeSectionB = ({ home }) => {
                   height={49}
                   objectFit="cover"
                   quality={100}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNsfrG0HgAGlwKRsbTehgAAAABJRU5ErkJggg=="
                 />
-                <p className="heading">
-                  Frictionless <br />
-                  Payment
-                </p>
-                <p className="desc">
-                  Increase sales and conversion complete transactions in
-                  one-click without ever leaving the show.{" "}
-                </p>
+                <ReactMarkdown
+                  children={HomeSectionBiconsHeadingC}
+                  className="heading"
+                />
+                <p className="desc">{HomeSectionBiconsDescC}</p>
               </Col>
               <Col sm={24} md={12} className="space" data-aos="fade-up">
                 <Image
@@ -82,28 +91,29 @@ const HomeSectionB = ({ home }) => {
                   height={41}
                   objectFit="cover"
                   quality={100}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNsfrG0HgAGlwKRsbTehgAAAABJRU5ErkJggg=="
                 />
-                <p className="heading">
-                  Real-Time
-                  <br /> Analytics
-                </p>
-                <p className="desc">
-                  Real-time analytics to maximize sales throughout the show.
-                  Built in KPIs and fully branded ownership of enhanced
-                  analytics and data.{" "}
-                </p>
+                <ReactMarkdown
+                  children={HomeSectionBiconsHeadingD}
+                  className="heading"
+                />
+
+                <p className="desc">{HomeSectionBiconsDescD}</p>
               </Col>
             </Row>
           </Col>
           <Col sm={24} md={12} className="imagecon" data-aos="zoom-in">
             <Image
               alt="revo"
-              src={HomeSectionBimage.data.attributes.url}
+              src={HomeSectionBimage.data.attributes.formats.large.url}
               // src="/images/features.png"
-              width={1200}
-              height={750}
+              width={1000}
+              height={625}
               objectFit="cover"
               quality={100}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNsfrG0HgAGlwKRsbTehgAAAABJRU5ErkJggg=="
             />
           </Col>
         </Row>

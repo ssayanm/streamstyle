@@ -19,12 +19,7 @@ const Layout = ({ children }) => {
         as="font"
         crossOrigin=""
       />
-      <link
-        href="/fonts/MontLight.otf"
-        rel="preload"
-        as="font"
-        crossOrigin=""
-      />
+
       <Meta />
       <Navbar />
       <Sidebar />

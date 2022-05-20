@@ -66,7 +66,8 @@ const HomeHero = ({ home }) => {
             <div className="onlydesktop">
               <div className="player-wrapper">
                 <ReactPlayer
-                  url={"/videos/homevideo.mp4"}
+                  // url={"/videos/homevideo.mp4"}
+                  url={heroVideo.data.attributes.url}
                   playing={true}
                   muted={true}
                   controls={true}
