@@ -2,7 +2,6 @@ import axios from "axios";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import { Row, Col } from "antd";
-import Link from "next/link";
 
 export const getStaticProps = async () => {
   try {

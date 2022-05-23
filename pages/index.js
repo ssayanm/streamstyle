@@ -24,7 +24,7 @@ export const getStaticProps = async () => {
   }
 };
 
-export default function Home({ home }) {
+const Home = ({ home }) => {
   return (
     <>
       <Meta title="Home" />
@@ -36,4 +36,6 @@ export default function Home({ home }) {
       <HomeSectionE home={home} />
     </>
   );
-}
+};
+
+export default Home;

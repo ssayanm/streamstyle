@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 import { useRouter } from "next/router";
 import Loading from "../components/Loading";
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
 
   const [pageLoading, setPageLoading] = useState(false);
@@ -42,6 +42,6 @@ function MyApp({ Component, pageProps }) {
       </Layout>
     </AppProvider>
   );
-}
+};
 
 export default MyApp;

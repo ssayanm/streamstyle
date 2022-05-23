@@ -25,7 +25,7 @@ export const getStaticProps = async () => {
   }
 };
 
-export default function Pricing({ pricing, features }) {
+const Pricing = ({ pricing, features }) => {
   return (
     <main>
       <Meta title="Pricing" />
@@ -33,4 +33,6 @@ export default function Pricing({ pricing, features }) {
       <Price pricing={pricing} features={features} />
     </main>
   );
-}
+};
+
+export default Pricing;
