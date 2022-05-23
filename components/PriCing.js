@@ -292,7 +292,12 @@ const Wrapper = styled.section`
       margin: 0 auto;
       margin-top: 2rem;
       margin-bottom: 2rem;
-      line-height: 1.75rem;
+
+      p {
+        font-size: 1rem;
+        font-family: "Mont";
+        color: var(--clr-black);
+      }
     }
     pre,
     code {
@@ -334,10 +339,12 @@ const Wrapper = styled.section`
         color: var(--clr-light);
       }
 
-      pre,
-      code {
-        font-size: 1.2rem;
+      .features {
+        p {
+          font-size: 1.2rem;
+        }
       }
+
       ul {
         margin: 0 auto;
         width: 18rem;
