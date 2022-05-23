@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import { GoPrimitiveDot } from "react-icons/go";
 import { GrClose } from "react-icons/gr";
-import { featuresPrice } from "../utils/constants";
+// import { featuresPrice } from "../utils/constants";
 import { Table } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 
-const Price = () => {
+const Price = ({ pricing, features }) => {
+  const { pricingImage } = pricing.data.attributes;
+
+  const featuresPrice = features.data.map((items) => items.attributes);
+
   const columnsfordesktop = [
     {
       title: "Features",
@@ -87,7 +91,8 @@ const Price = () => {
             {" "}
             <Image
               alt="revo"
-              src="/images/pricingim.png"
+              src={pricingImage.data.attributes.url}
+              // src="/images/pricingim.png"
               width={250}
               height={252}
               objectFit="cover"

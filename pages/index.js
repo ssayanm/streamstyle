@@ -6,8 +6,6 @@ import HomeSectionB from "../components/HomeSectionB";
 import HomeSectionC from "../components/HomeSectionC";
 import HomeSectionD from "../components/HomeSectionD";
 import HomeSectionE from "../components/HomeSectionE";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
 import Loading from "../components/Loading";
 
 export const getStaticProps = async () => {
@@ -28,7 +26,7 @@ export const getStaticProps = async () => {
 
 export default function Home({ home }) {
   return (
-    <main>
+    <>
       <Meta title="Home" />
       <HomeHero home={home} />
       <HomeSectionA home={home} />
@@ -36,6 +34,6 @@ export default function Home({ home }) {
       <HomeSectionC home={home} />
       <HomeSectionD home={home} />
       <HomeSectionE home={home} />
-    </main>
+    </>
   );
 }

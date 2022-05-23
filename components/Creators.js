@@ -67,7 +67,7 @@ const Creators = () => {
             width={1000}
             height={625}
             objectFit="cover"
-            quality={100}
+            // quality={100}
           />
         </Col>
       </Row>
@@ -88,7 +88,7 @@ const Creators = () => {
             width="100%"
             height="100%"
             // image="/images/herovideo.jpg"
-            quality={100}
+            // quality={100}
           />
         </Col>
         <Col sm={24} md={12} data-aos="fade-up">
@@ -109,7 +109,7 @@ const Creators = () => {
             width="100%"
             height="100%"
             // image="/images/herovideo.jpg"
-            quality={100}
+            // quality={100}
           />
         </Col>
       </Row>
@@ -138,7 +138,7 @@ const Creators = () => {
             width={1000}
             height={666}
             objectFit="cover"
-            quality={100}
+            // quality={100}
           />
         </Col>
       </Row>
@@ -159,7 +159,7 @@ const Creators = () => {
               width="100%"
               height="100%"
               // image="/images/herovideo.jpg"
-              quality={100}
+              // quality={100}
             />
           </Col>
           <Col sm={24} md={14} data-aos="fade-up">
@@ -179,7 +179,7 @@ const Creators = () => {
               width="100%"
               height="100%"
               // image="/images/herovideo.jpg"
-              quality={100}
+              // quality={100}
             />
           </Col>
         </Row>
@@ -208,7 +208,7 @@ const Creators = () => {
             width="100%"
             height="100%"
             // image="/images/herovideo.jpg"
-            quality={100}
+            // quality={100}
           />
         </Col>
       </Row>

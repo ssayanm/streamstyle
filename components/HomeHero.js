@@ -25,7 +25,7 @@ const HomeHero = ({ home }) => {
                     controls={true}
                     width="100%"
                     height="100%"
-                    image="/images/herovideo.jpg"
+                    // image="/images/herovideo.jpg"
                     className="react-player"
                   />
                 </div>
@@ -74,7 +74,7 @@ const HomeHero = ({ home }) => {
                   width="100%"
                   height="100%"
                   className="react-player"
-                  image="/images/herovideo.jpg"
+                  // image="/images/herovideo.jpg"
                 />
               </div>
             </div>

@@ -14,8 +14,19 @@ function callback(key) {
   console.log(key);
 }
 
-const PriCing = () => {
-  //  const { dtcFeature } = pricing.data.attributes;
+const PriCing = ({ pricing }) => {
+  const {
+    pageHeading,
+    dtcHeading,
+    dtcsubHeading,
+    dtcFeatures,
+    brandsHeading,
+    brandssubHeading,
+    brandsFeatures,
+    enterpriseHeading,
+    enterprisesubHeading,
+    enterpriseFeatures,
+  } = pricing.data.attributes;
 
   const columnsfordtc = [
     {
@@ -102,27 +113,17 @@ const PriCing = () => {
 
   return (
     <Wrapper>
-      <h1 className="title text-center ">Pricing & Plans</h1>
+      <h1 className="title text-center ">{pageHeading}</h1>
       <div className="section-center space1">
         <Row gutter={[32, 32]} justify="center" align="middle">
           <Col sm={24} md={12} lg={8} data-aos="fade-up">
             <div className="box first">
               <h5>Revo for</h5>
-              <h3>DTC</h3>
-              <p>
-                Any DTC brand on e-commerce platforms. Download the app and go
-                live.
-              </p>
-              {/*  <div className="features">
-                <ReactMarkdown children={dtcFeature} />
-  </div>*/}
-
-              <ul>
-                <li>5% of gross sales generated on the platform. </li>
-                <li>No monthly fee.</li>
-                <li> No code environment.</li>
-                <li>No obligation.</li>
-              </ul>
+              <h3>{dtcHeading}</h3>
+              <p>{dtcsubHeading}</p>
+              <div className="features">
+                <ReactMarkdown children={dtcFeatures} />
+              </div>
 
               <Link href="/get-started">
                 <a className="btn"> Get Started</a>
@@ -150,13 +151,12 @@ const PriCing = () => {
           <Col sm={24} md={12} lg={8} data-aos="zoom-in-up">
             <div className="box boxmiddle">
               <h5>Revo for</h5>
-              <h3>Brands White Label</h3>
-              <p>For brands that want to customize the consumer experience.</p>
-              <ul>
-                <li>5% of gross sales generated on the platform.</li>
-                <li> Volume discounts. </li>
-                <li>No code environment.</li>
-              </ul>
+              <h3>{brandsHeading}</h3>
+              <p>{brandssubHeading}</p>
+
+              <div className="features">
+                <ReactMarkdown children={brandsFeatures} />
+              </div>
 
               <Link href="/get-started">
                 <a className="btn"> Get Started</a>
@@ -185,11 +185,11 @@ const PriCing = () => {
           <Col sm={24} md={12} lg={8} data-aos="fade-up">
             <div className="box">
               <h5>Revo for</h5>
-              <h3>Enterprise SaaS</h3>
-              <p>
-                For large companies who want to fully customize and even extend
-                the Revo platform within their ecosystem.
-              </p>
+              <h3>{enterpriseHeading}</h3>
+              <p>{enterprisesubHeading}</p>
+              <div className="features">
+                <ReactMarkdown children={enterpriseFeatures} />
+              </div>
 
               <span className="btnn">
                 <Link href="/get-started">
@@ -287,11 +287,12 @@ const Wrapper = styled.section`
       word-break: break-word;
     }
     .features {
-      /* text-align: left; */
-      /* width: 15rem; */
-      /* margin: 0 auto; */
-      /* margin-top: 2rem; */
-      /* margin-bottom: 2rem; */
+      text-align: left;
+      width: 17rem;
+      margin: 0 auto;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      line-height: 1.75rem;
     }
     pre,
     code {

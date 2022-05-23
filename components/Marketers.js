@@ -88,7 +88,7 @@ const Marketers = () => {
             width="100%"
             height="100%"
             // image="/images/herovideo.jpg"
-            quality={100}
+            // quality={100}
           />
         </Col>
         <Col sm={24} md={12} data-aos="fade-up">
@@ -109,7 +109,7 @@ const Marketers = () => {
             width="100%"
             height="100%"
             // image="/images/herovideo.jpg"
-            quality={100}
+            // quality={100}
           />
         </Col>
       </Row>
@@ -138,7 +138,7 @@ const Marketers = () => {
             width="100%"
             height="100%"
             // image="/images/herovideo.jpg"
-            quality={100}
+            // quality={100}
           />
         </Col>
       </Row>
@@ -160,7 +160,7 @@ const Marketers = () => {
               width="100%"
               height="100%"
               // image="/images/herovideo.jpg"
-              quality={100}
+              // quality={100}
             />
           </Col>
           <Col sm={24} md={14} data-aos="fade-up">
@@ -180,7 +180,7 @@ const Marketers = () => {
               width="100%"
               height="100%"
               // image="/images/herovideo.jpg"
-              quality={100}
+              // quality={100}
             />
           </Col>
         </Row>
@@ -210,7 +210,7 @@ const Marketers = () => {
             width="100%"
             height="100%"
             // image="/images/herovideo.jpg"
-            quality={100}
+            // quality={100}
           />
         </Col>
       </Row>
