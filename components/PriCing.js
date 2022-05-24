@@ -17,15 +17,24 @@ function callback(key) {
 const PriCing = ({ pricing }) => {
   const {
     pageHeading,
+    dtcBoxHeading,
     dtcHeading,
     dtcsubHeading,
     dtcFeatures,
+    dtcButtonText,
+    dtcButtonLink,
+    brandsBoxHeading,
     brandsHeading,
     brandssubHeading,
     brandsFeatures,
+    brandsButtonText,
+    brandsButtonLink,
+    enterpriseBoxHeading,
     enterpriseHeading,
     enterprisesubHeading,
     enterpriseFeatures,
+    enterpriseButtonText,
+    enterpriseButtonLink,
   } = pricing.data.attributes;
 
   const columnsfordtc = [
@@ -118,15 +127,15 @@ const PriCing = ({ pricing }) => {
         <Row gutter={[32, 32]} justify="center" align="middle">
           <Col sm={24} md={12} lg={8} data-aos="fade-up">
             <div className="box first">
-              <h5>Revo for</h5>
+              <h5>{dtcBoxHeading}</h5>
               <h3>{dtcHeading}</h3>
               <p>{dtcsubHeading}</p>
               <div className="features">
                 <ReactMarkdown children={dtcFeatures} />
               </div>
 
-              <Link href="/get-started">
-                <a className="btn"> Get Started</a>
+              <Link href={`/${dtcButtonLink}`}>
+                <a className="btn">{dtcButtonText}</a>
               </Link>
               <Collapse
                 defaultActiveKey={["10"]}
@@ -150,7 +159,7 @@ const PriCing = ({ pricing }) => {
           </Col>
           <Col sm={24} md={12} lg={8} data-aos="zoom-in-up">
             <div className="box boxmiddle">
-              <h5>Revo for</h5>
+              <h5>{brandsBoxHeading}</h5>
               <h3>{brandsHeading}</h3>
               <p>{brandssubHeading}</p>
 
@@ -158,8 +167,8 @@ const PriCing = ({ pricing }) => {
                 <ReactMarkdown children={brandsFeatures} />
               </div>
 
-              <Link href="/get-started">
-                <a className="btn"> Get Started</a>
+              <Link href={`/${brandsButtonLink}`}>
+                <a className="btn">{brandsButtonText}</a>
               </Link>
 
               <Collapse
@@ -184,7 +193,7 @@ const PriCing = ({ pricing }) => {
           </Col>
           <Col sm={24} md={12} lg={8} data-aos="fade-up">
             <div className="box">
-              <h5>Revo for</h5>
+              <h5>{enterpriseBoxHeading}</h5>
               <h3>{enterpriseHeading}</h3>
               <p>{enterprisesubHeading}</p>
               <div className="features">
@@ -192,8 +201,8 @@ const PriCing = ({ pricing }) => {
               </div>
 
               <span className="btnn">
-                <Link href="/get-started">
-                  <a className="btn"> Get Started</a>
+                <Link href={`/${enterpriseButtonLink}`}>
+                  <a className="btn">{enterpriseButtonText}</a>
                 </Link>
               </span>
               <Collapse

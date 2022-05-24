@@ -5,7 +5,8 @@ import { social } from "../utils/constants";
 import ReactPlayer from "react-player/lazy";
 
 const HomeHero = ({ home }) => {
-  const { heading, subHeading, heroVideo, buttonText } = home.data.attributes;
+  const { heading, subHeading, heroVideo, buttonText, buttonLink } =
+    home.data.attributes;
 
   return (
     <Wrapper>
@@ -40,7 +41,7 @@ const HomeHero = ({ home }) => {
                     Add to your shopify store
                   </a>
                 </Link>
-                <Link href="/get-started">
+                <Link href={`/${buttonLink}`}>
                   <a className="btn btn-start"> {buttonText}</a>
                 </Link>
               </div>

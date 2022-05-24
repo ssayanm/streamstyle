@@ -70,6 +70,7 @@ const Wrapper = styled.section`
   .header {
     font-size: 1.75rem;
     font-family: "MontSemiBold", sans-serif;
+    color: var(--clr-white);
   }
 
   .info {

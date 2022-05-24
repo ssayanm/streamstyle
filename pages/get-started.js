@@ -28,7 +28,7 @@ const HubspotContactForm = () => {
         <Col sm={24} md={12} lg={8} data-aos="fade-up">
           <div className="box">
             <div className="contenta">
-              <h1 className="title">Get in touch</h1>
+              <h1 className="title">Let's Go!</h1>
             </div>
 
             <div id="hubspotForm" data-aos="fade-up"></div>

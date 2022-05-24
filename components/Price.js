@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Price = ({ pricing, features }) => {
-  const { pricingImage } = pricing.data.attributes;
+  const { pricingImage, priceImageLink } = pricing.data.attributes;
 
   const featuresPrice = features.data.map((items) => items.attributes);
 
@@ -86,7 +86,7 @@ const Price = ({ pricing, features }) => {
         />
       </Wrapper>
       <center className="space">
-        <Link href="/get-started">
+        <Link href={`/${priceImageLink}`}>
           <a>
             {" "}
             <Image

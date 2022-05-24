@@ -3,8 +3,12 @@ import styled from "styled-components";
 import { Row, Col } from "antd";
 
 const HomeSectionE = ({ home }) => {
-  const { HomeSectionEheading, HomeSectionEsubheading, buttonText } =
-    home.data.attributes;
+  const {
+    HomeSectionEheading,
+    HomeSectionEsubheading,
+    buttonText,
+    buttonLink,
+  } = home.data.attributes;
 
   return (
     <Wrapper>
@@ -13,7 +17,7 @@ const HomeSectionE = ({ home }) => {
           <h3 className="title">{HomeSectionEheading}</h3>
           <p>{HomeSectionEsubheading}</p>
           <center>
-            <Link href="/get-started">
+            <Link href={`/${buttonLink}`}>
               <a className="btn"> {buttonText}</a>
             </Link>
           </center>
