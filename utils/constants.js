@@ -60,7 +60,7 @@ export const social = [
   {
     id: 1,
     icon: <FaLinkedin className="social-icon "></FaLinkedin>,
-    url: "https://www.linkedin.com/company/borderFeetechnologies",
+    url: "https://www.linkedin.com/company/revo-video/",
   },
 ];
 
