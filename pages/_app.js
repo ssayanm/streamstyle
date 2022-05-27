@@ -6,25 +6,25 @@ import { AppProvider } from "../context/app_context";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { useRouter } from "next/router";
-import Loading from "../components/Loading";
+// import { useRouter } from "next/router";
+// import Loading from "../components/Loading";
 
 const MyApp = ({ Component, pageProps }) => {
-  const router = useRouter();
+  // const router = useRouter();
 
-  const [pageLoading, setPageLoading] = useState(false);
-  useEffect(() => {
-    const handleStart = () => {
-      setPageLoading(true);
-    };
-    const handleComplete = () => {
-      setPageLoading(false);
-    };
+  // const [pageLoading, setPageLoading] = useState(false);
+  // useEffect(() => {
+  //   const handleStart = () => {
+  //     setPageLoading(true);
+  //   };
+  //   const handleComplete = () => {
+  //     setPageLoading(false);
+  //   };
 
-    router.events.on("routeChangeStart", handleStart);
-    router.events.on("routeChangeComplete", handleComplete);
-    router.events.on("routeChangeError", handleComplete);
-  }, [router]);
+  //   router.events.on("routeChangeStart", handleStart);
+  //   router.events.on("routeChangeComplete", handleComplete);
+  //   router.events.on("routeChangeError", handleComplete);
+  // }, [router]);
 
   useEffect(() => {
     AOS.init({
@@ -38,7 +38,7 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <AppProvider>
       <Layout>
-        {pageLoading ? <Loading /> : <Component {...pageProps} />}
+        <Component {...pageProps} />
       </Layout>
     </AppProvider>
   );
