@@ -46,7 +46,7 @@ const Nav = () => {
             return (
               <li key={id}>
                 <Link href={url}>
-                  <a className={router.pathname === url ? "active" : ""}>
+                  <a className={router.pathname === url ? "active" : "home"}>
                     {text}
                   </a>
                 </Link>
@@ -134,6 +134,9 @@ const NavContainer = styled.nav`
       }
       .active {
         border-bottom: 2px solid var(--clr-primary-1);
+      }
+      .home:hover {
+        border-bottom: 2px solid var(--clr-white);
       }
     }
     .cart-btn-wrapper {

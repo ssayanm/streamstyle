@@ -88,8 +88,8 @@ export const categories = [
   },
   {
     id: 4,
-    text: "Direct Marketers",
-    label: "Direct Marketers",
+    text: "Direct Sellers",
+    label: "Direct Sellers",
     url: "/",
     components: <Marketers />,
   },
