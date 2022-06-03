@@ -14,11 +14,11 @@ const Footer = () => {
             <a>
               <Image
                 alt="Revo"
-                src="/images/Revologowhite.png"
-                width={172}
-                height={69}
-                className="logo"
+                src="/images/Revologowhite.svg"
+                width={171}
+                height={67}
                 quality={100}
+                objectFit="contain"
               />
             </a>
           </Link>

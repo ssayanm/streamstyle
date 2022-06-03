@@ -25,13 +25,13 @@ const Nav = () => {
                 alt="Revo"
                 src={
                   router.asPath === "/"
-                    ? "/images/Revo_Logo_white.png"
-                    : "/images/Revologo.png"
+                    ? "/images/Revo_Logo_white.svg"
+                    : "/images/Revologo.svg"
                 }
-                width={172}
-                height={69}
-                className="logo"
+                width={171}
+                height={67}
                 quality={100}
+                objectFit="contain"
                 priority
               />
             </a>

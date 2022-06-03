@@ -6,8 +6,9 @@ const HomeSectionE = ({ home }) => {
   const {
     HomeSectionEheading,
     HomeSectionEsubheading,
-    buttonText,
-    buttonLink,
+
+    HomeSectionEbutton,
+    HomeSectionEbuttonLink,
   } = home.data.attributes;
 
   return (
@@ -17,8 +18,8 @@ const HomeSectionE = ({ home }) => {
           <h3 className="title">{HomeSectionEheading}</h3>
           <p>{HomeSectionEsubheading}</p>
           <center>
-            <Link href={`/${buttonLink}`}>
-              <a className="btn"> {buttonText}</a>
+            <Link href={`/${HomeSectionEbuttonLink}`}>
+              <a className="btn"> {HomeSectionEbutton}</a>
             </Link>
           </center>
         </Col>
