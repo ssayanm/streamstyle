@@ -99,7 +99,7 @@ const Wrapper = styled.nav`
   }
 
   .links li {
-    margin: 1rem 0.5rem;
+    margin: 0.5rem;
   }
   .links a:hover {
     border-bottom: 2px solid var(--clr-primary-1);

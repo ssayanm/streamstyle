@@ -106,7 +106,7 @@ const SidebarContainer = styled.div`
     width: 100%;
     height: 100%;
     background: var(--clr-white);
-    transition: var(--transition);
+    /* transition: var(--transition); */
     transform: translate(-100%);
     z-index: -1;
     background-image: linear-gradient(
