@@ -1,160 +1,296 @@
-import Image from "next/image";
-import React, { useState, useRef, useEffect } from "react";
-import { FaBars } from "react-icons/fa";
-import { links } from "../utils/constants";
-import { useRouter } from "next/router";
 import styled from "styled-components";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import Image from "next/image";
+import { links } from "../utils/constants";
+import { useAppContext } from "../context/app_context";
+import { useState } from "react";
+import { BsPlayCircleFill } from "react-icons/bs";
 
-const Navbar = () => {
+const Nav = () => {
   const router = useRouter();
-  const [showLinks, setShowLinks] = useState(false);
-  const linksContainerRef = useRef(null);
-  const linksRef = useRef(null);
-  const toggleLinks = () => {
-    setShowLinks(!showLinks);
-  };
-  useEffect(() => {
-    const linksHeight = linksRef.current.getBoundingClientRect().height;
-    if (showLinks) {
-      linksContainerRef.current.style.height = `${linksHeight}px`;
-    } else {
-      linksContainerRef.current.style.height = "0px";
-    }
-  }, [showLinks]);
+
+  const [toggle, setToggle] = useState(false);
+
   return (
-    <Wrapper>
-      <nav>
-        <div className="nav-center">
-          <div className="nav-header">
-            <Image
-              alt="Revo"
-              src={
-                router.asPath === "/"
-                  ? "/images/Revo_Logo_white.png"
-                  : "/images/Revologo.png"
-              }
-              width={172}
-              height={69}
-              className="logo"
-              quality={100}
-              priority
-            />
-            <button className="nav-toggle" onClick={toggleLinks}>
-              <FaBars />
-            </button>
-          </div>
-          <div className="links-container" ref={linksContainerRef}>
-            <ul className="links" ref={linksRef}>
-              {links.map((link) => {
-                const { id, url, text } = link;
-                return (
-                  <li key={id}>
-                    <a href={url}>{text}</a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+    <NavContainer
+      style={{
+        background:
+          router.asPath === "/" ? "var(--clr-primary-1)" : "var(--clr-white)",
+      }}
+    >
+      <div className="nav-center">
+        <div className="nav-header">
+          <Link href="/">
+            <a>
+              <Image
+                alt="Revo"
+                src={
+                  router.asPath === "/"
+                    ? "/images/Revo_Logo_white.svg"
+                    : "/images/Revologo.svg"
+                }
+                width={171}
+                height={67}
+                quality={100}
+                objectFit="contain"
+                priority
+              />
+            </a>
+          </Link>
+          <button
+            type="button"
+            className="nav-toggle"
+            onClick={() => setToggle(!toggle)}
+          >
+            <FaBars />
+          </button>
         </div>
-      </nav>
-    </Wrapper>
+
+        {toggle ? (
+          <SidebarContainer>
+            <aside className="sidebar show-sidebar">
+              <div className="sidebar-header">
+                <Link href="/">
+                  <a>
+                    <Image
+                      alt="Revo"
+                      src="/images/Revo_Logo_white.png"
+                      width={172}
+                      height={69}
+                      className="logo"
+                    />
+                  </a>
+                </Link>
+                <button
+                  className="close-btn"
+                  onClick={() => setToggle(!toggle)}
+                >
+                  <FaTimes />
+                </button>
+              </div>
+
+              <ul className="links">
+                {links.map((link) => {
+                  const { id, url, text } = link;
+                  return (
+                    <li key={id}>
+                      <Link href={url}>
+                        <a onClick={() => setToggle(!toggle)}>{text}</a>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+              <BsPlayCircleFill className="icon" />
+            </aside>
+          </SidebarContainer>
+        ) : (
+          <ul className="nav-links">
+            {links.map((link) => {
+              const { id, url, text } = link;
+              return (
+                <li key={id}>
+                  <Link href={url}>
+                    <a className={router.pathname === url ? "active" : "home"}>
+                      {text}
+                    </a>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </div>
+    </NavContainer>
   );
 };
 
-const Wrapper = styled.nav`
-  nav {
-    background: var(--clr-white);
-    /* box-shadow: var(--light-shadow); */
+const NavContainer = styled.nav`
+  /* background: var(--clr-primary-1); */
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .nav-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: var(--max-width);
   }
   .nav-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
   }
   .nav-toggle {
-    font-size: 2rem;
-    color: var(--clr-black);
     background: transparent;
-    border-color: transparent;
-    transition: var(--transition);
+    border: transparent;
+    color: var(--clr-black);
     cursor: pointer;
+    svg {
+      font-size: 2rem;
+    }
   }
-  .nav-toggle:hover {
-    color: var(--clr-primary-1);
-    transform: rotate(90deg);
-  }
-  .logo {
-    height: 40px;
-  }
-  .links a {
-    color: var(--clr-grey-1);
-    font-family: "Mont";
-    font-size: 1.4rem;
-    text-transform: capitalize;
-    margin: 0 0.5rem;
-    /* display: inline-block; */
-    padding: 0.5rem;
-    /* transition: var(--transition); */
-  }
-
-  .links li {
-    margin: 0.5rem;
-  }
-  .links a:hover {
-    border-bottom: 2px solid var(--clr-primary-1);
-  }
-  .social-icons {
+  .nav-links {
     display: none;
   }
-  .links-container {
-    margin: 2rem 0;
-    height: 0;
-    overflow: hidden;
-    transition: var(--transition);
+  .cart-btn-wrapper {
+    display: none;
   }
-  .show-container {
-    height: 10rem;
+
+  .phone-btn {
+    display: none;
   }
-  @media screen and (min-width: 800px) {
-    .nav-center {
-      /* max-width: 1170px; */
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 5rem;
-    }
-    .nav-header {
-      padding: 0;
-    }
+
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .social-icons li {
+    padding: 0.5rem;
+  }
+
+  @media (min-width: 992px) {
     .nav-toggle {
       display: none;
     }
-    .links-container {
-      height: auto !important;
+    .nav-center {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
     }
-    .links {
+    .nav-links {
       display: flex;
+      justify-content: flex-end;
+      li {
+        margin: 0 0.5rem;
+      }
+      a {
+        color: var(--clr-grey-1);
+        font-family: "Mont";
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        padding: 0.5rem;
+        &:hover {
+          border-bottom: 2px solid var(--clr-primary-1);
+        }
+      }
+      .active {
+        border-bottom: 2px solid var(--clr-primary-1);
+      }
+      .home:hover {
+        border-bottom: 2px solid var(--clr-white);
+      }
     }
-    .links a {
-      margin: 0;
-      padding: 0.5rem;
+    .cart-btn-wrapper {
+      display: grid;
     }
-    .links a:hover {
-      background: transparent;
-    }
-    .social-icons {
+    .phone-btn {
+      font-size: 1.4rem;
+      letter-spacing: var(--spacing);
+
       display: flex;
-    }
-    .social-icons a {
-      margin: 0 0.5rem;
-      color: var(--clr-primary-5);
-      transition: var(--transition);
-    }
-    .social-icons a:hover {
-      color: var(--clr-primary-7);
+      /* justify-content: center; */
+      align-items: center;
+      color: var(--clr-grey-1);
+
+      .icon {
+        margin-right: 0.2rem;
+        color: var(--clr-primary-1);
+      }
     }
   }
 `;
-export default Navbar;
+
+const SidebarContainer = styled.div`
+  text-align: center;
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+  .close-btn {
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    color: var(--clr-black);
+    transition: var(--transition);
+    cursor: pointer;
+
+    margin-top: 0.2rem;
+  }
+  .close-btn:hover {
+    color: var(--clr-red-light);
+  }
+  .icon {
+    width: 64px;
+    height: 64px;
+  }
+  .logo {
+    justify-self: center;
+    height: 45px;
+  }
+  .links {
+    margin-bottom: 2rem;
+  }
+  .links a {
+    display: block;
+    text-align: center;
+    font-size: 1.75rem;
+    text-transform: capitalize;
+    padding: 0.5rem 1.5rem;
+    color: var(--clr-black);
+    transition: var(--transition);
+    font-family: "Mont";
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr-white);
+    /* transition: var(--transition); */
+    transform: translate(-100%);
+    z-index: -1;
+    background-image: linear-gradient(
+      to top,
+      rgba(69, 213, 107, 0.73),
+      #45d56b
+    );
+  }
+  .show-sidebar {
+    transform: translate(0);
+    z-index: 999;
+  }
+  .cart-btn-wrapper {
+    margin: 2rem auto;
+  }
+  .phone-btn {
+    font-size: 1.4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-grey-1);
+
+    .icon {
+      margin-right: 0.2rem;
+      color: var(--clr-primary-1);
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .sidebar {
+      display: none;
+    }
+  }
+`;
+
+export default Nav;
