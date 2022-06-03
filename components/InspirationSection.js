@@ -4,7 +4,7 @@ import { Row, Col } from "antd";
 import Link from "next/link";
 import { featuredChannels } from "../utils/constants";
 
-const InspirationHero = () => {
+const InspirationSection = () => {
   return (
     <Wrapper>
       <div className="section-center">
@@ -107,4 +107,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default InspirationHero;
+export default InspirationSection;
