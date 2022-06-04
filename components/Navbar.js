@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import { links } from "../utils/constants";
-import { useState } from "react";
 import { BsPlayCircleFill } from "react-icons/bs";
+import { FaBars, FaTimes } from "react-icons/fa";
+import styled from "styled-components";
 
 const Nav = () => {
   const router = useRouter();
@@ -135,13 +135,6 @@ const NavContainer = styled.nav`
   .nav-links {
     display: none;
   }
-  .cart-btn-wrapper {
-    display: none;
-  }
-
-  .phone-btn {
-    display: none;
-  }
 
   .social-icons {
     display: flex;
@@ -186,33 +179,17 @@ const NavContainer = styled.nav`
         border-bottom: 2px solid var(--clr-white);
       }
     }
-    .cart-btn-wrapper {
-      display: grid;
-    }
-    .phone-btn {
-      font-size: 1.4rem;
-      letter-spacing: var(--spacing);
-
-      display: flex;
-      /* justify-content: center; */
-      align-items: center;
-      color: var(--clr-grey-1);
-
-      .icon {
-        margin-right: 0.2rem;
-        color: var(--clr-primary-1);
-      }
-    }
   }
 `;
 
 const SidebarContainer = styled.div`
   text-align: center;
+
   .sidebar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 2rem 1.5rem;
   }
   .close-btn {
     font-size: 2rem;
@@ -232,8 +209,8 @@ const SidebarContainer = styled.div`
     height: 64px;
   }
   .logo {
-    justify-self: center;
-    height: 45px;
+    /* justify-self: center;
+    height: 45px; */
   }
   .links {
     margin-bottom: 2rem;
@@ -256,7 +233,7 @@ const SidebarContainer = styled.div`
     width: 100%;
     height: 100%;
     background: var(--clr-white);
-    /* transition: var(--transition); */
+    transition: var(--transition);
     transform: translate(-100%);
     z-index: -1;
     background-image: linear-gradient(
@@ -269,22 +246,7 @@ const SidebarContainer = styled.div`
     transform: translate(0);
     z-index: 999;
   }
-  .cart-btn-wrapper {
-    margin: 2rem auto;
-  }
-  .phone-btn {
-    font-size: 1.4rem;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--clr-grey-1);
-
-    .icon {
-      margin-right: 0.2rem;
-      color: var(--clr-primary-1);
-    }
-  }
   @media screen and (min-width: 992px) {
     .sidebar {
       display: none;

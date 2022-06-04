@@ -4,7 +4,12 @@ import Meta from "./Meta";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <>
+      <Meta />
+      <Navbar />
+      {children}
+
+      <Footer />
       <link
         href="/fonts/MontRegular.otf"
         rel="preload"
@@ -18,14 +23,7 @@ const Layout = ({ children }) => {
         as="font"
         crossOrigin=""
       />
-
-      <Meta />
-      <Navbar />
-
-      {children}
-
-      <Footer />
-    </div>
+    </>
   );
 };
 
