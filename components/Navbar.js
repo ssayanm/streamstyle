@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import { links } from "../utils/constants";
-import { useAppContext } from "../context/app_context";
 import { useState } from "react";
 import { BsPlayCircleFill } from "react-icons/bs";
 

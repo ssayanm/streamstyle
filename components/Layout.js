@@ -1,7 +1,6 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Meta from "./Meta";
-import Sidebar from "./Sidebar";
 
 const Layout = ({ children }) => {
   return (

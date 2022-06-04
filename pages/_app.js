@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Layout from "../components/Layout";
 import "../styles/index.css";
 import "antd/dist/antd.css";
-import { AppProvider } from "../context/app_context";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -36,11 +36,9 @@ const MyApp = ({ Component, pageProps }) => {
     });
   }, []);
   return (
-    <AppProvider>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </AppProvider>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 };
 
