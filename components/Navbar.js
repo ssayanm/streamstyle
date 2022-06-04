@@ -49,7 +49,7 @@ const Nav = () => {
 
         {toggle ? (
           <SidebarContainer>
-            <aside className="sidebar show-sidebar">
+            <aside className={`${toggle ? "sidebar show-sidebar" : "sidebar"}`}>
               <div className="sidebar-header">
                 <Link href="/">
                   <a>
