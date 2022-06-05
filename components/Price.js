@@ -88,7 +88,6 @@ const Price = ({ pricing, features }) => {
       <center className="space">
         <Link href={`/${priceImageLink}`}>
           <a>
-            {" "}
             <Image
               alt="revo"
               src={pricingImage.data.attributes.url}

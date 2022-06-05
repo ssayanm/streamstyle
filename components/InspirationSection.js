@@ -2,9 +2,12 @@ import styled from "styled-components";
 import Image from "next/image";
 import { Row, Col } from "antd";
 import Link from "next/link";
-import { featuredChannels } from "../utils/constants";
 
-const InspirationSection = () => {
+const InspirationSection = ({ channels }) => {
+  const featuredChannels1 = channels.data.map(
+    (items) => items.attributes.title
+  );
+
   return (
     <Wrapper>
       <div className="section-center">
@@ -12,27 +15,36 @@ const InspirationSection = () => {
           <h3 className="title">Featured Channels</h3>
         </div>
         <Row gutter={[32, 24]} justify="center" align="middle">
-          {featuredChannels.map((channel) => (
-            <Col sm={24} md={12} lg={8} key={channel.id} data-aos="zoom-in-up">
-              <div className="box">
-                <a className="btn1" href={`${channel.link}`} target="_blank">
-                  <Image
-                    alt={channel.title}
-                    src={channel.image}
-                    width={600}
-                    height={359}
-                    objectFit="contain"
-                    quality={100}
-                  />
-                </a>
+          {channels.data.map((channel) => {
+            const { title, subTitle, link, image } = channel.attributes;
+            return (
+              <Col
+                sm={24}
+                md={12}
+                lg={8}
+                key={channel.id}
+                data-aos="zoom-in-up"
+              >
+                <div className="box">
+                  <a className="btn1" href={`${link}`} target="_blank">
+                    <Image
+                      alt={title}
+                      src={image.data.attributes.url}
+                      width={600}
+                      height={359}
+                      objectFit="contain"
+                      quality={100}
+                    />
+                  </a>
 
-                <div className="textBox">
-                  <h4>{channel.title}</h4>
-                  <h5>{channel.subTitle}</h5>
+                  <div className="textBox">
+                    <h4>{title}</h4>
+                    <h5>{subTitle}</h5>
+                  </div>
                 </div>
-              </div>
-            </Col>
-          ))}
+              </Col>
+            );
+          })}
         </Row>
         <center className="space">
           <Link href="/">
