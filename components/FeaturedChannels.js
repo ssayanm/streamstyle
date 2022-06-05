@@ -7,7 +7,7 @@ const FeaturedChannels = ({ channel }) => {
     <Wrapper>
       <Card className="channels">
         <Image
-          alt="Revo"
+          alt="Revo Video"
           src={channel.image}
           width={400}
           height={500}

@@ -13,7 +13,7 @@ const Footer = () => {
           <Link href="/">
             <a>
               <Image
-                alt="Revo"
+                alt="Revo Video"
                 src="/images/Revologowhite.svg"
                 width={171}
                 height={67}

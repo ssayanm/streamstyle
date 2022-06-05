@@ -59,7 +59,7 @@ const Creators = () => {
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <Image
-            alt="revo"
+            alt="Revo Video"
             src={
               data.data[9].attributes.image.data.attributes.formats.large.url
             }
@@ -130,7 +130,7 @@ const Creators = () => {
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <Image
-            alt="revo"
+            alt="Revo Video"
             src={
               data.data[11].attributes.image.data.attributes.formats.large.url
             }

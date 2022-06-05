@@ -89,7 +89,7 @@ const Price = ({ pricing, features }) => {
         <Link href={`/${priceImageLink}`}>
           <a>
             <Image
-              alt="revo"
+              alt="Revo Video"
               src={pricingImage.data.attributes.url}
               // src="/images/pricingim.png"
               width={250}

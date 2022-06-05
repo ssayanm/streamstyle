@@ -74,7 +74,7 @@ const Publishers = () => {
 
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <Image
-            alt="revo"
+            alt={data.data[13].attributes.heading}
             src={
               data.data[4].attributes.image.data.attributes.formats.large.url
             }
@@ -95,7 +95,7 @@ const Publishers = () => {
         </Col>
         <Col sm={24} md={12} className="onlymobile">
           <Image
-            alt="revo"
+            alt={data.data[4].attributes.heading}
             src={
               data.data[4].attributes.image.data.attributes.formats.large.url
             }

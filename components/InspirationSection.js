@@ -26,7 +26,7 @@ const InspirationSection = ({ channels }) => {
                 data-aos="zoom-in-up"
               >
                 <div className="box">
-                  <a className="btn1" href={`${link}`} target="_blank">
+                  <a href={`${link}`} target="_blank">
                     <Image
                       alt={title}
                       src={image.data.attributes.url}
@@ -58,7 +58,7 @@ const InspirationSection = ({ channels }) => {
 
 const Wrapper = styled.section`
   padding: 2rem 1rem;
-  font-family: "Mont";
+  font-family: "MontSemiBold";
   background-image: url("/images/circle.png"), url("/images/circle.png");
   background-position: 0% 0%, -8% 100%;
   background-repeat: no-repeat, no-repeat;
@@ -66,7 +66,7 @@ const Wrapper = styled.section`
   .title {
     text-align: center;
     font-size: 2rem;
-    font-family: "Mont";
+    font-family: "MontSemiBold";
   }
 
   .box {
@@ -85,7 +85,7 @@ const Wrapper = styled.section`
   .textBox {
     display: inline-block;
     margin-top: 0.5rem;
-    margin-left: 0.5rem;
+    text-align: center;
     h4,
     h5 {
       margin-bottom: 0.2rem;
@@ -115,6 +115,11 @@ const Wrapper = styled.section`
     .box {
       /* margin: 2rem 0 4rem 0; */
       justify-content: flex-start;
+    }
+
+    .textBox {
+      margin-left: 0.5rem;
+      text-align: left;
     }
   }
 `;

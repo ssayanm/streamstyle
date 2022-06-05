@@ -59,7 +59,7 @@ const Brands = () => {
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <Image
-            alt="revo"
+            alt="Revo Video"
             // url=
             src={
               data.data[6].attributes.image.data.attributes.formats.large.url
@@ -144,7 +144,7 @@ const Brands = () => {
       >
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <Image
-            alt="revo"
+            alt="Revo Video"
             src={
               data.data[4].attributes.image.data.attributes.formats.large.url
             }
@@ -165,7 +165,7 @@ const Brands = () => {
         </Col>
         <Col sm={24} md={12} className="onlymobile">
           <Image
-            alt="revo"
+            alt="Revo Video"
             src={
               data.data[4].attributes.image.data.attributes.formats.large.url
             }

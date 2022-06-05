@@ -33,7 +33,7 @@ const HomeSectionB = ({ home }) => {
             <Row gutter={[48, 32]}>
               <Col sm={24} md={12} data-aos="fade-up">
                 <Image
-                  alt="revo"
+                  alt="Revo Video"
                   src={HomeSectionBiconsA.data.attributes.url}
                   // src="/images/cart.png"
                   width={49}
@@ -53,7 +53,7 @@ const HomeSectionB = ({ home }) => {
               <Col sm={24} md={12} data-aos="fade-up">
                 {" "}
                 <Image
-                  alt="revo"
+                  alt="Revo Video"
                   src={HomeSectionBiconsB.data.attributes.url}
                   // src="/images/eng.png"
                   width={49}
@@ -74,7 +74,7 @@ const HomeSectionB = ({ home }) => {
               <Col sm={24} md={12} className="space" data-aos="fade-up">
                 {" "}
                 <Image
-                  alt="revo"
+                  alt="Revo Video"
                   src={HomeSectionBiconsC.data.attributes.url}
                   // src="/images/dollar.png"
                   width={49}
@@ -92,7 +92,7 @@ const HomeSectionB = ({ home }) => {
               </Col>
               <Col sm={24} md={12} className="space" data-aos="fade-up">
                 <Image
-                  alt="revo"
+                  alt="Revo Video"
                   src={HomeSectionBiconsD.data.attributes.url}
                   // src="/images/analytics.png"
                   width={83}
@@ -113,7 +113,7 @@ const HomeSectionB = ({ home }) => {
           </Col>
           <Col sm={24} md={12} className="imagecon" data-aos="zoom-in">
             <Image
-              alt="revo"
+              alt="Revo Video"
               src={HomeSectionBimage.data.attributes.formats.large.url}
               // src="/images/features.png"
               width={1000}

@@ -18,7 +18,7 @@ const Sidebar = () => {
           <Link href="/">
             <a>
               <Image
-                alt="Revo"
+                alt="Revo Video"
                 src="/images/Revo_Logo_white.png"
                 width={172}
                 height={69}

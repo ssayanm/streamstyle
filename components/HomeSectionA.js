@@ -15,7 +15,7 @@ const HomeSectionA = ({ home }) => {
         <Col sm={24} md={12} xl={10} data-aos="fade-up">
           {" "}
           <Image
-            alt="revo"
+            alt="Revo Video"
             src={HomeSectionAimage.data.attributes.formats.large.url}
             // src="/images/Revo_image_homepage_Section_1.png"
             width={1000}

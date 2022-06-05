@@ -24,7 +24,7 @@ const HomeSectionC = ({ home }) => {
           {" "}
           <div className="onlydesktop">
             <Image
-              alt="revo"
+              alt="Revo Video"
               src={HomeSectionCimage.data.attributes.formats.large.url}
               // src="/images/Revo_image_homepage_Section_3.png"
               width={1000}
@@ -64,7 +64,7 @@ const HomeSectionC = ({ home }) => {
           </article>
           <div className="onlymobile">
             <Image
-              alt="revo"
+              alt={HomeSectionCheading}
               src={HomeSectionCimage.data.attributes.formats.large.url}
               // src="/images/Revo_image_homepage_Section_3.png"
               width={1000}
