@@ -50,6 +50,7 @@ const Wrapper = styled.section`
     border-radius: 1rem;
     margin-bottom: 2rem;
     background-color: var(--clr-white);
+    border: 1px solid var(--clr-primary-1);
   }
 
   .hs-button {

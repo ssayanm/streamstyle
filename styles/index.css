@@ -341,3 +341,7 @@ video {
 .widthfull {
   width: 100%;
 }
+
+#hubspotForm .hubspot-link__container.sproket {
+  display: none;
+}

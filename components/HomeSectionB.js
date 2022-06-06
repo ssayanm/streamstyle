@@ -30,7 +30,7 @@ const HomeSectionB = ({ home }) => {
         </Row>
         <Row gutter={[48, 32]}>
           <Col sm={24} md={12}>
-            <Row gutter={[48, 32]}>
+            <Row gutter={[32, 32]}>
               <Col sm={24} md={12} data-aos="fade-up">
                 <Image
                   alt="Revo Video"

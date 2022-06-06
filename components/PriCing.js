@@ -331,7 +331,7 @@ const Wrapper = styled.section`
     .box {
       box-shadow: var(--dark-shadow);
       margin-top: 2rem;
-      padding: 3rem 2rem;
+      padding: 3rem 1rem;
       height: 39rem;
       background-color: var(--clr-white);
       position: relative;
@@ -344,7 +344,7 @@ const Wrapper = styled.section`
       }
 
       p {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
         color: var(--clr-light);
       }
 
