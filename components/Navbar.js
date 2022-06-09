@@ -1,16 +1,12 @@
-import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import { links } from "../utils/constants";
-import { BsPlayCircleFill } from "react-icons/bs";
+
 import { FaBars, FaTimes } from "react-icons/fa";
 import styled from "styled-components";
 
 const Nav = () => {
   const router = useRouter();
-
-  const [toggle, setToggle] = useState(false);
 
   return (
     <NavContainer
@@ -46,61 +42,6 @@ const Nav = () => {
             <FaBars />
           </button>
         </div>
-
-        {toggle ? (
-          <SidebarContainer>
-            <aside className={`${toggle ? "sidebar show-sidebar" : "sidebar"}`}>
-              <div className="sidebar-header">
-                <Link href="/">
-                  <a>
-                    <Image
-                      alt="Revo Video"
-                      src="/images/Revo_Logo_white.png"
-                      width={172}
-                      height={69}
-                      className="logo"
-                    />
-                  </a>
-                </Link>
-                <button
-                  className="close-btn"
-                  onClick={() => setToggle(!toggle)}
-                >
-                  <FaTimes />
-                </button>
-              </div>
-
-              <ul className="links">
-                {links.map((link) => {
-                  const { id, url, text } = link;
-                  return (
-                    <li key={id}>
-                      <Link href={url}>
-                        <a onClick={() => setToggle(!toggle)}>{text}</a>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-              <BsPlayCircleFill className="icon" />
-            </aside>
-          </SidebarContainer>
-        ) : (
-          <ul className="nav-links">
-            {links.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id}>
-                  <Link href={url}>
-                    <a className={router.pathname === url ? "active" : "home"}>
-                      {text}
-                    </a>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        )}
       </div>
     </NavContainer>
   );

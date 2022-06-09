@@ -1,28 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { BsPlayFill } from "react-icons/bs";
-import Image from "next/image";
 import { Row, Col } from "antd";
 import ReactPlayer from "react-player/lazy";
-import useSWR from "swr";
-import Loading from "./Loading";
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
-const Marketers = () => {
-  const { data, error } = useSWR(
-    `${process.env.url}/api/how-it-works?populate=*`,
-    fetcher
-  );
-
-  if (error) return <div>Failed to load</div>;
-  if (!data)
-    return (
-      <div>
-        <Loading />
-      </div>
-    );
-
+const Marketers = ({ sales }) => {
   return (
     <Wrapper>
       <Row
@@ -32,37 +14,18 @@ const Marketers = () => {
         className="section"
       >
         <Col sm={24} md={12} data-aos="fade-up">
-          <h1 className="title">{data.data[14].attributes.heading}</h1>
-          <p>{data.data[14].attributes.subHeading}</p>
-        </Col>
-        <Col sm={24} md={12} className="widthfull" data-aos="zoom-in">
-          <div className="player-wrapper">
-            <ReactPlayer
-              url={data.data[7].attributes.image.data.attributes.url}
-              // url={"/videos/homevideo.mp4"}
-              playing={true}
-              muted={true}
-              controls={true}
-              width="100%"
-              height="100%"
-              // image="/images/herovideo.jpg"
-              className="react-player"
-            />
-          </div>
-        </Col>
-        <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">{data.data[15].attributes.heading}</h1>
+            <h1 className="title">{sales.data[15].attributes.heading}</h1>
           </div>
 
-          <p>{data.data[15].attributes.subHeading}</p>
+          <p>{sales.data[15].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
-            url={data.data[15].attributes.image.data.attributes.url}
+            url={sales.data[15].attributes.image.data.attributes.url}
             // url={"/videos/setstudio.mp4"}
-            playing={true}
+            playing={false}
             muted={true}
             controls={true}
             width="100%"
@@ -80,9 +43,9 @@ const Marketers = () => {
       >
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
-            url={data.data[10].attributes.image.data.attributes.url}
+            url={sales.data[10].attributes.image.data.attributes.url}
             // url={"/videos/Live Chat & Moderation.mp4"}
-            playing={true}
+            playing={false}
             muted={true}
             controls={true}
             width="100%"
@@ -94,16 +57,16 @@ const Marketers = () => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">{data.data[10].attributes.heading}</h1>
+            <h1 className="title">{sales.data[10].attributes.heading}</h1>
           </div>
 
-          <p>{data.data[10].attributes.subHeading}</p>
+          <p>{sales.data[10].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} className="onlymobile">
           <ReactPlayer
-            url={data.data[10].attributes.image.data.attributes.url}
+            url={sales.data[10].attributes.image.data.attributes.url}
             // url={"/videos/Live Chat & Moderation.mp4"}
-            playing={true}
+            playing={false}
             muted={true}
             controls={true}
             width="100%"
@@ -123,16 +86,16 @@ const Marketers = () => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title"> {data.data[2].attributes.heading}</h1>
+            <h1 className="title"> {sales.data[2].attributes.heading}</h1>
           </div>
 
-          <p>{data.data[2].attributes.subHeading}</p>
+          <p>{sales.data[2].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
-            url={data.data[2].attributes.image.data.attributes.url}
+            url={sales.data[2].attributes.image.data.attributes.url}
             // url={"/videos/Frictionless Checkout.mp4"}
-            playing={true}
+            playing={false}
             muted={true}
             controls={true}
             width="100%"
@@ -152,9 +115,9 @@ const Marketers = () => {
         >
           <Col sm={24} md={10} className="onlydesktop" data-aos="zoom-in">
             <ReactPlayer
-              url={data.data[3].attributes.image.data.attributes.url}
+              url={sales.data[3].attributes.image.data.attributes.url}
               // url={"/videos/Virtual Try On.mp4"}
-              playing={true}
+              playing={false}
               muted={true}
               controls={true}
               width="100%"
@@ -166,15 +129,15 @@ const Marketers = () => {
           <Col sm={24} md={14} data-aos="fade-up">
             <div className="iconbar">
               <BsPlayFill className="icon" />
-              <h1 className="title">{data.data[3].attributes.heading}</h1>
+              <h1 className="title">{sales.data[3].attributes.heading}</h1>
             </div>
-            <p className="para">{data.data[3].attributes.subHeading}</p>
+            <p className="para">{sales.data[3].attributes.subHeading}</p>
           </Col>
           <Col sm={24} md={8} className="onlymobile">
             <ReactPlayer
-              url={data.data[3].attributes.image.data.attributes.url}
+              url={sales.data[3].attributes.image.data.attributes.url}
               // url={"/videos/Virtual Try On.mp4"}
-              playing={true}
+              playing={false}
               muted={true}
               controls={true}
               width="100%"
@@ -195,16 +158,16 @@ const Marketers = () => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">{data.data[1].attributes.heading}</h1>
+            <h1 className="title">{sales.data[1].attributes.heading}</h1>
           </div>
 
-          <p>{data.data[1].attributes.subHeading}</p>
+          <p>{sales.data[1].attributes.subHeading}</p>
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
-            url={data.data[1].attributes.image.data.attributes.url}
+            url={sales.data[1].attributes.image.data.attributes.url}
             // url={"/videos/Real-Time Analytics.mp4"}
-            playing={true}
+            playing={false}
             muted={true}
             controls={true}
             width="100%"
@@ -225,6 +188,12 @@ const Wrapper = styled.section`
     height: max-content;
     padding: 2rem 0.5rem;
     border-radius: 2rem;
+    color: var(--clr-white);
+
+    .title,
+    p {
+      color: var(--clr-white);
+    }
   }
   .title {
     text-align: center;

@@ -6,7 +6,7 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: hsl(136, 64%, 55%);
+  --clr-primary-1: hsl(272, 68%, 40%);
   --clr-primary-2: hsl(20, 100%, 67%);
   --clr-primary-3: hsl(20, 100%, 77%);
   --clr-primary-4: hsl(20, 100%, 87%);
@@ -255,11 +255,11 @@ p {
 .social-icons {
   display: flex;
   /* justify-content: center; */
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  /* margin-top: 1.5rem;
+  margin-bottom: 1.5rem; */
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   /* margin-top: 1.5rem; */
 }
@@ -303,11 +303,11 @@ p {
   .social-icons {
     display: flex;
 
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    /* margin-top: 1.5rem;
+    margin-bottom: 1.5rem; */
     /* width: 16rem; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
   }
 

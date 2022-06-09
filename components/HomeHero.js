@@ -5,8 +5,7 @@ import { social } from "../utils/constants";
 import ReactPlayer from "react-player/lazy";
 
 const HomeHero = ({ home }) => {
-  const { heading, subHeading, heroVideo, buttonText, buttonLink } =
-    home.data.attributes;
+  const { heading, subHeading, heroVideo } = home.data.attributes;
 
   return (
     <Wrapper>
@@ -31,36 +30,6 @@ const HomeHero = ({ home }) => {
                   />
                 </div>
               </div>
-              <div className="btn-section">
-                <Link href="/">
-                  <a
-                    className="btn-alt btn-shopify"
-                    style={{ display: "none" }}
-                  >
-                    {" "}
-                    Add to your shopify store
-                  </a>
-                </Link>
-                <Link href={`/${buttonLink}`}>
-                  <a className="btn btn-start"> {buttonText}</a>
-                </Link>
-              </div>
-
-              <p className="smallfont" style={{ display: "none" }}>
-                Available now on all platforms
-              </p>
-              <ul className="social-icons" style={{ display: "none" }}>
-                {social.map((socialIcon) => {
-                  const { id, url, icon } = socialIcon;
-                  return (
-                    <li key={id}>
-                      <a href={url} target="_blank">
-                        {icon}
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
             </article>
           </Col>
           <Col sm={24} md={24} lg={12} data-aos="zoom-in">
@@ -69,7 +38,7 @@ const HomeHero = ({ home }) => {
                 <ReactPlayer
                   // url={"/videos/homevideo.mp4"}
                   url={heroVideo.data.attributes.url}
-                  playing={true}
+                  playing={false}
                   muted={true}
                   controls={true}
                   width="100%"
@@ -94,30 +63,15 @@ const Wrapper = styled.section`
     font-size: 1.75rem;
     text-align: center;
     margin-bottom: 2rem;
+    color: var(--clr-white);
   }
   .smallfont {
     font-size: 1.25rem;
   }
-  .btn-shopify {
-    margin-top: 1rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .btn-start {
-    text-align: center;
-    width: 12rem;
-    margin: 0 auto;
-  }
-
-  .btn-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
 
   .title {
     text-align: center;
+    color: var(--clr-white);
   }
   @media (min-width: 992px) {
     padding: 5rem 2rem;
@@ -132,25 +86,6 @@ const Wrapper = styled.section`
     }
     .smallfont {
       font-size: 1.5rem;
-    }
-    .btn-shopify {
-      margin-top: 0rem;
-      text-align: center;
-      margin-bottom: 0rem;
-    }
-
-    .btn-start {
-      width: auto;
-      margin: 0 auto;
-    }
-
-    .btn-section {
-      display: block;
-      /* width: 31rem; */
-      align-items: center;
-      flex-direction: row;
-      justify-content: flex-start;
-      margin-top: 2rem;
     }
   }
 

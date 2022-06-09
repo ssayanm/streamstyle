@@ -14,11 +14,11 @@ const Meta = ({ title, keywords, description, siteTitle }) => {
 };
 
 Meta.defaultProps = {
-  siteTitle: "Revo Video",
+  siteTitle: "Streamstyle",
   keywords: "",
-  description: "One Platform For Video Engagement & Live Commerce",
+  description: "One Platform For Live Video Engagement & Live Commerce",
 
-  title: "Revo Video",
+  title: "Streamstyle",
 };
 
 export default Meta;

@@ -1,39 +1,36 @@
 import axios from "axios";
 import Meta from "../components/Meta";
 import HomeHero from "../components/HomeHero";
-import HomeSectionA from "../components/HomeSectionA";
-import HomeSectionB from "../components/HomeSectionB";
-import HomeSectionC from "../components/HomeSectionC";
-import HomeSectionD from "../components/HomeSectionD";
-import HomeSectionE from "../components/HomeSectionE";
+
 import Loading from "../components/Loading";
+import Marketers from "../components/Marketers";
 
 export const getStaticProps = async () => {
   try {
     const res = await axios.get(`${process.env.url}/api/home/?populate=*`);
+    const res1 = await axios.get(
+      `${process.env.url}/api/how-it-works?populate=*`
+    );
     const home = res.data;
-    if (!home)
+    const sales = res1.data;
+    if (!home && !sales)
       return (
         <div>
           <Loading />
         </div>
       );
-    return { props: { home } };
+    return { props: { home, sales } };
   } catch (error) {
     return { error };
   }
 };
 
-const Home = ({ home }) => {
+const Home = ({ home, sales }) => {
   return (
     <>
       <Meta title="Home" />
       <HomeHero home={home} />
-      <HomeSectionA home={home} />
-      <HomeSectionB home={home} />
-      <HomeSectionC home={home} />
-      <HomeSectionD home={home} />
-      <HomeSectionE home={home} />
+      <Marketers sales={sales} />
     </>
   );
 };
