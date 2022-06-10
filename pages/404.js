@@ -32,11 +32,17 @@ const NotFound = () => {
 
 const Wrapper = styled.section`
   padding: 2rem;
+  height: 50vh;
   font-family: "Mont";
+  background: var(--clr-primary-1);
 
+  h2 {
+    color: var(--clr-white);
+  }
   p {
     font-size: 1rem;
     margin-top: 1rem;
+    color: var(--clr-white);
   }
 
   @media (min-width: 992px) {

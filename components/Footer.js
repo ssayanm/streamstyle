@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { FaLinkedin, FaPlay } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
 import styled from "styled-components";
-import { footerLinks, footerLinksAlt, social } from "../utils/constants";
 
 const Footer = () => {
   return (
@@ -13,10 +12,10 @@ const Footer = () => {
           <Link href="/">
             <a>
               <Image
-                alt="Revo Video"
-                src="/images/Revologowhite.svg"
-                width={171}
-                height={67}
+                alt="streamstyle"
+                src="/images/sslogo.png"
+                width={300}
+                height={68}
                 quality={100}
                 objectFit="contain"
               />
@@ -24,21 +23,13 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="">
-          <ul className="social-icons">
-            {social.map((socialIcon) => {
-              const { id, url, icon } = socialIcon;
-              return (
-                <li key={id}>
-                  <Link href={url}>
-                    <a href={url} target="_blank">
-                      {icon}
-                    </a>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+        <div className="social-icons">
+          <a
+            href="https://www.linkedin.com/company/revo-video/"
+            target="_blank"
+          >
+            <FaLinkedin className="social-icon" />
+          </a>
         </div>
       </div>
       <hr />
@@ -54,8 +45,9 @@ const Wrapper = styled.footer`
   color: var(--clr-white);
   .foot {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 0.85rem;
+    align-items: center;
   }
   hr {
     color: var(--clr-white);

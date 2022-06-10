@@ -1,7 +1,5 @@
 import { Row, Col } from "antd";
 import styled from "styled-components";
-import Link from "next/link";
-import { social } from "../utils/constants";
 import ReactPlayer from "react-player/lazy";
 
 const HomeHero = ({ home }) => {
@@ -10,7 +8,12 @@ const HomeHero = ({ home }) => {
   return (
     <Wrapper>
       <div className="section-center">
-        <Row gutter={32} justify="center" align="middle" className="herorow">
+        <Row
+          gutter={[48, 32]}
+          justify="center"
+          align="middle"
+          className="herorow"
+        >
           <Col sm={24} md={24} lg={12} data-aos="fade-up">
             <article className="content">
               <h1 className="title">{heading}</h1>
@@ -74,7 +77,7 @@ const Wrapper = styled.section`
     color: var(--clr-white);
   }
   @media (min-width: 992px) {
-    padding: 5rem 2rem;
+    padding: 3rem 2rem;
 
     .title {
       text-align: left;
@@ -89,9 +92,9 @@ const Wrapper = styled.section`
     }
   }
 
-  @media (min-width: 1367px) {
+  /* @media (min-width: 1367px) {
     padding: 5rem 2rem;
-  }
+  } */
 `;
 
 export default HomeHero;

@@ -13,6 +13,18 @@ const Marketers = ({ sales }) => {
         align="middle"
         className="section"
       >
+        <Col sm={24} md={12} data-aos="zoom-in" className="onlydesktop">
+          <ReactPlayer
+            url={sales.data[15].attributes.image.data.attributes.url}
+            // url={"/videos/setstudio.mp4"}
+            playing={false}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            // image="/images/herovideo.jpg"
+          />
+        </Col>
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
@@ -21,7 +33,7 @@ const Marketers = ({ sales }) => {
 
           <p>{sales.data[15].attributes.subHeading}</p>
         </Col>
-        <Col sm={24} md={12} data-aos="zoom-in">
+        <Col sm={24} md={12} data-aos="zoom-in" className="onlymobile">
           <ReactPlayer
             url={sales.data[15].attributes.image.data.attributes.url}
             // url={"/videos/setstudio.mp4"}
@@ -41,19 +53,6 @@ const Marketers = ({ sales }) => {
         justify="center"
         align="middle"
       >
-        <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
-          <ReactPlayer
-            url={sales.data[10].attributes.image.data.attributes.url}
-            // url={"/videos/Live Chat & Moderation.mp4"}
-            playing={false}
-            muted={true}
-            controls={true}
-            width="100%"
-            height="100%"
-            // image="/images/herovideo.jpg"
-            // quality={100}
-          />
-        </Col>
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
@@ -62,7 +61,7 @@ const Marketers = ({ sales }) => {
 
           <p>{sales.data[10].attributes.subHeading}</p>
         </Col>
-        <Col sm={24} md={12} className="onlymobile">
+        <Col sm={24} md={12} className="" data-aos="zoom-in">
           <ReactPlayer
             url={sales.data[10].attributes.image.data.attributes.url}
             // url={"/videos/Live Chat & Moderation.mp4"}
@@ -83,6 +82,19 @@ const Marketers = ({ sales }) => {
         justify="center"
         align="middle"
       >
+        <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
+          <ReactPlayer
+            url={sales.data[2].attributes.image.data.attributes.url}
+            // url={"/videos/Frictionless Checkout.mp4"}
+            playing={false}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            // image="/images/herovideo.jpg"
+            // quality={100}
+          />
+        </Col>
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
@@ -91,7 +103,7 @@ const Marketers = ({ sales }) => {
 
           <p>{sales.data[2].attributes.subHeading}</p>
         </Col>
-        <Col sm={24} md={12} data-aos="zoom-in">
+        <Col sm={24} md={12} className="onlymobile" data-aos="zoom-in">
           <ReactPlayer
             url={sales.data[2].attributes.image.data.attributes.url}
             // url={"/videos/Frictionless Checkout.mp4"}
@@ -113,19 +125,6 @@ const Marketers = ({ sales }) => {
           align="middle"
           gutter={[32, 32]}
         >
-          <Col sm={24} md={10} className="onlydesktop" data-aos="zoom-in">
-            <ReactPlayer
-              url={sales.data[3].attributes.image.data.attributes.url}
-              // url={"/videos/Virtual Try On.mp4"}
-              playing={false}
-              muted={true}
-              controls={true}
-              width="100%"
-              height="100%"
-              // image="/images/herovideo.jpg"
-              // quality={100}
-            />
-          </Col>
           <Col sm={24} md={14} data-aos="fade-up">
             <div className="iconbar">
               <BsPlayFill className="icon" />
@@ -133,7 +132,7 @@ const Marketers = ({ sales }) => {
             </div>
             <p className="para">{sales.data[3].attributes.subHeading}</p>
           </Col>
-          <Col sm={24} md={8} className="onlymobile">
+          <Col sm={24} md={10} className="" data-aos="zoom-in">
             <ReactPlayer
               url={sales.data[3].attributes.image.data.attributes.url}
               // url={"/videos/Virtual Try On.mp4"}
@@ -155,6 +154,19 @@ const Marketers = ({ sales }) => {
         justify="center"
         align="middle"
       >
+        <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
+          <ReactPlayer
+            url={sales.data[1].attributes.image.data.attributes.url}
+            // url={"/videos/Real-Time Analytics.mp4"}
+            playing={false}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            // image="/images/herovideo.jpg"
+            // quality={100}
+          />
+        </Col>
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
@@ -163,10 +175,10 @@ const Marketers = ({ sales }) => {
 
           <p>{sales.data[1].attributes.subHeading}</p>
         </Col>
-        <Col sm={24} md={12} data-aos="zoom-in">
+        <Col sm={24} md={8} className="onlymobile">
           <ReactPlayer
             url={sales.data[1].attributes.image.data.attributes.url}
-            // url={"/videos/Real-Time Analytics.mp4"}
+            // url={"/videos/Virtual Try On.mp4"}
             playing={false}
             muted={true}
             controls={true}
@@ -182,6 +194,7 @@ const Marketers = ({ sales }) => {
 };
 
 const Wrapper = styled.section`
+  padding: 2rem;
   .section-d {
     margin: 2rem 0;
     background: var(--clr-primary-1);
