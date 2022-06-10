@@ -77,7 +77,7 @@ const Wrapper = styled.section`
     color: var(--clr-white);
   }
   @media (min-width: 992px) {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
 
     .title {
       text-align: left;
@@ -92,9 +92,9 @@ const Wrapper = styled.section`
     }
   }
 
-  /* @media (min-width: 1367px) {
+  @media (min-width: 1367px) {
     padding: 5rem 2rem;
-  } */
+  }
 `;
 
 export default HomeHero;
