@@ -3,7 +3,7 @@ import Meta from "../components/Meta";
 import HomeHero from "../components/HomeHero";
 
 import Loading from "../components/Loading";
-import Marketers from "../components/Marketers";
+import HomeInfo from "../components/HomeInfo";
 
 export const getStaticProps = async () => {
   try {
@@ -30,7 +30,7 @@ const Home = ({ home, sales }) => {
     <>
       <Meta title="Home" />
       <HomeHero home={home} />
-      <Marketers sales={sales} />
+      <HomeInfo sales={sales} />
     </>
   );
 };

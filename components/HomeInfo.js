@@ -4,7 +4,7 @@ import { BsPlayFill } from "react-icons/bs";
 import { Row, Col } from "antd";
 import ReactPlayer from "react-player/lazy";
 
-const Marketers = ({ sales }) => {
+const HomeInfo = ({ sales }) => {
   return (
     <Wrapper>
       <Row
@@ -194,32 +194,21 @@ const Marketers = ({ sales }) => {
 };
 
 const Wrapper = styled.section`
-  padding: 2rem;
-  .section-d {
-    margin: 2rem 0;
-    background: var(--clr-primary-1);
-    height: max-content;
-    padding: 2rem 0.5rem;
-    border-radius: 2rem;
-    color: var(--clr-white);
+  padding: 0 1rem;
 
-    .title,
-    p {
-      color: var(--clr-white);
-    }
-  }
   .title {
     text-align: center;
+    font-size: 2rem;
   }
 
   .section {
-    padding: 2rem 0.5rem;
+    padding: 2rem 1rem;
   }
 
   .section-a {
     background: var(--clr-black);
     color: var(--clr-white);
-    padding: 2rem 0.5rem;
+    padding: 2rem 1rem;
 
     p {
       color: var(--clr-white);
@@ -232,7 +221,7 @@ const Wrapper = styled.section`
   .section-b {
     background: var(--clr-white);
     color: var(--clr-black);
-    padding: 2rem 0.5rem;
+    padding: 2rem 1rem;
     p {
       color: var(--clr-black);
     }
@@ -241,13 +230,26 @@ const Wrapper = styled.section`
   .section-c {
     background: var(--clr-black);
     color: var(--clr-white);
-    padding: 2rem 0.5rem;
+    padding: 2rem 1rem;
 
     p {
       color: var(--clr-white);
     }
 
     .title {
+      color: var(--clr-white);
+    }
+  }
+  .section-d {
+    margin: 2rem 0;
+    background: var(--clr-primary-1);
+    height: max-content;
+    padding: 2rem 1rem;
+    border-radius: 2rem;
+    color: var(--clr-white);
+
+    .title,
+    p {
       color: var(--clr-white);
     }
   }
@@ -259,10 +261,6 @@ const Wrapper = styled.section`
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 0rem;
-  }
-
-  .title {
-    font-size: 2rem;
   }
 
   .iconbar {
@@ -317,4 +315,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Marketers;
+export default HomeInfo;

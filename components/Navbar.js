@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 
-import { FaBars, FaTimes } from "react-icons/fa";
 import styled from "styled-components";
 
 const Nav = () => {
@@ -29,7 +28,7 @@ const Nav = () => {
               />
             </a>
           </Link>{" "}
-          <Link href="/">
+          <Link href="/get-started">
             <a className="btn-alt">call sales</a>
           </Link>
         </div>
