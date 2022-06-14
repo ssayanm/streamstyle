@@ -29,7 +29,7 @@ const Nav = () => {
             </a>
           </Link>{" "}
           <Link href="/get-started">
-            <a className="btn-alt">call sales</a>
+            <a className="btn-alt">Get Started</a>
           </Link>
         </div>
       </div>
