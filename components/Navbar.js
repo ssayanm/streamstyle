@@ -18,7 +18,7 @@ const Nav = () => {
           <Link href="/">
             <a>
               <Image
-                alt="streamstyle"
+                alt="StreamStyle"
                 src="/images/sslogo.png"
                 width={300}
                 height={68}

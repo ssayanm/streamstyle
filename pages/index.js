@@ -1,9 +1,9 @@
 import axios from "axios";
 import Meta from "../components/Meta";
-import HomeHero from "../components/HomeHero";
+import HomeStaticHero from "../components/HomeStaticHero";
 
 import Loading from "../components/Loading";
-import HomeInfo from "../components/HomeInfo";
+import HomeStaticInfo from "../components/HomeStaticInfo";
 
 export const getStaticProps = async () => {
   try {
@@ -29,8 +29,8 @@ const Home = ({ home, sales }) => {
   return (
     <>
       <Meta title="Home" />
-      <HomeHero home={home} />
-      <HomeInfo sales={sales} />
+      <HomeStaticHero home={home} />
+      <HomeStaticInfo sales={sales} />
     </>
   );
 };
