@@ -4,7 +4,25 @@ import { BsPlayFill } from "react-icons/bs";
 import { Row, Col } from "antd";
 import ReactPlayer from "react-player/lazy";
 
-const HomeInfo = ({ sales }) => {
+const HomeInfo = ({ home }) => {
+  const {
+    sectionAheading,
+    sectionAsubheading,
+    sectionAvideo,
+    sectionBheading,
+    sectionBsubheading,
+    sectionBvideo,
+    sectionCheading,
+    sectionCsubheading,
+    sectionCvideo,
+    sectionDheading,
+    sectionDsubheading,
+    sectionDvideo,
+    sectionEheading,
+    sectionEsubheading,
+    sectionEvideo,
+  } = home.data.attributes;
+
   return (
     <Wrapper>
       <Row
@@ -15,9 +33,9 @@ const HomeInfo = ({ sales }) => {
       >
         <Col sm={24} md={12} data-aos="zoom-in" className="onlydesktop">
           <ReactPlayer
-            url={sales.data[15].attributes.image.data.attributes.url}
+            url={sectionAvideo.data.attributes.url}
             // url={"/videos/setstudio.mp4"}
-            playing={false}
+            playing={true}
             muted={true}
             controls={true}
             width="100%"
@@ -28,16 +46,16 @@ const HomeInfo = ({ sales }) => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">{sales.data[15].attributes.heading}</h1>
+            <h1 className="title">{sectionAheading}</h1>
           </div>
 
-          <p>{sales.data[15].attributes.subHeading}</p>
+          <p>{sectionAsubheading}</p>
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in" className="onlymobile">
           <ReactPlayer
-            url={sales.data[15].attributes.image.data.attributes.url}
+            url={sectionAvideo.data.attributes.url}
             // url={"/videos/setstudio.mp4"}
-            playing={false}
+            playing={true}
             muted={true}
             controls={true}
             width="100%"
@@ -56,16 +74,16 @@ const HomeInfo = ({ sales }) => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">{sales.data[10].attributes.heading}</h1>
+            <h1 className="title">{sectionBheading}</h1>
           </div>
 
-          <p>{sales.data[10].attributes.subHeading}</p>
+          <p>{sectionBsubheading}</p>
         </Col>
         <Col sm={24} md={12} className="" data-aos="zoom-in">
           <ReactPlayer
-            url={sales.data[10].attributes.image.data.attributes.url}
+            url={sectionBvideo.data.attributes.url}
             // url={"/videos/Live Chat & Moderation.mp4"}
-            playing={false}
+            playing={true}
             muted={true}
             controls={true}
             width="100%"
@@ -84,9 +102,9 @@ const HomeInfo = ({ sales }) => {
       >
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
-            url={sales.data[2].attributes.image.data.attributes.url}
+            url={sectionCvideo.data.attributes.url}
             // url={"/videos/Frictionless Checkout.mp4"}
-            playing={false}
+            playing={true}
             muted={true}
             controls={true}
             width="100%"
@@ -98,16 +116,16 @@ const HomeInfo = ({ sales }) => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title"> {sales.data[2].attributes.heading}</h1>
+            <h1 className="title"> {sectionCheading}</h1>
           </div>
 
-          <p>{sales.data[2].attributes.subHeading}</p>
+          <p>{sectionCsubheading}</p>
         </Col>
         <Col sm={24} md={12} className="onlymobile" data-aos="zoom-in">
           <ReactPlayer
-            url={sales.data[2].attributes.image.data.attributes.url}
+            url={sectionCvideo.data.attributes.url}
             // url={"/videos/Frictionless Checkout.mp4"}
-            playing={false}
+            playing={true}
             muted={true}
             controls={true}
             width="100%"
@@ -128,15 +146,15 @@ const HomeInfo = ({ sales }) => {
           <Col sm={24} md={14} data-aos="fade-up">
             <div className="iconbar">
               <BsPlayFill className="icon" />
-              <h1 className="title">{sales.data[3].attributes.heading}</h1>
+              <h1 className="title">{sectionDheading}</h1>
             </div>
-            <p className="para">{sales.data[3].attributes.subHeading}</p>
+            <p className="para">{sectionDsubheading}</p>
           </Col>
           <Col sm={24} md={10} className="" data-aos="zoom-in">
             <ReactPlayer
-              url={sales.data[3].attributes.image.data.attributes.url}
+              url={sectionDvideo.data.attributes.url}
               // url={"/videos/Virtual Try On.mp4"}
-              playing={false}
+              playing={true}
               muted={true}
               controls={true}
               width="100%"
@@ -156,9 +174,9 @@ const HomeInfo = ({ sales }) => {
       >
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
-            url={sales.data[1].attributes.image.data.attributes.url}
+            url={sectionEvideo.data.attributes.url}
             // url={"/videos/Real-Time Analytics.mp4"}
-            playing={false}
+            playing={true}
             muted={true}
             controls={true}
             width="100%"
@@ -170,16 +188,16 @@ const HomeInfo = ({ sales }) => {
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
-            <h1 className="title">{sales.data[1].attributes.heading}</h1>
+            <h1 className="title">{sectionEheading}</h1>
           </div>
 
-          <p>{sales.data[1].attributes.subHeading}</p>
+          <p>{sectionEsubheading}</p>
         </Col>
         <Col sm={24} md={8} className="onlymobile">
           <ReactPlayer
-            url={sales.data[1].attributes.image.data.attributes.url}
+            url={sectionEvideo.data.attributes.url}
             // url={"/videos/Virtual Try On.mp4"}
-            playing={false}
+            playing={true}
             muted={true}
             controls={true}
             width="100%"

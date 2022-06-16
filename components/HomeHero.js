@@ -23,7 +23,7 @@ const HomeHero = ({ home }) => {
                   <ReactPlayer
                     url={heroVideo.data.attributes.url}
                     // url={"/videos/homevideo.mp4"}
-                    playing={false}
+                    playing={true}
                     muted={true}
                     controls={true}
                     width="100%"
@@ -41,7 +41,7 @@ const HomeHero = ({ home }) => {
                 <ReactPlayer
                   // url={"/videos/homevideo.mp4"}
                   url={heroVideo.data.attributes.url}
-                  playing={false}
+                  playing={true}
                   muted={true}
                   controls={true}
                   width="100%"

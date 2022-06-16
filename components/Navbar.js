@@ -5,7 +5,7 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const Nav = () => {
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <NavContainer
