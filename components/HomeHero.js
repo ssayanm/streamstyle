@@ -21,8 +21,11 @@ const HomeHero = ({ home }) => {
               <div className="onlymobile">
                 <div className="player-wrapper">
                   <ReactPlayer
-                    url={heroVideo.data.attributes.url}
-                    // url={"/videos/homevideo.mp4"}
+                    url={
+                      heroVideo.data.attributes.url
+                        ? heroVideo.data.attributes.url
+                        : "/videos/homevideo.mp4"
+                    }
                     playing={true}
                     muted={true}
                     controls={true}
@@ -39,15 +42,19 @@ const HomeHero = ({ home }) => {
             <div className="onlydesktop">
               <div className="player-wrapper">
                 <ReactPlayer
+                  url={
+                    heroVideo.data.attributes.url
+                      ? heroVideo.data.attributes.url
+                      : "/videos/homevideo.mp4"
+                  }
                   // url={"/videos/homevideo.mp4"}
-                  url={heroVideo.data.attributes.url}
                   playing={true}
                   muted={true}
                   controls={true}
                   width="100%"
                   height="100%"
-                  className="react-player"
                   // image="/images/herovideo.jpg"
+                  className="react-player"
                 />
               </div>
             </div>

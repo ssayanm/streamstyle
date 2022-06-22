@@ -33,7 +33,11 @@ const HomeInfo = ({ home }) => {
       >
         <Col sm={24} md={12} data-aos="zoom-in" className="onlydesktop">
           <ReactPlayer
-            url={sectionAvideo.data.attributes.url}
+            url={
+              sectionAvideo.data.attributes.url
+                ? sectionAvideo.data.attributes.url
+                : "/videos/setstudio.mp4"
+            }
             // url={"/videos/setstudio.mp4"}
             playing={true}
             muted={true}
@@ -53,8 +57,11 @@ const HomeInfo = ({ home }) => {
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in" className="onlymobile">
           <ReactPlayer
-            url={sectionAvideo.data.attributes.url}
-            // url={"/videos/setstudio.mp4"}
+            url={
+              sectionAvideo.data.attributes.url
+                ? sectionAvideo.data.attributes.url
+                : "/videos/setstudio.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -81,8 +88,11 @@ const HomeInfo = ({ home }) => {
         </Col>
         <Col sm={24} md={12} className="" data-aos="zoom-in">
           <ReactPlayer
-            url={sectionBvideo.data.attributes.url}
-            // url={"/videos/Live Chat & Moderation.mp4"}
+            url={
+              sectionBvideo.data.attributes.url
+                ? sectionBvideo.data.attributes.url
+                : "/videos/LiveChat_ Moderation.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -102,8 +112,11 @@ const HomeInfo = ({ home }) => {
       >
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
-            url={sectionCvideo.data.attributes.url}
-            // url={"/videos/Frictionless Checkout.mp4"}
+            url={
+              sectionCvideo.data.attributes.url
+                ? sectionCvideo.data.attributes.url
+                : "/videos/FrictionlessCheckout.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -123,8 +136,11 @@ const HomeInfo = ({ home }) => {
         </Col>
         <Col sm={24} md={12} className="onlymobile" data-aos="zoom-in">
           <ReactPlayer
-            url={sectionCvideo.data.attributes.url}
-            // url={"/videos/Frictionless Checkout.mp4"}
+            url={
+              sectionCvideo.data.attributes.url
+                ? sectionCvideo.data.attributes.url
+                : "/videos/FrictionlessCheckout.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -152,8 +168,11 @@ const HomeInfo = ({ home }) => {
           </Col>
           <Col sm={24} md={10} className="" data-aos="zoom-in">
             <ReactPlayer
-              url={sectionDvideo.data.attributes.url}
-              // url={"/videos/Virtual Try On.mp4"}
+              url={
+                sectionDvideo.data.attributes.url
+                  ? sectionDvideo.data.attributes.url
+                  : "/videos/VirtualTryOn.mp4"
+              }
               playing={true}
               muted={true}
               controls={true}
@@ -174,8 +193,11 @@ const HomeInfo = ({ home }) => {
       >
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
-            url={sectionEvideo.data.attributes.url}
-            // url={"/videos/Real-Time Analytics.mp4"}
+            url={
+              sectionEvideo.data.attributes.url
+                ? sectionEvideo.data.attributes.url
+                : "/videos/Real-TimeAnalytics.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -195,8 +217,11 @@ const HomeInfo = ({ home }) => {
         </Col>
         <Col sm={24} md={8} className="onlymobile">
           <ReactPlayer
-            url={sectionEvideo.data.attributes.url}
-            // url={"/videos/Virtual Try On.mp4"}
+            url={
+              sectionEvideo.data.attributes.url
+                ? sectionEvideo.data.attributes.url
+                : "/videos/Real-TimeAnalytics.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
