@@ -91,7 +91,7 @@ const HomeInfo = ({ home }) => {
             url={
               sectionBvideo.data.attributes.url
                 ? sectionBvideo.data.attributes.url
-                : "/videos/LiveChat_ Moderation.mp4"
+                : "/videos/LiveChat_Moderation.mp4"
             }
             playing={true}
             muted={true}
