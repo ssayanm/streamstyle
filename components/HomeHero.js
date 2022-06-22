@@ -24,7 +24,7 @@ const HomeHero = ({ home }) => {
                     url={
                       heroVideo.data.attributes.url
                         ? heroVideo.data.attributes.url
-                        : "/videos/homevideo.mp4"
+                        : "/videos/Streamstyle_final.m4v"
                     }
                     playing={true}
                     muted={true}
