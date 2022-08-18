@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { BsPlayFill } from "react-icons/bs";
 import { Row, Col } from "antd";
-import ReactPlayer from "react-player/lazy";
+// import ReactPlayer from "react-player/lazy";
+
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const HomeInfo = ({ home }) => {
   const {
